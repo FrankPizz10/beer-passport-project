@@ -13,17 +13,24 @@
 4. **Security gaps worth fixing:** no CloudTrail trail exists (no API audit logging at all); IAM user `frank-pizz-cli` has two active access keys aged 995 and 1425 days that have never been used; no MFA on either IAM user (root does have MFA); all three S3 buckets are publicly readable with Block Public Access off.
 5. **Orphaned/stale resources:** CloudFront distribution E28SQQ8C7G4XBJ is still Enabled but points at a nonexistent bucket (`capstonevideoclips`); security group `lb-sg` allows 0.0.0.0/0 on ports 80/443 with no load balancer in place; the idle ECS cluster and two task definitions remain; an `EFS-SG` security group exists, implying an EFS file system that was not verified (EFS was outside the checked scope).
 
-## Billing (verified via Cost Explorer, October 11, 2026)
+## Billing (verified via Cost Explorer and Billing invoices, October 11, 2026)
 
-Last 12 months (Oct 2025 – Sep 2026): **$19.32 total, $1.61/month average.**
+**Last 12 months** (Oct 2025 – Sep 2026, Cost Explorer): **$19.32 total, $1.61/month average.** Monthly: Oct 2025–Jan 2026 $0.00 each (service still running; likely credit-covered), Feb 2026 $4.28 (shutdown month), Mar–Sep 2026 ~$2.14–2.19 each. Top services: Route 53 $12.14, Secrets Manager $3.20, ECS $1.91 (Feb 2026 only), RDS $1.41 (residual ~$0.18/mo, cause unverified), EFS $0.25. Month-to-date Oct 2026: $1.72; forecasted $2.12.
 
-Monthly totals: Oct 2025 $0.00, Nov 2025 $0.00, Dec 2025 $0.00, Jan 2026 $0.00, Feb 2026 $4.28 (highest; the shutdown month), Mar 2026 $2.19, Apr 2026 $2.14, May 2026 $2.15, Jun 2026 $2.14, Jul 2026 $2.14, Aug 2026 $2.14, Sep 2026 $2.15.
+**Historical invoices** (Billing → Bills, back to Nov 2022; Cost Explorer only retains 12 months):
 
-Top services (12-month totals): Route 53 $12.14, Secrets Manager $3.20 ($0.40/mo), ECS $1.91 (Feb 2026 only), RDS $1.41 (small residual ~$0.18/mo with zero instances; cause unverified), EFS $0.25. ELB, CloudFront, EC2, and others: $0.00.
+| Month | Total | Top drivers |
+|---|---|---|
+| Nov 2022 | $1.00 | Route 53 $1.00 |
+| Oct 2023 | $8.74 | EFS $4.86, EC2 $2.61, Route 53 $1.01, ECS $0.26 |
+| Nov 2023 | $4.59 | EFS $1.63, Route 53 $1.53, ECS $1.23 |
+| Dec 2023 | $18.75 | ELB $16.74, Route 53 $1.50 |
+| Jan 2024 | $28.46 | ELB $16.74, ECS $6.48, WAF $2.89, Route 53 $1.50 |
+| Feb 2024 – Jan 2025 | ~$37–39/mo | Region-spend proxy; bill detail UI would not render for these months |
 
-Month-to-date (Oct 1–12, 2026): $1.72 (Route 53 $1.51, Secrets Manager $0.14, RDS $0.06, tax $0.01). Forecasted month-end: $2.12.
+**Correction to the plan's "~$50/month" figure:** the $50 was the "My Monthly Cost Budget" threshold, not actual spend. No invoiced or proxied month reached $50; the observed peak is ~$39–40. The ramp's cost drivers were the classic ELB (~$16.74/mo, nearly half the bill), ECS Fargate, and WAF. Feb 2024 shows a billing correction (invoice issued and reversed).
 
-Notes: the $0.00 months (Oct 2025–Jan 2026) overlap the period the service was still running; likely covered by credits. The plan's historical ~$50/month figure predates this 12-month window and could not be verified here. ELB shows $0.00 across the window, so the classic load balancer was deleted more than 12 months ago. Current baseline is dominated by Route 53 hosted zones (~$1.50/mo for 3 zones).
+**Takeaway for D1:** the single most expensive component of the old stack was the classic load balancer. At this scale the relaunch does not need a dedicated LB. Current baseline ~$2/mo is dominated by Route 53 hosted zones ($1.50/mo).
 
 ## Resource inventory
 
