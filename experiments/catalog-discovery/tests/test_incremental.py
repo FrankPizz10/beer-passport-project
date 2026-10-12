@@ -125,5 +125,53 @@ class TestSourceFailure(unittest.TestCase):
                 w.writerows(rows)
 
 
+class TestChunkedBaseline(unittest.TestCase):
+    def test_parts_reassemble_without_row_loss(self):
+        # Large exports are committed as <stem>.partNN.csv chunks; the
+        # loader must reassemble them exactly, with no dropped rows.
+        from src.baseline import load_baseline
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            headers = ["id", "brewery_id", "name", "cat_id", "style_id",
+                       "abv", "ibu", "srm", "upc", "descript", "last_mod"]
+            rows = [[str(i), "1", f"Beer {i}", "1", "1", "5.0", "", "", "",
+                     "", ""] for i in range(1, 251)]
+            with open(d / "LiveBeers.part01.csv", "w", newline="",
+                      encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                w.writerows(rows[:100])
+            with open(d / "LiveBeers.part02.csv", "w", newline="",
+                      encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerows(rows[100:200])
+            with open(d / "LiveBeers.part03.csv", "w", newline="",
+                      encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerows(rows[200:])
+            for name, h, r in [
+                    ("LiveBreweries.csv",
+                     ["id", "name", "address1", "address2", "city", "state",
+                      "code", "country", "phone", "website", "descript",
+                      "add_user"],
+                     [["1", "Brew Co", "", "", "", "", "", "", "", "", "",
+                       ""]]),
+                    ("LiveCategories.csv", ["id", "cat_name", "last_mod"],
+                     [["1", "British Ale", ""]]),
+                    ("LiveStyles.csv",
+                     ["id", "cat_id", "style_name", "last_mod"],
+                     [["1", "1", "Style", ""]])]:
+                with open(d / name, "w", newline="", encoding="utf-8") as f:
+                    w = csv.writer(f)
+                    w.writerow(h)
+                    w.writerows(r)
+            base = load_baseline(d)
+            self.assertEqual(len(base.beers), 250)
+            self.assertEqual(base.beers[0]["name"], "Beer 1")
+            self.assertEqual(base.beers[99]["name"], "Beer 100")
+            self.assertEqual(base.beers[100]["name"], "Beer 101")
+            self.assertEqual(base.beers[249]["name"], "Beer 250")
+
+
 if __name__ == "__main__":
     unittest.main()

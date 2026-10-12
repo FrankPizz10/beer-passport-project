@@ -29,18 +29,40 @@ class Baseline:
 
 
 def _read_csv(path: Path, expected_headers: list[str]) -> list[dict]:
-    if not path.exists():
+    parts = _resolve_parts(path)
+    if not parts:
         raise FileNotFoundError(f"Baseline CSV not found: {path}")
-    with open(path, newline="", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
+    rows: list[dict] = []
+    header: list[str] | None = None
+    for part in parts:
+        with open(part, newline="", encoding="utf-8") as f:
+            # Only the first part carries the header row; later parts are
+            # headerless, so reuse the fieldnames explicitly.
+            reader = (csv.DictReader(f) if header is None
+                      else csv.DictReader(f, fieldnames=header))
+            if header is None:
+                header = list(reader.fieldnames or [])
+            rows.extend(reader)
     if not rows:
         raise ValueError(f"Baseline CSV is empty: {path}")
-    actual = list(rows[0].keys())
-    missing = [h for h in expected_headers if h not in actual]
+    missing = [h for h in expected_headers if h not in (header or [])]
     if missing:
         raise ValueError(f"{path.name} missing expected headers {missing}; "
-                         f"got {actual}")
+                         f"got {header}")
     return rows
+
+
+def _resolve_parts(path: Path) -> list[Path]:
+    """Return the file(s) backing a baseline CSV.
+
+    Large exports are committed as numbered parts (``<stem>.partNN.csv``)
+    because the push path caps single files at ~100 KB; parts are
+    reassembled here in order so the loader sees the original CSV.
+    """
+    if path.exists():
+        return [path]
+    parts = sorted(path.parent.glob(f"{path.stem}.part*.csv"))
+    return parts
 
 
 def load_baseline(data_dir: Path) -> Baseline:

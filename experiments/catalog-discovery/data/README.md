@@ -13,6 +13,16 @@ Exported via the Google Sheets API (UNFORMATTED_VALUE rendering) on 2026-10-12.
 Raw contents are preserved as exported; do not clean or rewrite these files in
 place. Normalization for matching happens in code (`src/normalize.py`).
 
+**Chunked storage:** the GitHub push path caps single files at roughly 100 KB,
+so the two large exports are committed as numbered parts
+(`LiveBeers.part01.csv` … `LiveBeers.part12.csv`,
+`LiveBreweries.part01.csv` … `LiveBreweries.part04.csv`). The parts are a
+mechanical row-boundary split of the original CSVs — no data was changed —
+and `src/baseline.py` reassembles them in order at load time. To work with the
+original single-file layout locally, concatenate the parts
+(`cat LiveBeers.part*.csv > LiveBeers.csv`); the loader prefers the single
+file when present.
+
 No credentials, tokens, or secrets are stored here.
 
 - `cache/` — cached API responses from Open Brewery DB and Open Food Facts,
