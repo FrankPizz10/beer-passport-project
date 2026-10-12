@@ -13,11 +13,17 @@
 4. **Security gaps worth fixing:** no CloudTrail trail exists (no API audit logging at all); IAM user `frank-pizz-cli` has two active access keys aged 995 and 1425 days that have never been used; no MFA on either IAM user (root does have MFA); all three S3 buckets are publicly readable with Block Public Access off.
 5. **Orphaned/stale resources:** CloudFront distribution E28SQQ8C7G4XBJ is still Enabled but points at a nonexistent bucket (`capstonevideoclips`); security group `lb-sg` allows 0.0.0.0/0 on ports 80/443 with no load balancer in place; the idle ECS cluster and two task definitions remain; an `EFS-SG` security group exists, implying an EFS file system that was not verified (EFS was outside the checked scope).
 
-## Billing
+## Billing (verified via Cost Explorer, October 11, 2026)
 
-- Month-to-date: $1.72. Forecasted month total: $2.12 (source: Budgets table).
-- Budgets: one monthly budget exists, $50.00, status healthy.
-- Cost Explorer: access denied for the auditor user, so 12-month history and per-service breakdowns were not retrievable in this pass.
+Last 12 months (Oct 2025 – Sep 2026): **$19.32 total, $1.61/month average.**
+
+Monthly totals: Oct 2025 $0.00, Nov 2025 $0.00, Dec 2025 $0.00, Jan 2026 $0.00, Feb 2026 $4.28 (highest; the shutdown month), Mar 2026 $2.19, Apr 2026 $2.14, May 2026 $2.15, Jun 2026 $2.14, Jul 2026 $2.14, Aug 2026 $2.14, Sep 2026 $2.15.
+
+Top services (12-month totals): Route 53 $12.14, Secrets Manager $3.20 ($0.40/mo), ECS $1.91 (Feb 2026 only), RDS $1.41 (small residual ~$0.18/mo with zero instances; cause unverified), EFS $0.25. ELB, CloudFront, EC2, and others: $0.00.
+
+Month-to-date (Oct 1–12, 2026): $1.72 (Route 53 $1.51, Secrets Manager $0.14, RDS $0.06, tax $0.01). Forecasted month-end: $2.12.
+
+Notes: the $0.00 months (Oct 2025–Jan 2026) overlap the period the service was still running; likely covered by credits. The plan's historical ~$50/month figure predates this 12-month window and could not be verified here. ELB shows $0.00 across the window, so the classic load balancer was deleted more than 12 months ago. Current baseline is dominated by Route 53 hosted zones (~$1.50/mo for 3 zones).
 
 ## Resource inventory
 

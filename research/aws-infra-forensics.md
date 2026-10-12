@@ -32,9 +32,10 @@ Task: Fargate/awsvpc, 0.25 vCPU, 1024 MiB. Logs to CloudWatch group `/ecs/beer-p
 
 ## Still open
 
-- 12-month Cost Explorer history (needs billing access fix or a CSV from Frank as root).
 - Exact earliest log timestamp in `/ecs/beer-passport-task-def1` (console pagination refused).
 - Target-group health-check path (not visible in console).
+- Cause of the small residual RDS charge (~$0.18/mo with zero instances).
+- The plan's historical ~$50/month figure predates the 12-month Cost Explorer window and remains unverified.
 
 ## EFS verdict (verified October 11, 2026): the MySQL data is recoverable
 
