@@ -1,0 +1,955 @@
+id,brewery_id,name,cat_id,style_id,abv,ibu,srm,upc,descript,last_mod
+1,812,Hocus Pocus,11,116,4.5,0,0,0,"Our take on a classic summer ale.  A toast to weeds, rays, and summer haze.  A light, crisp ale for mowing lawns, hitting lazy fly balls, and communing with nature, Hocus Pocus is offered up as a summer sacrifice to clodless days.
+
+Its malty sweetness finishes tart and crisp and is best apprediated with a wedge of orange.",2010-07-22T20:00:00.000Z
+2,264,Grimbergen Blonde,11,142,6.7,0,0,0,,2010-07-22T20:00:00.000Z
+3,779,Widdershins Barleywine,11,142,9.1,0,0,0,,2010-07-22T20:00:00.000Z
+4,287,Lucifer,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+5,1056,Bitter,11,142,4,0,0,0,,2010-07-22T20:00:00.000Z
+6,1385,Winter Warmer,1,13,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+7,1099,Winter Welcome 2007-2008,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+8,236,Oatmeal Stout,3,42,4.95,,,,,2010-07-22T20:00:00.000Z
+9,879,Espresso Porter,11,142,5.6,,,,,2010-07-22T20:00:00.000Z
+10,545,Chocolate Stout,3,42,5.3,,,,,2010-07-22T20:00:00.000Z
+11,742,Hitachino Nest Real Ginger Brew,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+12,779,JuJu Ginger,11,142,4,0,0,0,,2010-07-22T20:00:00.000Z
+13,545,The Kidd Lager,7,86,4.5,,,,,2010-07-22T20:00:00.000Z
+14,1099,Imperial Stout,3,42,7,0,0,0,,2010-07-22T20:00:00.000Z
+15,1315,Oak-Aged Belgian Tripel,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+16,168,Ultrablonde,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+17,1023,Wiesen Edel Weisse,4,50,6.2,0,0,0,,2010-07-22T20:00:00.000Z
+18,39,Old Foghorn 2001,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+19,196,Framboise,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+20,483,Cow Palace Scotch Ale 1998,1,15,8.7,0,0,0,,2010-07-22T20:00:00.000Z
+21,1142,Bigfoot 2001,11,142,9.6,0,0,0,,2010-07-22T20:00:00.000Z
+22,1142,Bigfoot 2002,11,142,9.6,0,0,0,,2010-07-22T20:00:00.000Z
+23,1142,Bigfoot 2003,11,142,9.6,0,0,0,,2010-07-22T20:00:00.000Z
+24,1142,Bigfoot 2004,11,142,9.6,0,0,0,,2010-07-22T20:00:00.000Z
+25,1142,Bigfoot 2005,11,142,9.6,0,0,0,,2010-07-22T20:00:00.000Z
+26,1220,Winter Ale,1,13,5.9,0,0,0,,2010-07-22T20:00:00.000Z
+27,878,Full Moon Winter Ale,5,72,5.6,0,0,0,This full-bodied ale is brewed with roasted malts and a hint of Dark Belgian sugar for a perfectly balanced taste.,2010-07-22T20:00:00.000Z
+28,935,Odell IPA,3,31,7,0,0,0,"We took the traditional IPA, originally shipped from England to India in the 1700's, and made it bolder and more flavorful - American Style. We've added new varieties of highly aromatic American hops to create a distinctive bitterness profile and an incredible hop character.",2010-07-22T20:00:00.000Z
+29,1271,Ornery Amber Lager,8,95,3.2,,,,,2010-07-22T20:00:00.000Z
+30,935,Cutthroat Porter,2,25,4.8,0,0,0,"Not quite a stout but definitely no lightweight, Cutthroat Porter is smooth and robust. Inspired by the classic London porters, we use dark roasted malts to create a deep, rich color and flavor that hint at chocolate and coffee. We named it Cutthroat Porter as our tribute to the Colorado state fish - with its own rich heritage and unmistakable dark coloring. And while we're big fans of small batches, here's to the currently threatened Cutthroat population reaching mass quantities.",2010-07-22T20:00:00.000Z
+31,1271,Maple Nut Brown Ale Ale,3,38,4.5,,,,,2010-07-22T20:00:00.000Z
+32,1271,Cocoa Porter,11,142,5.7,,,,,2010-07-22T20:00:00.000Z
+33,190,Jenlain Blonde,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+34,196,Blonde,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+35,432,Flemish Primitive Wild Ale (Demon Fish),11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+36,294,Witkap-Pater Tripel,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+37,1175,Winter Cheer,3,38,6.3,,,,,2010-07-22T20:00:00.000Z
+38,743,Canaster Winter Scotch,11,142,8.7,0,0,0,,2010-07-22T20:00:00.000Z
+39,1307,16,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+40,1307,Quelque Chose,5,70,8,0,0,0,"Quelque Chose was launched in January 1996. This versatile beer was specifically developed as a winter beer because, when warmed to 70ÂºC (160ÂºF), it can be taken as a hot drink. On the other hand, on the rocks, it is a wonderful aperitif. The cherries are soaked for months in slightly bitter ale before being blended into the beer. Quelque Chose is made with dark roasted malts, and the end result is something commonly known as an authentic nectar. The most original of the Unibroue line, it is highly appreciated by winter-sports enthusiasts.",2010-07-22T20:00:00.000Z
+41,277,Kriek,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+42,170,BiÃ¨re Darbyste,11,116,5.8,,,,,2010-07-22T20:00:00.000Z
+43,723,Maracaibo Especial,3,38,7.5,0,0,0,"A rich brown ale inspired by the enigmatic monastic brews of Belgium, and the mysterious mist shrouded jungles of the tropics. Brewed with real cacao, and spiced with cinnamon and sweet orange peel for a sensual delight. A brew to be sipped, savored, and enjoyed!",2010-07-22T20:00:00.000Z
+44,432,Flemish Primitive Wild Ale (Pin Head),11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+45,723,Calabaza Blanca,5,72,4.8,0,0,0,"Aged in large oak casks and refermented in the bottle, Calabaza Blanca is a Belgian Biere Blanche. Spiced with orange peel and corriander, you'll find it refreshingly tart, with a wonderfully dry finish.",2010-07-22T20:00:00.000Z
+46,901,Porter,2,25,8.6,,,,,2010-07-22T20:00:00.000Z
+47,901,Cardinal Pale Ale,3,26,6,,,,Award-winning pale beer with citrus flavors,2010-07-22T20:00:00.000Z
+48,176,Zinnebir Xmas,11,142,6.6,0,0,0,,2010-07-22T20:00:00.000Z
+49,974,Bridal Ale 2005,11,142,6.5,,,,,2010-07-22T20:00:00.000Z
+50,176,Zinnebir,3,26,5.8,,,,,2010-07-22T20:00:00.000Z
+51,432,Saison Imperiale,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+52,170,La Moneuse,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+53,901,Red Sled Winter Ale,11,142,6.2,,,,,2010-07-22T20:00:00.000Z
+54,39,Christmas Ale 2007,11,142,5.5,,,,,2010-07-22T20:00:00.000Z
+55,176,Equinox Dark Belgian Winter,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+56,856,Serafijn Christmas Angel,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+57,160,Obovoid Empirical Stout,3,43,8,0,0,0,,2010-07-22T20:00:00.000Z
+58,1221,Furious Beer,3,31,6,0,0,0,"Like Hops? You'll like this fire-hued beer. This is the beer I have always dreamed of making. This is the beer that would come to mind while spending the last two years tearing down walls, hanging sheetrock, moving kegs, power washing the ceilings, arguing with various agencies, and cutting the water main. 
+
+Without Golden Promise malt, made by family-owned Simpsons Malt, Furious would just be pissed off-ed. From Scotland, this malt is still produced in the tradition of turning over the barley by hand, resulting in a malt that is unsurpassed in its quality. Golden Promise is also used extensively by premium whisky distilleries such as The Macallan. This malt provides the backbone for the intense hop character. Four American hop varieties are used at a rate of over three pounds per barrel. The result is a rich malt sweetness infused with bright hop flavor and aroma from beginning to end. Oh yeah, it's about 6% alcohol and around 100 IBUs.",2010-07-22T20:00:00.000Z
+59,1221,Bender Beer,3,38,5.1,0,0,0,"This beer is an amalgamation of styles; brown/porter/apa. Five distinct malts, including two from Belgium, give this beer added complexity and depth. We also add oatmeal to this beer to give it a smooth texture not usually associated with this type of beer. We add large amounts of American finishing hops to give Bender a citrus hop aroma because... we like hops. This is a session beer weighing in around 5% alcohol and 25 IBUs. Grab one today, we think you will want another!",2010-07-22T20:00:00.000Z
+60,1315,Oak Aged Ebenezer,11,142,9.4,0,0,0,,2010-07-22T20:00:00.000Z
+61,160,Killer Penguin,3,35,10,0,0,0,,2010-07-22T20:00:00.000Z
+63,935,Isolation Ale,11,141,6,0,0,0,"Ever been in a warm, cozy cabin and had a secret desire to get snowed in? To celebrate the winter season, we offer our Isolation Ale - a traditional winter brew made with premium malts imported from England. It's just one of the reasons Isolation Ale stands alone.",2010-07-22T20:00:00.000Z
+64,501,Festive Ale 2007,11,142,8.6,,,,,2010-07-22T20:00:00.000Z
+65,586,Bourbon County Stout 2007,11,142,13,0,0,0,,2010-07-22T20:00:00.000Z
+66,670,Twelve Days,3,42,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+67,1056,Seriously Bad Elf,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+68,905,Big Shot Seasonal Ale,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+69,923,God Jul - Winter Ale,3,42,8.5,0,0,0,"A dark ale brewed specially for the Christmas season, with a rich, complex taste of caramel. This is a strong, dark and rather sweet Christmas Beer â€“ just the way we think a Christmas beer should be.",2010-07-22T20:00:00.000Z
+70,1142,Harvest Ale 2007,3,26,6.7,0,0,0,,2010-07-22T20:00:00.000Z
+71,161,Nut Cracker Ale,11,141,5.9,0,0,0,"Nutcracker Ale is Boulevardâ€™s holiday gift for real beer lovers. This hearty, warming brew is a classic winter ale, deep amber in color, with hints of molasses balanced by the â€œspicinessâ€ of freshly harvested Chinook hops.",2010-07-22T20:00:00.000Z
+72,779,Goosinator Smoked Doppelbock 2007,8,95,7.7,,,,,2010-07-22T20:00:00.000Z
+73,779,Snow Bound Winter Ale,11,142,8.6,0,0,0,,2010-07-22T20:00:00.000Z
+74,779,Warrior IPA,3,31,6.6,0,0,0,,2010-07-22T20:00:00.000Z
+75,266,Petrus Oud Bruin,11,142,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+76,266,Petrus Gouden Tripel Ale,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+77,266,Petrus Blond Ale,11,142,6.6,0,0,0,,2010-07-22T20:00:00.000Z
+78,266,Petrus Dubbel Bruin Ale,5,60,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+79,266,Petrus Speciale,3,26,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+80,1202,Weizengold Hefefein,4,50,5.1,0,0,0,"Stiegl Weizengold. It has 12o original gravity; the choicest ingredients and a top fermentation process are responsible for the highest possible quality and an unmistakable flavor. It is brewed according to the classic wheat beer recipe: 60 % wheat malt and 40 % barley malt, top fermentation and in compliance with the Purity Law of 1516.  This fine yeast wheat beer specialty is a refreshing, natural and stimulating beer brand.",2010-07-22T20:00:00.000Z
+81,160,Never Summer Ale,11,141,5.94,0,0,0,,2010-07-22T20:00:00.000Z
+82,1264,Modern Monks Belgian Blonde,3,26,5.6,,,,,2010-07-22T20:00:00.000Z
+83,1264,Grand Cru,11,142,5.2,,,,,2010-07-22T20:00:00.000Z
+84,210,JÃ¶rger WeiÃŸe Hell,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+85,1272,OSB Premium Ale,11,142,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+86,425,Morocco Ale,11,142,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+87,1047,Glacier Ale,3,33,5.4,,,,,2010-07-22T20:00:00.000Z
+88,1047,Bent Nail IPA,3,31,6.3,,,,,2010-07-22T20:00:00.000Z
+90,879,Harvest Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+91,879,Stillwater Rye,11,142,5.4,,,,,2010-07-22T20:00:00.000Z
+92,879,Sharptail Pale Ale,3,26,5.6,,,,,2010-07-22T20:00:00.000Z
+93,879,Fat Belly Amber,3,33,5.4,,,,,2010-07-22T20:00:00.000Z
+94,879,Whitetail Wheat,8,95,5.2,,,,,2010-07-22T20:00:00.000Z
+95,879,Sandbagger Gold,11,142,5,,,,,2010-07-22T20:00:00.000Z
+96,901,Brunette Hot Brown Ale,3,38,4.7,,,,English-style brown ale with hint of nuts,2010-07-22T20:00:00.000Z
+97,901,Irish Red,11,142,5.6,,,,Nebraska Brewing's first beer!,2010-07-22T20:00:00.000Z
+98,901,Belgian Wit,11,142,4.4,,,,,2010-07-22T20:00:00.000Z
+99,901,EOS Hefeweizen,4,50,5.2,,,,,2010-07-22T20:00:00.000Z
+100,901,India Pale Ale - Nebraska Brewing,3,26,6.9,,,,,2010-07-22T20:00:00.000Z
+101,1185,Winter Ale,1,13,6.3,0,0,0,,2010-07-22T20:00:00.000Z
+102,1260,Pride & Joy Mild Ale,1,10,5,,,,Pale Ale with Citrus Hops,2010-07-22T20:00:00.000Z
+103,1260,Robert the Bruce Scottish Ale,1,15,7,0,0,0,"A big malty body from chocolate and roasted malts, well balanced with just the right combination of hops. Robust yet smooth, a true malt-lover's delight.",2010-07-22T20:00:00.000Z
+104,1056,Lump of Coal Dark Holiday Stout,3,42,8,0,0,0,,2010-07-22T20:00:00.000Z
+105,1056,Warm Welcome Nut Browned Ale,3,38,6,0,0,0,,2010-07-22T20:00:00.000Z
+106,884,Pendle Witches Brew,3,26,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+107,345,Carnegie Stark-Porter,2,25,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+108,727,Harvest Ale 2002,1,13,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+109,1075,Woody Organic IPA,3,31,6.2,0,0,0,,2010-07-22T20:00:00.000Z
+110,620,Adriaan,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+111,304,Leute Bok Bier,7,90,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+112,905,La Folie Falling Rock,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+113,1315,Oak Aged IPA,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+114,304,Tikka Gold,3,26,5,0,0,0,,2010-07-22T20:00:00.000Z
+115,179,La Divine Double Blond,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+116,179,La Divine Tripel Amber,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+117,292,Ename Tripel,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+118,827,Triple Dipsea Belgian,11,142,9.2,0,0,0,,2010-07-22T20:00:00.000Z
+119,1019,Oktoberfest Weizen,11,142,5.7,0,0,0,,2010-07-22T20:00:00.000Z
+120,1029,Imperial Hefeweizen,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+121,481,Triple Exultation Old Ale,1,13,9.7,0,0,0,,2010-07-22T20:00:00.000Z
+122,130,Organic Gingerbread Ale,11,142,6.8,0,0,0,,2010-07-22T20:00:00.000Z
+123,1064,Falcon Pale Ale,3,26,6.7,,,,,2010-07-22T20:00:00.000Z
+124,441,Buzzsaw Brown,3,38,4.8,0,0,0,"By 1915, Bend, Oregon, was alive with the sound of the buzz saw, as two of the country's largest pine sawmills set up shop on the banks of the Deschutes River.  The mills are  gone now, but the smokestacks still stand testament to Bend's humble beginnings. 
+
+Buzzsaw Brown is an easy-drinking beer that is refreshing after a hard dayâ€™s work. The timber mills in Bend may be closed, but whether your adventure includes a day of scaling rock faces, hitting 18 holes or skiing the slopes in spring, Buzzsaw Brown is the perfect end to a fun-filled day.
+
+â€œBuzzsaw Brown is one of my favorite beers,â€ says Deschutes Brewery Brewmaster Larry Sidor. â€œThe unique combination of European and American malts makes it a very food friendly beer that pairs well with a wide variety of flavors.â€",2010-07-22T20:00:00.000Z
+125,369,Eisenbahn South American Pale Ale (S.A.P.A.),3,26,4.8,,,,,2010-07-22T20:00:00.000Z
+126,584,Geist Bock,7,90,6.1,0,0,0,"This is one of our rare lagers brewed in the style of the German Heiliges Geist Bock, or Holy Ghost Bock. The name refers to the lighter nature of the beer as opposed to the darker and heavier Doppel Bock and Mai Bock also brewed during the spring in Germany. There is a rich malt flavor, a firm German style lager head, and a clean lagered finish to this beer.  Available on draft or in 12 oz. bottles.",2010-07-22T20:00:00.000Z
+127,623,Troll Porter,2,25,6.5,,,,,2010-07-22T20:00:00.000Z
+128,397,Dark Ale,1,10,4.5,0,0,0,"A dark brew full of promise. Coopers Dark Ale is a journey in taste, starting fresh and creamy, and finishing with a lingering coffee flavour. 
+
+Conditioned and naturally brewed using the top fermentation method, Coopers 'Dark' is made using roasted and chocolate malts, giving it a rich dark colour and unique flavour. 
+
+Coopers Dark Ale has no additives and no preservatives.",2010-07-22T20:00:00.000Z
+129,441,Cinder Cone Red,3,33,5.4,0,0,0,"Cinder Cone Red's diverse selection of hops and barley captivates thirsty palates with its toffee-like flavor, intense citrus aroma and defined bitterness.
+
+Located on the northern slope of Mt. Bachelor, the Cinder Cone was also known as \Red Hill\"" due to its reddish color that is revealed as the seasons change",2000-01-01T00:00:00.000Z
+130,562,LTD 02 Lager,7,90,6.4,0,0,0,,2010-07-22T20:00:00.000Z
+131,189,Saison Vielle Provision,11,142,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+132,130,Organic Barley Wine Ale 2005,11,142,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+133,562,Old Boardhead 2006,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+134,622,Blue Dot Double India Pale Ale,3,32,7,0,0,0,,2010-07-22T20:00:00.000Z
+135,562,Nugget,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+136,1175,American Pale Ale,3,26,5.7,,,,,2010-07-22T20:00:00.000Z
+137,236,471 Extra ESB,11,142,7.8,0,0,0,,2010-07-22T20:00:00.000Z
+138,935,Odell Red Ale,3,33,6.5,0,0,0,"The Rocky Mountain Goat is no ordinary goat. Just like Odell Red is no ordinary red. 
+
+We took the American-style red to a whole new level by adding a variety of aggressive American hopsâ€”giving this ale a distinctive fresh hop aroma and flavor. 
+
+We think you'll agree this red has some serious kick.",2010-07-22T20:00:00.000Z
+139,255,Haymaker Extra Pale Ale,11,142,5.6,,,,,2010-07-22T20:00:00.000Z
+140,671,Summer Lightning,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+141,335,Long Leg English Fuggles Hop Ale,11,142,4.1,,,,,2010-07-22T20:00:00.000Z
+142,447,Pale Ale - Dick's Brewing,3,26,5,,,,,2010-07-22T20:00:00.000Z
+143,447,Silk Lady,3,26,4.4,0,0,0,,2010-07-22T20:00:00.000Z
+144,447,Danger Ale,3,38,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+145,447,Irish Style Ale,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+146,1392,Yeti Special Export,8,95,7,0,0,0,,2010-07-22T20:00:00.000Z
+147,1151,Steelie Brown Ale,3,38,4.3,,,,,2010-07-22T20:00:00.000Z
+148,441,Bond Street 19th Anniversary,11,142,8.7,0,0,0,,2010-07-22T20:00:00.000Z
+149,1151,Trumpeter Stout,3,42,10,,,,,2010-07-22T20:00:00.000Z
+150,1264,Nitro Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+151,62,Fourteen,11,142,9.46,0,0,0,,2010-07-22T20:00:00.000Z
+152,919,Old Stock Ale 2007,1,13,11.7,0,0,0,,2010-07-22T20:00:00.000Z
+153,160,Cold Hop,1,2,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+154,742,Hitachino Nest Espresso Stout,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+155,433,Witte,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+156,432,Slaapmutske Triple Nightcap,11,142,8.1,0,0,0,,2010-07-22T20:00:00.000Z
+157,723,Biere de Mars,1,13,7,0,0,0,A sustaining beer that is brewed to comfort in the gusty ides of March and welcome in a wealth of warmer weather.,2010-07-22T20:00:00.000Z
+158,300,Kerst Pater Special Christmas Beer,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+159,432,Zoetzuur Flemish Ale,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+160,869,WPA (Wheat Pale Ale),11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+161,869,Smoked Hefe,8,95,5.2,,,,,2010-07-22T20:00:00.000Z
+162,1084,The Unforgiven Amber Ale,3,33,5.8,0,0,0,,2010-07-22T20:00:00.000Z
+163,192,Strange Ghost,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+164,595,Duke IPA,3,31,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+165,595,Broad Axe Stout,3,42,5,0,0,0,,2010-07-22T20:00:00.000Z
+166,595,Northern Light Lager,8,95,4.4,0,0,0,,2010-07-22T20:00:00.000Z
+167,31,Podge Belgian Imperial Stout,3,42,10.5,0,0,0,,2010-07-22T20:00:00.000Z
+168,307,Okocim Porter,2,25,8.3,0,0,0,,2010-07-22T20:00:00.000Z
+169,458,1809,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+170,433,Pannepot,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+171,604,Samurai,11,142,5.1,0,0,0,"Looking for something a little different? Brewed with rice and barley malts, Samurai is an easy drinking, unfiltered ale that changes the status quo for unfiltered beers. The addition of rice gives Samurai a slightly fruity, crisp, refreshing and clean taste. This is definitely not your everyday unfiltered beer.",2010-07-22T20:00:00.000Z
+172,122,Crystal Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+173,177,Gavroche French Red Ale,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+174,1138,Coney Island Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+175,191,La BiÃ¨re des Collines van de Saisis,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+176,211,Dark Beer / StiftsbrÃ¤u,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+177,723,LuciÃ©rnaga,5,64,6.5,0,0,0,"An artisan pale ale brewed in the Grand Cru tradition. Enjoy its golden effervescence and gentle hop aroma. Coriander and Grains of Paradise round out the spicy palate, melting o so softly into a silken finish of hoppiness and bliss! Make any season a celebration!",2010-07-22T20:00:00.000Z
+178,202,CuvÃ©e des Champions 2003-2004,5,70,0,0,0,0,,2010-07-22T20:00:00.000Z
+179,859,Beer Geek Breakfast,3,43,7.5,0,0,0,"Breakfast is the most important meal of the day, many say, and if you are a beer geek there is no better way to start the day than with a powerful, complex morning stout. The unique mix of oats and coffee gives this beer large body and power, while the coffee, at the same time, creates a nice balance.",2010-07-22T20:00:00.000Z
+180,432,Flemish Primitive Wild Ale (Spoon Whacker),11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+181,39,Bock,7,90,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+182,810,Double India Pale Ale,3,26,8.6,0,0,0,,2010-07-22T20:00:00.000Z
+183,984,Old Bawdy 2006,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+184,397,Extra Strong Vintage Ale,11,142,7.5,0,0,0,"If fine wine were beer it would no doubt be Coopers Extra Strong Vintage Ale. This strong ale imparts rich full flavours that are suitable for maturation. Brewed with choice malts and an extended top fermentation, Coopers Extra Strong Vintage Ale will improve with age, becoming more interesting and complex in flavour for up to 18 months. The results are well worth the wait!",2010-07-22T20:00:00.000Z
+185,481,Certified Organic India Pale Ale,3,26,7,0,0,0,,2010-07-22T20:00:00.000Z
+186,481,Certified Organic Porter,2,25,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+187,481,Certified Organic Extra Pale Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+188,481,Certified Organic Amber Ale,3,33,4.8,0,0,0,"Eel River Brewing Company, brewers of California's first Certified Organic Ale, proudly brings you our Organic Amber Ale. Unique in flavor and purity, this medium bodied beer has a hoppy bouquet and a distinctive rich taste with a caramel-like sweetness that is balanced with a liberal dose of certified organic Pacific Gems and Hallertau hops, imported from New Zealand. Pure taste, pure ingredients, pure good.",2010-07-22T20:00:00.000Z
+189,706,Farm House Ale,11,142,6.7,0,0,0,,2010-07-22T20:00:00.000Z
+190,255,Beer Town Brown,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+191,890,Tanners Jack,11,142,4.4,0,0,0,,2010-07-22T20:00:00.000Z
+192,62,Mephistopheles Stout,3,42,16.03,0,0,0,,2010-07-22T20:00:00.000Z
+193,923,NÃ¸gne Ã˜ Brown Ale,3,38,4.5,0,0,0,"A dark brown English ale, in which classic English malts meet the spicy hoppiness of the new world.  Recommended serving temperature 8Â°C/45Â°F. Goes very well with â€˜pub grub.â€™",2010-07-22T20:00:00.000Z
+194,1204,Vertical Epic 07.07.07,11,142,8.4,0,0,0,,2010-07-22T20:00:00.000Z
+195,1136,Ringwood Brewery Old Thumper Extra Special Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+196,1136,Export Ale,3,26,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+197,950,Bourbon Barrel Porter,11,142,9.1,0,0,0,,2010-07-22T20:00:00.000Z
+198,1204,Old Guardian Barley Wine 2007,11,142,11.26,0,0,0,,2010-07-22T20:00:00.000Z
+199,892,White Christmas,11,142,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+200,175,Winter,11,142,10.5,0,0,0,,2010-07-22T20:00:00.000Z
+201,765,Undercover Investigation Shut-Down Ale,3,26,9.28,0,0,0,,2010-07-22T20:00:00.000Z
+202,727,Harvest Ale 2006,1,13,11.6,0,0,0,,2010-07-22T20:00:00.000Z
+203,202,Classic Gueuze,5,70,0,0,0,0,,2010-07-22T20:00:00.000Z
+204,1315,Gueuze-Lambic,5,70,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+205,484,Schwarzbier / Dunkel,7,86,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+206,779,Sawtooth Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+207,779,Pole Star Pilsner,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+208,935,90 Shilling,1,7,5.3,0,0,0,"We introduced 90 Shilling, our flagship beer, at our opening party in 1989. For a while, we'd been wondering - what would happen if we lightened up the traditional Scottish ale? The result is an irresistibly smooth and delicious medium-bodied amber ale. The name 90 Shilling comes from the Scottish method of taxing beer. Only the highest quality beers were taxed 90 Shillings. A shilling was a British coin used from 1549 to 1982. We think you'll find this original ale brilliantly refreshing, and worth every shilling.",2010-07-22T20:00:00.000Z
+209,905,Sunshine Wheat,11,116,4.8,0,0,0,"SUNSHINE WHEAT is a great beer for trouncing thirst.  Yet, it has a depth of character that inspires a quiet momentâ€™s reflection. Sunshine Wheat swirls in the mouth with ripples of coriander and orange peel tartness, settling nicely into a tranquil sea of apple and honey tones.  A filtered wheat beer, Sunshine offers a crisp, refreshing alternative to heavier-bodied heffe-weizens.",2010-07-22T20:00:00.000Z
+210,174,Grand Cru,11,142,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+211,70,Der Weisse Bock,4,55,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+212,176,Stouterik / The Brussels Stout,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+213,779,Black Jack Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+214,161,Lunar Ale,3,38,5.1,0,0,0,"Our first new year-round brand launch since 1996, Lunar Ale is in a category all its own. Brewed using a unique aromatic yeast, this refreshing variety is best described as a cloudy brown ale with a complex, malty aroma and flavor, and a crisp, dry finish.",2010-07-22T20:00:00.000Z
+215,604,Denver Pale Ale / DPA,3,26,5.4,0,0,0,"Historically Great Divideâ€™s flagship beer, DPAâ€™s record speaks for itself. By continually garnering national and international recognition, DPA has risen to become one of the most award-winning English-style pale ales in the world.
+
+Sporting a brilliant copper hue and an assertive floral hop aroma, DPA is known for its smooth, malty middle, which is expertly complemented with hearty and complex hop flavor. DPAâ€™s extraordinary hop finish is marked by crisp yet moderate hop bitterness. Its well-balanced profile makes DPA the perfect beer to accompany a hearty mountain picnic or a night on the town. For those who seek beers characterized by excitement, flavor and distinction, Denver Pale Ale is the natural choice.",2010-07-22T20:00:00.000Z
+216,296,Grotten Flemish Ale,5,72,7.7,0,0,0,,2010-07-22T20:00:00.000Z
+217,1316,Grand Cru,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+218,501,Summer Common,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+219,1185,Golden Ale,11,142,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+220,174,Ambree,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+221,296,Pater 6,5,60,6.7,0,0,0,"This name became a reference. This beer is mostly pointed out with its product name: â€œa Paterkeâ€. 
+
+This â€œPaterkeâ€ is a chestnut coloured dark beer with a high fermentation (6.7 alcohol content) and a full taste.",2010-07-22T20:00:00.000Z
+222,187,Blanche de Namur,11,142,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+223,905,Skinny Dip,3,37,4.2,0,0,0,"Ever tried a Skinny Dip? You wouldn't be alone. Featured by both Men's Journal and the Today Show as a favorite summer brew, this full-bodied, highly drinkable beer makes a splash every summer in our Seasonal line-up. Cascade hops frolic with a hint of lime leaf, giving the beer complexity that's surprisingly refreshing.",2010-07-22T20:00:00.000Z
+224,174,Blanche Double,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+225,236,Summer Bright Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+226,905,Mothership Wit,11,142,4.8,0,0,0,"Our first venture into organically-produced beer, Mothership Wit Organic Wheat Beer elevates the zesty Wit or White beers of Belgium. Our far-flung Beer Rangers affectionately refer to our Fort Collins brewery as the Mothership, a name that conjures images of earth shot from space and the interconnectivity of it all. Mothership Wit is brewed with wheat and barley malt, as well as coriander and orange peel spicing resulting in a balance of citrus and sour flavors held in suspension by a bright burst of carbonation.",2010-07-22T20:00:00.000Z
+227,696,Lia Fail Stone of Destiny Ale,11,142,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+228,395,Premium XB Bluebird Bitter,11,142,4.4,0,0,0,,2010-07-22T20:00:00.000Z
+229,1056,IPA,3,31,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+230,167,Houblon,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+231,935,Double Pilsner,8,95,8.1,0,0,0,,2010-07-22T20:00:00.000Z
+232,708,Creamy Dark,8,95,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+233,757,Premium Pils Edelherb,11,142,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+234,590,StÃ¼venbrÃ¤u Maibock,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+235,590,Jack of Spades Schwarzbier,7,86,3.9,0,0,0,,2010-07-22T20:00:00.000Z
+236,1179,Shiner Hefeweizen,4,50,5.4,0,0,0,,2010-07-22T20:00:00.000Z
+237,1154,Sapporo Premium Beer,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+238,501,Dark German Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+239,44,Spring Heat Spiced Wheat,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+240,567,Gose,11,142,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+241,1176,Pils,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+242,1274,New,8,95,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+243,369,Eisenbahn Defumada,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+244,369,Eisenbahn Escura,7,86,0,0,0,0,,2010-07-22T20:00:00.000Z
+245,369,Eisenbahn Dourada,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+246,501,Fallen Angel Sweet Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+247,604,Hot Shot ESB,1,5,5,0,0,0,"HotShot ESB is an easy-drinking and remarkably smooth Extra Special Bitter, brewed in the classic-English style. More assertively hopped than ordinary bitters, light copper-colored HotShot showcases clean hop flavors, balanced by its slightly fruity nose and light-caramel malt character.
+
+While HotShot is one of Great Divideâ€™s easiest-drinking and lower alcohol beers, its complex flavor profile makes it the perfect session beer for craft beer lovers.",2010-07-22T20:00:00.000Z
+248,312,Porter,2,25,8,0,0,0,,2010-07-22T20:00:00.000Z
+249,923,NÃ¸gne Ã˜ Imperial Stout,3,43,9,0,0,0,"We think the russian tsar would have liked his stout this way. A dark, rich ale in which a generous sweetness with roasted malt bitterness.  Serving temp.10Â°C/50Â°F. Great with vanilla ice cream or dark chocolate.",2010-07-22T20:00:00.000Z
+250,923,NÃ¸gne Ã˜ Porter,2,25,7,0,0,0,"In this quite dark ale, dark malts provide flavors of coffee and dried fruit. Recommended serving temperature 10Â°C/50Â°F.  Try with dark chocolate, cheese, or red meat dishes.",2010-07-22T20:00:00.000Z
+251,923,NÃ¸gne Ã˜ Pale Ale,3,26,6,0,0,0,A refreshing light and hoppy ale. Probably our best allrounder.  Recommended serving temperature 8Â°C/45Â°F.  Ideal with barbequed or smoked meat dishes.,2010-07-22T20:00:00.000Z
+252,501,Eccentric Belgian Wheat,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+253,1265,Oatmeal Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+254,1265,Amber Light,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+255,1265,New World Wheat,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+256,1265,Maibock,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+257,1265,Ironwood Dark,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+258,1265,Cascade Amber,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+259,1265,Alpine Gold,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+260,624,Illuminator Doppelbock,7,90,6.8,0,0,0,,2010-07-22T20:00:00.000Z
+261,624,Old Princeton Landing IPA,3,31,6.1,0,0,0,,2010-07-22T20:00:00.000Z
+262,624,Paddle Out Stout,3,42,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+263,624,Pillar Point Pale Ale,3,26,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+264,624,Sandy Beach Blonde Hefeweizen,4,50,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+265,624,Mavericks Amber Ale,3,33,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+266,624,Harbor Light Ale,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+267,1126,Leroy Barleywine,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+268,1126,Oatmeal Stout,3,42,6,0,0,0,,2010-07-22T20:00:00.000Z
+269,1126,Amber,3,33,5,0,0,0,,2010-07-22T20:00:00.000Z
+270,1126,Blur IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+271,1126,Pelican Pale,3,26,5,0,0,0,,2010-07-22T20:00:00.000Z
+272,1126,Brew Ribbon,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+273,701,Casey Jones Imperial IPA,3,31,7.25,0,0,0,,2010-07-22T20:00:00.000Z
+274,701,Fairfax Coffee Porter,11,142,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+275,701,Epiphany Ale,3,33,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+276,701,IPA,3,31,6,0,0,0,,2010-07-22T20:00:00.000Z
+277,701,Chazz Cat Rye,8,95,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+278,701,Shining Star Pale Ale,3,26,5,0,0,0,,2010-07-22T20:00:00.000Z
+279,701,Honey Bunny Blonde Ale,8,95,5.8,0,0,0,,2010-07-22T20:00:00.000Z
+280,701,Kent Lake Kolsch,11,142,4,0,0,0,,2010-07-22T20:00:00.000Z
+281,892,Old Blarney Barleywine,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+282,892,Irish Dry Stout,3,42,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+283,892,Kilt Lifter Scottish Ale,1,15,8,0,0,0,,2010-07-22T20:00:00.000Z
+284,892,India Pale Ale,3,26,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+285,588,Blonde Bock,7,90,7,0,0,0,,2010-07-22T20:00:00.000Z
+286,588,Schwarzbier,7,86,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+287,588,Czech Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+288,385,Yule Tide,5,61,10,0,0,0,"The latest addition to Baltimore's own Clipper City Brewing Company - Mutiny Fleet is their holiday brew Yule Tide, a Belgian style triple ale, which like the rest of the Mutiny Fleet is distributed in 22 ounce bombers.",2010-07-22T20:00:00.000Z
+289,588,Pilsner,11,142,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+290,308,Warka Strong,8,95,7,0,0,0,European Strong Lager,2010-07-22T20:00:00.000Z
+291,1074,Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+292,1074,ESB,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+293,1074,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+294,1074,Kristall Weizen,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+295,1163,ESB (Extra Special Blizzard),11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+296,677,Paint the Town Red,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+297,677,Golden Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+298,1004,Train Wreck IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+299,1004,Zone 7 Porter,2,25,3.8,0,0,0,,2010-07-22T20:00:00.000Z
+300,1004,Pleasanton Pale,3,26,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+301,1004,Island Wheat,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+302,707,Hefeweizen,4,50,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+303,707,Red Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+304,707,Penalty Shot Porter,2,25,5.8,0,0,0,,2010-07-22T20:00:00.000Z
+305,707,India Pale Ale,3,26,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+306,707,Grid Iron Amber Ale,3,33,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+307,707,Boys of Summer Wheat,8,95,3.5,0,0,0,,2010-07-22T20:00:00.000Z
+308,523,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+309,523,Red Ale,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+310,523,Hefeweizen,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+311,523,Bitter,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+312,523,Double IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+313,133,Tatonka Stout,3,43,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+314,133,P.M. Porter,2,25,6.4,0,0,0,,2010-07-22T20:00:00.000Z
+315,133,Jeremiah Red,2,22,7.3,0,0,0,,2010-07-22T20:00:00.000Z
+316,133,Piranha Pale Ale,3,26,5.7,0,0,0,,2010-07-22T20:00:00.000Z
+317,133,Harvest Hefeweizen,4,50,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+318,133,Brewhouse Blonde,11,142,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+319,133,Nutty Brewnette,3,38,5.9,0,0,0,,2010-07-22T20:00:00.000Z
+320,515,India Pale Ale (IPA),3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+321,515,Belgian Tripel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+322,515,Belgian Abbey,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+323,515,Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+324,515,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+325,515,Best Bitter,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+326,515,Hefe Weizen,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+327,515,Pilsner,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+328,515,KÃ¶lsch,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+329,727,Harvest Ale 2005 (Whisky),11,142,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+330,727,Harvest Ale 2005 (Calvados),11,142,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+331,727,Harvest Ale 2005 (Sherry),11,142,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+332,1072,Old Crustacean Barleywine 2006,11,142,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+333,236,Avalanche Amber,3,33,5.4,0,0,0,,2010-07-22T20:00:00.000Z
+334,236,Hefe Proper Ale,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+335,935,Levity Amber Ale,3,33,5.1,0,0,0,"Levity is our lighter take on the amber ale. Munich and honey malts give it a full-bodied flavor and a happy-go-lucky personality. Then we let the finishing hops shine, for a beer that's crisp instead of bitter, as many ambers are. Levity was named by our brewers partly for its light color - and partly for the way it just refuses to take itself too seriously. Hey, we could all use a little levity once in a while.",2010-07-22T20:00:00.000Z
+336,935,Easy Street Wheat,11,116,4.6,0,0,0,"Light and refreshing, Easy Street Wheat is an unfiltered American-style wheat beer. Leaving in the yeast gives the beer a nice, smooth finish and a slightly citrusy flavor. Easy Street Wheat gets its name by brewers \taking it easy\"" and not filtering the beer. However",2024-01-09T02:18:43.000Z
+337,161,Boulevard Pale Ale,3,26,5.4,0,0,0,"Boulevard Pale Ale is a smooth, fruity, well-balanced beer with year-round appeal. A variety of caramel malts impart a rich flavor and amber color, while liberal use of whole hops adds zest and aroma. Pale Ale is the first beer we brewed, and continues to be a perennial favorite.",2010-07-22T20:00:00.000Z
+338,161,Bully! Porter,2,25,5.4,0,0,0,"The intense flavors of dark-roasted malt in Boulevardâ€™s rendition of the classic English porter are perfectly balanced by a generous and complex hop character. Bully! Porterâ€™s robust nature makes it the ideal companion to a variety of foods, from seafood to chocolate.",2010-07-22T20:00:00.000Z
+339,795,Bovine Belgian Winter Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+340,795,XX Black Angus Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+341,795,Blarney Stone Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+342,795,Bison Brown Ale,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+343,795,Prairie Pale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+344,795,Wildcat Wheat,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+345,161,Boulevard Dry Stout,3,42,4.9,0,0,0,"Velvety black and perfectly opaque, our bottled Dry Stout is the somewhat livelier companion to our popular draught version of this enduring style. This surprisingly smooth, drinkable beer is a delightful harmony of smoky roasted flavors and tangy, coffee-like notes.",2010-07-22T20:00:00.000Z
+346,160,Planet Porter / Boulder Porter,2,25,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+347,195,Amber,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+348,187,Blanche des Moines,11,142,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+349,187,Triple Moine,11,142,7.2,0,0,0,,2010-07-22T20:00:00.000Z
+350,272,Arabier,5,65,9,0,0,0,"An arabier is a pure malt beer 8Â°vol/alc brewed with flower Nugget-hops from Poperinge. It has the special dry-hopping taste and aroma, so appreciated by beer lovers all over the world. It is one of the two main beers from De Dolle Brouwers throughout the year. Aging time is limited due to the fact that hop bitterness is declining with the time. Store arabier cool and dark and serve cool at 10Â°C. Cheers!",2010-07-22T20:00:00.000Z
+351,272,Bos Keun,5,65,8.9,0,0,0,,2010-07-22T20:00:00.000Z
+352,175,Grand Cru,11,142,10.5,0,0,0,,2010-07-22T20:00:00.000Z
+353,272,Oerbier,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+354,272,Dulle Teve / Mad Bitch,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+355,278,Vuuve,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+356,284,Gouden Carolus Tripel,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+357,284,Gouden Carolus Ambrio 1471,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+358,269,Pauwel Kwak,11,142,8,0,0,0,"LOOK:
+Kwak is recognisable by its deep bright amber colour and a dense, creamy coloured head. The pale wood of the glass holder makes a pleasant contrast with the beer.
+
+SMELL:
+You will smell a mellow, fruity and malty aroma with a slightly spicy character (coriander, hops). Additional earthy and very subtle aromas of banana and perhaps also a whiff of pineapple or mango in the background.
+
+TASTE:
+Discover a very mellow, fruity attack, a nougat-like solidity, and a slightly spicy character with hints of liquorice passing into a warm finish that reminds you of caramelised banana. The bitterness always remains in the background but in the end emerges delicately.",2010-07-22T20:00:00.000Z
+359,285,Delirium NoÃ«l,5,72,10,0,0,0,,2010-07-22T20:00:00.000Z
+360,7,Rochefort 10,5,62,11.3,0,0,0,"Reddish-brown colour, with a very compact head and an aroma of figs, feels like honey in the mouth. The alcohol profile is a major component in the flavour of this rich ale. It is very similar to 6 and 8, but has much more of everything. Some may find the high alcohol content to be disagreeable.",2010-07-22T20:00:00.000Z
+361,167,McChouffe,3,29,8.5,0,0,0,"Description : Dark Ale, strong, spicy, lightly hoppy, with evoluting taste. Natural Beer, bottle refermented, unfiltered, not pasteurised and without any additives
+
+Alcohol : 8,5% alc./vol.
+
+Original gravity : 16 Â°Plato
+
+Storage : Store the bottles vertically in a cold place, sheltered from light. The yeast deposit can either be drunk or left according to taste
+
+Serve at : 8 to 12Â°C (botlle)",2010-07-22T20:00:00.000Z
+362,236,471 Double IPA,3,31,9.2,0,0,0,,2010-07-22T20:00:00.000Z
+363,167,La Chouffe Golden Ale,5,65,8,0,0,0,,2010-07-22T20:00:00.000Z
+364,184,Saison Voisin,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+365,322,Olde Expensive Ale,1,13,0,0,0,0,,2010-07-22T20:00:00.000Z
+366,110,Quadrupel,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+367,110,Tripel,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+368,110,Dubbel,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+369,903,Old Growler,2,25,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+370,431,Urthel Vlaemse Bock,7,90,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+371,296,Watou Tripel,5,61,7.5,0,0,0,The flavour of this beer is pleasantly soft and is characterized by a delicate bitterness where the balance between malt and hop is based upon a fruity orange taste with a straight fresh after taste (7.5% alcohol content),2010-07-22T20:00:00.000Z
+372,586,Matilda,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+373,638,Old Engine Oil Special Reserve (aged in malt whisky casks),11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+374,935,Imperial Stout,3,42,7.1,0,0,0,,2010-07-22T20:00:00.000Z
+375,757,EKU 28,7,90,11,0,0,0,,2010-07-22T20:00:00.000Z
+376,757,Eisbock,7,90,9.2,0,0,0,,2010-07-22T20:00:00.000Z
+377,1115,Doppelbock Dunkel,7,92,8.5,0,0,0,"DoppelBock Dunkel has a pleasant full and creamy body, with a cofeeish aroma. Nicely warming with toffeelike malty sweetness, balanced by a hoppy-bitterness in the finish.",2010-07-22T20:00:00.000Z
+378,1385,Special London Ale,1,13,6.4,0,0,0,,2010-07-22T20:00:00.000Z
+379,1385,Oatmeal Stout,3,42,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+380,128,Super,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+381,128,Wayan,11,142,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+382,160,GABF 25th Year Beer,1,5,0,0,0,0,,2010-07-22T20:00:00.000Z
+383,39,Old Foghorn 2006,11,142,9.4,0,0,0,,2010-07-22T20:00:00.000Z
+384,21,Grand Cru 2006,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+385,363,Cerveza Negra,3,42,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+386,363,Cerveza Diablo,8,95,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+387,363,Cerveza Roja,7,84,6,0,0,0,,2010-07-22T20:00:00.000Z
+388,300,Buffalo Belgian Stout,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+389,238,Rader AmbrÃ©e,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+390,238,Rader Blonde,11,142,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+391,626,Toleration,11,142,4.4,0,0,0,,2010-07-22T20:00:00.000Z
+392,1185,English Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+393,425,Ripon Jewel Ale,3,26,5.8,0,0,0,,2010-07-22T20:00:00.000Z
+394,200,XTra,11,142,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+395,723,Bam BiÃ¨re,5,74,4.5,0,0,0,"An artisan farmhouse ale that is golden, naturally cloudy, bottle conditioned and dry hopped for a perfectly refreshing balance of spicy malts, hops and yeast.",2010-07-22T20:00:00.000Z
+396,1115,Samichlaus Bier 2005,7,90,14,0,0,0,,2010-07-22T20:00:00.000Z
+397,609,Barleywine,3,35,10,0,0,0,"Our American-style Barleywine undergoes a three hour boil to intensify the caramel malts and the enormous Pacific Northwest hop charge. The result is a rich, estery brew with toffee notes and citrus hop flavors layered throughout. Enjoy this brew fresh today or lay it down for aging to see how the flavors of each vintage evolve.",2010-07-22T20:00:00.000Z
+398,1177,Old Godfather,11,142,10.2,0,0,0,,2010-07-22T20:00:00.000Z
+399,1023,Aventinus Weizen-Eisbock,7,90,12,0,0,0,,2010-07-22T20:00:00.000Z
+400,1023,Aventinus Weizenstarkbier / Doppel Weizen Bock,4,55,8.2,0,0,0,"Dark-ruby, almost black-colored and streaked with fine top-fermenting yeast, this beer has a compact and persistent head. This is a very intense wheat doppelbock with a complex spicy chocolate-like arome with a hint of banana and raisins. On the palate, you experience a soft touch and on the tongue it is very rich and complex, though fresh with a hint of caramel. It finishes in a rich soft and lightly bitter impression.",2010-07-22T20:00:00.000Z
+401,905,New Belgium Trippel Belgian Style Ale,5,61,8.5,0,0,0,"Our Trippel Belgian Style Ale (pronounced triple) opens with a bold blast of hops that slowly gives way to the fruity esters implied by our Belgian yeast strain. The Three Graces hand-painted on the label are Zeusâ€™s daughters Aglaia (splendor), Euphrosyne (mirth) and Thalia (good cheer). In the Belgian tradition of brewing singles, doubles and triples, Trippel is the strongest with the longest fermentation. Remarkably smooth and complex, our bottle-conditioned Trippel is spiced with a trace of coriander.",2010-07-22T20:00:00.000Z
+402,249,Hennepin Farmhouse Ale,11,142,7.7,0,0,0,,2010-07-22T20:00:00.000Z
+403,905,Abbey Belgian Style Ale,5,60,7,0,0,0,"Winner of four World Beer Cup medals and eight medals at the Great American Beer Fest, Abbey Belgian Ale is the Mark Spitz of New Belgiumâ€™s lineup - but it didnâ€™t start out that way. When Jeff and Kim first sampled the beer at the Lyons Folks Fest, reviews were mixed at best. One of founder Jeffâ€™s first two Belgian style homebrews (along with Fat Tire), Abbey is a Belgian dubbel (or double) brewed with six different malts and an authentic Belgian yeast strain. Abbey is bottle-conditioned, weighs in at 7.0% alcohol by volume, and pairs well with chocolate (or boldly served by itself) for dessert.",2010-07-22T20:00:00.000Z
+404,1142,India Pale Ale,3,26,6.8,0,0,0,,2010-07-22T20:00:00.000Z
+405,1142,Bigfoot 2006,11,142,9.6,0,0,0,,2010-07-22T20:00:00.000Z
+406,1054,Iron Fist Pale Ale,3,26,0,0,0,0,An amber pale ale dry hopped with a blend of American hops.,2010-07-22T20:00:00.000Z
+407,586,Demolition,8,95,8,0,0,0,,2010-07-22T20:00:00.000Z
+408,723,Oro de Calabaza,5,65,8,0,0,0,Brewed in the Franco-Belgian tradition of strong golden ales.  Spicy and peppery with a gentle hop bouquet and the beguiling influence of wild yeast.,2010-07-22T20:00:00.000Z
+409,723,La Roja,3,33,7.2,0,0,0,"An artisan amber ale brewed in the Flanders tradition.  Deep amber with earthy caramel, spice, and sour fruit notes developed through natural barrel aging.  Unfiltered, unpasteurized and blended from barrels ranging in age from two to ten months.",2010-07-22T20:00:00.000Z
+410,919,Brother Thelonious,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+411,441,Hop Trip Fresh Hop Pale Ale,3,26,5.5,0,0,0,"This Fresh Hop Pale Ale is all about celebrating the hop harvest in the fall.  Fresh picked hops have to be added to the brew immediately and in abundance.  Roughly 270 pounds of Crystal hops from Doug Weathers' farm outside Salem, Oregon will be added to the 50 barrel batch in addition to some dry kilned whole flower hops.  That adds up to approximately 5.5 pounds of hops per barrel brewed.  Another deliciously interesting beer in our Bond Street Series.",2010-07-22T20:00:00.000Z
+412,130,Organic Belgian Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+413,1192,Nieuw Ligt Grand Cru 2006,11,142,12,0,0,0,,2010-07-22T20:00:00.000Z
+414,604,Hibernation Ale,1,13,8.1,0,0,0,"Great Divideâ€™s award-winning Hibernation Ale is Coloradoâ€™s original strong ale â€“ it has been our winter seasonal each year since 1995. Since that time, Hibernation has become the most sought-after winter beer in Colorado. Hibernationâ€™s massive flavors are so intense that it requires over three months of aging each year. Each summer, while our brewers are still spending their weekends in flip-flops and shorts, they prepare for Julyâ€™s Hibernation brewing schedule.
+
+We cellar Hibernation until late October, when it reaches the peak of perfection. This lengthy aging process gives Hibernation its revered malty richness, complex hop profile and hearty warming character, which is perfect right out of the bottle or cellared for longer periods of time. Hibernation is a lively treat that really beats the winter chill. This scrumptious, collectible, and imminently cellarable ale is only available for six weeks each year, from November 1 to December 15.  Hibernation Ale is the perfect gift or accompaniment to your winter festivities.",2010-07-22T20:00:00.000Z
+415,623,Wee Heavy Winter Ale,1,15,0,0,0,0,,2010-07-22T20:00:00.000Z
+416,905,2Â° Below,1,5,6.6,0,0,0,"Pull on your wool socks and crack open a 2Â° Below Ale. This tasty winter warmer started life as a small batch beer brewed for the Al Johnson Uphill Downhill â€“ a telemark ski race in Crested Butte, Colorado. The Uphill Downhill celebrates the exploits of Al Johnson, letter carrier extraordinaire, who delivered mail by ski in the late 1800â€™s. Dry hopping during fermentation creates a floral nose with a hint of pepper and spicy, subtle undertones. 2Â° Below provides a bright, hoppy palate and a cheery warm afterglow.",2010-07-22T20:00:00.000Z
+417,425,Monkey Wrench Dark Ale,2,25,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+418,425,Old Legover,11,142,4.1,0,0,0,,2010-07-22T20:00:00.000Z
+419,604,Hercules Double IPA,3,31,9.1,0,0,0,"Hoppier, maltier and with more alcohol than a standard IPA, Hercules Double IPA definitely is not for the faint of heart. Hercules Double IPA is, however, an elixir fit for the gods. A brash but creamy wonder, Hercules pours a deep orange-coppery color, forming substantial lace in the glass. Hercules Double IPA delivers a huge amount of piney, floral, and citrusy hop aroma and flavor from start to finish. A hefty backbone of nutty, toffee-like malt character balances Herculesâ€™ aggressive, punchy hop profile.",2010-07-22T20:00:00.000Z
+420,604,Fresh Hop Pale Ale,3,26,6.1,0,0,0,"The September hop harvest is a once-a-year opportunity to brew with fresh hops, also called â€œwet hops.â€ Given the perishable nature of just-harvested hop cones, they are shipped overnight to Great Divide shortly after harvest. The morning of the scheduled hop delivery in Denver, Great Divideâ€™s brewers begin brewing Fresh Hop and are ready to hop the beer just as the fresh hops are delivered.
+
+Using fresh hops is a big endeavor, requiring four to five times the volume of hops compared to the usual process of using pelletized hops. This complex process brings impressive results: Fresh Hop is an American-Style Pale Ale with moderate hop bitterness marked by a unique and intensely grassy hop flavor and aroma. Fresh Hop is a superbly refreshing, medium bodied, light-copper colored pale ale.",2010-07-22T20:00:00.000Z
+421,98,Twisted Thistle India Pale Ale,3,26,6.1,0,0,0,,2010-07-22T20:00:00.000Z
+422,1315,Espresso Stout,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+423,441,Inversion IPA,3,31,6.8,0,0,0,"After several months of experimentation, energy and obsession, Deschutes Breweryâ€™s brewers have triumphed once again.  Inversion I.P.A.'s trio of American hops delivers an over-the-top nose with hints of orange and grapefruit.  Inversion is then dry-hopped for seven days resulting in an added hoppy kick.  To balance the hop character, Deschutesâ€™ brewers used crystal and caraston malts that weave throughout the beer providing soft, complex caramel flavors. 
+
+Just like clear days up on the mountain, Inversion I.P.A. will deliver a path to higher ground.  Inversion I.P.A. is a phenomenal NW-style I.P.A., beckoning all beer drinkers and enticing I.P.A. lovers to invert their world and find clarity above the routine of the everyday.",2010-07-22T20:00:00.000Z
+424,844,India Pale Ale,3,26,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+425,844,London Porter,2,25,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+426,742,Hitachino Nest Celebration Ale 2006,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+427,363,Rubia,8,95,6,0,0,0,,2010-07-22T20:00:00.000Z
+428,562,Session Premium Lager,8,95,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+429,156,Mocny BOSS / BOSS Beer,8,95,8.1,0,0,0,,2010-07-22T20:00:00.000Z
+430,127,La Rossa,7,90,7.2,0,0,0,,2010-07-22T20:00:00.000Z
+431,905,Blue Paddle Pilsener,7,77,4.8,0,0,0,"Climb on in and grab a paddle. Our first foray into lagered beers, Blue Paddle Pilsener-Lager, is a Czech style pilsener with a refreshing crispness from noble hops and a rich, malty finish. â€˜Blue Paddleâ€™ refers to the implement our warehouse managerâ€™s Grandma once used to lovingly paddle his a** when she caught him stealing sips of her beer. With more body than a traditional Belgian pils, Blue Paddle is reflective of Europeâ€™s finest pilseners.",2010-07-22T20:00:00.000Z
+432,367,Lager,8,95,4,0,0,0,,2010-07-22T20:00:00.000Z
+433,70,Hell,11,142,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+434,70,Pilsner,11,142,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+435,70,Ungespundet Lager Hefetrub,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+436,1188,Keller-Bier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+437,1264,Imperial Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+438,1264,Amber Ale,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+439,905,La Folie,11,142,6,0,0,0,"La Folie Wood-Aged Biere, is our original wood-conditioned beer, resting in French Oak barrels between one and three years before being bottled. . Peter Bouckaert, came to us from Rodenbach â€“ home of the fabled sour red. Our La Folie emulates the spontaneous fermentation beers of Peterâ€™s beloved Flanders with sour apple notes, a dry effervescence, and earthy undertones. New in 2010, we'll do a single bottling of La Folie for the year. Collect the 22oz unique to 2010 designed bottle and start a yearly wood-aged collection of goodness.",2010-07-22T20:00:00.000Z
+440,296,Abt 12,5,62,10,0,0,0,"The absolute top quality in the hierarchy of the St. Bernardus beers. It is also the beer with the highest alcohol content (10.50 %).
+A dark ivory coloured beer with a high fermentation. 
+
+The show piece of the brewery. Thanks to its soft and unconditionally genuine aroma, the beer can be smoothly tasted.  The Abt has a very fruity flavour.",2010-07-22T20:00:00.000Z
+441,195,Nostradamus,11,142,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+442,175,Triple,11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+443,168,Ultrabrune,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+444,277,PÃ¨re NoÃ«l,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+445,1375,Bah Humbug,1,13,6,0,0,0,,2010-07-22T20:00:00.000Z
+446,727,Harvest Ale 2005 (Port),11,142,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+447,727,Harvest Ale 2005,1,13,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+448,727,Moonraker,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+449,638,Old Engine Oil,2,25,6,0,0,0,,2010-07-22T20:00:00.000Z
+450,1043,Pitchfork Rebellious Bitter,11,142,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+451,638,Bitter and Twisted,11,142,3.8,0,0,0,,2010-07-22T20:00:00.000Z
+452,1185,India Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+453,1043,Old Slug Porter,2,25,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+454,744,Golden Abbot Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+455,744,Porter,2,25,7.1,0,0,0,,2010-07-22T20:00:00.000Z
+456,757,MÃ¶nchshof KellerbrÃ¤u,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+457,626,Nightmare,2,25,5,0,0,0,,2010-07-22T20:00:00.000Z
+458,205,Ur-Weisse,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+459,650,Schlenkerla Helles Lagerbier,11,142,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+460,743,Ondineke Oilsjtersen Tripel,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+461,1043,Ale Mary,3,26,6,0,0,0,,2010-07-22T20:00:00.000Z
+462,743,Jan de Lichte,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+463,1142,Bigfoot 2000,11,142,9.6,0,0,0,,2010-07-22T20:00:00.000Z
+464,222,Rauchbier Lager,11,142,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+465,14,Bourbon Imperial Stout,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+466,14,Witbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+467,14,Bavarian Bock,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+468,14,Heater,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+469,14,Harvest Brown,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+470,14,Brout,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+471,650,Aecht Schlenkerla Rauchbier MÃ¤rzen,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+472,650,Aecht Schlenkerla Rauchbier Weizen,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+473,757,Kapuziner Schwarz-Weizen,11,142,5.4,0,0,0,,2010-07-22T20:00:00.000Z
+474,70,Christmas Bock,7,90,6,0,0,0,,2010-07-22T20:00:00.000Z
+475,296,Prior 8,5,60,8,0,0,0,"This noble delicious beer with a high fermentation has a ruby purple colour with a full malty and fruity taste (8% alcohol content). 
+
+This beer has a beautiful round froth due to the second fermentation with a taste that creates a perfect balance between sweet and sour.",2010-07-22T20:00:00.000Z
+476,395,Old Man Ale,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+477,1056,Criminally Bad Elf,11,142,10.5,0,0,0,,2010-07-22T20:00:00.000Z
+478,1056,Very Bad Elf Special Reserve Ale,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+479,70,Weisse,4,50,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+480,757,MÃ¶nchshof Premium Schwarzbier,7,86,4.9,0,0,0,"Schwarzbier means \black beer\"" in German. It is a medium-bodied",2024-01-09T02:18:43.000Z
+481,296,St. Bernardus Tripel,5,61,8,0,0,0,"This beer, with high fermentation, has a pale amber colour and a flowery, fruity taste with a harmonious balance between sweet and sour (8% alcohol content). 
+This beer has a thick and vivid froth and strikes by its balanced taste with a delicate bitterness.",2010-07-22T20:00:00.000Z
+482,296,BiÃ¨re Blanche,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+483,1375,Wychcraft,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+484,1204,Double Bastard Ale,3,26,10,0,0,0,,2010-07-22T20:00:00.000Z
+485,7,Rochefort 6,3,29,7.5,0,0,0,"eddish colour, almost like autumn leaves, very consistent texture with a slightly spicy aroma and an intense taste of caramel, fruit, and hints of raisins. It is only brewed about once per year, representing approximately 1% of total beer production, thus is quite difficult to obtain.",2010-07-22T20:00:00.000Z
+486,277,Guldenberg,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+487,262,Westmalle Trappist Tripel,5,61,9.5,0,0,0,"Was first brewed in 1934 and the recipe has not changed since 1956. It is made with pale candy sugar and has a very pale color produced from a mash of light pilsener malts. Styrian Goldings hops are used along with some German varieties and the classic Saaz pilsener hop. After a long secondary fermentation, the Tripel Westmalle is bottled with a dose of sugar and yeast. This beer holds up well in the bottle over time and seems to soften with age.",2010-07-22T20:00:00.000Z
+488,590,Fire in the Hole!,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+489,590,Cow Palace Scotch Ale,1,15,6.8,0,0,0,,2010-07-22T20:00:00.000Z
+490,590,Toil & Trubbel Dubbel,11,142,8.1,0,0,0,,2010-07-22T20:00:00.000Z
+491,590,Abtskelder Tripel,11,142,8.4,0,0,0,,2010-07-22T20:00:00.000Z
+492,590,All-American Gold,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+493,511,Curator Dunkler Doppelbock,7,90,9,0,0,0,,2010-07-22T20:00:00.000Z
+494,511,Kloster Dunkel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+495,511,Kloster Edel-Hell,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+496,594,Teton Ale,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+497,534,Pilsener,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+498,230,Nickelbier,7,90,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+499,216,Edel-Pils,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+500,845,Weiss-Gold,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+501,225,Zwickelbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+502,225,Pils,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+503,225,Spezial,11,142,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+504,1120,WeiÃŸe,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+505,1120,Schwarzbier,7,86,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+506,1120,Pils,11,142,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+507,1120,Original NÂº 1 NaturtrÃ¼b,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+508,74,Schwarze,7,86,0,0,0,0,,2010-07-22T20:00:00.000Z
+509,74,Blonde,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+510,74,Rotgold-Pils,8,95,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+511,30,Spezial,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+512,30,Pils,11,142,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+513,204,Coronator Helle Doppelbock,7,90,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+514,204,See-Weizen Bio-Hefeweizen,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+515,204,Kellerpils,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+516,204,Pils,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+517,204,Kronenbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+518,1146,Dunkles Weissbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+519,1146,Festbier,7,84,0,0,0,0,,2010-07-22T20:00:00.000Z
+520,1146,Dunkles Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+521,1146,Weizen,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+522,1146,BrÃ¤ustatt Pils,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+523,1146,BrÃ¤ustatt Gold,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+524,205,Altbairisch Dunkel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+525,671,Pickled Santa,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+526,727,Manchester Star Ale,1,13,7.3,0,0,0,,2010-07-22T20:00:00.000Z
+527,189,Moinette Brune,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+528,192,Chocolat,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+529,190,BiÃ¨re de NoÃ«l,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+530,164,BiÃ¨re de Gamme,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+531,129,Panil BarriquÃ©e,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+532,183,CuvÃ©e du 7Ã¨me,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+533,192,Dark White,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+534,501,Festive Ale 2006,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+535,44,Green Valley Stone Mill Pale Ale,3,26,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+536,44,Green Valley Wild Hop Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+537,806,LÃ¶wen Weisse,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+538,1198,Herbstbier,7,86,0,0,0,0,,2010-07-22T20:00:00.000Z
+539,1198,Altbier,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+540,1198,Huusbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+541,217,Leermond Bier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+542,649,Original Ittinger KlosterbrÃ¤u,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+543,233,Huusbier Schwarz,2,25,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+544,233,Oktoberfest,4,55,0,0,0,0,,2010-07-22T20:00:00.000Z
+545,233,Weizentrumpf,4,50,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+546,233,Honey Brown Ale,8,95,6,0,0,0,,2010-07-22T20:00:00.000Z
+547,233,Huusbier Hell,11,142,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+548,748,KÃ¶nig Ludwig Weissbier Dunkel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+549,877,Gambrinus,11,142,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+550,877,NaturtrÃ¼bes Kellerbier,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+551,1116,Stout,3,42,5,0,0,0,,2010-07-22T20:00:00.000Z
+552,1116,Weizen,4,50,5,0,0,0,,2010-07-22T20:00:00.000Z
+553,1116,Spezial,11,142,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+554,1116,Naturtrubes,11,142,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+555,219,St. Galler Landbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+556,569,Maisbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+557,569,Weizenbier,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+558,569,Dunkel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+559,569,Hell,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+560,877,Spezial,11,142,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+561,1344,Single-Malt-Bier,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+562,1344,Ur-Pils,11,142,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+563,1344,Ur-Weizen,4,50,5,0,0,0,,2010-07-22T20:00:00.000Z
+564,1344,Hanf,11,142,5,0,0,0,,2010-07-22T20:00:00.000Z
+565,1344,Dunkel,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+566,1344,Hell,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+567,1344,Blond,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+568,213,Dunkle Weisse,11,142,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+569,750,WalderBrÃ¤u Export,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+570,216,Hefe-Weizen,4,50,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+571,216,Edel-Spezial,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+572,479,Alt-DÃ¼rrener-WeiÃŸe,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+573,479,Edelweiss,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+574,479,Kristall-Weizen,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+575,479,Hofgutsbier,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+576,479,Humpis-Original Naturtrub,11,142,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+577,568,Hefeweizen,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+578,568,Spezial,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+579,568,Kellerpils,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+580,451,Sanwald Dunkelweizen,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+581,451,Das Schwarze / Dark,11,142,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+582,1083,Hecker Dunkel,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+583,1083,Kristall Weizen,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+584,1083,Hefe Weizen Dunkel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+585,1083,Schimmele Hefe Pils,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+586,1083,Hefe Weizen Hell,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+587,1083,Spezial-Export,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+588,1083,Edel-Pils,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+589,230,Herbstbeer,7,84,0,0,0,0,,2010-07-22T20:00:00.000Z
+590,230,Weizen,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+591,230,Kupfer,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+592,230,Messing,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+593,905,Saison,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+594,285,Duinen Dubbel,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+595,165,Castelain St.Amand French Country Ale,11,142,5.9,0,0,0,,2010-07-22T20:00:00.000Z
+596,357,Red Racer India Pale Ale,3,31,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+597,357,Steelhead Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+598,357,Iceberg Copper Bock,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+599,357,Boomers Red Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+600,357,Springboard Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+601,119,Light Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+602,119,Old Sullivan Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+603,119,Brotherhood Black & Tan,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+604,119,Clover Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+605,119,Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+606,119,Red Truck Ale,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+607,120,Dry Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+608,120,Extra Special Bitter,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+609,120,Nut Brown Ale,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+610,120,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+611,120,Vienna Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+612,120,Pilsner,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+613,120,Blonde Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+614,1085,Cream Ale,1,10,0,0,0,0,,2010-07-22T20:00:00.000Z
+615,1085,Blonde Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+616,1085,Special Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+617,1085,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+618,1034,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+619,788,Beacon India Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+620,1237,Traditional India Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+621,1237,Mad Scow Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+622,1237,Red Truck Ale,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+623,1237,Two Lions Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+624,1237,Baden Powell Cream Ale,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+625,1237,Dominion Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+626,1381,Yippee IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+627,1381,Downtown Brown,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+628,453,Tropical Lager,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+629,453,Honey Brown,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+630,453,IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+631,453,Game Day,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+632,453,Red Truck Ale,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+633,453,Red Truck Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+634,828,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+635,828,Premium Gold,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+636,873,India Pale Ale,3,26,5.8,0,0,0,,2010-07-22T20:00:00.000Z
+637,873,Oatmeal Stout,3,42,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+638,873,Cream Ale,8,95,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+639,873,Blonde Draft,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+640,598,Hefeweizen,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+641,598,Island Lager,8,95,5,0,0,0,,2010-07-22T20:00:00.000Z
+642,598,English Bay Pale Ale,3,26,5,0,0,0,,2010-07-22T20:00:00.000Z
+643,598,Kitsilano Maple Cream Ale,8,95,5,0,0,0,,2010-07-22T20:00:00.000Z
+644,598,Cypress Honey Lager,8,95,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+645,457,Pelican Bay Brown,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+646,457,Marina Light Lager,11,142,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+647,457,Haupenthal Hefeweizen,4,50,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+648,457,Old Bridge Dark Lager,8,95,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+649,457,Johnston Pilsener,11,142,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+650,457,Cartwright Pale Ale,3,26,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+651,1307,15,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+652,202,Gueuze Bio / Organic Gueuze,5,70,0,0,0,0,,2010-07-22T20:00:00.000Z
+653,1178,Hopluia,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+654,995,Czech Premium Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+655,935,Bobby,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+656,590,1916 Irish Stout,3,42,3.5,0,0,0,,2010-07-22T20:00:00.000Z
+657,590,Model-A-Tor Doppelbock,7,90,7.4,0,0,0,,2010-07-22T20:00:00.000Z
+658,590,Wilsteraner Altbier,3,38,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+659,590,Eighty-Shilling Scottish Ale (80/-),11,142,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+660,647,Dark Lager,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+661,647,Lager Beer,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+662,647,Premium Light Lager Beer,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+663,236,Trademark English Pale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+664,829,Jolly Roger,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+665,829,Firkin IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+666,829,Portage Bay Pilsener,11,142,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+667,829,Old Seattle Lager,8,95,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+668,829,Nightwatch Dark Ale,2,25,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+669,829,Islander Pale Ale,3,26,5,0,0,0,,2010-07-22T20:00:00.000Z
+670,829,Salmon Bay E.S.B.,11,142,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+671,829,Clipper Gold Hefeweizen,8,95,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+672,829,Flagship Red Alt Ale,3,33,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+673,123,Slam Dunkelweizen,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+674,123,Trombipulator,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+675,123,Faux Paddy Irish Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+676,123,Black Mulligan Dublin Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+677,123,Coal Creek Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+678,123,Atlas Amber Ale,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+679,123,Prime Time Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+680,123,Snow Melt Nitrogen Pale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+681,123,Old Rip Oatmeal Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+682,123,Scarlet Fire IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+683,496,The Immortal IPA,3,31,6.3,0,0,0,,2010-07-22T20:00:00.000Z
+684,496,Whoville Weizenbock,4,55,6.6,0,0,0,,2010-07-22T20:00:00.000Z
+685,497,Warminster Special Bitter,11,142,3.8,0,0,0,,2010-07-22T20:00:00.000Z
+686,497,AK-47 Malt Liquor,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+687,497,Foster Child Australian Lager,8,95,4,0,0,0,,2010-07-22T20:00:00.000Z
+688,496,Avatar Jasmine IPA,11,142,6.2,0,0,0,,2010-07-22T20:00:00.000Z
+689,496,BiFrÃ¶st Winter Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+690,496,Elysian Fields Pale Ale,3,26,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+691,496,Loki,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+692,496,Zephyrus Pilsner,11,142,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+693,496,Perseus Porter,2,25,5.4,0,0,0,,2010-07-22T20:00:00.000Z
+694,496,The Wise ESB,1,5,5.9,0,0,0,,2010-07-22T20:00:00.000Z
+695,496,Ambrosia Maibock,7,90,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+696,496,BÃªte Blanche,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+697,984,Auld Acquaintance Spiced Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+698,984,India Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+699,984,Oatmeal Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+700,984,Kilt Lifter Scotch Ale,1,15,0,0,0,0,,2010-07-22T20:00:00.000Z
+701,984,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+702,984,Weisse,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+703,1296,Imperial Stout,3,42,6.2,0,0,0,,2010-07-22T20:00:00.000Z
+704,1296,Imperial I.P.A.,3,26,7.2,0,0,0,,2010-07-22T20:00:00.000Z
+705,1296,India Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+706,1296,N.W. Pale Ale,3,26,5,0,0,0,,2010-07-22T20:00:00.000Z
+707,1296,Bock,7,90,5,0,0,0,,2010-07-22T20:00:00.000Z
+708,1296,Weissbier,8,95,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+709,1296,Saison,11,142,5.7,0,0,0,,2010-07-22T20:00:00.000Z
+710,1296,Pilsner,11,142,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+711,842,Nebraska Bitter,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+712,842,Irish Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+713,842,I.M. Pale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+714,842,Wheat Beer,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+715,842,Golden,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+716,842,Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+717,842,Terminator Stout,3,42,6.45,0,0,0,"Black as the darkest night, rich as the most decadent dessert, Terminator is for the true stout lover. This is a full bodied and flavor packed ale which draws it's robust complexity from kiln-baked specialty grains. Look for a wide array of toasted, chocolate, nutty and coffee-like flavors in every pint! The devoted swear by it, and it remains one of our top selling ales year after year.",2010-07-22T20:00:00.000Z
+718,842,India Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+719,842,Hammerhead Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+720,445,Icebreaker Barley Wine,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+721,445,Industrial IPA,3,32,7.4,0,0,0,"This one's a butt-kicker! Essentially, the same recipe as the IPA, but with approximately 25% more grain and twice the hops!",2010-07-22T20:00:00.000Z
+722,445,IPA,3,31,6.2,0,0,0,"OUR FLAGSHIP BEER, the one for which we're known throughout the Puget Sound. Columbus hops impart intense bitterness with flavors of grapefruit and a hint of cedar.",2010-07-22T20:00:00.000Z
+723,445,Possession Porter,2,25,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+724,445,Steamer Glide Stout,3,42,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+725,445,E.S.B.,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+726,445,Brown Ale,3,38,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+727,445,Golden Ale,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+728,445,Hefe-Weizen,4,50,5.8,0,0,0,,2010-07-22T20:00:00.000Z
+729,445,Lighthouse Ale,3,26,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+730,475,Golden,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+731,1124,Gale Force IPA,3,31,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+732,1124,Porter,2,25,5.8,0,0,0,,2010-07-22T20:00:00.000Z
+733,1124,Nut Brown,3,38,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+734,1124,Amber Ale,3,38,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+735,1124,Hefe Weizen,8,95,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+736,1124,Maibock,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+737,1124,Sequoia Red,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+738,1124,Homeport Blonde,11,142,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+739,1151,Skibbereen Stout,3,42,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+740,1151,Red Card Lager,11,142,6.65,0,0,0,,2010-07-22T20:00:00.000Z
+741,1151,Navidad,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+742,1151,Free Bike Amber,3,33,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+743,1151,Highwater Porter,2,25,6,0,0,0,,2010-07-22T20:00:00.000Z
+744,1151,Skagit Brown Ale,3,38,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+745,1151,Yellowjacket Pale Ale,3,26,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+746,1151,Dutch Girl Lager,11,142,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+747,1151,Del Rio Lager,8,95,4,0,0,0,,2010-07-22T20:00:00.000Z
+748,504,Barleywine,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+749,504,Imperial Pale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+750,504,Spring Bock,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+751,504,Irish Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+752,504,India Pale Ale,3,26,6.6,0,0,0,,2010-07-22T20:00:00.000Z
+753,504,Porter,2,25,5.9,0,0,0,,2010-07-22T20:00:00.000Z
+754,504,Firehouse Red,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+755,504,Tacoma Brew,11,142,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+756,504,Hefeweizen,4,50,4.3,0,0,0,,2010-07-22T20:00:00.000Z
+757,504,Belgian White,11,142,4.1,0,0,0,,2010-07-22T20:00:00.000Z
+758,526,Poseidon Imperial Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+759,526,Thornton Creel Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+760,526,Blonde Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+761,526,Light,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+762,526,WinterFish Ale,3,26,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+763,526,Mudshark Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+764,526,Organic India Pale Ale,3,31,6.7,0,0,0,"Fish Tale Organic India Pale Ale is a medium-bodied beer with a rich golden color. The organic pale and crystal malts lay down a firm malt body. This provides the backbone for an assertive hop profile featuring organic Pacific Gem. The moment the Mighty Fish Brewers sampled this pungent and resinous New Zealand hop, they knew it would be perfect for their Organic I.P.A. The result: A Cascadian treasure.",2010-07-22T20:00:00.000Z
+765,526,Wild Salmon Pale Ale,3,26,4,0,0,0,,2010-07-22T20:00:00.000Z
+766,526,Organic Amber Ale,3,33,5,0,0,0,"Medium-bodied with an appealing amber hue, this is the First Ale of the Republic. Its organic pale, Munich, and crystal malts create a gentle sweet character that is difficult to resist.  From organic Hallertauer hops come a zesty flavor and aroma that beautifully balance Organic Amber's malt profile. The result: Truly delicious ale that salutes organic farmers and all the goodness they bring to our tables.",2010-07-22T20:00:00.000Z
+767,526,Blind Pig Dunkelweizen,8,95,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+768,526,Whistling Pig Hefeweizen,8,95,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+769,1030,Snow Cap,1,13,7,0,0,0,,2010-07-22T20:00:00.000Z
+770,1030,DPA,3,26,5.1,0,0,0,,2010-07-22T20:00:00.000Z
+771,1030,Krystal Weizen,8,95,4.9,0,0,0,,2010-07-22T20:00:00.000Z
+772,1030,Thunder Head IPA,3,31,6.7,0,0,0,,2010-07-22T20:00:00.000Z
+773,1030,Amber Weizen,8,95,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+774,1030,Hefeweizen,8,95,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+775,1030,Curve Ball,11,142,4.8,0,0,0,,2010-07-22T20:00:00.000Z
+776,704,Bourbon Barrel Stout,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+777,704,Oak Stout,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+778,704,Two Frog Dubbel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+779,704,Farm Frog,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+780,704,Frosty Frog,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+781,494,Dry Hopped IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+782,494,No Doubt Stout,3,42,5.75,0,0,0,,2010-07-22T20:00:00.000Z
+783,494,Riot Ale,3,26,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+784,494,IPA,3,31,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+785,494,Alembic Pale,3,26,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+786,494,Luna Weizen,8,95,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+787,966,Castaway Barley Wine Winter Ale,11,142,11,0,0,0,,2010-07-22T20:00:00.000Z
+788,966,Blacktop Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+789,966,Puget Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+790,966,Rat City IPA,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z
+791,966,Fauntleroy Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+792,966,Alki Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+793,966,Vashon Old Stock Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+794,966,Admiral ESB,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+795,966,Driftwood Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+796,770,Kataja Olut IVB,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+797,1185,Cream Stout,3,42,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+798,526,Leviathan 2004,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+799,160,MoJo India Pale Ale,3,31,6.8,0,0,0,,2010-07-22T20:00:00.000Z
+800,526,Old Woody 2005,1,13,10,0,0,0,,2010-07-22T20:00:00.000Z
+801,103,Weisse,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+802,431,Urthel Hop-It,5,72,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+803,641,Super Natural Oatmeal Stout,3,42,8,0,0,0,,2010-07-22T20:00:00.000Z
+804,432,Flemish Primitive Wild Ale (Pig Nun),11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+805,432,Andelot Cuvee Diabolique,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+806,432,Lozen Boer Abt,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+807,641,Imperial Gold Malt Liquor,8,95,9.9,0,0,0,,2010-07-22T20:00:00.000Z
+808,1177,Double Daddy,3,26,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+809,1072,Old Crustacean Barleywine 2005,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+810,622,Fred,11,142,10,0,0,0,,2010-07-22T20:00:00.000Z
+811,21,Wee Heavy,1,15,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+812,709,Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+813,540,Horn Dog,3,35,10.2,0,0,0,"By far the biggest dog in the yard... Horn Dog Barley Wine is a dark and malty English-style Barely Wine that is aged for a minimum of three months before being packaged. Like a fine wine, this beer will only get better with age when stored at optimum conditions.",2010-07-22T20:00:00.000Z
+814,137,Nut Brown Ale,3,38,0,0,0,0,,2010-07-22T20:00:00.000Z
+815,137,Chaser Pale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+816,270,Trappist Extra,11,142,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+817,174,Brune,11,142,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+818,459,Olde School Barleywine,3,35,15.04,0,0,0,,2010-07-22T20:00:00.000Z
+819,1115,Urbock 23Â°,7,92,9.6,0,0,0,Schloss Eggenberg Urbock 23Â° is one of the strongest beers in the world. We keep the Urbock 23Â° in our Schloss cellars for 9 months until it is dark gold and strongly matured. Urbock 23Â° has received the highest acknowledgments and honours at international exhibitions and world evaluations. It is brewed exclusively from natural raw ingredients after the purity requirement of 1516. Schloss Eggenberg Urbock is filled in a 0.33 litre designer bottle embossed with Schloss Eggenberg and in barrels for the export (20 and 30 litre).,2010-07-22T20:00:00.000Z
+820,447,Double Diamond Winter,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+821,1204,Stone IPA,3,31,6.9,0,0,0,"An \India Pale Ale\"" by definition is highly hopped and high in alcohol (ours is 6.9% alc./vol.).
+
+Medium Bodied Refreshing Ale
+Light-medium malt character with a heavy dose of over the top hops! Two full weeks of \""dry hopping\"" give this beer its abundant hop aroma and crisp hop flavor.""",2010-07-22T20:00:00.000Z
+822,188,Scaldis Prestige,11,142,13,0,0,0,,2010-07-22T20:00:00.000Z
+823,432,Flemish Primitive Wild Ale (Surly Bird),11,142,9,0,0,0,,2010-07-22T20:00:00.000Z
+824,623,Red Menace Big Amber,3,33,0,0,0,0,,2010-07-22T20:00:00.000Z
+825,174,Blonde,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+826,297,St. Sebastiaan Golden,11,142,7.7,0,0,0,,2010-07-22T20:00:00.000Z
+827,221,Pils,11,142,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+828,221,Hefe-Weizen,4,50,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+829,368,Xingu,7,86,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+830,562,Slip Knot Imperial IPA 2006,3,31,7.8,0,0,0,,2010-07-22T20:00:00.000Z
+831,447,Bottleworks IPA,3,31,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+832,919,Old Rasputin Russian Imperial Stout,3,43,9,0,0,0,"Produced in the tradition of 18th Century English brewers who supplied the court of Russia's Catherine the Great, Old Rasputin seems to develop a cult following wherever it goes. It's a rich, intense brew with big complex flavors and a warming finish.",2010-07-22T20:00:00.000Z
+833,604,Yeti Imperial Stout,3,43,9.5,0,0,0,"Traditionally, Imperial Stouts, the biggest and boldest of all stouts, were brewed with massive amounts of roasted malts and hops, resulting in a velvety smooth but robust beer characterized by high alcohol content and extremely high hop bitterness. Meeting the challenge of this aggressive, challenging beer style, Great Divideâ€™s Yeti Imperial Stout is an onslaught of the senses. An almost viscous, inky-black brew, Yeti opens with a massive, roasty, chocolate, coffee malt flavor that eventually gives way to rich toffee and burnt caramel notes. Packed with an enormous quantity of American hops, Yetiâ€™s hop profile reveals a slightly citrusy, piney, and wonderfully dry hoppy finish.",2010-07-22T20:00:00.000Z
+834,745,Hefe-Weizen Dunkel,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+835,745,Winter-Traum,7,84,5.4,0,0,0,,2010-07-22T20:00:00.000Z
+836,301,Poperings Hommel Ale,3,26,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+837,907,Smoked Rye Bock,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+838,1263,Russian Imperial Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+839,190,Jenlain St Druon de Sebourg,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+840,196,Les Sans Culottes,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+841,202,Bruocsella 1900 Grand Cru,5,70,0,0,0,0,,2010-07-22T20:00:00.000Z
+842,188,Scaldis / Bush Amber 12%,11,142,12,0,0,0,,2010-07-22T20:00:00.000Z
+843,590,Princess of Darkness Porter,2,25,4.6,0,0,0,,2010-07-22T20:00:00.000Z
+844,590,Impromptu Pale Ale,3,26,5,0,0,0,,2010-07-22T20:00:00.000Z
+845,590,Steinworthy Oktoberfest,7,84,6,0,0,0,,2010-07-22T20:00:00.000Z
+846,590,DSB / Dusters Special Bitter,11,142,5.6,0,0,0,,2010-07-22T20:00:00.000Z
+847,590,Bugeater Brown Ale,3,38,4.4,0,0,0,,2010-07-22T20:00:00.000Z
+848,590,Tin Lizzie Hefeweizen,4,50,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+849,590,All-American Lager (discontinued),11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+850,590,Heavenly Helles,11,142,5.3,0,0,0,,2010-07-22T20:00:00.000Z
+851,169,Orval Trappist Ale,5,72,6.9,0,0,0,,2010-07-22T20:00:00.000Z
+852,270,Trappist Bruin Bier / BiÃ¨re Brune,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+853,7,Rochefort 8,11,142,9.2,0,0,0,"Yellowish-brown colour, with a more pronounced aroma, more fruits and a slight amount of Demi-Sec. This variety constitutes the largest proportion of production.",2010-07-22T20:00:00.000Z
+854,271,Satan Red,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+855,671,Entire Stout,3,42,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+856,1056,Ivanhoe,3,26,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+857,277,XX Bitter,11,142,6,0,0,0,,2010-07-22T20:00:00.000Z
+858,359,Moza,7,90,0,0,0,0,,2010-07-22T20:00:00.000Z
+859,370,Negra,7,86,5.4,0,0,0,,2010-07-22T20:00:00.000Z
+860,1003,Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+861,717,Porter,2,25,0,0,0,0,,2010-07-22T20:00:00.000Z
+862,717,Oktoberfest,7,84,0,0,0,0,,2010-07-22T20:00:00.000Z
+863,717,Tip Top Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+864,1303,DoppelSticke,7,90,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+865,1303,Sticke,3,38,6,0,0,0,,2010-07-22T20:00:00.000Z
+866,1303,Alt,3,38,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+867,742,Hitachino Nest Japanese Classic Ale,1,2,7,0,0,0,,2010-07-22T20:00:00.000Z
+868,1204,9th Anniversary IPA,3,31,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+869,622,Adam,1,13,10,0,0,0,,2010-07-22T20:00:00.000Z
+870,622,Rose,11,142,7.5,0,0,0,,2010-07-22T20:00:00.000Z
+871,303,Kasteel Bier Donker-Foncee,11,142,11,0,0,0,,2010-07-22T20:00:00.000Z
+872,431,Urthel Samaranth Quadrium Ale,11,142,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+873,432,Andelot Mystique,11,142,8.5,0,0,0,,2010-07-22T20:00:00.000Z
+874,432,Andelot Angelique,11,142,7,0,0,0,,2010-07-22T20:00:00.000Z
+875,432,Andelot Euphorique,11,142,6.5,0,0,0,,2010-07-22T20:00:00.000Z
+876,1307,Terrible,5,72,10.5,0,0,0,"Topped by a sumptuous head of foam, La Terrible possesses a fruity aroma enriched with notes of roasted malt and Madeira. Its long lasting flavour is both elegant and full bodied.
+
+La Terrible is a dark brown beer on lees and is part of a collection of exotic and refined Unibroue beers brewed using 100% natural raw materials. It may be drunk as an aperitif or as an after dinner digestive. It is equally a perfect accompaniment to the above-mentioned dishes or a pleasant alternative to coffee.",2010-07-22T20:00:00.000Z
+877,269,Deus Brut des Flandres,11,142,11.5,0,0,0,,2010-07-22T20:00:00.000Z
+878,28,Kentucky Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+879,935,5 Barrel Pale Ale,1,1,5.3,0,0,0,"The distinctive hop character of our 5 Barrel Pale Ale is due to the extraction of essential oils from select hops. We treat 5 Barrel Pale Ale to an infusion of fresh whole hop flowers in the Hop Back and the Fermentor, as well as four hop additions during the kettle boil. We like how this gives the beer a fresh, lively flavor and aroma.",2010-07-22T20:00:00.000Z
+880,1143,Spruce Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+881,174,Triple ImpÃ©riale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+882,189,Avec Les Bons Voeux,11,142,9.5,0,0,0,,2010-07-22T20:00:00.000Z
+883,175,Blonde,5,72,6,0,0,0,This authentic Abbey Ale is based on the recipe perfected centuries ago by the monks of Abbey Du Val-Dieu.,2010-07-22T20:00:00.000Z
+884,1143,Oatmeal Cream Stout,3,42,0,0,0,0,,2010-07-22T20:00:00.000Z
+885,903,Augustinian Ale,11,142,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+886,1378,Butty Bach,11,142,4.5,0,0,0,,2010-07-22T20:00:00.000Z
+887,623,Pale Ale,3,26,0,0,0,0,,2010-07-22T20:00:00.000Z
+888,109,De Horste Vermeer Traditional Dutch Ale,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+889,195,Troublette,11,142,5.5,0,0,0,,2010-07-22T20:00:00.000Z
+890,194,Blonde Tradition,11,142,6.2,0,0,0,,2010-07-22T20:00:00.000Z
+891,128,NoÃ«l,1,13,0,0,0,0,,2010-07-22T20:00:00.000Z
+892,182,Yeti,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+893,175,Brune / Brown,11,142,8,0,0,0,,2010-07-22T20:00:00.000Z
+894,586,Pere Jacques,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+895,1331,1784 Anniversary Beer,11,142,5.4,0,0,0,,2010-07-22T20:00:00.000Z
+896,1331,Baltas Alus,4,50,5.2,0,0,0,,2010-07-22T20:00:00.000Z
+897,623,El Jefe Weizen Ale,4,50,0,0,0,0,,2010-07-22T20:00:00.000Z
+898,89,Hefeweizen,8,95,0,0,0,0,,2010-07-22T20:00:00.000Z
+899,89,Dancing Trout Ale,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
+900,1177,Untouchable Pale Ale,3,26,5.5,0,0,0,,2010-07-22T20:00:00.000Z
