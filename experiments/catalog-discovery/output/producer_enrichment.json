@@ -9,26 +9,32 @@
     "rows": 11959,
     "attribution": "Producer data: Open Brewery DB (openbrewerydb.org)"
   },
+  "snapshot_note": "Snapshot retrieved 2026-10-12. This records the retrieval date; it does not verify that every brewery entry was current on that date.",
+  "method_note": "Fuzzy buckets are score-based and PROVISIONAL. token_set_ratio inflates scores on generic shared words ('Brewing Company', 'Beer Company'); manual inspection found false positives even at >=90 (e.g. '1 of Us Brewing Company' scoring 88 against '(512) Brewing Company' on shared words alone). Only exact normalized-name matches are reported as matches. Nothing here is verified coverage or a confirmed new producer.",
   "baseline_breweries": 1431,
   "producer_comparison": {
-    "exact_overlap": 162,
-    "clear": 1317,
-    "ambiguous": 7987,
-    "likely_new": 2655,
+    "exact_name_matches_unique": 154,
+    "exact_name_matches_rows": 162,
+    "fuzzy_ge_90_provisional": 1317,
+    "fuzzy_70_90_provisional": 7987,
+    "fuzzy_lt_70_provisional": 2655,
     "total": 11959
   },
   "off_enrichment": {
-    "improved": 2,
+    "improved": 0,
+    "unresolved": 2,
     "unchanged": 63,
     "no_producer": 35,
     "total": 100
   },
-  "improved_candidates": [
+  "improved_candidates": [],
+  "unresolved_candidates": [
     {
       "candidate_id": "cand_2ac65f4a0227",
       "name": "Clean & Press: Smashed Cactus & Lime",
       "producer": "BrewDog",
       "baseline_score": 100.0,
+      "baseline_match_id": "241",
       "dataset_score": 100.0,
       "dataset_match": "brewdog",
       "exact_dataset_match": true
@@ -38,12 +44,240 @@
       "name": "Clean & Press Hard Seltzer Mangue Peche",
       "producer": "Brewdog",
       "baseline_score": 100.0,
+      "baseline_match_id": "241",
       "dataset_score": 100.0,
       "dataset_match": "brewdog",
       "exact_dataset_match": true
     }
   ],
-  "ambiguous_sample": [
+  "fuzzy_ge_90_provisional_sample": [
+    {
+      "dataset_id": "ae7b3174-8be8-4d53-a3a5-9b8240970eea",
+      "name": "'s",
+      "brewery_type": "brewpub",
+      "city": "Kronach",
+      "country": "Germany",
+      "baseline_id": "28",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "6d14b220-8926-4521-8d19-b98a2d6ec3db",
+      "name": "10 Barrel Brewing Co",
+      "brewery_type": "large",
+      "city": "Bend",
+      "country": "United States",
+      "baseline_id": "83",
+      "score": 91.9
+    },
+    {
+      "dataset_id": "e2e78bd8-80ff-4a61-a65c-3bfbd9d76ce2",
+      "name": "10 Barrel Brewing Co",
+      "brewery_type": "large",
+      "city": "Bend",
+      "country": "United States",
+      "baseline_id": "83",
+      "score": 91.9
+    },
+    {
+      "dataset_id": "e432899b-7f58-455f-9c7b-9a6e2130a1e0",
+      "name": "10 Barrel Brewing Co",
+      "brewery_type": "large",
+      "city": "Portland",
+      "country": "United States",
+      "baseline_id": "83",
+      "score": 91.9
+    },
+    {
+      "dataset_id": "ef970757-fe42-416f-931d-722451f1f59c",
+      "name": "10 Barrel Brewing Co",
+      "brewery_type": "large",
+      "city": "San Diego",
+      "country": "United States",
+      "baseline_id": "83",
+      "score": 91.9
+    },
+    {
+      "dataset_id": "5ae467af-66dc-4d7f-8839-44228f89b596",
+      "name": "101 North Brewing Company",
+      "brewery_type": "closed",
+      "city": "Petaluma",
+      "country": "United States",
+      "baseline_id": "919",
+      "score": 91.3
+    },
+    {
+      "dataset_id": "4b677b60-fef1-42e2-90ef-dadc1bd7fb06",
+      "name": "14er Brewing Company",
+      "brewery_type": "proprietor",
+      "city": "Denver",
+      "country": "United States",
+      "baseline_id": "507",
+      "score": 90.0
+    },
+    {
+      "dataset_id": "d35b40b0-a3ff-4878-a6ee-9caa2149b521",
+      "name": "1623 Brewing Company",
+      "brewery_type": "brewpub",
+      "city": "Eldersburg",
+      "country": "United States",
+      "baseline_id": "1",
+      "score": 92.3
+    },
+    {
+      "dataset_id": "00fdce16-e1dd-4678-87f2-45550f9083e1",
+      "name": "212 Brewing Company",
+      "brewery_type": "contract",
+      "city": "Davenport",
+      "country": "United States",
+      "baseline_id": "1",
+      "score": 94.7
+    },
+    {
+      "dataset_id": "63baab9a-b561-4eff-8619-f95290a61b77",
+      "name": "21st Amendment Brewery",
+      "brewery_type": "regional",
+      "city": "San Leandro",
+      "country": "United States",
+      "baseline_id": "2",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "8f9621dc-da98-4ddb-82a1-039c9e2b3224",
+      "name": "21st Amendment Brewery Cafe",
+      "brewery_type": "brewpub",
+      "city": "San Francisco",
+      "country": "United States",
+      "baseline_id": "2",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "2711c5ad-83cb-4917-932e-b8bbf1a25ffb",
+      "name": "23 Brewing Company / Lizzie B's Cafe",
+      "brewery_type": "brewpub",
+      "city": "Prestonsburg",
+      "country": "United States",
+      "baseline_id": "1034",
+      "score": 90.0
+    },
+    {
+      "dataset_id": "3cf2698f-4193-4591-aab3-a8ef0fbedcab",
+      "name": "2SP Brewing Company",
+      "brewery_type": "micro",
+      "city": "Aston",
+      "country": "United States",
+      "baseline_id": "1396",
+      "score": 90.0
+    },
+    {
+      "dataset_id": "ad9ec3c5-cd44-4fcb-a4d1-cbec897839b1",
+      "name": "3 Fonteinen",
+      "brewery_type": "micro",
+      "city": "Beersel",
+      "country": "Belgium",
+      "baseline_id": "3",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "dad10840-28ab-4dcf-9005-bf2cc2665b5a",
+      "name": "42 North Brewing Company",
+      "brewery_type": "brewpub",
+      "city": "East Aurora",
+      "country": "United States",
+      "baseline_id": "919",
+      "score": 93.3
+    },
+    {
+      "dataset_id": "52dd0878-928b-4b47-b7fa-602f140592ed",
+      "name": "4204 Main Street Brewing Co",
+      "brewery_type": "brewpub",
+      "city": "Belleville",
+      "country": "United States",
+      "baseline_id": "817",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "aea0a6f9-557e-4907-be23-d80737a071e4",
+      "name": "4J Brewing Company",
+      "brewery_type": "micro",
+      "city": "Houston",
+      "country": "United States",
+      "baseline_id": "1",
+      "score": 90.9
+    },
+    {
+      "dataset_id": "257e9aac-7dbe-4656-b366-9d8a94c49d58",
+      "name": "5 North Brewing Company",
+      "brewery_type": "closed",
+      "city": "Spokane",
+      "country": "United States",
+      "baseline_id": "919",
+      "score": 95.5
+    },
+    {
+      "dataset_id": "c6a766f9-a187-4e5b-9519-6c737ce0cde5",
+      "name": "8 Bit Brewing Company",
+      "brewery_type": "brewpub",
+      "city": "Murrieta",
+      "country": "United States",
+      "baseline_id": "10",
+      "score": 90.5
+    },
+    {
+      "dataset_id": "aa0d914e-2fdb-4e6d-9aa9-f7cdbf9bd4fd",
+      "name": "Abbaye Chimay",
+      "brewery_type": "micro",
+      "city": "Chimay",
+      "country": "Belgium",
+      "baseline_id": "378",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "149a0cb0-fdc3-4a41-b086-c0aac49de23c",
+      "name": "Abbaye des Rocs",
+      "brewery_type": "micro",
+      "city": "Honnelles",
+      "country": "Belgium",
+      "baseline_id": "174",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "8311d675-4efa-427a-82ba-b06d2cbaaa93",
+      "name": "Abbaye St. Rémy",
+      "brewery_type": "micro",
+      "city": "Rochefort",
+      "country": "Belgium",
+      "baseline_id": "7",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "b161916f-3f69-4f16-8059-eef9eee6877c",
+      "name": "Abide Brewing Company",
+      "brewery_type": "micro",
+      "city": "Newnan",
+      "country": "United States",
+      "baseline_id": "10",
+      "score": 90.5
+    },
+    {
+      "dataset_id": "93b979f7-1a8a-4134-aad9-ebc674cacb6f",
+      "name": "Achelse Kluis",
+      "brewery_type": "micro",
+      "city": "Hamont-Achel",
+      "country": "Belgium",
+      "baseline_id": "270",
+      "score": 100.0
+    },
+    {
+      "dataset_id": "e6edd20a-fcb9-4636-9e82-22d07b4632b0",
+      "name": "Achilles",
+      "brewery_type": "micro",
+      "city": "Heist-op-den-Berg",
+      "country": "Belgium",
+      "baseline_id": "856",
+      "score": 100.0
+    }
+  ],
+  "fuzzy_70_90_provisional_sample": [
     {
       "dataset_id": "5128df48-79fc-4f0f-8b52-d06be54d0cec",
       "name": "(405) Brewing Co",
@@ -270,7 +504,7 @@
       "score": 77.8
     }
   ],
-  "likely_new_sample": [
+  "fuzzy_lt_70_provisional_sample": [
     {
       "dataset_id": "aa7cbe9b-3a0f-4888-9884-6186b0042b55",
       "name": "’t Drankorgel",
@@ -495,233 +729,6 @@
       "country": "United States",
       "baseline_id": "",
       "score": 0.0
-    }
-  ],
-  "clear_sample": [
-    {
-      "dataset_id": "ae7b3174-8be8-4d53-a3a5-9b8240970eea",
-      "name": "'s",
-      "brewery_type": "brewpub",
-      "city": "Kronach",
-      "country": "Germany",
-      "baseline_id": "28",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "6d14b220-8926-4521-8d19-b98a2d6ec3db",
-      "name": "10 Barrel Brewing Co",
-      "brewery_type": "large",
-      "city": "Bend",
-      "country": "United States",
-      "baseline_id": "83",
-      "score": 91.9
-    },
-    {
-      "dataset_id": "e2e78bd8-80ff-4a61-a65c-3bfbd9d76ce2",
-      "name": "10 Barrel Brewing Co",
-      "brewery_type": "large",
-      "city": "Bend",
-      "country": "United States",
-      "baseline_id": "83",
-      "score": 91.9
-    },
-    {
-      "dataset_id": "e432899b-7f58-455f-9c7b-9a6e2130a1e0",
-      "name": "10 Barrel Brewing Co",
-      "brewery_type": "large",
-      "city": "Portland",
-      "country": "United States",
-      "baseline_id": "83",
-      "score": 91.9
-    },
-    {
-      "dataset_id": "ef970757-fe42-416f-931d-722451f1f59c",
-      "name": "10 Barrel Brewing Co",
-      "brewery_type": "large",
-      "city": "San Diego",
-      "country": "United States",
-      "baseline_id": "83",
-      "score": 91.9
-    },
-    {
-      "dataset_id": "5ae467af-66dc-4d7f-8839-44228f89b596",
-      "name": "101 North Brewing Company",
-      "brewery_type": "closed",
-      "city": "Petaluma",
-      "country": "United States",
-      "baseline_id": "919",
-      "score": 91.3
-    },
-    {
-      "dataset_id": "4b677b60-fef1-42e2-90ef-dadc1bd7fb06",
-      "name": "14er Brewing Company",
-      "brewery_type": "proprietor",
-      "city": "Denver",
-      "country": "United States",
-      "baseline_id": "507",
-      "score": 90.0
-    },
-    {
-      "dataset_id": "d35b40b0-a3ff-4878-a6ee-9caa2149b521",
-      "name": "1623 Brewing Company",
-      "brewery_type": "brewpub",
-      "city": "Eldersburg",
-      "country": "United States",
-      "baseline_id": "1",
-      "score": 92.3
-    },
-    {
-      "dataset_id": "00fdce16-e1dd-4678-87f2-45550f9083e1",
-      "name": "212 Brewing Company",
-      "brewery_type": "contract",
-      "city": "Davenport",
-      "country": "United States",
-      "baseline_id": "1",
-      "score": 94.7
-    },
-    {
-      "dataset_id": "63baab9a-b561-4eff-8619-f95290a61b77",
-      "name": "21st Amendment Brewery",
-      "brewery_type": "regional",
-      "city": "San Leandro",
-      "country": "United States",
-      "baseline_id": "2",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "8f9621dc-da98-4ddb-82a1-039c9e2b3224",
-      "name": "21st Amendment Brewery Cafe",
-      "brewery_type": "brewpub",
-      "city": "San Francisco",
-      "country": "United States",
-      "baseline_id": "2",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "2711c5ad-83cb-4917-932e-b8bbf1a25ffb",
-      "name": "23 Brewing Company / Lizzie B's Cafe",
-      "brewery_type": "brewpub",
-      "city": "Prestonsburg",
-      "country": "United States",
-      "baseline_id": "1034",
-      "score": 90.0
-    },
-    {
-      "dataset_id": "3cf2698f-4193-4591-aab3-a8ef0fbedcab",
-      "name": "2SP Brewing Company",
-      "brewery_type": "micro",
-      "city": "Aston",
-      "country": "United States",
-      "baseline_id": "1396",
-      "score": 90.0
-    },
-    {
-      "dataset_id": "ad9ec3c5-cd44-4fcb-a4d1-cbec897839b1",
-      "name": "3 Fonteinen",
-      "brewery_type": "micro",
-      "city": "Beersel",
-      "country": "Belgium",
-      "baseline_id": "3",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "dad10840-28ab-4dcf-9005-bf2cc2665b5a",
-      "name": "42 North Brewing Company",
-      "brewery_type": "brewpub",
-      "city": "East Aurora",
-      "country": "United States",
-      "baseline_id": "919",
-      "score": 93.3
-    },
-    {
-      "dataset_id": "52dd0878-928b-4b47-b7fa-602f140592ed",
-      "name": "4204 Main Street Brewing Co",
-      "brewery_type": "brewpub",
-      "city": "Belleville",
-      "country": "United States",
-      "baseline_id": "817",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "aea0a6f9-557e-4907-be23-d80737a071e4",
-      "name": "4J Brewing Company",
-      "brewery_type": "micro",
-      "city": "Houston",
-      "country": "United States",
-      "baseline_id": "1",
-      "score": 90.9
-    },
-    {
-      "dataset_id": "257e9aac-7dbe-4656-b366-9d8a94c49d58",
-      "name": "5 North Brewing Company",
-      "brewery_type": "closed",
-      "city": "Spokane",
-      "country": "United States",
-      "baseline_id": "919",
-      "score": 95.5
-    },
-    {
-      "dataset_id": "c6a766f9-a187-4e5b-9519-6c737ce0cde5",
-      "name": "8 Bit Brewing Company",
-      "brewery_type": "brewpub",
-      "city": "Murrieta",
-      "country": "United States",
-      "baseline_id": "10",
-      "score": 90.5
-    },
-    {
-      "dataset_id": "aa0d914e-2fdb-4e6d-9aa9-f7cdbf9bd4fd",
-      "name": "Abbaye Chimay",
-      "brewery_type": "micro",
-      "city": "Chimay",
-      "country": "Belgium",
-      "baseline_id": "378",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "149a0cb0-fdc3-4a41-b086-c0aac49de23c",
-      "name": "Abbaye des Rocs",
-      "brewery_type": "micro",
-      "city": "Honnelles",
-      "country": "Belgium",
-      "baseline_id": "174",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "8311d675-4efa-427a-82ba-b06d2cbaaa93",
-      "name": "Abbaye St. Rémy",
-      "brewery_type": "micro",
-      "city": "Rochefort",
-      "country": "Belgium",
-      "baseline_id": "7",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "b161916f-3f69-4f16-8059-eef9eee6877c",
-      "name": "Abide Brewing Company",
-      "brewery_type": "micro",
-      "city": "Newnan",
-      "country": "United States",
-      "baseline_id": "10",
-      "score": 90.5
-    },
-    {
-      "dataset_id": "93b979f7-1a8a-4134-aad9-ebc674cacb6f",
-      "name": "Achelse Kluis",
-      "brewery_type": "micro",
-      "city": "Hamont-Achel",
-      "country": "Belgium",
-      "baseline_id": "270",
-      "score": 100.0
-    },
-    {
-      "dataset_id": "e6edd20a-fcb9-4636-9e82-22d07b4632b0",
-      "name": "Achilles",
-      "brewery_type": "micro",
-      "city": "Heist-op-den-Berg",
-      "country": "Belgium",
-      "baseline_id": "856",
-      "score": 100.0
     }
   ]
 }

@@ -3,6 +3,40 @@
 Owner summary. Builds on `REVIEW_2026-10-12.md`; same branch
 (`experiment/catalog-discovery-prototype`), not merged.
 
+## Corrections to the first version of this summary (same day)
+
+1. **The two BrewDog "wins" were not wins.** The enrichment report listed
+   both BrewDog candidates with a baseline fuzzy score of 100, and the
+   baseline contains `BrewDog Ltd` (brewery id 241). The analysis has been
+   corrected: an exact dataset match is now reported separately from
+   whether it adds information beyond the baseline. Corrected result:
+   **0 confirmed incremental attributions, 2 unresolved**
+   (exact dataset match for "brewdog", but the baseline already scores
+   100 on the same producer string, so the relationship needs manual
+   assessment). A matching brand string does not prove a new producer.
+2. **Relevance labels now update on reprocessing.** Re-running the
+   pipeline left accumulated candidates `unclassified` because
+   `merge_candidate` never applied the fresh classification. It now does,
+   preserving prior evidence and timestamps; the run summary counts
+   `reclassified_this_run` separately from legacy unclassified records.
+   Before: 100/100 unclassified (branch state). A demo re-run against a
+   /tmp copy of that state fetched 100 (different) OFF records, all new:
+   the 100 legacy records stayed `unclassified` (not reprocessed), the
+   100 new ones were labeled at creation (56 term-matched, 44 uncertain).
+   The reprocessing path itself is verified by a new unit test that runs
+   the pipeline twice over the same record: the second run reclassifies
+   it (reclassified_this_run = 1) and preserves `first_discovered_at`
+   and source associations.
+3. **Fuzzy buckets renamed as provisional.** `compare_producers` now
+   reports `exact_name_matches_unique` (154) separately from
+   `fuzzy_ge_90_provisional` (1,317), `fuzzy_70_90_provisional` (7,987),
+   and `fuzzy_lt_70_provisional` (2,655). The report carries a method note
+   stating these are unreviewed score buckets, not verified coverage.
+4. **Snapshot freshness and `--limit`.** The dataset is described as a
+   snapshot retrieved 2026-10-12, not as verified current. `--limit 100`
+   bounds product/API fetching only; the dataset source intentionally
+   loads the full 11,959-row snapshot.
+
 ## Dataset snapshot used
 
 - **Repo:** https://github.com/openbrewerydb/openbrewerydb
@@ -40,14 +74,19 @@ dominated by this kind of weak overlap. Treat fuzzy buckets as
 
 OFF beverage candidates (100 in current state), producer attribution:
 
-- **2 newly attributable via the dataset (exact match):** both BrewDog
-  hard-seltzer candidates -> "Brewdog" (Coburg, Australia). The 2008-era
-  baseline has no BrewDog; this is a genuine, if small, enrichment win.
+- **0 newly attributable via the dataset (corrected).** The two BrewDog
+  hard-seltzer candidates match "Brewdog" (Coburg, Australia) exactly in
+  the dataset, but the baseline already contains `BrewDog Ltd` at fuzzy
+  score 100. These are recorded as **unresolved**: the dataset adds a
+  location-specific producer record, but whether that is distinct from
+  the baseline's BrewDog entry needs manual assessment. Not counted as
+  enrichment wins.
 - 63 unchanged, 35 list no producer at all.
 - An earlier fuzzy-based pass claimed 6 improvements; manual inspection
   showed all 6 were token-subset false positives ("High Noon" matching
   "Grinder's High Noon Brewery", "Corona" matching a brewpub in Corona,
-  CA). The assessment now counts only exact matches as improvements.
+  CA). The assessment now counts only exact matches as improvements,
+  and only when the baseline has nothing close.
 
 ## What changed (code, this round)
 
@@ -72,10 +111,12 @@ OFF beverage candidates (100 in current state), producer attribution:
 - The dataset path works end to end and is reproducible from the pinned
   snapshot reference.
 - The dataset is ~8x the baseline and current (2026 data vs 2008 baseline);
-  exact matching gives a conservative lower bound of its coverage.
-- Producer enrichment is real but small on this sample and entirely
-  dependent on matching strictness: 2 exact attributions, 0 trustworthy
-  fuzzy ones.
+  exact matching gives a conservative lower bound of its coverage: 154
+  unique producer names.
+- Producer enrichment on this sample: 0 confirmed new attributions, 2
+  unresolved (BrewDog), 63 unchanged, 35 with no producer listed. The
+  honest result is smaller than first reported, and the analysis now
+  says so explicitly.
 
 ## What it does not show
 
@@ -94,15 +135,26 @@ OFF beverage candidates (100 in current state), producer attribution:
 3. What "credit to Open Brewery DB" requires in practice.
 4. Whether the OBDB API 403 is worth revisiting later or the dataset
    snapshot is the permanent path.
+5. Manual assessment of the 2 unresolved BrewDog attributions (dataset
+   "Brewdog", Coburg AU vs baseline "BrewDog Ltd"): same producer with
+   a location-specific record, or genuinely distinct?
 
 ## Checks performed
 
-- 34/34 unit tests pass (new: dataset-source pipeline test with mocked
-  OFF fetch; existing API-failure test updated for the new config fields).
-- Enrichment analysis run against the full 11,959-row snapshot:
-  comparison and OFF assessment complete in ~16s.
+- 41/41 unit tests pass (new: enrichment bucket/improved-vs-unresolved
+  tests, relevance-reclassification test, dataset-source pipeline test,
+  repeat-counter regression test).
+- Enrichment analysis re-run against the full 11,959-row snapshot with
+  corrected logic: 154 exact unique names; fuzzy provisional buckets
+  1,317 / 7,987 / 2,655; OFF assessment 0 improved, 2 unresolved,
+  63 unchanged, 35 no producer.
 - Manual inspection: ~12 ambiguous, ~8 clear, ~8 likely-new producer
   samples; all 6 fuzzy "improved" OFF attributions (all false positives);
-  both exact-match improvements.
+  both BrewDog records (baseline_score 100 vs BrewDog Ltd, id 241).
 - Discovery state (100 candidates) and baseline snapshots verified
-  untouched; no new pipeline runs wrote to them.
+  untouched; no pipeline runs wrote to the committed state or outputs.
+  A reclassification demo ran against a /tmp copy of the branch state:
+  the full 11,959-row dataset loads in the pipeline; the 100 fetched OFF
+  records were all new (OFF search results shift between runs), so no
+  legacy repeats were reprocessed there, but all 100 new records received
+  current relevance labels at creation (56 term-matched, 44 uncertain).
