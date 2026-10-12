@@ -13,3 +13,4 @@ Findings from external research: data sources, licensing, hosting options, third
 
 - [image-licensing.md](image-licensing.md): beverage imagery and catalog data sources, licensing posture, and approaches to avoid (from the relaunch plan, October 2026).
 - [aws-infra-audit.md](aws-infra-audit.md): read-only AWS infrastructure audit, October 11, 2026 (account 149290600858): billing, resource inventory, security posture, BeerPassport mapping.
+- [aws-infra-forensics.md](aws-infra-forensics.md): forensic reconstruction of the historical BeerPassport infrastructure (Oct 11, 2026): ECS task definitions, load balancer chain, EFS-backed MySQL, DNS/TLS state, IAM roles, log retention.
