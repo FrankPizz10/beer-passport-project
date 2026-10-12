@@ -35,7 +35,9 @@ class Config:
     abv_conflict: float = 2.0         # ABV point difference that flags a conflict
     request_timeout: int = 25
     max_retries: int = 3
-    off_delay: float = 3.0            # seconds between Open Food Facts requests
+    # Open Food Facts documents 10 req/min/IP for search queries
+    # (/cgi/search.pl); 6s keeps us under that limit.
+    off_delay: float = 6.0
     obdb_delay: float = 1.0           # seconds between Open Brewery DB requests
 
 

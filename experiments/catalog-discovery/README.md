@@ -23,6 +23,48 @@ those discoveries require?
 | Open Brewery DB | Producer directory (Source B). Breweries are **never** counted as beverage discoveries; producer candidates are reported separately. | https://www.openbrewerydb.org/documentation |
 | Open Food Facts | Packaged-product database (Source C) | https://openfoodfacts.github.io/openfoodfacts-server/api/ |
 
+### Source access policy (checked 2026-10-12)
+
+**Open Food Facts.** `world.openfoodfacts.org/robots.txt` disallows `/api`,
+`/cgi`, and `/facets` for general crawlers (`User-agent: *`). That directive
+targets web crawlers (search-engine indexers). The published API documentation
+separately and explicitly describes programmatic access: always identify the
+app with a custom `User-Agent`, respect **10 req/min/IP for search queries**
+(`GET /api/v*/search` or `GET /cgi/search.pl`; 15 req/min/IP for product
+reads), test against the staging environment (`world.openfoodfacts.net`,
+user/password `off`), and use the bulk CSV/JSONL downloads when fetching
+more than a few hundred products. robots.txt alone is not a legal conclusion;
+the documented API is the intentional interface and its terms govern. This
+prototype calls `/cgi/search.pl` per those documented API rules, with a 6s
+request delay (10 req/min ceiling) and a custom User-Agent.
+
+**Open Brewery DB.** `openbrewerydb.org/robots.txt` allows `/` for general
+crawlers. The 403 responses seen from the build environment are Cloudflare bot
+protection (the FAQ confirms Cloudflare sits in front of the API), not a
+robots.txt denial; treat as an access issue to investigate (e.g. retry from a
+residential IP), not a policy refusal. Reuse guidance (FAQ, checked
+2026-10-12): the dataset is free and open-source, the API is free with no
+authentication, any project may use the dataset **with credit to Open Brewery
+DB**; the API is community-supported with no SLAs and recommended for
+personal projects.
+
+**Licenses (Open Food Facts).** Database: Open Database License (ODbL).
+Individual contents: Database Contents License (DbCL). Product images:
+Creative Commons Attribution-ShareAlike (CC BY-SA); product photos may also
+contain label artwork subject to third-party copyright. ODbL carries
+attribution and share-alike obligations that can matter when publicly reusing
+or republishing derived data. This experiment evaluates discovery potential
+only; **experimental access is not production reuse approval**. A licensing
+review is required before any production ingestion.
+
+**Open questions for the project owner (do not contact sources on our behalf):**
+- Whether to file the OFF API usage form and add a contact email to the
+  User-Agent before any further collection.
+- Whether the Open Brewery DB 403 is specific to datacenter IPs (test from a
+  residential IP before concluding).
+- Licensing review of ODbL share-alike implications for displaying OFF-derived
+  product data in the app.
+
 **Licensing:** the Open Food Facts database is ODbL-licensed. This experiment
 evaluates discovery potential only; incorporating records into production
 requires a licensing review. No images are downloaded, stored, or processed
@@ -111,8 +153,20 @@ association updates, graceful single-source failure, and CSV lookup joins.
 
 - `new_candidate` means *unmatched against the baseline*, not *verified new
   product*. Absence from the baseline alone does not prove novelty.
+- `relevance` separates **confirmed** records (a search term matched the
+  record's name/categories/brand) from **uncertain** ones (kept for review,
+  not verified beverages) and **rejected** ones (excluded). Records imported
+  before relevance labeling show as `unclassified`.
 - `needs_review` is expected to be non-trivial: seasonal releases, vintages,
   reformulations, and package variants may be distinct products.
+- **Candidate identity.** A candidate merges repeat sightings of the same
+  source record (same barcode/product code, e.g. under two search terms).
+  Cross-*source* product merging is unproven with the current sources: Open
+  Brewery DB yields producers only, never product candidates. When source
+  record IDs are missing, the same product from two sources would not merge
+  (follow-up design: content-based fallback identity). Same normalized
+  name+producer across different barcodes is intentionally *not* auto-merged;
+  those sit in the review queue as possible variants or data-entry duplicates.
 - Evaluate Open Brewery DB by **producer coverage** (does it improve product
   matching?), not by beverage count.
 - Cross-source agreement is useful evidence, not proof of correctness.
@@ -120,12 +174,19 @@ association updates, graceful single-source failure, and CSV lookup joins.
 ## Known limitations
 
 - Open Brewery DB blocked automated requests from the build environment
-  (bot protection); the client implements the documented API and the runner
+  (403, Cloudflare bot protection — not a robots.txt denial; robots.txt
+  allows `/`). The client implements the documented API and the runner
   records the failure gracefully, but producer enrichment could not be
-  exercised end to end here.
-- Open Food Facts rate-limits aggressively; the client backs off on 429s and
-  caches everything, but full-coverage runs take a while.
+  exercised end to end here. Retry from a residential IP before concluding.
+- Open Food Facts rate-limits aggressively (documented: 10 req/min/IP for
+  search); the client now waits 6s between requests, backs off on 429s, and
+  caches everything. The docs ask for bulk CSV/JSONL downloads beyond a few
+  hundred products and testing on the staging environment; this prototype
+  uses production search within the documented rate limit.
 - ABV coverage in Open Food Facts is sparse (`nutriments.alcohol_value` is
   often absent); many candidates will list ABV as unknown.
 - The baseline catalog is a 2026-10-12 snapshot; rerun after re-exporting the
   live sheets to pick up catalog changes.
+- The custom User-Agent does not yet include a contact email as the OFF docs
+  recommend; the API usage form has not been filed. Both are open questions
+  for the project owner (see Source access policy).

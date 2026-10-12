@@ -1,8 +1,9 @@
 """Tests for normalization helpers. No network access."""
 import unittest
 
-from src.normalize import (barcode_is_trustworthy, is_relevant_beverage,
-                           normalize_barcode, normalize_name, parse_abv)
+from src.normalize import (barcode_is_trustworthy, classify_relevance,
+                           is_relevant_beverage, normalize_barcode,
+                           normalize_name, parse_abv)
 
 
 class TestNormalizeName(unittest.TestCase):
@@ -71,6 +72,31 @@ class TestRelevance(unittest.TestCase):
         ok, reason = is_relevant_beverage("", "", "", ["beer"])
         self.assertFalse(ok)
         self.assertTrue(reason)
+
+
+class TestClassifyRelevance(unittest.TestCase):
+    TERMS = ["beer", "cider", "hard seltzer"]
+
+    def test_term_match_is_confirmed(self):
+        rel, _ = classify_relevance("Punk IPA", "Beers, Ales", "Brewdog",
+                                    self.TERMS)
+        self.assertEqual(rel, "confirmed")
+
+    def test_no_term_match_is_uncertain(self):
+        rel, reason = classify_relevance("Mystery Drink", "Beverages",
+                                        "Unknown Co", self.TERMS)
+        self.assertEqual(rel, "uncertain")
+        self.assertTrue(reason)
+
+    def test_empty_is_rejected(self):
+        rel, _ = classify_relevance("", "", "", self.TERMS)
+        self.assertEqual(rel, "rejected")
+
+    def test_uncertain_stays_relevant(self):
+        # Uncertain records are kept for review, not dropped.
+        ok, _ = is_relevant_beverage("Mystery Drink", "Beverages",
+                                     "Unknown Co", self.TERMS)
+        self.assertTrue(ok)
 
 
 if __name__ == "__main__":

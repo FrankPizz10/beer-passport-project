@@ -93,11 +93,24 @@ def is_relevant_beverage(name: str, categories: str, brands: str,
     Returns (relevant, reason). Records that fail are rejected as irrelevant;
     uncertain ones are kept with a review reason.
     """
+    relevance, reason = classify_relevance(name, categories, brands, terms)
+    return relevance != "rejected", reason
+
+
+def classify_relevance(name: str, categories: str, brands: str,
+                       terms: list[str]) -> tuple[str, str]:
+    """Classify a packaged-product record as confirmed, uncertain, or rejected.
+
+    - "confirmed": a search term appears in the record's name/categories/brand.
+    - "uncertain": non-empty record, but no search term matched. Kept as a
+      candidate with a review reason; NOT treated as a verified beverage.
+    - "rejected": empty name/categories/brand; excluded from candidates.
+    """
     blob = normalize_name(" ".join([name or "", categories or "", brands or ""]))
     if not blob:
-        return False, "empty name/categories"
+        return "rejected", "empty name/categories"
     for term in terms:
         if normalize_name(term) in blob:
-            return True, ""
+            return "confirmed", ""
     # Uncertain: keep for review rather than silently dropping.
-    return True, "uncertain category"
+    return "uncertain", "uncertain category"

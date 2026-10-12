@@ -15,7 +15,8 @@ import logging
 from urllib.parse import urlencode
 
 from ..config import Config
-from ..normalize import is_relevant_beverage, normalize_barcode, parse_abv
+from ..normalize import (classify_relevance, is_relevant_beverage,
+                         normalize_barcode, parse_abv)
 from .base import CachedClient, SourceError
 
 log = logging.getLogger(__name__)
@@ -88,9 +89,11 @@ def to_product_record(product: dict, terms: list[str]) -> dict | None:
     nutriments = product.get("nutriments") or {}
     abv = parse_abv(nutriments.get("alcohol_value"))
     code = str(product.get("code") or product.get("_id") or "")
+    relevance, relevance_reason = classify_relevance(name, categories, brands,
+                                                     terms)
     review_reasons = []
-    if reason:
-        review_reasons.append(f"uncertain category: {reason}")
+    if relevance_reason:
+        review_reasons.append(relevance_reason)
 
     return {
         "source_name": "openfoodfacts",
@@ -105,5 +108,6 @@ def to_product_record(product: dict, terms: list[str]) -> dict | None:
         "quantity": product.get("quantity") or "",
         "source_url": product.get("url") or "",
         "retrieved_note": "Open Food Facts (ODbL); discovery evaluation only",
+        "relevance": relevance,
         "review_reasons": review_reasons,
     }

@@ -12,7 +12,7 @@ CANDIDATE_COLUMNS = [
     "candidate_id", "name", "brand", "producer_name", "category", "style",
     "abv", "barcode", "country", "source_names", "source_record_ids",
     "source_urls", "existing_beerpassport_id", "match_status",
-    "match_confidence", "missing_fields", "review_reasons",
+    "match_confidence", "relevance", "missing_fields", "review_reasons",
     "first_discovered_at", "last_seen_at",
 ]
 

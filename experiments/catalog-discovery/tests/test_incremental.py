@@ -54,6 +54,34 @@ class TestStateMerging(unittest.TestCase):
         self.assertIn("rec-2", merged["source_record_ids"])
 
 
+class TestCandidateIdentity(unittest.TestCase):
+    def test_same_barcode_across_search_terms_merges(self):
+        # The same Open Food Facts product surfacing under two search terms
+        # carries the same barcode, so it must resolve to one candidate.
+        from src.match import make_candidate_id
+        id_a = make_candidate_id("openfoodfacts", "5056025440449",
+                                 "Punk IPA", "Brewdog")
+        id_b = make_candidate_id("openfoodfacts", "5056025440449",
+                                 "PUNK IPA", "BREWDOG")
+        self.assertEqual(id_a, id_b)
+        state = state_mod.State()
+        self.assertEqual(state_mod.merge_candidate(state, cand(id_a)), "new")
+        self.assertEqual(state_mod.merge_candidate(state, cand(id_a)),
+                         "updated")
+        self.assertEqual(len(state.candidates), 1)
+
+    def test_cross_source_merge_without_record_ids_is_unsupported(self):
+        # Known limitation, documented in the README: when source record ids
+        # are missing, the source name is part of the identity hash, so the
+        # same product reported by two different sources does NOT merge.
+        # (With the current sources this cannot happen: Open Brewery DB
+        # yields producers only, never product candidates.)
+        from src.match import make_candidate_id
+        id_a = make_candidate_id("source_a", "", "Punk IPA", "Brewdog")
+        id_b = make_candidate_id("source_b", "", "Punk IPA", "Brewdog")
+        self.assertNotEqual(id_a, id_b)
+
+
 class TestSourceFailure(unittest.TestCase):
     def test_client_raises_after_retries(self):
         import requests

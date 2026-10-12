@@ -103,11 +103,18 @@ def run(cfg: Config) -> dict:
     source_records: list[dict] = []
     new_this_run = 0
     updated_this_run = 0
+    repeated_this_run = 0
+    # Snapshot of previously seen record ids, so repeats within this run are
+    # counted against pre-run state rather than this run's own appends.
+    seen_at_start = {src: set(ids)
+                     for src, ids in state.seen_source_ids.items()}
     now = state_mod.utcnow()
     for rec in products:
         rec["producer_name"] = rec.get("brand") or ""
         rec["retrieved_at"] = now
         source_records.append(rec)
+        if rec["source_record_id"] in seen_at_start.get(rec["source_name"], set()):
+            repeated_this_run += 1
 
         status, baseline_id, confidence, reasons = match_mod.match_record(
             rec, index, cfg)
@@ -131,6 +138,7 @@ def run(cfg: Config) -> dict:
             existing_beerpassport_id=baseline_id,
             match_status=status,
             match_confidence=round(confidence, 1),
+            relevance=rec.get("relevance", "unclassified"),
             missing_fields=missing_fields_for(rec),
             review_reasons=reasons,
         )
@@ -149,8 +157,11 @@ def run(cfg: Config) -> dict:
     candidates = list(state.candidates.values())
     counts = {"existing": 0, "new_candidate": 0, "needs_review": 0}
     by_source: dict[str, int] = {}
+    relevance_counts: dict[str, int] = {}
     for c in candidates:
         counts[c["match_status"]] = counts.get(c["match_status"], 0) + 1
+        rel = c.get("relevance", "unclassified")
+        relevance_counts[rel] = relevance_counts.get(rel, 0) + 1
         for s in c["source_names"]:
             by_source[s] = by_source.get(s, 0) + 1
 
@@ -158,10 +169,12 @@ def run(cfg: Config) -> dict:
         "run_at": state.last_run,
         "unique_source_records_processed": len(source_records),
         "match_counts": counts,
+        "relevance_counts": relevance_counts,
         "candidates_by_source": by_source,
         "incremental": {
             "new_candidates_this_run": new_this_run,
             "updated_candidates_this_run": updated_this_run,
+            "repeated_source_records_this_run": repeated_this_run,
             "total_candidates": len(candidates),
         },
         "field_completeness": field_completeness(candidates),
@@ -226,6 +239,7 @@ def print_summary(summary: dict) -> None:
         print(f"Source {name}: {stats.get('raw_records', 0)} raw records; "
               f"errors: {stats.get('errors', [])}")
     print(f"Match counts: {summary.get('match_counts')}")
+    print(f"Relevance: {summary.get('relevance_counts')}")
     print(f"Incremental: {summary.get('incremental')}")
     print(f"Field completeness: {summary.get('field_completeness')}")
     if summary.get("errors"):
