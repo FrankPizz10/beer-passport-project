@@ -68,8 +68,9 @@ def run(cfg: Config) -> dict:
     obdb_stats: dict = {}
     try:
         if cfg.brewery_source == "dataset":
-            raw_breweries = brewery_dataset.load_snapshot(
-                cfg.brewery_dataset, limit=cfg.limit)
+            # The snapshot is local reference data: always load it fully.
+            # --limit bounds API fetches, not the pinned dataset.
+            raw_breweries = brewery_dataset.load_snapshot(cfg.brewery_dataset)
             obdb_stats = {"source": "dataset",
                           "snapshot": brewery_dataset.SNAPSHOT["commit_short"],
                           "snapshot_rows": brewery_dataset.SNAPSHOT["rows"]}
@@ -125,10 +126,10 @@ def run(cfg: Config) -> dict:
         rec["retrieved_at"] = now
         source_records.append(rec)
         src, sid = rec["source_name"], rec["source_record_id"]
-        if (sid in seen_at_start.get(src, set())
-                or sid in seen_this_run.setdefault(src, set())):
+        seen = seen_this_run.setdefault(src, set())
+        if sid in seen_at_start.get(src, set()) or sid in seen:
             repeated_this_run += 1
-        seen_this_run[src].add(sid)
+        seen.add(sid)
 
         status, baseline_id, confidence, reasons = match_mod.match_record(
             rec, index, cfg)

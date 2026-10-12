@@ -155,6 +155,70 @@ class TestBreweryDatasetSource(unittest.TestCase):
                 w.writerows(rows)
 
 
+class TestRepeatFromPriorRun(unittest.TestCase):
+    def test_repeat_sighting_from_prior_run_does_not_crash(self):
+        # Regression: a record ID seen in a previous run must be counted as
+        # a repeat, not crash with KeyError. The bug was a short-circuited
+        # `or` skipping setdefault() before the later dict access.
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "cache").mkdir()
+            state_dir = d / "state"
+            state_dir.mkdir()
+            out = d / "output"
+            self._write_baseline(d)
+            cfg = SimpleNamespace(
+                data_dir=d, output_dir=out, cache_dir=d / "cache",
+                state_dir=state_dir, limit=10, refresh=False,
+                brewery_pages=1, brewery_source="api", brewery_dataset=None,
+                fuzzy_threshold=88.0, review_threshold=70.0,
+                abv_conflict=2.0, request_timeout=5, max_retries=1,
+                off_delay=0, obdb_delay=0,
+                search_terms=["beer"],
+            )
+            product = {
+                "source_name": "openfoodfacts", "source_record_id": "111",
+                "original_name": "Brand New IPA", "brand": "NewCo",
+                "categories": "Beers", "abv": 6.0, "abv_unknown": False,
+                "barcode": "1234567890128", "country": "US", "quantity": "",
+                "source_url": "http://example.com/p/111",
+                "retrieved_note": "", "review_reasons": [],
+            }
+            from src import main as main_mod
+            with mock.patch("src.sources.openbrewerydb.fetch_breweries",
+                            return_value=([], {})), \
+                 mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([product], {"terms_ok": 1})):
+                main_mod.run(cfg)
+                summary = main_mod.run(cfg)
+            inc = summary["incremental"]
+            self.assertEqual(inc["repeated_source_records_this_run"], 1)
+            self.assertEqual(inc["new_candidates_this_run"], 0)
+
+    def _write_baseline(self, d: Path):
+        specs = {
+            "LiveBeers.csv": (["id", "brewery_id", "name", "cat_id",
+                               "style_id", "abv", "ibu", "srm", "upc",
+                               "descript", "last_mod"],
+                              [["1", "1", "Old Ale", "1", "1", "5.0", "", "",
+                                 "", "", ""]]),
+            "LiveBreweries.csv": (["id", "name", "address1", "address2",
+                                   "city", "state", "code", "country",
+                                   "phone", "website", "descript", "add_user"],
+                                  [["1", "Old Brewery", "", "", "", "", "",
+                                    "", "", "", "", ""]]),
+            "LiveCategories.csv": (["id", "cat_name", "last_mod"],
+                                   [["1", "British Ale", ""]]),
+            "LiveStyles.csv": (["id", "cat_id", "style_name", "last_mod"],
+                               [["1", "1", "Old Ale Style", ""]]),
+        }
+        for name, (headers, rows) in specs.items():
+            with open(d / name, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                w.writerows(rows)
+
+
 class TestSourceFailure(unittest.TestCase):
     def test_client_raises_after_retries(self):
         import requests
