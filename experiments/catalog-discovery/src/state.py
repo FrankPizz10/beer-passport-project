@@ -88,6 +88,13 @@ def merge_candidate(state: State, cand: dict) -> str:
     existing["match_status"] = cand["match_status"]
     existing["match_confidence"] = cand["match_confidence"]
     existing["existing_beerpassport_id"] = cand["existing_beerpassport_id"]
+    # Relevance: the fresh classification from this run wins, so reprocessed
+    # candidates pick up current labels instead of staying "unclassified"
+    # forever. Prior evidence (source associations, review reasons,
+    # first_discovered_at) is preserved. Records never reprocessed keep
+    # their existing label, including genuine "unclassified" legacy records.
+    if cand.get("relevance"):
+        existing["relevance"] = cand["relevance"]
     for r in cand.get("review_reasons", []):
         if r not in existing["review_reasons"]:
             existing["review_reasons"].append(r)

@@ -115,6 +115,7 @@ def run(cfg: Config) -> dict:
     new_this_run = 0
     updated_this_run = 0
     repeated_this_run = 0
+    reclassified_this_run = 0
     # Snapshot of previously seen record ids. A record counts as repeated
     # when its id was seen in a previous run OR earlier in this run.
     seen_at_start = {src: set(ids)
@@ -157,11 +158,19 @@ def run(cfg: Config) -> dict:
             missing_fields=missing_fields_for(rec),
             review_reasons=reasons,
         )
+        prior = state.candidates.get(cand.candidate_id)
+        old_relevance = (prior or {}).get("relevance", "unclassified")
         outcome = state_mod.merge_candidate(state, cand.__dict__)
         if outcome == "new":
             new_this_run += 1
         else:
             updated_this_run += 1
+            # A reprocessed candidate whose legacy label was "unclassified"
+            # now carries the current classification; count it separately
+            # from records that were never reprocessed.
+            if (old_relevance == "unclassified"
+                    and cand.relevance != "unclassified"):
+                reclassified_this_run += 1
 
         seen = state.seen_source_ids.setdefault(rec["source_name"], [])
         if rec["source_record_id"] not in seen:
@@ -190,6 +199,7 @@ def run(cfg: Config) -> dict:
             "new_candidates_this_run": new_this_run,
             "updated_candidates_this_run": updated_this_run,
             "repeated_source_records_this_run": repeated_this_run,
+            "reclassified_this_run": reclassified_this_run,
             "total_candidates": len(candidates),
         },
         "field_completeness": field_completeness(candidates),

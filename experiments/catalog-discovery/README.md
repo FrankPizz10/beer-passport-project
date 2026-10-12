@@ -78,7 +78,10 @@ community-supported with no SLAs, recommended for personal projects.
 Because API availability is unconfirmed, this experiment evaluates
 producers through a pinned snapshot of the official dataset repository
 (see `data/dataset/SNAPSHOT.md`) instead of spending the task on access
-troubleshooting. The live-API adapter is retained (`--brewery-source api`).
+troubleshooting. The snapshot was retrieved on 2026-10-12; that records
+the retrieval date and does not verify that every brewery entry was
+current on that date. The live-API adapter is retained
+(`--brewery-source api`).
 
 **Open questions for the project owner (do not contact sources on our behalf):**
 - Whether to file the OFF API usage form and add a contact email to the
@@ -128,6 +131,16 @@ coverage (200 records per page), `--brewery-source dataset` to load producers
 from the pinned dataset snapshot instead of the live API
 (see `data/dataset/SNAPSHOT.md`; snapshot CSV is gitignored, download it
 first).
+
+`--limit N` bounds product/API fetching (e.g. `--limit 100` fetches at most
+100 Open Food Facts records). It does not truncate the dataset source:
+`--brewery-source dataset` intentionally loads the full pinned snapshot
+(11,959 producers), because a partial slice of a reference dataset would
+skew producer matching.
+
+The run summary distinguishes accumulated totals (all candidates ever
+discovered) from this-run figures (`incremental`: new, updated, repeated
+source records, and reclassified relevance labels this run).
 
 To evaluate producer enrichment without a full discovery run:
 ```bash

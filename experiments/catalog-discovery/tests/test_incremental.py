@@ -195,6 +195,67 @@ class TestRepeatFromPriorRun(unittest.TestCase):
             self.assertEqual(inc["repeated_source_records_this_run"], 1)
             self.assertEqual(inc["new_candidates_this_run"], 0)
 
+    def test_reprocessed_candidate_gets_current_relevance(self):
+        # Legacy candidates stuck at "unclassified" pick up the current
+        # classification when reprocessed, without losing prior evidence.
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "cache").mkdir()
+            state_dir = d / "state"
+            state_dir.mkdir()
+            out = d / "output"
+            self._write_baseline(d)
+            cfg = SimpleNamespace(
+                data_dir=d, output_dir=out, cache_dir=d / "cache",
+                state_dir=state_dir, limit=10, refresh=False,
+                brewery_pages=1, brewery_source="api", brewery_dataset=None,
+                fuzzy_threshold=88.0, review_threshold=70.0,
+                abv_conflict=2.0, request_timeout=5, max_retries=1,
+                off_delay=0, obdb_delay=0,
+                search_terms=["beer"],
+            )
+            base_product = {
+                "source_name": "openfoodfacts", "source_record_id": "111",
+                "original_name": "Brand New IPA", "brand": "NewCo",
+                "categories": "Beers", "abv": 6.0, "abv_unknown": False,
+                "barcode": "1234567890128", "country": "US", "quantity": "",
+                "source_url": "http://example.com/p/111",
+                "retrieved_note": "", "review_reasons": [],
+            }
+            from src import main as main_mod
+            from src.sources import openbrewerydb
+            # Run 1: record carries no relevance label (legacy import).
+            with mock.patch.object(openbrewerydb, "fetch_breweries",
+                                   return_value=([], {})), \
+                 mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([dict(base_product)],
+                                          {"terms_ok": 1})):
+                s1 = main_mod.run(cfg)
+            self.assertEqual(s1["relevance_counts"].get("unclassified"), 1)
+            first_seen = json.load(
+                open(state_dir / "discovery_state.json")
+            )["candidates"]
+            cid = next(iter(first_seen))
+            discovered_at = first_seen[cid]["first_discovered_at"]
+            # Run 2: same record reprocessed, now with a classification.
+            product_v2 = dict(base_product, relevance="term-matched")
+            with mock.patch.object(openbrewerydb, "fetch_breweries",
+                                   return_value=([], {})), \
+                 mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([product_v2], {"terms_ok": 1})):
+                s2 = main_mod.run(cfg)
+            inc = s2["incremental"]
+            self.assertEqual(inc["reclassified_this_run"], 1)
+            self.assertEqual(s2["relevance_counts"].get("term-matched"), 1)
+            self.assertEqual(s2["relevance_counts"].get("unclassified", 0), 0)
+            # Prior evidence preserved: same candidate, original timestamp.
+            cand = json.load(open(state_dir / "discovery_state.json"))[
+                "candidates"][cid]
+            self.assertEqual(cand["relevance"], "term-matched")
+            self.assertEqual(cand["first_discovered_at"], discovered_at)
+            self.assertIn("111", cand["source_record_ids"])
+
     def _write_baseline(self, d: Path):
         specs = {
             "LiveBeers.csv": (["id", "brewery_id", "name", "cat_id",
