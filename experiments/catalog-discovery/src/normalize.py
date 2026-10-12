@@ -99,9 +99,11 @@ def is_relevant_beverage(name: str, categories: str, brands: str,
 
 def classify_relevance(name: str, categories: str, brands: str,
                        terms: list[str]) -> tuple[str, str]:
-    """Classify a packaged-product record as confirmed, uncertain, or rejected.
+    """Classify a packaged-product record as term-matched, uncertain, or rejected.
 
-    - "confirmed": a search term appears in the record's name/categories/brand.
+    - "term-matched": a search term appears in the record's name/categories/
+      brand. This means the term matched; it does NOT confirm the record is
+      a beverage.
     - "uncertain": non-empty record, but no search term matched. Kept as a
       candidate with a review reason; NOT treated as a verified beverage.
     - "rejected": empty name/categories/brand; excluded from candidates.
@@ -111,6 +113,6 @@ def classify_relevance(name: str, categories: str, brands: str,
         return "rejected", "empty name/categories"
     for term in terms:
         if normalize_name(term) in blob:
-            return "confirmed", ""
+            return "term-matched", ""
     # Uncertain: keep for review rather than silently dropping.
     return "uncertain", "uncertain category"

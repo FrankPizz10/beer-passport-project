@@ -77,10 +77,10 @@ class TestRelevance(unittest.TestCase):
 class TestClassifyRelevance(unittest.TestCase):
     TERMS = ["beer", "cider", "hard seltzer"]
 
-    def test_term_match_is_confirmed(self):
+    def test_term_match_is_term_matched(self):
         rel, _ = classify_relevance("Punk IPA", "Beers, Ales", "Brewdog",
                                     self.TERMS)
-        self.assertEqual(rel, "confirmed")
+        self.assertEqual(rel, "term-matched")
 
     def test_no_term_match_is_uncertain(self):
         rel, reason = classify_relevance("Mystery Drink", "Beverages",

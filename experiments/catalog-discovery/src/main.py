@@ -26,6 +26,7 @@ from .match import Candidate, make_candidate_id, missing_fields_for
 from .normalize import normalize_barcode, normalize_name, parse_abv
 from .sources import openbrewerydb as obdb
 from .sources import openfoodfacts as off
+from .sources import brewery_dataset
 from .sources.base import CachedClient, SourceError
 
 log = logging.getLogger("catalog_discovery")
@@ -66,14 +67,23 @@ def run(cfg: Config) -> dict:
     producers: list[dict] = []
     obdb_stats: dict = {}
     try:
-        client = CachedClient(cfg.cache_dir / "openbrewerydb",
-                              delay=cfg.obdb_delay,
-                              timeout=cfg.request_timeout,
-                              max_retries=cfg.max_retries)
-        raw_breweries, obdb_stats = obdb.fetch_breweries(cfg, client)
-        producers = [match_producer(obdb.to_producer_record(r), base)
-                     for r in raw_breweries]
-    except SourceError as e:
+        if cfg.brewery_source == "dataset":
+            raw_breweries = brewery_dataset.load_snapshot(
+                cfg.brewery_dataset, limit=cfg.limit)
+            obdb_stats = {"source": "dataset",
+                          "snapshot": brewery_dataset.SNAPSHOT["commit_short"],
+                          "snapshot_rows": brewery_dataset.SNAPSHOT["rows"]}
+            producers = [match_producer(brewery_dataset.to_producer_record(r), base)
+                         for r in raw_breweries]
+        else:
+            client = CachedClient(cfg.cache_dir / "openbrewerydb",
+                                  delay=cfg.obdb_delay,
+                                  timeout=cfg.request_timeout,
+                                  max_retries=cfg.max_retries)
+            raw_breweries, obdb_stats = obdb.fetch_breweries(cfg, client)
+            producers = [match_producer(obdb.to_producer_record(r), base)
+                         for r in raw_breweries]
+    except (SourceError, FileNotFoundError, ValueError) as e:
         summary["errors"].append(f"openbrewerydb: {e}")
         log.error("Open Brewery DB unavailable: %s", e)
     summary["sources"]["openbrewerydb"] = {
@@ -104,17 +114,21 @@ def run(cfg: Config) -> dict:
     new_this_run = 0
     updated_this_run = 0
     repeated_this_run = 0
-    # Snapshot of previously seen record ids, so repeats within this run are
-    # counted against pre-run state rather than this run's own appends.
+    # Snapshot of previously seen record ids. A record counts as repeated
+    # when its id was seen in a previous run OR earlier in this run.
     seen_at_start = {src: set(ids)
                      for src, ids in state.seen_source_ids.items()}
+    seen_this_run: dict[str, set[str]] = {}
     now = state_mod.utcnow()
     for rec in products:
         rec["producer_name"] = rec.get("brand") or ""
         rec["retrieved_at"] = now
         source_records.append(rec)
-        if rec["source_record_id"] in seen_at_start.get(rec["source_name"], set()):
+        src, sid = rec["source_name"], rec["source_record_id"]
+        if (sid in seen_at_start.get(src, set())
+                or sid in seen_this_run.setdefault(src, set())):
             repeated_this_run += 1
+        seen_this_run[src].add(sid)
 
         status, baseline_id, confidence, reasons = match_mod.match_record(
             rec, index, cfg)
@@ -238,9 +252,9 @@ def print_summary(summary: dict) -> None:
     for name, stats in summary.get("sources", {}).items():
         print(f"Source {name}: {stats.get('raw_records', 0)} raw records; "
               f"errors: {stats.get('errors', [])}")
-    print(f"Match counts: {summary.get('match_counts')}")
-    print(f"Relevance: {summary.get('relevance_counts')}")
-    print(f"Incremental: {summary.get('incremental')}")
+    print(f"Match counts (accumulated): {summary.get('match_counts')}")
+    print(f"Relevance (accumulated): {summary.get('relevance_counts')}")
+    print(f"This run: {summary.get('incremental')}")
     print(f"Field completeness: {summary.get('field_completeness')}")
     if summary.get("errors"):
         print(f"Errors: {summary['errors']}")

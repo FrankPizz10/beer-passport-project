@@ -25,45 +25,68 @@ those discoveries require?
 
 ### Source access policy (checked 2026-10-12)
 
-**Open Food Facts.** `world.openfoodfacts.org/robots.txt` disallows `/api`,
-`/cgi`, and `/facets` for general crawlers (`User-agent: *`). That directive
-targets web crawlers (search-engine indexers). The published API documentation
-separately and explicitly describes programmatic access: always identify the
-app with a custom `User-Agent`, respect **10 req/min/IP for search queries**
-(`GET /api/v*/search` or `GET /cgi/search.pl`; 15 req/min/IP for product
-reads), test against the staging environment (`world.openfoodfacts.net`,
-user/password `off`), and use the bulk CSV/JSONL downloads when fetching
-more than a few hundred products. robots.txt alone is not a legal conclusion;
-the documented API is the intentional interface and its terms govern. This
-prototype calls `/cgi/search.pl` per those documented API rules, with a 6s
-request delay (10 req/min ceiling) and a custom User-Agent.
+**Open Food Facts.** `world.openfoodfacts.org/robots.txt` (rechecked
+2026-10-12, unchanged) disallows `/api`, `/cgi`, and `/facets` for
+`User-agent: *`. That directive is addressed to general web crawlers. The
+published API documentation separately describes programmatic access in
+detail: always identify the app with a custom `User-Agent`, respect
+**10 req/min/IP for search queries** (`GET /api/v*/search` or
+`GET /cgi/search.pl`; 15 req/min/IP for product reads), test against the
+staging environment, and use the bulk CSV/JSONL downloads when fetching
+more than a few hundred products.
+
+On the tension: robots.txt alone is not a legal conclusion, and the API
+docs do not automatically override it either. They are two signals from
+the same operator aimed at different audiences (indexing crawlers vs API
+consumers). This prototype's position: it calls `/cgi/search.pl` exactly
+as the API documentation describes (identified User-Agent, 6s delay for a
+10 req/min ceiling, small evaluation volume), which is the documented
+intentional interface. That is a judgment call for an experiment, not a
+clearance for production. Do not broaden collection until the approved
+retrieval path is explicit.
+
+How the current experiment relates to the guidance:
+- Within the documented search rate limit (6s delay); backs off on 429/503.
+- Small volume (100s of records), not the thousands that trigger the bulk
+  download recommendation.
+- Uses production search, not the staging environment the docs ask testers
+  to use. Staging has a separate account database and HTTP basic auth
+  (`off`/`off`).
+- Custom User-Agent set, but without the contact email the docs recommend.
+
+**Licenses (Open Food Facts).** Per the API docs and the licensing tutorial
+(https://openfoodfacts.github.io/openfoodfacts-server/api/tutorials/license-be-on-the-legal-side/,
+checked 2026-10-12): the database is under the Open Database License
+(ODbL); individual contents under the Database Contents License (DbCL);
+product images under Creative Commons Attribution-ShareAlike (CC BY-SA),
+with the caveat that photos may contain label artwork subject to
+third-party copyright. OFF points reusers to its Terms of use and reuse,
+its wiki attribution guidelines, and a public non-compliance list; legal
+questions go to reuse@openfoodfacts.org. ODbL carries attribution and
+share-alike obligations that can matter when publicly reusing or
+republishing derived data. This experiment evaluates discovery potential
+only; **experimental access is not production reuse approval**.
 
 **Open Brewery DB.** `openbrewerydb.org/robots.txt` allows `/` for general
-crawlers. The 403 responses seen from the build environment are Cloudflare bot
-protection (the FAQ confirms Cloudflare sits in front of the API), not a
-robots.txt denial; treat as an access issue to investigate (e.g. retry from a
-residential IP), not a policy refusal. Reuse guidance (FAQ, checked
-2026-10-12): the dataset is free and open-source, the API is free with no
-authentication, any project may use the dataset **with credit to Open Brewery
-DB**; the API is community-supported with no SLAs and recommended for
-personal projects.
-
-**Licenses (Open Food Facts).** Database: Open Database License (ODbL).
-Individual contents: Database Contents License (DbCL). Product images:
-Creative Commons Attribution-ShareAlike (CC BY-SA); product photos may also
-contain label artwork subject to third-party copyright. ODbL carries
-attribution and share-alike obligations that can matter when publicly reusing
-or republishing derived data. This experiment evaluates discovery potential
-only; **experimental access is not production reuse approval**. A licensing
-review is required before any production ingestion.
+crawlers. The API 403s seen from the build environment *and* the project
+owner's machine have an unconfirmed cause; robots.txt does not explain
+them and they are not characterized here as a confirmed Cloudflare
+decision. Reuse guidance (FAQ, checked 2026-10-12): the dataset is free
+and open-source, the API is free with no authentication, any project may
+use the dataset **with credit to Open Brewery DB**; the API is
+community-supported with no SLAs, recommended for personal projects.
+Because API availability is unconfirmed, this experiment evaluates
+producers through a pinned snapshot of the official dataset repository
+(see `data/dataset/SNAPSHOT.md`) instead of spending the task on access
+troubleshooting. The live-API adapter is retained (`--brewery-source api`).
 
 **Open questions for the project owner (do not contact sources on our behalf):**
 - Whether to file the OFF API usage form and add a contact email to the
   User-Agent before any further collection.
-- Whether the Open Brewery DB 403 is specific to datacenter IPs (test from a
-  residential IP before concluding).
-- Licensing review of ODbL share-alike implications for displaying OFF-derived
-  product data in the app.
+- Whether to move evaluation traffic to the OFF staging environment.
+- Licensing review of ODbL/DbCL share-alike implications for displaying
+  OFF-derived product data in the app.
+- What "credit to Open Brewery DB" concretely requires for production use.
 
 **Licensing:** the Open Food Facts database is ODbL-licensed. This experiment
 evaluates discovery potential only; incorporating records into production
@@ -100,8 +123,20 @@ python -m src.main --reset-state
 ```
 
 Useful options: `--search-terms beer cider "hard seltzer"` to override the
-Open Food Facts search terms, `--brewery-pages N` for Open Brewery DB coverage
-(200 records per page).
+Open Food Facts search terms, `--brewery-pages N` for Open Brewery DB API
+coverage (200 records per page), `--brewery-source dataset` to load producers
+from the pinned dataset snapshot instead of the live API
+(see `data/dataset/SNAPSHOT.md`; snapshot CSV is gitignored, download it
+first).
+
+To evaluate producer enrichment without a full discovery run:
+```bash
+python -m src.enrichment --limit 2000   # bounded comparison; full snapshot by default
+```
+This compares the dataset snapshot against the baseline breweries and
+assesses producer attribution for the OFF candidates in the current
+discovery state, writing `output/producer_enrichment.json`. Breweries are
+never counted as beverage discoveries.
 
 After the limited test succeeds, broaden the search by raising `--limit`,
 adding `--brewery-pages`, and extending `--search-terms`.
@@ -153,20 +188,22 @@ association updates, graceful single-source failure, and CSV lookup joins.
 
 - `new_candidate` means *unmatched against the baseline*, not *verified new
   product*. Absence from the baseline alone does not prove novelty.
-- `relevance` separates **confirmed** records (a search term matched the
-  record's name/categories/brand) from **uncertain** ones (kept for review,
-  not verified beverages) and **rejected** ones (excluded). Records imported
-  before relevance labeling show as `unclassified`.
+- `relevance` separates **term-matched** records (a search term matched the
+  record's name/categories/brand; this means the term matched, *not* that the
+  record is confirmed to be a beverage) from **uncertain** ones (kept for
+  review, not verified beverages) and **rejected** ones (excluded). Records
+  imported before relevance labeling show as `unclassified`.
 - `needs_review` is expected to be non-trivial: seasonal releases, vintages,
   reformulations, and package variants may be distinct products.
 - **Candidate identity.** A candidate merges repeat sightings of the same
-  source record (same barcode/product code, e.g. under two search terms).
-  Cross-*source* product merging is unproven with the current sources: Open
-  Brewery DB yields producers only, never product candidates. When source
-  record IDs are missing, the same product from two sources would not merge
-  (follow-up design: content-based fallback identity). Same normalized
-  name+producer across different barcodes is intentionally *not* auto-merged;
-  those sit in the review queue as possible variants or data-entry duplicates.
+  source record (same barcode/product code, e.g. under two search terms);
+  the summary counts these as repeated source records. Cross-*source*
+  product merging is unsupported and undescribed: Open Brewery DB
+  contributes producer records only, never beverage candidates, so nothing
+  in this experiment demonstrates cross-source beverage deduplication.
+  Different barcodes that may describe the same beverage (or package
+  variants) are intentionally *not* auto-merged; those sit in the review
+  queue as possible variants or data-entry duplicates.
 - Evaluate Open Brewery DB by **producer coverage** (does it improve product
   matching?), not by beverage count.
 - Cross-source agreement is useful evidence, not proof of correctness.

@@ -30,6 +30,8 @@ class Config:
         ]
     )
     brewery_pages: int = 2            # Open Brewery DB pages (200 records each)
+    brewery_source: str = "api"       # "api" or "dataset"
+    brewery_dataset: Path | None = None  # snapshot CSV for --brewery-source dataset
     fuzzy_threshold: float = 88.0     # rapidfuzz score to call a fuzzy match
     review_threshold: float = 70.0    # below this: new_candidate; between: needs_review
     abv_conflict: float = 2.0         # ABV point difference that flags a conflict
@@ -59,6 +61,10 @@ def parse_args(argv: list[str] | None = None) -> Config:
                    help="Override the Open Food Facts search terms.")
     p.add_argument("--brewery-pages", type=int, default=2,
                    help="Number of Open Brewery DB pages to fetch (200 records each).")
+    p.add_argument("--brewery-source", choices=["api", "dataset"], default="api",
+                   help="Open Brewery DB access path: live API or pinned dataset snapshot.")
+    p.add_argument("--brewery-dataset", type=Path, default=None,
+                   help="Path to the Open Brewery DB snapshot CSV (with --brewery-source dataset).")
     p.add_argument("--data-dir", type=Path, default=None)
     p.add_argument("--output-dir", type=Path, default=None)
     args = p.parse_args(argv)
@@ -73,10 +79,13 @@ def parse_args(argv: list[str] | None = None) -> Config:
     if args.search_terms:
         cfg.search_terms = args.search_terms
     cfg.brewery_pages = args.brewery_pages
+    cfg.brewery_source = args.brewery_source
     if args.data_dir:
         cfg.data_dir = args.data_dir
         cfg.cache_dir = args.data_dir / "cache"
         cfg.state_dir = args.data_dir / "state"
+    cfg.brewery_dataset = (args.brewery_dataset
+                           or cfg.data_dir / "dataset" / "openbrewerydb-breweries.csv")
     if args.output_dir:
         cfg.output_dir = args.output_dir
     return cfg

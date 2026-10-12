@@ -82,6 +82,79 @@ class TestCandidateIdentity(unittest.TestCase):
         self.assertNotEqual(id_a, id_b)
 
 
+class TestBreweryDatasetSource(unittest.TestCase):
+    def test_dataset_path_produces_producer_candidates(self):
+        # --brewery-source dataset must load the snapshot and match producers
+        # without touching the API adapter.
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "cache").mkdir()
+            (d / "state").mkdir()
+            out = d / "output"
+            self._write_baseline(d)
+            ds = d / "snapshot.csv"
+            with open(ds, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(["id", "name", "brewery_type", "address_1",
+                            "address_2", "address_3", "city",
+                            "state_province", "postal_code", "country",
+                            "phone", "website_url", "longitude", "latitude"])
+                w.writerow(["abc", "Old Brewery", "micro", "", "", "",
+                            "Town", "ST", "", "US", "", "", "", ""])
+                w.writerow(["def", "Brand New Brewing", "micro", "", "", "",
+                            "City", "ST", "", "US", "", "", "", ""])
+            cfg = SimpleNamespace(
+                data_dir=d, output_dir=out, cache_dir=d / "cache",
+                state_dir=d / "state", limit=10, refresh=False,
+                brewery_pages=1, brewery_source="dataset",
+                brewery_dataset=ds, fuzzy_threshold=88.0,
+                review_threshold=70.0, abv_conflict=2.0, request_timeout=5,
+                max_retries=1, off_delay=0, obdb_delay=0,
+                search_terms=["beer"],
+            )
+            from src import main as main_mod
+            with mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([], {"terms_ok": 0})):
+                summary = main_mod.run(cfg)
+            self.assertEqual(
+                summary["sources"]["openbrewerydb"]["source"], "dataset")
+            self.assertEqual(
+                summary["sources"]["openbrewerydb"]["raw_records"], 2)
+            producers = list(csv.DictReader(
+                open(out / "producer_candidates.csv", encoding="utf-8-sig")))
+            self.assertEqual(len(producers), 2)
+            by_name = {p["original_name"]: p for p in producers}
+            # Exact baseline match -> existing; unknown -> new_candidate.
+            self.assertEqual(by_name["Old Brewery"]["match_status"], "existing")
+            self.assertEqual(by_name["Brand New Brewing"]["match_status"],
+                             "new_candidate")
+            self.assertEqual(by_name["Old Brewery"]["source_name"],
+                             "openbrewerydb-dataset")
+
+    def _write_baseline(self, d: Path):
+        specs = {
+            "LiveBeers.csv": (["id", "brewery_id", "name", "cat_id",
+                               "style_id", "abv", "ibu", "srm", "upc",
+                               "descript", "last_mod"],
+                              [["1", "1", "Old Ale", "1", "1", "5.0", "", "",
+                                 "", "", ""]]),
+            "LiveBreweries.csv": (["id", "name", "address1", "address2",
+                                   "city", "state", "code", "country",
+                                   "phone", "website", "descript", "add_user"],
+                                  [["1", "Old Brewery", "", "", "", "", "",
+                                    "", "", "", "", ""]]),
+            "LiveCategories.csv": (["id", "cat_name", "last_mod"],
+                                   [["1", "British Ale", ""]]),
+            "LiveStyles.csv": (["id", "cat_id", "style_name", "last_mod"],
+                               [["1", "1", "Old Ale Style", ""]]),
+        }
+        for name, (headers, rows) in specs.items():
+            with open(d / name, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                w.writerows(rows)
+
+
 class TestSourceFailure(unittest.TestCase):
     def test_client_raises_after_retries(self):
         import requests
@@ -104,7 +177,8 @@ class TestSourceFailure(unittest.TestCase):
             cfg = SimpleNamespace(
                 data_dir=d, output_dir=out, cache_dir=d / "cache",
                 state_dir=d / "state", limit=10, refresh=False,
-                brewery_pages=1, fuzzy_threshold=88.0, review_threshold=70.0,
+                brewery_pages=1, brewery_source="api", brewery_dataset=None,
+                fuzzy_threshold=88.0, review_threshold=70.0,
                 abv_conflict=2.0, request_timeout=5, max_retries=1,
                 off_delay=0, obdb_delay=0,
                 search_terms=["beer"],

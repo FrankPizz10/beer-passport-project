@@ -40,7 +40,7 @@ class Candidate:
     existing_beerpassport_id: str = ""
     match_status: str = "new_candidate"
     match_confidence: float = 0.0
-    # confirmed | uncertain | rejected | unclassified (records imported
+    # term-matched | uncertain | rejected | unclassified (records imported
     # before relevance labeling existed; see README).
     relevance: str = "unclassified"
     missing_fields: list[str] = field(default_factory=list)
