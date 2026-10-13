@@ -177,3 +177,17 @@ Validated against an isolated test copy in `/tmp/beerpassport_validation` (branc
 - **Traceability and outputs**:
   - 100% of candidate rows trace to source records and valid HTTP URLs; review queue matches 103/103 `needs_review` candidate IDs.
 - **Verdict**: **Ready with specific limitations**. High-priority limitation to address before broader ingestion: adjust fuzzy auto-matching to require stronger independent producer similarity or route single-word/generic beer style names to `needs_review` rather than auto-merging into `existing`.
+
+## Fuzzy matcher fix and re-assessment (2026-10-13)
+
+- **Issue addressed**: Generic single-word beer style names (e.g. "Blonde", "Ambrée") combined with shared brewery tokens like "Brasserie" overweighted `fuzz.token_set_ratio`, causing 3 false positives to be auto-labeled as `existing` (75.0% accuracy in `existing`).
+- **Fix implemented**: Added a single-token producer agreement guard in `match_record` (`src/match.py`) with configurable threshold `single_token_producer_threshold = 85.0` (`src/config.py`). When the candidate name or matched baseline beer name has only a single word (`len <= 1`), independent producer agreement (`fuzz.token_set_ratio`) must reach at least 85.0 to auto-merge into `existing`. Borderline matches below 85.0 are routed to `needs_review` with the reason `weak producer agreement (X) for single-token name '...'` rather than false auto-merging. Exact barcode (Stage 1) and exact normalized name+producer (Stage 2) matches remain completely preserved.
+- **Unit test suite**: 45/45 unit tests pass (4 new tests added in `tests/test_match.py`: 3 regression tests for the false positives and 1 positive-control test for legitimate single-word names with strong producer agreement).
+- **Measured results (test state re-evaluation)**:
+  - `existing`: reduced from 12 (with 3 false positives) to 7 confirmed true matches (**100.0% observed accuracy**, 0 false positives).
+  - All 3 previously misclassified records (`la goudale blonde` / *Brasserie Goudale*, `La Blonde` / *Brasserie du Mont Blanc*, and `75CL BIERE LA GOUDALE AMBREE` / *Brasserie de Gayant*) are now routed to `needs_review` with their respective weak-producer reasons.
+  - Borderline name cases (`cand_5833aa3b5f32` `Blonde` / *Leffe, AB-InBev* and `cand_ff71162fc781` `Heineken Beer` / *Heineken Bier*) were also safely shifted from `existing` to `needs_review`.
+  - Legitimate single-token matches with strong producer agreement (`Framboise Lambic Beer` / *Lindemans*, `Pécheresse` / *Lindemans*) correctly remain in `existing`.
+  - `new_candidate` count remains unchanged at 85 (100.0% accuracy).
+  - `needs_review` count updated from 103 to 109, appropriately holding all borderline and incomplete entries for review.
+

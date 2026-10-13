@@ -34,6 +34,7 @@ class Config:
     brewery_dataset: Path | None = None  # snapshot CSV for --brewery-source dataset
     fuzzy_threshold: float = 88.0     # rapidfuzz score to call a fuzzy match
     review_threshold: float = 70.0    # below this: new_candidate; between: needs_review
+    single_token_producer_threshold: float = 85.0  # min producer score for single-token name fuzzy matches
     abv_conflict: float = 2.0         # ABV point difference that flags a conflict
     request_timeout: int = 25
     max_retries: int = 3

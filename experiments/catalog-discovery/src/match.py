@@ -112,6 +112,7 @@ def match_record(record: dict, index: dict, cfg) -> tuple[str, str, float, list[
 
     # Stage 3: fuzzy.
     best, best_score = None, 0.0
+    best_bnn, best_bnp = "", ""
     if nn:
         for (bnn, bnp), hits in index["by_name_producer"].items():
             if not bnn:
@@ -119,7 +120,15 @@ def match_record(record: dict, index: dict, cfg) -> tuple[str, str, float, list[
             score = fuzzy_score(nn, np, bnn, bnp)
             if score > best_score:
                 best, best_score = hits[0], score
+                best_bnn, best_bnp = bnn, bnp
     if best and best_score >= cfg.fuzzy_threshold:
+        st_threshold = getattr(cfg, "single_token_producer_threshold", 85.0)
+        is_single_token = len(best_bnn.split()) <= 1 or len(nn.split()) <= 1
+        best_prod_score = fuzz.token_set_ratio(np, best_bnp) if np and best_bnp else 0.0
+        if is_single_token and best_prod_score < st_threshold:
+            reasons.append(
+                f"weak producer agreement ({best_prod_score:.1f}) for single-token name {best_bnn!r}")
+            return "needs_review", best["id"], best_score, reasons
         return _check_conflicts("existing", best, abv, reasons, best_score, cfg)
     if best and best_score >= cfg.review_threshold:
         reasons.append(f"possible duplicate (fuzzy score {best_score:.1f})")

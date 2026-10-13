@@ -19,6 +19,7 @@ def make_baseline(beers):
 
 
 CFG = SimpleNamespace(fuzzy_threshold=88.0, review_threshold=70.0,
+                      single_token_producer_threshold=85.0,
                       abv_conflict=2.0)
 
 
@@ -95,5 +96,56 @@ class TestFuzzyStage(unittest.TestCase):
         self.assertTrue(any("insufficient evidence" in r for r in reasons))
 
 
+class TestSingleTokenGenericNameFuzzy(unittest.TestCase):
+    def setUp(self):
+        beers = [
+            {"id": "34", "name": "Blonde", "upc": "", "abv": "7.5",
+             "_brewery": "Brasserie La Choulette"},
+            {"id": "825", "name": "Blonde", "upc": "", "abv": "6.0",
+             "_brewery": "Brasserie De L'Abbaye Des Rocs"},
+            {"id": "220", "name": "Ambree", "upc": "", "abv": "7.0",
+             "_brewery": "Brasserie De L'Abbaye Des Rocs"},
+        ]
+        self.index = match_mod.build_baseline_index(beers, make_baseline(beers))
+
+    def test_goudale_blonde_different_brewery_needs_review(self):
+        # "la goudale blonde" / "Brasserie Goudale" should not auto-match
+        # baseline "Blonde" / "Brasserie La Choulette" despite high fuzzy name score.
+        status, bid, conf, reasons = match_mod.match_record(
+            rec("la goudale blonde", "Brasserie Goudale"), self.index, CFG)
+        self.assertEqual(status, "needs_review")
+        self.assertNotEqual(status, "existing")
+        self.assertTrue(any("weak producer agreement" in r for r in reasons))
+
+    def test_mont_blanc_blonde_different_brewery_needs_review(self):
+        # "La Blonde" / "Brasserie du Mont Blanc" should not auto-match
+        # baseline "Blonde" / "Brasserie De L'Abbaye Des Rocs".
+        status, bid, conf, reasons = match_mod.match_record(
+            rec("La Blonde", "Brasserie du Mont Blanc"), self.index, CFG)
+        self.assertEqual(status, "needs_review")
+        self.assertNotEqual(status, "existing")
+        self.assertTrue(any("weak producer agreement" in r for r in reasons))
+
+    def test_goudale_ambree_different_brewery_needs_review(self):
+        # "75CL BIERE LA GOUDALE AMBREE" / "Brasserie de Gayant" should not
+        # auto-match baseline "Ambree" / "Brasserie De L'Abbaye Des Rocs".
+        status, bid, conf, reasons = match_mod.match_record(
+            rec("75CL BIERE LA GOUDALE AMBREE", "Brasserie de Gayant"), self.index, CFG)
+        self.assertEqual(status, "needs_review")
+        self.assertNotEqual(status, "existing")
+        self.assertTrue(any("weak producer agreement" in r for r in reasons))
+
+    def test_single_word_name_strong_producer_matches_existing(self):
+        # Positive control: single-word name with strong producer agreement
+        # ("Blonde de Choulette" vs baseline "Blonde" / "Brasserie La Choulette")
+        # should still be classified as existing.
+        status, bid, conf, reasons = match_mod.match_record(
+            rec("Blonde de Choulette", "Brasserie La Choulette"), self.index, CFG)
+        self.assertEqual(status, "existing")
+        self.assertEqual(bid, "34")
+        self.assertGreaterEqual(conf, CFG.fuzzy_threshold)
+
+
 if __name__ == "__main__":
     unittest.main()
+
