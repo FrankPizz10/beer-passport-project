@@ -53,7 +53,10 @@ def run(cfg: Config) -> dict:
     cfg.state_dir.mkdir(parents=True, exist_ok=True)
 
     base = baseline_mod.load_baseline(cfg.data_dir)
-    index = match_mod.build_baseline_index(base.beers, base)
+    aliases = match_mod.load_brand_aliases(cfg.data_dir)
+    if aliases:
+        log.info("Loaded %d brand aliases", len(aliases))
+    index = match_mod.build_baseline_index(base.beers, base, aliases=aliases)
     state = state_mod.load_state(cfg.state_dir)
 
     summary: dict = {
