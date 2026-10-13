@@ -1,0 +1,60 @@
+{
+  "baseline_files": {
+    "LiveBeers.csv": 5894,
+    "LiveBreweries.csv": 1431,
+    "LiveCategories.csv": 14,
+    "LiveStyles.csv": 147
+  },
+  "sources": {
+    "openbrewerydb": {
+      "raw_records": 0,
+      "producer_candidates": 0,
+      "pages_attempted": 1,
+      "pages_ok": 0,
+      "errors": [
+        "Failed to fetch https://api.openbrewerydb.org/v1/breweries?page=1&per_page=200: 403 Client Error: Forbidden for url: https://api.openbrewerydb.org/v1/breweries?page=1&per_page=200"
+      ]
+    },
+    "openfoodfacts": {
+      "raw_records": 100,
+      "terms_attempted": 3,
+      "terms_ok": 1,
+      "errors": [
+        "beer: Failed to fetch https://world.openfoodfacts.org/cgi/search.pl?search_terms=beer&search_simple=1&action=process&json=1&page_size=100&page=1: 503 Server Error: Service Temporarily Unavailable for url: https://world.openfoodfacts.org/cgi/search.pl?search_terms=beer&search_simple=1&action=process&json=1&page_size=100&page=1",
+        "cider: Failed to fetch https://world.openfoodfacts.org/cgi/search.pl?search_terms=cider&search_simple=1&action=process&json=1&page_size=100&page=1: 503 Server Error: Service Temporarily Unavailable for url: https://world.openfoodfacts.org/cgi/search.pl?search_terms=cider&search_simple=1&action=process&json=1&page_size=100&page=1"
+      ],
+      "raw_hits": 100,
+      "rejected": 0
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "run_at": "2026-10-12T05:07:50+00:00",
+  "unique_source_records_processed": 100,
+  "match_counts": {
+    "existing": 1,
+    "new_candidate": 57,
+    "needs_review": 42
+  },
+  "candidates_by_source": {
+    "openfoodfacts": 100
+  },
+  "incremental": {
+    "new_candidates_this_run": 100,
+    "updated_candidates_this_run": 0,
+    "total_candidates": 100
+  },
+  "field_completeness": {
+    "name": 1.0,
+    "producer": 0.65,
+    "category": 0.81,
+    "abv": 0.28,
+    "trustworthy_barcode": 1.0
+  },
+  "producer_candidates": 0,
+  "notes": [
+    "Absence from the baseline does not prove a product is genuinely new; unmatched records are candidates, not verified products.",
+    "Open Brewery DB records are producers only and are never counted as beverage discoveries.",
+    "Open Food Facts data is ODbL-licensed; discovery evaluation only, not permission to incorporate into production."
+  ]
+}

@@ -1,0 +1,3301 @@
+{
+  "seen_source_ids": {
+    "openfoodfacts": [
+      "5391537510076",
+      "0085000029268",
+      "5391537510809",
+      "0087692019220",
+      "0635985500049",
+      "0087692009900",
+      "5391537510021",
+      "0635985260868",
+      "7640308970426",
+      "0635985800248",
+      "0096619108480",
+      "0087692012238",
+      "0635985800255",
+      "0096619108466",
+      "0848819000213",
+      "0848819000312",
+      "5391537510441",
+      "09150033",
+      "0635985800231",
+      "03492316",
+      "4099100179699",
+      "5391537510106",
+      "0726959914990",
+      "6419800082675",
+      "0635985500018",
+      "8720844041329",
+      "0018200263866",
+      "0850046522024",
+      "0858799002725",
+      "8720865027319",
+      "0635985801566",
+      "4061461064051",
+      "0635985802723",
+      "0810078781370",
+      "4061463667649",
+      "0860438001686",
+      "0087692004363",
+      "0635985260356",
+      "0087692008316",
+      "0087692006770",
+      "0087692008293",
+      "0635985800088",
+      "5391537510007",
+      "0087692009511",
+      "0087692010104",
+      "0635985548904",
+      "0087692010111",
+      "0897682002657",
+      "5014379010053",
+      "0897682002671",
+      "0635985260974",
+      "0087692010098",
+      "7350071700563",
+      "3760081423767",
+      "0085000031513",
+      "0635985800095",
+      "3760323590004",
+      "4061458219808",
+      "0858674005889",
+      "0068274347283",
+      "5060722510008",
+      "8411327006552",
+      "5056025439733",
+      "3560071252663",
+      "3560071252625",
+      "5056025439726",
+      "7649991089019",
+      "3119070090075",
+      "03454714",
+      "0635985800156",
+      "3119070090099",
+      "3119070090082",
+      "0859612001642",
+      "0848819000190",
+      "0726959913443",
+      "3770018391021",
+      "5449000294708",
+      "0779469600013",
+      "7640131281355",
+      "3760036931187",
+      "0085000033227",
+      "5419980074133",
+      "0087692009702",
+      "7393714646200",
+      "7393714646002",
+      "0085000031049",
+      "5391537510793",
+      "3163932288223",
+      "0087692012269",
+      "0087692012245",
+      "0848819000244",
+      "3760220891242",
+      "3760259622756",
+      "5056025439702",
+      "0033544000670",
+      "03401110",
+      "0085000031056",
+      "0033544001103",
+      "3830054842267",
+      "0087692012160"
+    ]
+  },
+  "candidates": {
+    "cand_b41e08031c17": {
+      "candidate_id": "cand_b41e08031c17",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "5391537510076",
+      "country": "United Kingdom",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5391537510076"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5391537510076/hard-seltzer-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.0,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_e0de7cb653bc": {
+      "candidate_id": "cand_e0de7cb653bc",
+      "name": "Vodka Seltzer Pineapple",
+      "normalized_name": "vodka seltzer pineapple",
+      "brand": "High Noon",
+      "producer_name": "High Noon",
+      "normalized_producer": "high noon",
+      "category": "Vodka, Mixed drinks",
+      "style": "",
+      "abv": 4.5,
+      "barcode": "0085000029268",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0085000029268"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0085000029268/vodka-seltzer-pineapple-high-noon"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 62.5,
+      "missing_fields": [],
+      "review_reasons": [
+        "uncertain category: uncertain category"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_4ee639245578": {
+      "candidate_id": "cand_4ee639245578",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "WHITE CLAW",
+      "producer_name": "WHITE CLAW",
+      "normalized_producer": "white claw",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5391537510809",
+      "country": "Suisse",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5391537510809"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5391537510809/hard-seltzer-mango-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_7effe6325d7d": {
+      "candidate_id": "cand_7effe6325d7d",
+      "name": "Hard Seltzer - Berry Blast",
+      "normalized_name": "hard seltzer berry blast",
+      "brand": "Hard Seltzer Beverage Company LLC, Truly, Truly Unruly",
+      "producer_name": "Hard Seltzer Beverage Company LLC, Truly, Truly Unruly",
+      "normalized_producer": "hard seltzer beverage company llc truly truly unruly",
+      "category": "Alcoholic beverages",
+      "style": "",
+      "abv": 8.0,
+      "barcode": "0087692019220",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692019220"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692019220/hard-seltzer-berry-blast-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 60.2,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_901433ecc6da": {
+      "candidate_id": "cand_901433ecc6da",
+      "name": "Hard Seltzer Natural Lime",
+      "normalized_name": "hard seltzer natural lime",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985500049",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985500049"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985500049/hard-seltzer-natural-lime-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 61.9,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_b9eb8929b00f": {
+      "candidate_id": "cand_b9eb8929b00f",
+      "name": "Truly Hard Seltzer",
+      "normalized_name": "truly hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692009900",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692009900"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692009900/truly-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 61.7,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_74bbaa05da6f": {
+      "candidate_id": "cand_74bbaa05da6f",
+      "name": "white claw hard seltzer",
+      "normalized_name": "white claw hard seltzer",
+      "brand": "white claw",
+      "producer_name": "white claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": 4.5,
+      "barcode": "5391537510021",
+      "country": "United Kingdom",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5391537510021"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5391537510021/white-claw-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "2723",
+      "match_status": "needs_review",
+      "match_confidence": 77.8,
+      "missing_fields": [],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 77.8)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_e55aea4a4ce9": {
+      "candidate_id": "cand_e55aea4a4ce9",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985260868",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985260868"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985260868/hard-seltzer-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_612a4efbf8b5": {
+      "candidate_id": "cand_612a4efbf8b5",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "7640308970426",
+      "country": "Suisse",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "7640308970426"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/7640308970426/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_688b740b3b4a": {
+      "candidate_id": "cand_688b740b3b4a",
+      "name": "Strawberry Hard Seltzer",
+      "normalized_name": "strawberry hard seltzer",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985800248",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985800248"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985800248/strawberry-hard-seltzer-white-claw"
+      ],
+      "existing_beerpassport_id": "5911",
+      "match_status": "needs_review",
+      "match_confidence": 77.7,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 77.7)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_bf72cbfec8e6": {
+      "candidate_id": "cand_bf72cbfec8e6",
+      "name": "Mango Hard Seltzer",
+      "normalized_name": "mango hard seltzer",
+      "brand": "Kirkland",
+      "producer_name": "Kirkland",
+      "normalized_producer": "kirkland",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0096619108480",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0096619108480"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0096619108480/mango-hard-seltzer-kirkland"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 50.7,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_cf978887cb6a": {
+      "candidate_id": "cand_cf978887cb6a",
+      "name": "FRUIT PUNCH HARD SELTZER",
+      "normalized_name": "fruit punch hard seltzer",
+      "brand": "TRULY",
+      "producer_name": "TRULY",
+      "normalized_producer": "truly",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692012238",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692012238"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692012238/fruit-punch-hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 60.0,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_a80be3d3c64d": {
+      "candidate_id": "cand_a80be3d3c64d",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985800255",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985800255"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985800255/hard-seltzer-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_e3540f7de02e": {
+      "candidate_id": "cand_e3540f7de02e",
+      "name": "Black Cherry Hard Seltzer",
+      "normalized_name": "black cherry hard seltzer",
+      "brand": "Kirkland",
+      "producer_name": "Kirkland",
+      "normalized_producer": "kirkland",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0096619108466",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0096619108466"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0096619108466/black-cherry-hard-seltzer-kirkland"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 64.8,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_83d34763f346": {
+      "candidate_id": "cand_83d34763f346",
+      "name": "Black cherry hard seltzer",
+      "normalized_name": "black cherry hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "en:Boissons  Boissons alcoolisées  Hard seltzer",
+      "style": "",
+      "abv": null,
+      "barcode": "0848819000213",
+      "country": "Canada",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0848819000213"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0848819000213/black-cherry-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "5983",
+      "match_status": "needs_review",
+      "match_confidence": 71.7,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 71.7)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_2b81f458262f": {
+      "candidate_id": "cand_2b81f458262f",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0848819000312",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0848819000312"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0848819000312/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_4d249f858017": {
+      "candidate_id": "cand_4d249f858017",
+      "name": "Hard Mango Seltzer",
+      "normalized_name": "hard mango seltzer",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5391537510441",
+      "country": "United Kingdom",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5391537510441"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5391537510441/hard-mango-seltzer-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 53.2,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_4cf8ec692ac5": {
+      "candidate_id": "cand_4cf8ec692ac5",
+      "name": "cucumber lime hard seltzer",
+      "normalized_name": "cucumber lime hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "09150033",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "09150033"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/09150033/cucumber-lime-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 56.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_05a6f0570491": {
+      "candidate_id": "cand_05a6f0570491",
+      "name": "PINEAPPLE",
+      "normalized_name": "pineapple",
+      "brand": "WHITE CLAW HARD SELTZER",
+      "producer_name": "WHITE CLAW HARD SELTZER",
+      "normalized_producer": "white claw hard seltzer",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985800231",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985800231"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985800231/pineapple-white-claw-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "6014",
+      "match_status": "needs_review",
+      "match_confidence": 80.8,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 80.8)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_db9c70671f18": {
+      "candidate_id": "cand_db9c70671f18",
+      "name": "Mimosa Hard Seltzer Pomegranate Orange",
+      "normalized_name": "mimosa hard seltzer pomegranate orange",
+      "brand": "Vizzy",
+      "producer_name": "Vizzy",
+      "normalized_producer": "vizzy",
+      "category": "Beverages",
+      "style": "",
+      "abv": null,
+      "barcode": "03492316",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "03492316"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/03492316/mimosa-hard-seltzer-pomegranate-orange-vizzy"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 57.9,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_8d04e24a85df": {
+      "candidate_id": "cand_8d04e24a85df",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "4099100179699",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "4099100179699"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/4099100179699/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_480cd94153bd": {
+      "candidate_id": "cand_480cd94153bd",
+      "name": "Hard Seltzer - Mango",
+      "normalized_name": "hard seltzer mango",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5391537510106",
+      "country": "Australia",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5391537510106"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5391537510106/hard-seltzer-mango-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 53.2,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_2434ea13f779": {
+      "candidate_id": "cand_2434ea13f779",
+      "name": "Quirk Cherry Blossom & Lime Hard Seltzer",
+      "normalized_name": "quirk cherry blossom lime hard seltzer",
+      "brand": "Boulevard Beverage Co.",
+      "producer_name": "Boulevard Beverage Co.",
+      "normalized_producer": "boulevard beverage co",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0726959914990",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0726959914990"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0726959914990/quirk-cherry-blossom-lime-hard-seltzer-boulevard-beverage-co"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 64.3,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_0fe5e034ec1c": {
+      "candidate_id": "cand_0fe5e034ec1c",
+      "name": "Hard seltzer lemon & lime",
+      "normalized_name": "hard seltzer lemon lime",
+      "brand": "Olvi",
+      "producer_name": "Olvi",
+      "normalized_producer": "olvi",
+      "category": "",
+      "style": "",
+      "abv": 4.5,
+      "barcode": "6419800082675",
+      "country": "Finland",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "6419800082675"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/6419800082675/hard-seltzer-lemon-lime-olvi"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 50.7,
+      "missing_fields": [
+        "category"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_376a8805cd56": {
+      "candidate_id": "cand_376a8805cd56",
+      "name": "BLACK CHERRY SPIKED SPARKLING WATER",
+      "normalized_name": "black cherry spiked sparkling water",
+      "brand": "WHITE CLAW HARD SELTZER",
+      "producer_name": "WHITE CLAW HARD SELTZER",
+      "normalized_producer": "white claw hard seltzer",
+      "category": "",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0635985500018",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985500018"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985500018/black-cherry-spiked-sparkling-water-white-claw-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 63.7,
+      "missing_fields": [
+        "category"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_6ffe5bfc4e41": {
+      "candidate_id": "cand_6ffe5bfc4e41",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "8720844041329",
+      "country": "Netherlands",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "8720844041329"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/8720844041329/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer",
+        "category",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_a9f52e224116": {
+      "candidate_id": "cand_a9f52e224116",
+      "name": "Pineapple Vodka Shelter",
+      "normalized_name": "pineapple vodka shelter",
+      "brand": "Nutrl",
+      "producer_name": "Nutrl",
+      "normalized_producer": "nutrl",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0018200263866",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0018200263866"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0018200263866/pineapple-vodka-shelter-nutrl"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 61.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_cd89790f781e": {
+      "candidate_id": "cand_cd89790f781e",
+      "name": "Happy Dad Fruit Punch Hard Seltzer",
+      "normalized_name": "happy dad fruit punch hard seltzer",
+      "brand": "Happy Dad",
+      "producer_name": "Happy Dad",
+      "normalized_producer": "happy dad",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0850046522024",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0850046522024"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0850046522024/happy-dad-fruit-punch-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "6051",
+      "match_status": "existing",
+      "match_confidence": 100.0,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_0de9b4bf9452": {
+      "candidate_id": "cand_0de9b4bf9452",
+      "name": "Spiked Sparkling Lemonade",
+      "normalized_name": "spiked sparkling lemonade",
+      "brand": "Maui Hard Seltzer",
+      "producer_name": "Maui Hard Seltzer",
+      "normalized_producer": "maui hard seltzer",
+      "category": "Hard Seltzers, Seltzer, Spiked-sparkling-lemonade",
+      "style": "",
+      "abv": null,
+      "barcode": "0858799002725",
+      "country": "United Kingdom",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0858799002725"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0858799002725/spiked-sparkling-lemonade-maui-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 58.8,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_ec652f7497ee": {
+      "candidate_id": "cand_ec652f7497ee",
+      "name": "Hard Seltzer Passionfruit",
+      "normalized_name": "hard seltzer passionfruit",
+      "brand": "Stelz",
+      "producer_name": "Stelz",
+      "normalized_producer": "stelz",
+      "category": "",
+      "style": "",
+      "abv": 3.55,
+      "barcode": "8720865027319",
+      "country": "Netherlands",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "8720865027319"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/8720865027319/hard-seltzer-passionfruit-stelz"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 51.1,
+      "missing_fields": [
+        "category"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_fc222b478631": {
+      "candidate_id": "cand_fc222b478631",
+      "name": "White Claw Hard Seltzer Peach",
+      "normalized_name": "white claw hard seltzer peach",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985801566",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985801566"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985801566/white-claw-hard-seltzer-peach"
+      ],
+      "existing_beerpassport_id": "5945",
+      "match_status": "needs_review",
+      "match_confidence": 78.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 78.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_5100011aa1a6": {
+      "candidate_id": "cand_5100011aa1a6",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "Aldi",
+      "producer_name": "Aldi",
+      "normalized_producer": "aldi",
+      "category": "",
+      "style": "",
+      "abv": 1.36363636363636,
+      "barcode": "4061461064051",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "4061461064051"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/4061461064051/hard-seltzer-aldi"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 56.6,
+      "missing_fields": [
+        "category"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_ce60c3d54931": {
+      "candidate_id": "cand_ce60c3d54931",
+      "name": "Hard Seltzer Green Apple",
+      "normalized_name": "hard seltzer green apple",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985802723",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985802723"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985802723/hard-seltzer-green-apple-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 59.6,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_9d32a525dfcc": {
+      "candidate_id": "cand_9d32a525dfcc",
+      "name": "Hard Seltzer: Oasis Cherry",
+      "normalized_name": "hard seltzer oasis cherry",
+      "brand": "Topo Chico",
+      "producer_name": "Topo Chico",
+      "normalized_producer": "topo chico",
+      "category": "",
+      "style": "",
+      "abv": 3.70704225352113,
+      "barcode": "0810078781370",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0810078781370"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0810078781370/hard-seltzer-oasis-cherry-topo-chico"
+      ],
+      "existing_beerpassport_id": "5848",
+      "match_status": "needs_review",
+      "match_confidence": 80.0,
+      "missing_fields": [
+        "category"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 80.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_8c34e3441093": {
+      "candidate_id": "cand_8c34e3441093",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "Vista Bay",
+      "producer_name": "Vista Bay",
+      "normalized_producer": "vista bay",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "4061463667649",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "4061463667649"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/4061463667649/hard-seltzer-vista-bay"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.1,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_03874efd1a56": {
+      "candidate_id": "cand_03874efd1a56",
+      "name": "Willie's Superbrew Hard Seltzer Sparkling Mango and Passionfruit",
+      "normalized_name": "willie s superbrew hard seltzer sparkling mango and passionfruit",
+      "brand": "Willie's",
+      "producer_name": "Willie's",
+      "normalized_producer": "willie s",
+      "category": "American beers",
+      "style": "",
+      "abv": 4.5,
+      "barcode": "0860438001686",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0860438001686"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0860438001686/willie-s-superbrew-hard-seltzer-sparkling-mango-and-passionfruit"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 54.5,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_6f278d7d4f71": {
+      "candidate_id": "cand_6f278d7d4f71",
+      "name": "Truly Hard Seltzer Grapefruit",
+      "normalized_name": "truly hard seltzer grapefruit",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692004363",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692004363"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692004363/truly-hard-seltzer-grapefruit"
+      ],
+      "existing_beerpassport_id": "5959",
+      "match_status": "needs_review",
+      "match_confidence": 85.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 85.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_6b15f0c30f0d": {
+      "candidate_id": "cand_6b15f0c30f0d",
+      "name": "Hard Seltzer Raspberry",
+      "normalized_name": "hard seltzer raspberry",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985260356",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985260356"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985260356/hard-seltzer-raspberry-white-claw"
+      ],
+      "existing_beerpassport_id": "2910",
+      "match_status": "needs_review",
+      "match_confidence": 80.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 80.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_91a7be532ed6": {
+      "candidate_id": "cand_91a7be532ed6",
+      "name": "Hard Seltzer Fruit De La Passion",
+      "normalized_name": "hard seltzer fruit de la passion",
+      "brand": "Truly",
+      "producer_name": "Truly",
+      "normalized_producer": "truly",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692008316",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692008316"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692008316/hard-seltzer-fruit-de-la-passion-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 61.9,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_ccc58134e403": {
+      "candidate_id": "cand_ccc58134e403",
+      "name": "Wild Berry Hard Seltzer",
+      "normalized_name": "wild berry hard seltzer",
+      "brand": "Truly",
+      "producer_name": "Truly",
+      "normalized_producer": "truly",
+      "category": "Alcoholic beverages",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0087692006770",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692006770"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692006770/wild-berry-hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 58.8,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_296da7d9affd": {
+      "candidate_id": "cand_296da7d9affd",
+      "name": "Pineapple Hard Seltzer",
+      "normalized_name": "pineapple hard seltzer",
+      "brand": "Truly",
+      "producer_name": "Truly",
+      "normalized_producer": "truly",
+      "category": "Alcoholic beverages",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0087692008293",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692008293"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692008293/pineapple-hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 57.5,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_dc5a292cafc1": {
+      "candidate_id": "cand_dc5a292cafc1",
+      "name": "Lemon Hard Seltzer",
+      "normalized_name": "lemon hard seltzer",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985800088",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985800088"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985800088/lemon-hard-seltzer-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 57.4,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_aaa363925d59": {
+      "candidate_id": "cand_aaa363925d59",
+      "name": "NATURAL LIME",
+      "normalized_name": "natural lime",
+      "brand": "WHITE CLAW HARD SELTZER",
+      "producer_name": "WHITE CLAW HARD SELTZER",
+      "normalized_producer": "white claw hard seltzer",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5391537510007",
+      "country": "United Kingdom",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5391537510007"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5391537510007/natural-lime-white-claw-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "5936",
+      "match_status": "needs_review",
+      "match_confidence": 78.4,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 78.4)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_074da4cc32f4": {
+      "candidate_id": "cand_074da4cc32f4",
+      "name": "Hard Seltzer Wild Berry",
+      "normalized_name": "hard seltzer wild berry",
+      "brand": "TRULY",
+      "producer_name": "TRULY",
+      "normalized_producer": "truly",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692009511",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692009511"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692009511/hard-seltzer-wild-berry-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 58.8,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_0106c4a2ff1b": {
+      "candidate_id": "cand_0106c4a2ff1b",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "Truly",
+      "producer_name": "Truly",
+      "normalized_producer": "truly",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692010104",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692010104"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692010104/hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 56.2,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_034e3c7a0c12": {
+      "candidate_id": "cand_034e3c7a0c12",
+      "name": "White claw hard seltzer",
+      "normalized_name": "white claw hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985548904",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985548904"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985548904/white-claw-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "1905",
+      "match_status": "needs_review",
+      "match_confidence": 85.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 85.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_c4001399ebb1": {
+      "candidate_id": "cand_c4001399ebb1",
+      "name": "Black Cherry Lemonade Hard Seltzer",
+      "normalized_name": "black cherry lemonade hard seltzer",
+      "brand": "TRULY",
+      "producer_name": "TRULY",
+      "normalized_producer": "truly",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692010111",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692010111"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692010111/black-cherry-lemonade-hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 58.6,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_3a659884ffdb": {
+      "candidate_id": "cand_3a659884ffdb",
+      "name": "Tangerine & Hops",
+      "normalized_name": "tangerine hops",
+      "brand": "Snow Melt",
+      "producer_name": "Snow Melt",
+      "normalized_producer": "snow melt",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0897682002657",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0897682002657"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0897682002657/tangerine-hops-snow-melt"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 61.0,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_05f15b96c82c": {
+      "candidate_id": "cand_05f15b96c82c",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "Mikes Hard",
+      "producer_name": "Mikes Hard",
+      "normalized_producer": "mikes hard",
+      "category": "Alcoholic Sparkling Water",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "5014379010053",
+      "country": "United Kingdom",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5014379010053"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5014379010053/hard-seltzer-mikes-hard"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 58.2,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_c5dcbfff76e1": {
+      "candidate_id": "cand_c5dcbfff76e1",
+      "name": "Pomegranate & Acai",
+      "normalized_name": "pomegranate acai",
+      "brand": "Snow Melt",
+      "producer_name": "Snow Melt",
+      "normalized_producer": "snow melt",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0897682002671",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0897682002671"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0897682002671/pomegranate-acai-snow-melt"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 64.2,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_715abb2a8c7c": {
+      "candidate_id": "cand_715abb2a8c7c",
+      "name": "Hard Seltzer with Flavor Tangerine",
+      "normalized_name": "hard seltzer with flavor tangerine",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985260974",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985260974"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985260974/hard-seltzer-with-flavor-tangerine-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 51.4,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_4d02f35706fd": {
+      "candidate_id": "cand_4d02f35706fd",
+      "name": "Limonade Originale Hard Seltzer",
+      "normalized_name": "limonade originale hard seltzer",
+      "brand": "Truly",
+      "producer_name": "Truly",
+      "normalized_producer": "truly",
+      "category": "Sodas, Hard Seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "0087692010098",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692010098"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692010098/limonade-originale-hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 47.8,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_c61a60f81a5a": {
+      "candidate_id": "cand_c61a60f81a5a",
+      "name": "Nordic Wolf Cherry And Cranberry Hard Seltzer",
+      "normalized_name": "nordic wolf cherry and cranberry hard seltzer",
+      "brand": "Nordic wolf",
+      "producer_name": "Nordic wolf",
+      "normalized_producer": "nordic wolf",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "7350071700563",
+      "country": "United Kingdom",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "7350071700563"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/7350071700563/nordic-wolf-cherry-and-cranberry-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 58.4,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_394478680869": {
+      "candidate_id": "cand_394478680869",
+      "name": "Florida Hard Seltzer Citron Vert",
+      "normalized_name": "florida hard seltzer citron vert",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3760081423767",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3760081423767"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3760081423767/florida-hard-seltzer-citron-vert"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 53.4,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_d5225797ff1b": {
+      "candidate_id": "cand_d5225797ff1b",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "High Noon",
+      "producer_name": "High Noon",
+      "normalized_producer": "high noon",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0085000031513",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0085000031513"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0085000031513/hard-seltzer-high-noon"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 62.2,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_6f5833b14969": {
+      "candidate_id": "cand_6f5833b14969",
+      "name": "Hard Seltzer Watermelon",
+      "normalized_name": "hard seltzer watermelon",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985800095",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985800095"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985800095/hard-seltzer-watermelon-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 60.6,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_e318328e96e7": {
+      "candidate_id": "cand_e318328e96e7",
+      "name": "Hard seltzer - saveur combava fleur de sureau",
+      "normalized_name": "hard seltzer saveur combava fleur de sureau",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3760323590004",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3760323590004"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3760323590004/hard-seltzer-saveur-combava-fleur-de-sureau"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 50.5,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_c3f4560f37d9": {
+      "candidate_id": "cand_c3f4560f37d9",
+      "name": "Hard Seltzer Natural Lime",
+      "normalized_name": "hard seltzer natural lime",
+      "brand": "Ravini",
+      "producer_name": "Ravini",
+      "normalized_producer": "ravini",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "4061458219808",
+      "country": "Germany",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "4061458219808"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/4061458219808/hard-seltzer-natural-lime-ravini"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 60.4,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_0f5fd2255605": {
+      "candidate_id": "cand_0f5fd2255605",
+      "name": "Premium hard seltzer",
+      "normalized_name": "premium hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0858674005889",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0858674005889"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0858674005889/premium-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "1862",
+      "match_status": "needs_review",
+      "match_confidence": 85.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 85.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_980dc9fd423d": {
+      "candidate_id": "cand_980dc9fd423d",
+      "name": "Quirk Spiked Sparkling Pear Yuzu Hard Seltzer",
+      "normalized_name": "quirk spiked sparkling pear yuzu hard seltzer",
+      "brand": "Boulevard Beverage Co.",
+      "producer_name": "Boulevard Beverage Co.",
+      "normalized_producer": "boulevard beverage co",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0068274347283",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0068274347283"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0068274347283/quirk-spiked-sparkling-pear-yuzu-hard-seltzer-boulevard-beverage-co"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.3,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_a252f7a25d33": {
+      "candidate_id": "cand_a252f7a25d33",
+      "name": "Drty Alcoholic Sparkling Water",
+      "normalized_name": "drty alcoholic sparkling water",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5060722510008",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5060722510008"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5060722510008/drty-alcoholic-sparkling-water"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 61.7,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_9de00a0c91c0": {
+      "candidate_id": "cand_9de00a0c91c0",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "8411327006552",
+      "country": "España",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "8411327006552"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/8411327006552/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_2ac65f4a0227": {
+      "candidate_id": "cand_2ac65f4a0227",
+      "name": "Clean & Press: Smashed Cactus & Lime",
+      "normalized_name": "clean press smashed cactus lime",
+      "brand": "BrewDog",
+      "producer_name": "BrewDog",
+      "normalized_producer": "brewdog",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "5056025439733",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5056025439733"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5056025439733/clean-press-smashed-cactus-lime-brewdog"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.5,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_04089ce1cc02": {
+      "candidate_id": "cand_04089ce1cc02",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3560071252663",
+      "country": "",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3560071252663"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3560071252663/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_f281b004aa52": {
+      "candidate_id": "cand_f281b004aa52",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "3560071252625",
+      "country": "",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3560071252625"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3560071252625/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_d78310301945": {
+      "candidate_id": "cand_d78310301945",
+      "name": "Clean & Press Hard Seltzer",
+      "normalized_name": "clean press hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5056025439726",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5056025439726"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5056025439726/clean-press-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 58.1,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_578279546cfb": {
+      "candidate_id": "cand_578279546cfb",
+      "name": "Hard Seltzer Lime Mint",
+      "normalized_name": "hard seltzer lime mint",
+      "brand": "Sundays",
+      "producer_name": "Sundays",
+      "normalized_producer": "sundays",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": 4.0,
+      "barcode": "7649991089019",
+      "country": "Suisse",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "7649991089019"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/7649991089019/hard-seltzer-lime-mint-sundays"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 50.0,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_b056c4053c5c": {
+      "candidate_id": "cand_b056c4053c5c",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3119070090075",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3119070090075"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3119070090075/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_130bf641c872": {
+      "candidate_id": "cand_130bf641c872",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "Vizzy",
+      "producer_name": "Vizzy",
+      "normalized_producer": "vizzy",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "03454714",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "03454714"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/03454714/hard-seltzer-vizzy"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 56.2,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_c00399f83ddb": {
+      "candidate_id": "cand_c00399f83ddb",
+      "name": "Hard lemonade seltzer",
+      "normalized_name": "hard lemonade seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0635985800156",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0635985800156"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0635985800156/hard-lemonade-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 65.9,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_99e53b9b254e": {
+      "candidate_id": "cand_99e53b9b254e",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3119070090099",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3119070090099"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3119070090099/hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 66.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_e7d4f8b970de": {
+      "candidate_id": "cand_e7d4f8b970de",
+      "name": "Hard seltzer mangue ananas",
+      "normalized_name": "hard seltzer mangue ananas",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3119070090082",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3119070090082"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3119070090082/hard-seltzer-mangue-ananas"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 53.4,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:49+00:00",
+      "last_seen_at": "2026-10-12T05:07:49+00:00"
+    },
+    "cand_7aa2051ff0b4": {
+      "candidate_id": "cand_7aa2051ff0b4",
+      "name": "Guava & passionfruit hard seltzer",
+      "normalized_name": "guava passionfruit hard seltzer",
+      "brand": "Soma",
+      "producer_name": "Soma",
+      "normalized_producer": "soma",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0859612001642",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0859612001642"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0859612001642/guava-passionfruit-hard-seltzer-soma"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 50.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_f2811ca8f49d": {
+      "candidate_id": "cand_f2811ca8f49d",
+      "name": "Hard seltzer framboise",
+      "normalized_name": "hard seltzer framboise",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0848819000190",
+      "country": "Canada",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0848819000190"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0848819000190/hard-seltzer-framboise"
+      ],
+      "existing_beerpassport_id": "19",
+      "match_status": "needs_review",
+      "match_confidence": 85.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 85.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_8faed59e26ac": {
+      "candidate_id": "cand_8faed59e26ac",
+      "name": "Quirk Spiked Sparkling Pear Yuzu Hard Seltzer",
+      "normalized_name": "quirk spiked sparkling pear yuzu hard seltzer",
+      "brand": "Boulevard Beverage Co.",
+      "producer_name": "Boulevard Beverage Co.",
+      "normalized_producer": "boulevard beverage co",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0726959913443",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0726959913443"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0726959913443/quirk-spiked-sparkling-pear-yuzu-hard-seltzer-boulevard-beverage-co"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.3,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_12c26f728267": {
+      "candidate_id": "cand_12c26f728267",
+      "name": "Hard Seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "fefe",
+      "producer_name": "fefe",
+      "normalized_producer": "fefe",
+      "category": "Boissons alcoolisées",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "3770018391021",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3770018391021"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3770018391021/hard-seltzer-fefe"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 61.6,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_a9dbe661955c": {
+      "candidate_id": "cand_a9dbe661955c",
+      "name": "Topo Chico Hard Seltzer",
+      "normalized_name": "topo chico hard seltzer",
+      "brand": "Topo Chico",
+      "producer_name": "Topo Chico",
+      "normalized_producer": "topo chico",
+      "category": "Bebidas",
+      "style": "",
+      "abv": 4.7,
+      "barcode": "5449000294708",
+      "country": "España",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5449000294708"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5449000294708/topo-chico-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 49.4,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_4254e2c4ff65": {
+      "candidate_id": "cand_4254e2c4ff65",
+      "name": "White Claw Hard Seltzer",
+      "normalized_name": "white claw hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0779469600013",
+      "country": "Canada",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0779469600013"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0779469600013/white-claw-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "1905",
+      "match_status": "needs_review",
+      "match_confidence": 85.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 85.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_f617f37b7ee0": {
+      "candidate_id": "cand_f617f37b7ee0",
+      "name": "Luke's Hard Seltzer Citrus Lime",
+      "normalized_name": "luke s hard seltzer citrus lime",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "7640131281355",
+      "country": "Suisse",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "7640131281355"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/7640131281355/luke-s-hard-seltzer-citrus-lime"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 55.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_e3608c0addb1": {
+      "candidate_id": "cand_e3608c0addb1",
+      "name": "Pampa Hard Seltzer",
+      "normalized_name": "pampa hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3760036931187",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3760036931187"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3760036931187/pampa-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 60.3,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_3ff51f8a1b9f": {
+      "candidate_id": "cand_3ff51f8a1b9f",
+      "name": "Peach Wine Hard Seltzer",
+      "normalized_name": "peach wine hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0085000033227",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0085000033227"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0085000033227/peach-wine-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 60.7,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_f1730d72b611": {
+      "candidate_id": "cand_f1730d72b611",
+      "name": "Hard Seltzer Passion Mango",
+      "normalized_name": "hard seltzer passion mango",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5419980074133",
+      "country": "Belgique",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5419980074133"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5419980074133/hard-seltzer-passion-mango"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 58.8,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_87fec34fc22a": {
+      "candidate_id": "cand_87fec34fc22a",
+      "name": "Truly pineapple hard seltzer",
+      "normalized_name": "truly pineapple hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692009702",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692009702"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692009702/truly-pineapple-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "5962",
+      "match_status": "needs_review",
+      "match_confidence": 85.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 85.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_45b29abeaaeb": {
+      "candidate_id": "cand_45b29abeaaeb",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "Kopparberg",
+      "producer_name": "Kopparberg",
+      "normalized_producer": "kopparberg",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "7393714646200",
+      "country": "Sweden",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "7393714646200"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/7393714646200/hard-seltzer-kopparberg"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 54.9,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_e91fbbe786d9": {
+      "candidate_id": "cand_e91fbbe786d9",
+      "name": "Hard seltzer mixed berries",
+      "normalized_name": "hard seltzer mixed berries",
+      "brand": "Kopparberg",
+      "producer_name": "Kopparberg",
+      "normalized_producer": "kopparberg",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": 5.0,
+      "barcode": "7393714646002",
+      "country": "Sweden",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "7393714646002"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/7393714646002/hard-seltzer-mixed-berries-kopparberg"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 51.2,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_714daba4fc29": {
+      "candidate_id": "cand_714daba4fc29",
+      "name": "Barefoot hard seltzer",
+      "normalized_name": "barefoot hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0085000031049",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0085000031049"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0085000031049/barefoot-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 56.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_db5e08458143": {
+      "candidate_id": "cand_db5e08458143",
+      "name": "Hard Seltzer- Natural Lime",
+      "normalized_name": "hard seltzer natural lime",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Boissons alcoolisées, Boissons avec sucre ajouté",
+      "style": "",
+      "abv": 4.5,
+      "barcode": "5391537510793",
+      "country": "Suisse",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5391537510793"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5391537510793/natural-lime-hard-seltzer-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 61.9,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_f479b071cce6": {
+      "candidate_id": "cand_f479b071cce6",
+      "name": "Hard Seltzer saveur citron vert, menthe, fleur de sureau",
+      "normalized_name": "hard seltzer saveur citron vert menthe fleur de sureau",
+      "brand": "Bewiz",
+      "producer_name": "Bewiz",
+      "normalized_producer": "bewiz",
+      "category": "Boissons alcoolisées",
+      "style": "",
+      "abv": 4.5,
+      "barcode": "3163932288223",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3163932288223"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3163932288223/hard-seltzer-saveur-citron-vert-menthe-fleur-de-sureau-bewiz"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 44.3,
+      "missing_fields": [],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_787078347521": {
+      "candidate_id": "cand_787078347521",
+      "name": "CITRUS PUNCH HARD SELTZER",
+      "normalized_name": "citrus punch hard seltzer",
+      "brand": "TRULY",
+      "producer_name": "TRULY",
+      "normalized_producer": "truly",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692012269",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692012269"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692012269/citrus-punch-hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 61.0,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_797272bfc373": {
+      "candidate_id": "cand_797272bfc373",
+      "name": "Berry Punch Hard Seltzer",
+      "normalized_name": "berry punch hard seltzer",
+      "brand": "TRULY",
+      "producer_name": "TRULY",
+      "normalized_producer": "truly",
+      "category": "",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692012245",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692012245"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692012245/berry-punch-hard-seltzer-truly"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 60.0,
+      "missing_fields": [
+        "category",
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_35422516e89e": {
+      "candidate_id": "cand_35422516e89e",
+      "name": "Hard seltzer",
+      "normalized_name": "hard seltzer",
+      "brand": "White Claw",
+      "producer_name": "White Claw",
+      "normalized_producer": "white claw",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0848819000244",
+      "country": "Canada",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0848819000244"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0848819000244/hard-seltzer-ruby-grapefruit-white-claw"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 55.0,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_3519912673f9": {
+      "candidate_id": "cand_3519912673f9",
+      "name": "Kaskad hard seltzer",
+      "normalized_name": "kaskad hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3760220891242",
+      "country": "España",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3760220891242"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3760220891242/kaskad-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 55.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_9ef2b31b3adc": {
+      "candidate_id": "cand_9ef2b31b3adc",
+      "name": "Hard Seltzer raisin blanc pastèque",
+      "normalized_name": "hard seltzer raisin blanc pasteque",
+      "brand": "Doort",
+      "producer_name": "Doort",
+      "normalized_producer": "doort",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3760259622756",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3760259622756"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3760259622756/hard-seltzer-raisin-blanc-pasteque-doort"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 43.9,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_b65702356a29": {
+      "candidate_id": "cand_b65702356a29",
+      "name": "Clean & Press Hard Seltzer Mangue Peche",
+      "normalized_name": "clean press hard seltzer mangue peche",
+      "brand": "Brewdog",
+      "producer_name": "Brewdog",
+      "normalized_producer": "brewdog",
+      "category": "Hard seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "5056025439702",
+      "country": "France",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "5056025439702"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/5056025439702/clean-press-hard-seltzer-mangue-peche-brewdog"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 57.5,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_61113bcd9f04": {
+      "candidate_id": "cand_61113bcd9f04",
+      "name": "Corona Hard Seltzer",
+      "normalized_name": "corona hard seltzer",
+      "brand": "Corona",
+      "producer_name": "Corona",
+      "normalized_producer": "corona",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0033544000670",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0033544000670"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0033544000670/corona-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "new_candidate",
+      "match_confidence": 53.3,
+      "missing_fields": [
+        "abv"
+      ],
+      "review_reasons": [],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_68689e9f7dbd": {
+      "candidate_id": "cand_68689e9f7dbd",
+      "name": "Vizzy hard seltzer",
+      "normalized_name": "vizzy hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "03401110",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "03401110"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/03401110/vizzy-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 56.2,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_bd3a69e8802e": {
+      "candidate_id": "cand_bd3a69e8802e",
+      "name": "barefoot hard seltzer",
+      "normalized_name": "barefoot hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0085000031056",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0085000031056"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0085000031056/barefoot-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 56.6,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_51b19c2469f3": {
+      "candidate_id": "cand_51b19c2469f3",
+      "name": "corona hard seltzer limonada",
+      "normalized_name": "corona hard seltzer limonada",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0033544001103",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0033544001103"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0033544001103/corona-hard-seltzer-limonada"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 61.7,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_225bf42cb9ac": {
+      "candidate_id": "cand_225bf42cb9ac",
+      "name": "Pure Piraña Hard Seltzer",
+      "normalized_name": "pure pirana hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "3830054842267",
+      "country": "Ireland",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "3830054842267"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/3830054842267/pure-pirana-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "",
+      "match_status": "needs_review",
+      "match_confidence": 57.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "insufficient evidence: missing name or producer"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    },
+    "cand_2a62ad346a6e": {
+      "candidate_id": "cand_2a62ad346a6e",
+      "name": "Truly watermelon lemonade hard seltzer",
+      "normalized_name": "truly watermelon lemonade hard seltzer",
+      "brand": "",
+      "producer_name": "",
+      "normalized_producer": "",
+      "category": "Hard Seltzers",
+      "style": "",
+      "abv": null,
+      "barcode": "0087692012160",
+      "country": "United States",
+      "source_names": [
+        "openfoodfacts"
+      ],
+      "source_record_ids": [
+        "0087692012160"
+      ],
+      "source_urls": [
+        "https://world.openfoodfacts.org/product/0087692012160/truly-watermelon-lemonade-hard-seltzer"
+      ],
+      "existing_beerpassport_id": "5965",
+      "match_status": "needs_review",
+      "match_confidence": 85.0,
+      "missing_fields": [
+        "producer",
+        "abv"
+      ],
+      "review_reasons": [
+        "possible duplicate (fuzzy score 85.0)"
+      ],
+      "first_discovered_at": "2026-10-12T05:07:50+00:00",
+      "last_seen_at": "2026-10-12T05:07:50+00:00"
+    }
+  },
+  "producers": {},
+  "last_run": "2026-10-12T05:07:50+00:00"
+}

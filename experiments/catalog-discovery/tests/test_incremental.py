@@ -1,0 +1,404 @@
+"""Tests for incremental state and graceful source failure. No network access."""
+import csv
+import tempfile
+import unittest
+from pathlib import Path
+from types import SimpleNamespace
+from unittest import mock
+
+from src import state as state_mod
+from src.sources.base import CachedClient, SourceError
+
+
+def cand(cid, sources=("openfoodfacts",)):
+    return {
+        "candidate_id": cid,
+        "name": "Test Beer",
+        "source_names": list(sources),
+        "source_record_ids": ["rec-1"],
+        "source_urls": ["http://example.com/1"],
+        "match_status": "new_candidate",
+        "match_confidence": 0.0,
+        "existing_beerpassport_id": "",
+        "review_reasons": [],
+        "missing_fields": [],
+        "first_discovered_at": "",
+        "last_seen_at": "",
+    }
+
+
+class TestStateMerging(unittest.TestCase):
+    def test_repeat_run_does_not_inflate(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            state = state_mod.load_state(d)
+            self.assertEqual(state_mod.merge_candidate(state, cand("c1")), "new")
+            # Same candidate seen again: updated, not new.
+            self.assertEqual(state_mod.merge_candidate(state, cand("c1")), "updated")
+            self.assertEqual(len(state.candidates), 1)
+            state_mod.save_state(d, state)
+            reloaded = state_mod.load_state(d)
+            self.assertEqual(len(reloaded.candidates), 1)
+            self.assertTrue(reloaded.candidates["c1"]["first_discovered_at"])
+
+    def test_second_source_updates_associations(self):
+        state = state_mod.State()
+        state_mod.merge_candidate(state, cand("c1", sources=("openfoodfacts",)))
+        c2 = cand("c1", sources=("openfoodfacts", "manual"))
+        c2["source_record_ids"] = ["rec-1", "rec-2"]
+        c2["source_urls"] = ["http://example.com/1", "http://example.com/2"]
+        self.assertEqual(state_mod.merge_candidate(state, c2), "updated")
+        merged = state.candidates["c1"]
+        self.assertEqual(len(state.candidates), 1)  # no duplicate created
+        self.assertIn("manual", merged["source_names"])
+        self.assertIn("rec-2", merged["source_record_ids"])
+
+
+class TestCandidateIdentity(unittest.TestCase):
+    def test_same_barcode_across_search_terms_merges(self):
+        # The same Open Food Facts product surfacing under two search terms
+        # carries the same barcode, so it must resolve to one candidate.
+        from src.match import make_candidate_id
+        id_a = make_candidate_id("openfoodfacts", "5056025440449",
+                                 "Punk IPA", "Brewdog")
+        id_b = make_candidate_id("openfoodfacts", "5056025440449",
+                                 "PUNK IPA", "BREWDOG")
+        self.assertEqual(id_a, id_b)
+        state = state_mod.State()
+        self.assertEqual(state_mod.merge_candidate(state, cand(id_a)), "new")
+        self.assertEqual(state_mod.merge_candidate(state, cand(id_a)),
+                         "updated")
+        self.assertEqual(len(state.candidates), 1)
+
+    def test_cross_source_merge_without_record_ids_is_unsupported(self):
+        # Known limitation, documented in the README: when source record ids
+        # are missing, the source name is part of the identity hash, so the
+        # same product reported by two different sources does NOT merge.
+        # (With the current sources this cannot happen: Open Brewery DB
+        # yields producers only, never product candidates.)
+        from src.match import make_candidate_id
+        id_a = make_candidate_id("source_a", "", "Punk IPA", "Brewdog")
+        id_b = make_candidate_id("source_b", "", "Punk IPA", "Brewdog")
+        self.assertNotEqual(id_a, id_b)
+
+
+class TestBreweryDatasetSource(unittest.TestCase):
+    def test_dataset_path_produces_producer_candidates(self):
+        # --brewery-source dataset must load the snapshot and match producers
+        # without touching the API adapter.
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "cache").mkdir()
+            (d / "state").mkdir()
+            out = d / "output"
+            self._write_baseline(d)
+            ds = d / "snapshot.csv"
+            with open(ds, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(["id", "name", "brewery_type", "address_1",
+                            "address_2", "address_3", "city",
+                            "state_province", "postal_code", "country",
+                            "phone", "website_url", "longitude", "latitude"])
+                w.writerow(["abc", "Old Brewery", "micro", "", "", "",
+                            "Town", "ST", "", "US", "", "", "", ""])
+                w.writerow(["def", "Brand New Brewing", "micro", "", "", "",
+                            "City", "ST", "", "US", "", "", "", ""])
+            cfg = SimpleNamespace(
+                data_dir=d, output_dir=out, cache_dir=d / "cache",
+                state_dir=d / "state", limit=10, refresh=False,
+                brewery_pages=1, brewery_source="dataset",
+                brewery_dataset=ds, fuzzy_threshold=88.0,
+                review_threshold=70.0, abv_conflict=2.0, request_timeout=5,
+                max_retries=1, off_delay=0, obdb_delay=0,
+                search_terms=["beer"],
+            )
+            from src import main as main_mod
+            with mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([], {"terms_ok": 0})):
+                summary = main_mod.run(cfg)
+            self.assertEqual(
+                summary["sources"]["openbrewerydb"]["source"], "dataset")
+            self.assertEqual(
+                summary["sources"]["openbrewerydb"]["raw_records"], 2)
+            producers = list(csv.DictReader(
+                open(out / "producer_candidates.csv", encoding="utf-8-sig")))
+            self.assertEqual(len(producers), 2)
+            by_name = {p["original_name"]: p for p in producers}
+            # Exact baseline match -> existing; unknown -> new_candidate.
+            self.assertEqual(by_name["Old Brewery"]["match_status"], "existing")
+            self.assertEqual(by_name["Brand New Brewing"]["match_status"],
+                             "new_candidate")
+            self.assertEqual(by_name["Old Brewery"]["source_name"],
+                             "openbrewerydb-dataset")
+
+    def _write_baseline(self, d: Path):
+        specs = {
+            "LiveBeers.csv": (["id", "brewery_id", "name", "cat_id",
+                               "style_id", "abv", "ibu", "srm", "upc",
+                               "descript", "last_mod"],
+                              [["1", "1", "Old Ale", "1", "1", "5.0", "", "",
+                                 "", "", ""]]),
+            "LiveBreweries.csv": (["id", "name", "address1", "address2",
+                                   "city", "state", "code", "country",
+                                   "phone", "website", "descript", "add_user"],
+                                  [["1", "Old Brewery", "", "", "", "", "",
+                                    "", "", "", "", ""]]),
+            "LiveCategories.csv": (["id", "cat_name", "last_mod"],
+                                   [["1", "British Ale", ""]]),
+            "LiveStyles.csv": (["id", "cat_id", "style_name", "last_mod"],
+                               [["1", "1", "Old Ale Style", ""]]),
+        }
+        for name, (headers, rows) in specs.items():
+            with open(d / name, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                w.writerows(rows)
+
+
+class TestRepeatFromPriorRun(unittest.TestCase):
+    def test_repeat_sighting_from_prior_run_does_not_crash(self):
+        # Regression: a record ID seen in a previous run must be counted as
+        # a repeat, not crash with KeyError. The bug was a short-circuited
+        # `or` skipping setdefault() before the later dict access.
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "cache").mkdir()
+            state_dir = d / "state"
+            state_dir.mkdir()
+            out = d / "output"
+            self._write_baseline(d)
+            cfg = SimpleNamespace(
+                data_dir=d, output_dir=out, cache_dir=d / "cache",
+                state_dir=state_dir, limit=10, refresh=False,
+                brewery_pages=1, brewery_source="api", brewery_dataset=None,
+                fuzzy_threshold=88.0, review_threshold=70.0,
+                abv_conflict=2.0, request_timeout=5, max_retries=1,
+                off_delay=0, obdb_delay=0,
+                search_terms=["beer"],
+            )
+            product = {
+                "source_name": "openfoodfacts", "source_record_id": "111",
+                "original_name": "Brand New IPA", "brand": "NewCo",
+                "categories": "Beers", "abv": 6.0, "abv_unknown": False,
+                "barcode": "1234567890128", "country": "US", "quantity": "",
+                "source_url": "http://example.com/p/111",
+                "retrieved_note": "", "review_reasons": [],
+            }
+            from src import main as main_mod
+            with mock.patch("src.sources.openbrewerydb.fetch_breweries",
+                            return_value=([], {})), \
+                 mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([product], {"terms_ok": 1})):
+                main_mod.run(cfg)
+                summary = main_mod.run(cfg)
+            inc = summary["incremental"]
+            self.assertEqual(inc["repeated_source_records_this_run"], 1)
+            self.assertEqual(inc["new_candidates_this_run"], 0)
+
+    def test_reprocessed_candidate_gets_current_relevance(self):
+        # Legacy candidates stuck at "unclassified" pick up the current
+        # classification when reprocessed, without losing prior evidence.
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "cache").mkdir()
+            state_dir = d / "state"
+            state_dir.mkdir()
+            out = d / "output"
+            self._write_baseline(d)
+            cfg = SimpleNamespace(
+                data_dir=d, output_dir=out, cache_dir=d / "cache",
+                state_dir=state_dir, limit=10, refresh=False,
+                brewery_pages=1, brewery_source="api", brewery_dataset=None,
+                fuzzy_threshold=88.0, review_threshold=70.0,
+                abv_conflict=2.0, request_timeout=5, max_retries=1,
+                off_delay=0, obdb_delay=0,
+                search_terms=["beer"],
+            )
+            base_product = {
+                "source_name": "openfoodfacts", "source_record_id": "111",
+                "original_name": "Brand New IPA", "brand": "NewCo",
+                "categories": "Beers", "abv": 6.0, "abv_unknown": False,
+                "barcode": "1234567890128", "country": "US", "quantity": "",
+                "source_url": "http://example.com/p/111",
+                "retrieved_note": "", "review_reasons": [],
+            }
+            from src import main as main_mod
+            from src.sources import openbrewerydb
+            # Run 1: record carries no relevance label (legacy import).
+            with mock.patch.object(openbrewerydb, "fetch_breweries",
+                                   return_value=([], {})), \
+                 mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([dict(base_product)],
+                                          {"terms_ok": 1})):
+                s1 = main_mod.run(cfg)
+            self.assertEqual(s1["relevance_counts"].get("unclassified"), 1)
+            first_seen = json.load(
+                open(state_dir / "discovery_state.json")
+            )["candidates"]
+            cid = next(iter(first_seen))
+            discovered_at = first_seen[cid]["first_discovered_at"]
+            # Run 2: same record reprocessed, now with a classification.
+            product_v2 = dict(base_product, relevance="term-matched")
+            with mock.patch.object(openbrewerydb, "fetch_breweries",
+                                   return_value=([], {})), \
+                 mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([product_v2], {"terms_ok": 1})):
+                s2 = main_mod.run(cfg)
+            inc = s2["incremental"]
+            self.assertEqual(inc["reclassified_this_run"], 1)
+            self.assertEqual(s2["relevance_counts"].get("term-matched"), 1)
+            self.assertEqual(s2["relevance_counts"].get("unclassified", 0), 0)
+            # Prior evidence preserved: same candidate, original timestamp.
+            cand = json.load(open(state_dir / "discovery_state.json"))[
+                "candidates"][cid]
+            self.assertEqual(cand["relevance"], "term-matched")
+            self.assertEqual(cand["first_discovered_at"], discovered_at)
+            self.assertIn("111", cand["source_record_ids"])
+
+    def _write_baseline(self, d: Path):
+        specs = {
+            "LiveBeers.csv": (["id", "brewery_id", "name", "cat_id",
+                               "style_id", "abv", "ibu", "srm", "upc",
+                               "descript", "last_mod"],
+                              [["1", "1", "Old Ale", "1", "1", "5.0", "", "",
+                                 "", "", ""]]),
+            "LiveBreweries.csv": (["id", "name", "address1", "address2",
+                                   "city", "state", "code", "country",
+                                   "phone", "website", "descript", "add_user"],
+                                  [["1", "Old Brewery", "", "", "", "", "",
+                                    "", "", "", "", ""]]),
+            "LiveCategories.csv": (["id", "cat_name", "last_mod"],
+                                   [["1", "British Ale", ""]]),
+            "LiveStyles.csv": (["id", "cat_id", "style_name", "last_mod"],
+                               [["1", "1", "Old Ale Style", ""]]),
+        }
+        for name, (headers, rows) in specs.items():
+            with open(d / name, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                w.writerows(rows)
+
+
+class TestSourceFailure(unittest.TestCase):
+    def test_client_raises_after_retries(self):
+        import requests
+        with tempfile.TemporaryDirectory() as tmp:
+            client = CachedClient(Path(tmp), delay=0, timeout=1, max_retries=2)
+            client.session.get = mock.Mock(
+                side_effect=requests.ConnectionError("nope"))
+            with self.assertRaises(SourceError):
+                client.get_json("http://example.com/x")
+
+    def test_one_source_failing_does_not_stop_run(self):
+        # Build a minimal baseline in a temp dir and run with OBDB failing.
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "cache").mkdir()
+            (d / "state").mkdir()
+            out = d / "output"
+            self._write_baseline(d)
+
+            cfg = SimpleNamespace(
+                data_dir=d, output_dir=out, cache_dir=d / "cache",
+                state_dir=d / "state", limit=10, refresh=False,
+                brewery_pages=1, brewery_source="api", brewery_dataset=None,
+                fuzzy_threshold=88.0, review_threshold=70.0,
+                abv_conflict=2.0, request_timeout=5, max_retries=1,
+                off_delay=0, obdb_delay=0,
+                search_terms=["beer"],
+            )
+            product = {
+                "source_name": "openfoodfacts", "source_record_id": "111",
+                "original_name": "Brand New IPA", "brand": "NewCo",
+                "categories": "Beers", "abv": 6.0, "abv_unknown": False,
+                "barcode": "1234567890128", "country": "US", "quantity": "",
+                "source_url": "http://example.com/p/111",
+                "retrieved_note": "", "review_reasons": [],
+            }
+            from src import main as main_mod
+            with mock.patch("src.sources.openbrewerydb.fetch_breweries",
+                            side_effect=SourceError("blocked")), \
+                 mock.patch("src.sources.openfoodfacts.fetch_products",
+                            return_value=([product], {"terms_ok": 1})):
+                summary = main_mod.run(cfg)
+
+            self.assertTrue(any("openbrewerydb" in e for e in summary["errors"]))
+            self.assertEqual(summary["sources"]["openfoodfacts"]["raw_records"], 1)
+            self.assertTrue((out / "beverage_candidates.csv").exists())
+            self.assertTrue((out / "run_summary.json").exists())
+
+    def _write_baseline(self, d: Path):
+        specs = {
+            "LiveBeers.csv": (["id", "brewery_id", "name", "cat_id",
+                               "style_id", "abv", "ibu", "srm", "upc",
+                               "descript", "last_mod"],
+                              [["1", "1", "Old Ale", "1", "1", "5.0", "", "",
+                                 "", "", ""]]),
+            "LiveBreweries.csv": (["id", "name", "address1", "address2",
+                                   "city", "state", "code", "country",
+                                   "phone", "website", "descript", "add_user"],
+                                  [["1", "Old Brewery", "", "", "", "", "",
+                                    "", "", "", "", ""]]),
+            "LiveCategories.csv": (["id", "cat_name", "last_mod"],
+                                   [["1", "British Ale", ""]]),
+            "LiveStyles.csv": (["id", "cat_id", "style_name", "last_mod"],
+                               [["1", "1", "Old Ale Style", ""]]),
+        }
+        for name, (headers, rows) in specs.items():
+            with open(d / name, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                w.writerows(rows)
+
+
+class TestChunkedBaseline(unittest.TestCase):
+    def test_parts_reassemble_without_row_loss(self):
+        # Large exports are committed as <stem>.partNN.csv chunks; the
+        # loader must reassemble them exactly, with no dropped rows.
+        from src.baseline import load_baseline
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            headers = ["id", "brewery_id", "name", "cat_id", "style_id",
+                       "abv", "ibu", "srm", "upc", "descript", "last_mod"]
+            rows = [[str(i), "1", f"Beer {i}", "1", "1", "5.0", "", "", "",
+                     "", ""] for i in range(1, 251)]
+            with open(d / "LiveBeers.part01.csv", "w", newline="",
+                      encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                w.writerows(rows[:100])
+            with open(d / "LiveBeers.part02.csv", "w", newline="",
+                      encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerows(rows[100:200])
+            with open(d / "LiveBeers.part03.csv", "w", newline="",
+                      encoding="utf-8") as f:
+                w = csv.writer(f)
+                w.writerows(rows[200:])
+            for name, h, r in [
+                    ("LiveBreweries.csv",
+                     ["id", "name", "address1", "address2", "city", "state",
+                      "code", "country", "phone", "website", "descript",
+                      "add_user"],
+                     [["1", "Brew Co", "", "", "", "", "", "", "", "", "",
+                       ""]]),
+                    ("LiveCategories.csv", ["id", "cat_name", "last_mod"],
+                     [["1", "British Ale", ""]]),
+                    ("LiveStyles.csv",
+                     ["id", "cat_id", "style_name", "last_mod"],
+                     [["1", "1", "Style", ""]])]:
+                with open(d / name, "w", newline="", encoding="utf-8") as f:
+                    w = csv.writer(f)
+                    w.writerow(h)
+                    w.writerows(r)
+            base = load_baseline(d)
+            self.assertEqual(len(base.beers), 250)
+            self.assertEqual(base.beers[0]["name"], "Beer 1")
+            self.assertEqual(base.beers[99]["name"], "Beer 100")
+            self.assertEqual(base.beers[100]["name"], "Beer 101")
+            self.assertEqual(base.beers[249]["name"], "Beer 250")
+
+
+if __name__ == "__main__":
+    unittest.main()

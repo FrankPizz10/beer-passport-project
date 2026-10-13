@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+cache/
+data/dataset/*.csv
+.vscode/
+.DS_Store

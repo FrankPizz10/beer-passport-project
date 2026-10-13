@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    {
+      "ambiguous": false,
+      "brand": "White Claw",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/White_Claw_Hard_Seltzer",
+        "https://www.inside.beer/news/detail/usa-mark-anthony-brewing-pauses-nj-plant-cuts-143-jobs"
+      ],
+      "note": "Mark Anthony Brewing is the subsidiary company that produces White Claw in the US. The BeerPassport baseline stores these products under Mark Anthony Brewing while Open Food Facts uses the consumer brand White Claw.",
+      "producer": "Mark Anthony Brewing"
+    },
+    {
+      "ambiguous": false,
+      "brand": "Truly",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/Truly_(brand)"
+      ],
+      "note": "Truly is a brand of hard seltzer produced by the Boston Beer Company. Covers Truly Unruly line extensions, which share the Truly brand.",
+      "producer": "Boston Beer Company"
+    },
+    {
+      "ambiguous": false,
+      "brand": "High Noon",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/High_Noon_(seltzer)"
+      ],
+      "note": "High Noon introduced in 2019 by E. & J. Gallo Winery. The BeerPassport baseline stores these under E. & J. Gallo Winery while Open Food Facts uses the consumer brand High Noon.",
+      "producer": "E. & J. Gallo Winery"
+    }
+  ],
+  "description": "Consumer brand -> producing company aliases for catalog matching. An alias is producer EVIDENCE, not proof that two beverages are the same product: the matcher still requires product-level (flavor) identity before classifying a record as existing. Entries marked ambiguous:true are documented but never used for matching.",
+  "version": 1
+}
