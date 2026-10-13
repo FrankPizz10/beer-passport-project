@@ -158,3 +158,22 @@ OFF beverage candidates (100 in current state), producer attribution:
   records were all new (OFF search results shift between runs), so no
   legacy repeats were reprocessed there, but all 100 new records received
   current relevance labels at creation (56 term-matched, 44 uncertain).
+
+## Validation run (2026-10-13)
+
+Validated against an isolated test copy in `/tmp/beerpassport_validation` (branch `experiment/catalog-discovery-prototype`, commit `c1d5647`):
+
+- **Candidate matching**:
+  - `existing`: 12/12 inspected, 9 correct (75.0%). 3 false positives (`la goudale blonde` matching `Blonde` by La Choulette, `La Blonde` matching `Blonde` by Abbaye Des Rocs, and `75CL BIERE LA GOUDALE AMBREE` matching `Ambree` by Abbaye Des Rocs). Root cause: `token_set_ratio` gives 100 on generic single-word beer names ("Blonde", "Ambrée") and combined with shared "Brasserie" pushes similarity over the 88.0 threshold into `existing`.
+  - `new_candidate`: 30/30 inspected, 30 correct (100.0%). All confirmed absent from 2008 baseline (mostly post-2015 seltzers and new craft lines).
+  - `needs_review`: 30/30 inspected, 30 correct (100.0%). Appropriately held ambiguous names, missing producer records, and parent/brand mismatches in review rather than auto-merging.
+- **Relevance labels**:
+  - `term-matched`: 30/30 inspected, 30 correct (100.0%). Strictly matches documented English search terms.
+  - `uncertain`: 30/30 inspected, 30 correct (100.0%). Strictly catches non-English beverage descriptions (e.g. *Bières*, *Bier*, *Birra*) and non-beverage outliers without dropping them.
+- **Producer attribution**:
+  - Exactly 2 exact dataset matches: `Jupiler` (`cand_f3083d8c048f`) and `Krombacher` (`cand_af21b406ceec`). Both 2/2 confirmed supported (100.0%) against Open Food Facts manufacturing evidence and Open Brewery DB geographic, website, and company records.
+- **Incremental behavior**:
+  - Bounded input executed twice against test copy: 0 duplicate candidates created, 100% first-discovered timestamps preserved, 100% accumulated source evidence preserved, relevance updated upon reprocessing.
+- **Traceability and outputs**:
+  - 100% of candidate rows trace to source records and valid HTTP URLs; review queue matches 103/103 `needs_review` candidate IDs.
+- **Verdict**: **Ready with specific limitations**. High-priority limitation to address before broader ingestion: adjust fuzzy auto-matching to require stronger independent producer similarity or route single-word/generic beer style names to `needs_review` rather than auto-merging into `existing`.
