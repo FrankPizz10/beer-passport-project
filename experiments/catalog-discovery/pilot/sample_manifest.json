@@ -1,0 +1,48 @@
+{
+  "method": "Seeded stratified sample (seed 20261013). Targets: 20 new_candidate, 5 needs_review, 5 existing; shortfalls reallocated to new_candidate. Within each group: seeded shuffle, greedy one-per-producer pass, then fill. Pool: discovery_state.json on branch experiment/catalog-discovery-prototype @ 0bb2f43.",
+  "seed": 20261013,
+  "branch": "experiment/catalog-discovery-prototype",
+  "commit": "0bb2f4375f8ea2fc0097ea8218400c0e2646d7bf",
+  "pool_counts": {
+    "new_candidate": 57,
+    "needs_review": 42,
+    "existing": 1
+  },
+  "sample_counts": {
+    "new_candidate": 24,
+    "needs_review": 5,
+    "existing": 1
+  },
+  "candidate_ids": [
+    "cand_db5e08458143",
+    "cand_ccc58134e403",
+    "cand_c61a60f81a5a",
+    "cand_05f15b96c82c",
+    "cand_7effe6325d7d",
+    "cand_ec652f7497ee",
+    "cand_9ef2b31b3adc",
+    "cand_e0de7cb653bc",
+    "cand_3a659884ffdb",
+    "cand_980dc9fd423d",
+    "cand_2ac65f4a0227",
+    "cand_5100011aa1a6",
+    "cand_0fe5e034ec1c",
+    "cand_130bf641c872",
+    "cand_61113bcd9f04",
+    "cand_c3f4560f37d9",
+    "cand_8c34e3441093",
+    "cand_e91fbbe786d9",
+    "cand_a9dbe661955c",
+    "cand_03874efd1a56",
+    "cand_0f5fd2255605",
+    "cand_6b15f0c30f0d",
+    "cand_9d32a525dfcc",
+    "cand_aaa363925d59",
+    "cand_6f278d7d4f71",
+    "cand_cd89790f781e",
+    "cand_a9f52e224116",
+    "cand_12c26f728267",
+    "cand_0106c4a2ff1b",
+    "cand_dc5a292cafc1"
+  ]
+}
