@@ -1,7 +1,16 @@
 # Image-Sourcing Implementation Plan
 
-Status: PROPOSED (Stage 1). No code written. Awaiting owner approval
-before Stage 2 implementation.
+Status: STAGE 2 COMPLETE (2026-10-13). Implemented on
+`experiment/image-sourcing-plan`, PR #5 open for review. No merges.
+
+Owner decisions applied:
+- Stage 2 is OFF-only automation; manufacturer path is schema-only
+  (no manual lookups at 10k+ scale, no unrestricted scraping assumed).
+- No OFF API usage form yet; pilot volume is within limits.
+
+Pilot result: 17 beverages, 12 approved (all barcode-exact + rights
+approved), 5 fallback (no OFF image), 0 errors. See
+`../pilot/IMAGE_PILOT_REPORT_2026-10-13.md`.
 
 ## Purpose and scope
 
