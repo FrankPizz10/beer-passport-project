@@ -19,10 +19,10 @@ sold in cans or bottles**.
 
 ## Explicit boundaries
 
-**Bottled spirits sold as liquor** (e.g. a 750ml bottle of vodka): OUT.
-These are not single-serve packaged beverages and are not what
-BeerPassport catalogs. A canned vodka soda from the same brand is IN;
-the bottle on the shelf is OUT.
+**Bottled spirits sold as liquor** (e.g. a 750ml bottle of vodka):
+UNDECIDED (owner decision). A canned vodka soda from the same brand fits
+the packaged format; the bottle on the shelf may not be what the catalog
+should contain. Do not treat either as settled until confirmed.
 
 **Non-alcoholic cocktails / mocktails**: UNDECIDED (owner decision).
 They fit the packaged format, but the product has not settled whether
@@ -32,11 +32,12 @@ the catalog covers non-alcoholic drinks beyond non-alcoholic beer.
 alcoholic, packaged in cans/bottles. Fits the format; category fit is
 unclear.
 
-**Unclear or varying ABV**: when ABV is missing, the record stays
-`needs_review` (existing pipeline behavior treats ABV 0.0 as unknown,
-not as verified zero). Do not infer alcohol status from the name. When
-ABV varies by region for the same barcode, keep the most documented
-value and note the variance in review reasons.
+**Unclear or varying ABV**: when ABV is missing or 0.0, the record stays
+`needs_review`. The pipeline treats ABV 0.0 as unknown, not as verified
+zero, so non-alcoholic products such as Heineken 0.0 may need manual
+review to confirm their alcohol status. Do not infer alcohol status from
+the name. When ABV varies by region for the same barcode, keep the most
+documented value and note the variance in review reasons.
 
 ## Three axes, not one label
 
@@ -48,8 +49,8 @@ candidate is described on three independent axes:
    never inferred from the name)
 3. **Packaging format**: can / bottle / unknown (with size where known)
 
-A record can be in-scope on format but out on type (bottled spirits), or
-in-scope on type but unknown on alcohol status (missing ABV). Review
+A record can be in-scope on format but out on type (bottled spirits, if
+the owner decides they are out of scope), or in-scope on type but unknown on alcohol status (missing ABV). Review
 handling differs per axis; see the review outcomes in
 `04-alias-and-review-procedure.md`.
 

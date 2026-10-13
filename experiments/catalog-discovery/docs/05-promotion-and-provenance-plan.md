@@ -11,8 +11,10 @@ experiment.
    data; "credit to Open Brewery DB" defined for producer data. Owner
    signs off; see `03-source-and-data-governance.md` for open questions.
 2. **Scope sign-off.** Owner resolves the open product decisions
-   (mocktails, kombucha, bottled-spirits boundary) in
-   `01-product-scope-and-taxonomy.md`.
+   (mocktails, kombucha, bottled spirits sold as liquor) in
+   `01-product-scope-and-taxonomy.md`. Note that the pipeline treats ABV
+   0.0 as unknown, so non-alcoholic products such as Heineken 0.0 may
+   need manual review before promotion.
 3. **Human review.** Every promoted record was manually classified
    Useful addition under `04-alias-and-review-procedure.md`. No bulk
    promotion of unreviewed `new_candidate` output.
