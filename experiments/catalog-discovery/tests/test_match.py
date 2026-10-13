@@ -265,6 +265,35 @@ class TestBrandAliasMatching(unittest.TestCase):
         self.assertEqual(status, "existing")
         self.assertEqual(bid, "5968")
 
+    def test_empty_flavor_signature_goes_to_review(self):
+        # A generic alias-branded candidate ("Hard Seltzer" / White Claw)
+        # has an empty flavor signature. Even against a generic baseline
+        # product for the aliased producer, empty == empty must NOT count
+        # as product identity: route to needs_review, never existing.
+        beers = [
+            {"id": "6000", "name": "White Claw", "upc": "",
+             "abv": "5", "_brewery": "Mark Anthony Brewing"},
+        ]
+        index = match_mod.build_baseline_index(
+            beers, make_baseline(beers), aliases=self.ALIASES)
+        self.assertEqual(
+            match_mod.flavor_signature("Hard Seltzer", "White Claw"),
+            frozenset())
+        status, bid, conf, reasons = match_mod.match_record(
+            rec("Hard Seltzer", "White Claw"), index, CFG)
+        self.assertEqual(status, "needs_review")
+        self.assertNotEqual(status, "existing")
+        self.assertTrue(any("flavor identity uncertain" in r for r in reasons))
+
+    def test_flavor_identity_confirmed_requires_nonempty(self):
+        self.assertFalse(match_mod.flavor_identity_confirmed(
+            "Hard Seltzer", "White Claw", "White Claw"))
+        self.assertTrue(match_mod.flavor_identity_confirmed(
+            "Hard Seltzer Natural Lime", "White Claw",
+            "White Claw - Natural Lime"))
+        self.assertFalse(match_mod.flavor_identity_confirmed(
+            "Hard Seltzer Natural Lime", "White Claw", "White Claw - Lime"))
+
     def test_abv_conflict_with_alias_goes_to_review(self):
         # Alias + flavor match, but ABV conflicts: needs_review, not existing.
         brand = "Hard Seltzer Beverage Company LLC, Truly, Truly Unruly"

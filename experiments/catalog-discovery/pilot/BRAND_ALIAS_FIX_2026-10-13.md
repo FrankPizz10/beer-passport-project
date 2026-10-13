@@ -108,6 +108,37 @@ pilot classifications): 16/24 (67%) before -> 16/18 (89%) after. The 6
 records that left the `new_candidate` pool were 5 Already-represented
 and 1 Uncertain; all 16 Useful additions remain `new_candidate`.
 
+## Empty-flavor-signature guard (2026-10-13, follow-up)
+
+Edge case closed: `flavor_signature()` strips brand and descriptor tokens,
+so a generic name like "Hard Seltzer" yields an empty signature. Two empty
+signatures compare equal as sets, which could have let an alias-supported
+fuzzy match classify a generic candidate as `existing` with no flavor
+evidence.
+
+Fix: new `flavor_identity_confirmed()` requires **non-empty, equal**
+signatures. Empty on either side is treated as uncertain flavor identity
+and routes to `needs_review`, never `existing`.
+
+Tests: 63 pass (61 prior + 2 new). New regression test asserts a generic
+"Hard Seltzer" / White Claw candidate against a generic White Claw
+baseline product goes to `needs_review` with the "flavor identity
+uncertain" reason. All prior alias tests still pass: White Claw Natural
+Lime, Truly Wild Berry, and High Noon Pineapple still match their correct
+baseline entries; different flavors still do not auto-merge; Truly
+Unruly's ABV conflict remains in review; Blonde/Ambrée safeguards and
+exact barcode/name-plus-producer behavior are unchanged.
+
+Pilot reassessment (same 30-candidate sample, isolated copy): counts are
+unchanged from the alias-fix run at 18 new / 6 review / 6 existing, and
+the committed discovery state (100 candidates) and pilot artifacts were
+not overwritten. No sample record exercised the empty-signature path;
+the guard is preventive.
+
+Remaining limitation: only three aliases are evidence-backed; other
+brand/producer mismatches in the full pool are unaddressed. No
+image-sourcing work done.
+
 ## Limits
 
 - Directional (n=30), not statistically conclusive. No claim is made

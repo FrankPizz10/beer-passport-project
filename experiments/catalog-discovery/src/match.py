@@ -108,11 +108,28 @@ def flavor_signature(name: str, brand: str) -> frozenset[str]:
     the tokens that distinguish one flavor from another (e.g. {natural,
     lime} vs {lemon}). Used to require product-level identity before an
     alias-supported match can become `existing`.
+
+    A generic name like "Hard Seltzer" yields an EMPTY signature: there is
+    no flavor evidence at all. Empty signatures never count as a match;
+    callers must treat them as uncertain flavor identity.
     """
     tokens = set(normalize_name(name).split())
     tokens -= set(normalize_name(brand).split())
     tokens -= DESCRIPTOR_TOKENS
     return frozenset(tokens)
+
+
+def flavor_identity_confirmed(name_a: str, brand_a: str,
+                              name_b: str) -> bool:
+    """True only when both sides have non-empty, equal flavor signatures.
+
+    Two empty signatures compare equal as sets, but that is the absence of
+    evidence, not evidence of identity: a generic "Hard Seltzer" record must
+    not auto-merge into a generic baseline product on an empty signature.
+    """
+    sig_a = flavor_signature(name_a, brand_a)
+    sig_b = flavor_signature(name_b, brand_a)
+    return bool(sig_a) and sig_a == sig_b
 
 
 @dataclass
@@ -235,9 +252,8 @@ def match_record(record: dict, index: dict, cfg) -> tuple[str, str, float, list[
             if score > best_score:
                 best, best_score = hits[0], score
                 best_bnn, best_bnp = bnn, bnp
-                best_flavor_match = (
-                    flavor_signature(name, brand)
-                    == flavor_signature(hits[0]["beer"].get("name", ""), brand))
+                best_flavor_match = flavor_identity_confirmed(
+                    name, brand, hits[0]["beer"].get("name", ""))
     if best and best_score >= cfg.fuzzy_threshold:
         st_threshold = getattr(cfg, "single_token_producer_threshold", 85.0)
         is_single_token = len(best_bnn.split()) <= 1 or len(nn.split()) <= 1
