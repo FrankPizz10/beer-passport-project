@@ -32,7 +32,7 @@ ran on an isolated copy at /tmp/pilot_work, since deleted).
 - Repository: FrankPizz10/beer-passport-project
 - Branch: experiment/catalog-discovery-prototype
 - Base at start: 0bb2f43 ("Updated gitignore")
-- New commit: <SHA after push> (pilot artifacts)
+- New commit: 5445855f ("Catalog-quality pilot: 30-candidate review, report, curated CSV, session handoff")
 - PR: https://github.com/FrankPizz10/beer-passport-project/pull/2
   (updated with pilot findings + recommendation; NOT merged, per Frank's
   rule)
