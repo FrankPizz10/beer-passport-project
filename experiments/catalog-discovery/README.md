@@ -221,6 +221,28 @@ association updates, graceful single-source failure, and CSV lookup joins.
   matching?), not by beverage count.
 - Cross-source agreement is useful evidence, not proof of correctness.
 
+## Documentation (`docs/`)
+
+How to resume and expand this work responsibly:
+
+- [Product scope and taxonomy](docs/01-product-scope-and-taxonomy.md) -
+  what the catalog should contain, explicit boundaries, open decisions.
+- [Expansion runbook](docs/02-expansion-runbook.md) - safe repeatable
+  discovery runs, sampling, error tracking, expansion gates.
+- [Source and data governance](docs/03-source-and-data-governance.md) -
+  access rules, terms, and licenses per source, with evidence links.
+- [Alias and review procedure](docs/04-alias-and-review-procedure.md) -
+  adding and maintaining brand-to-producer aliases; manual-review
+  outcomes.
+- [Promotion and provenance plan](docs/05-promotion-and-provenance-plan.md) -
+  what moving reviewed records into BeerPassport would require.
+- [Image readiness checklist](docs/06-image-readiness-checklist.md) -
+  metadata an eventual image pilot must capture.
+
+Prior evidence: [pilot report](pilot/PILOT_REPORT_2026-10-13.md),
+[alias fix notes](pilot/BRAND_ALIAS_FIX_2026-10-13.md),
+[session handoff](SESSION_HANDOFF_2026-10-13_PILOT.md).
+
 ## Known limitations
 
 - Open Brewery DB blocked automated requests from the build environment
