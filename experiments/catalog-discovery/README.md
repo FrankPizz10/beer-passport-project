@@ -238,6 +238,13 @@ How to resume and expand this work responsibly:
   what moving reviewed records into BeerPassport would require.
 - [Image readiness checklist](docs/06-image-readiness-checklist.md) -
   metadata an eventual image pilot must capture.
+- [Image licensing assessment](docs/07-image-licensing-assessment.md) -
+  rights analysis for Open Food Facts imagery.
+- [Image sourcing plan](docs/08-image-sourcing-plan.md) - barcode-first
+  automated image pipeline design (implemented in `src/images/`).
+- [Old-catalog cleanup strategy](docs/09-old-catalog-cleanup-strategy.md) -
+  v1 cleanup rules for the legacy catalog, report-first flow, and the
+  spreadsheet write-back decision (implemented in `src/cleanup/`).
 
 Prior evidence: [pilot report](pilot/PILOT_REPORT_2026-10-13.md),
 [alias fix notes](pilot/BRAND_ALIAS_FIX_2026-10-13.md),
