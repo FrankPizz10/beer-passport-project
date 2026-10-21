@@ -83,7 +83,7 @@ seeded sample (n=30) classified 17 useful / 11 not useful / 2
 uncertain, with the not-useful dominated by non-beverages from the
 cider/malt terms (relevance-filter gap). Full report:
 pilot/REFRESH_MEASUREMENT_2026-10-21.md. Artifacts:
-pilot/refresh_new_candidates_2026-10-21.csv (728 rows),
+pilot/refresh_new_candidates_2026-10-21.part01-04.csv (728 rows, split per repo part-file convention),
 pilot/refresh_sample30_classified.csv.
 
 Confirmed blocker for backfill: baseline has 0/5,894 trustworthy
