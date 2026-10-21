@@ -99,6 +99,14 @@ R1 drops 92, R2 clears 6, R3 normalizes 27, R4 flags 1 group.
 
 ## Outstanding issues and risks
 
+- The CI workflow file itself is NOT on the branch. The GitHub App
+  integration lacks GitHub's Workflows permission, so pushing
+  `.github/workflows/catalog-discovery-ci.yml` returns 403 (the other
+  9 CI files pushed fine, commit `6ed1fef`). The full YAML and
+  Frank's two options (paste it himself via the web UI, recommended,
+  or grant the app the Workflows permission) are in a comment on
+  PR #6. Until it lands, the other CI commits are inert config.
+
 - The cleanup script itself has never been run against the real
   baseline (unit tests only, all passing). A defect found when Frank
   runs report mode comes back as a fix commit on this branch before
