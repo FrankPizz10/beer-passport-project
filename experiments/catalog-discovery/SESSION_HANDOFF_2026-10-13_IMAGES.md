@@ -70,3 +70,27 @@ downloaded. Untappd and Unsplash explicitly excluded per owner.
 Frank reviews PR #5. If approved: visual spot-check of the 12 approved
 images, then run against a representative sample of existing catalog
 beverages.
+
+## Update (2026-10-21): catalog refresh measurement
+
+At Frank's direction ("best path forward to production with a
+noticeable catalog improvement"), ran one bounded discovery run on an
+isolated copy (fresh state; committed state/outputs untouched):
+1,480 OFF records, truncated by 503s on 3 terms. Results: 728
+new_candidate, 705 needs_review, 46 existing; image presence 82%
+among new candidates; image workflow validated 40/40 approved;
+seeded sample (n=30) classified 17 useful / 11 not useful / 2
+uncertain, with the not-useful dominated by non-beverages from the
+cider/malt terms (relevance-filter gap). Full report:
+pilot/REFRESH_MEASUREMENT_2026-10-21.md. Artifacts:
+pilot/refresh_new_candidates_2026-10-21.csv (728 rows),
+pilot/refresh_sample30_classified.csv.
+
+Confirmed blocker for backfill: baseline has 0/5,894 trustworthy
+barcodes, so the refresh path (new OFF-sourced records) is the
+viable route to a visibly better catalog.
+
+Next recommended action: relevance negative-category filters + retry
+truncated terms in 2-3 more bounded runs; then promotion planning
+(schema image fields are a known 2.0 blocker). Backend/domain
+restoration needs Frank's AWS write access.
