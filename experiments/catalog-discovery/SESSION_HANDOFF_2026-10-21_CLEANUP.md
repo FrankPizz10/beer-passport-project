@@ -8,6 +8,9 @@ provable defects in the legacy catalog, on a new branch with a new PR,
 with the strategy written down in a doc. Frank's explicit constraint:
 do not run anything; he tests it himself and approves the PR.
 
+Added later the same day at Frank's request: GitHub Actions CI for the
+repo (lint, typecheck, build, unit tests), included in the same PR.
+
 ## Changes actually made
 
 - `docs/09-old-catalog-cleanup-strategy.md`: the strategy. Rules,
@@ -29,6 +32,23 @@ do not run anything; he tests it himself and approves the PR.
 - `tests/test_cleanup.py`: 15 unit tests over synthetic rows.
 - README documentation list now links docs 07, 08, and 09 (07 and 08
   were added by PR #5 but never linked).
+- CI, added 2026-10-21 at Frank's request:
+  `.github/workflows/catalog-discovery-ci.yml` at the repo root runs
+  ruff, mypy, a byte-compile build check, and the unit tests on pull
+  requests into main and on pushes to main, path-filtered to the
+  experiment and the workflow file, plus manual dispatch. Tool
+  settings are in the experiment's `pyproject.toml` and the tools are
+  pinned in `requirements-dev.txt` (ruff 0.17.1, mypy 2.4.0). The
+  README gained a Continuous integration section.
+- Minimal source fixes so CI starts green on real checks rather than
+  suppressed ones: 5 unused imports removed (enrichment.py, main.py,
+  images/cli.py), 3 annotation-only fixes (stats dicts in the two
+  source adapters, Counter in images/cli.py). No behavior changes.
+  The one exception is recorded in `pyproject.toml`: mypy
+  `ignore_errors` for `src.main` only, covering 3 pre-existing errors
+  (a Path | None dataset argument and a seen_source_ids inference
+  conflict with src.state). That is logged type debt; new modules get
+  no override.
 
 ## Repositories, branches, and commits involved
 
@@ -53,6 +73,12 @@ has still never been run):
   run in a venv built from `requirements.txt`. The first attempt
   without it produced 9 import errors, all `rapidfuzz` missing in
   pre-existing modules; none were in the cleanup code.
+
+CI verification, run locally in the venv before pushing (same
+commands the workflow runs): ruff check, all checks passed; mypy src,
+no issues in 26 source files; compileall, OK; full unit suite, 101
+tests OK; the workflow YAML parses. The first live GitHub Actions run
+triggers on the PR itself when the CI commit lands.
 
 The report-mode command, for Frank to run from
 `experiments/catalog-discovery/`:

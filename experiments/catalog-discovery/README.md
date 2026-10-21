@@ -197,6 +197,22 @@ producer context, fuzzy thresholds, review classification, no auto-merge of
 same-name/different-producer products, idempotent repeat runs, second-source
 association updates, graceful single-source failure, and CSV lookup joins.
 
+## Continuous integration
+
+GitHub Actions (`.github/workflows/catalog-discovery-ci.yml`) runs on pull
+requests into `main` and on pushes to `main` that touch this experiment:
+lint (ruff), typecheck (mypy), a byte-compile build check, and the unit
+tests. Tool settings live in `pyproject.toml`; the tools themselves are
+pinned in `requirements-dev.txt`. Run the same checks locally with:
+
+```bash
+pip install -r requirements.txt -r requirements-dev.txt
+ruff check src tests
+mypy src
+python -m compileall -q src tests
+python -m unittest discover -s tests -v
+```
+
 ## Interpreting metrics
 
 - `new_candidate` means *unmatched against the baseline*, not *verified new
