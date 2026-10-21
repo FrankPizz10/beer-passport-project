@@ -1,0 +1,31 @@
+candidate_id,name,brand,country,barcode,classification,note
+cand_c3ce529158dc,Sparkling Cider Mango & lime,Somersby,France,56094770,Useful addition,
+cand_87bd1980951c,Smoothie Apple Banna Mango Orange,Ready To Drink,Czech Republic,8591119003911,Not useful,smoothie; brand field is a search artifact
+cand_cf845e0217d4,Malt Wheats Toasty Crunch,Tesco,"France, Ireland, United Kingdom",5000436857112,Not useful,"breakfast cereal, not a beverage"
+cand_06636ac29573,Old Mout Cider Berries & Cherries,Old Mout,United Kingdom,5035766044635,Useful addition,
+cand_86913ccb3867,English Country Cider Chutney,Cottage Delight,Deutschland,5021039023216,Not useful,"chutney, not a beverage"
+cand_8e05cd0ebca7,Pineapple Hard Seltzer,Colliding Tides,United States,0878364001700,Useful addition,
+cand_6f4bcfaacea7,Lime Hard Seltzer,Solstice,United States,0786411279111,Useful addition,
+cand_e60ea9bd421a,Potato Crisps Sea Salt & Vinegar,Taylors,United Kingdom,5039378004919,Not useful,potato crisps
+cand_e6c358b91c7b,Berries & cherries OLD MOUT CIDER,Old mout cider,United Kingdom,5035766051183,Useful addition,variant of #4 (different barcode/pack)
+cand_50f69b3880e7,Kopparberg alcohol free,Kopperberg,United Kingdom,7393714896193,Useful addition,"non-alcoholic cider, in scope"
+cand_a8d278796eb5,MyKind Organics Apple Cider Vinegar Gummies,Garden of Life,"United States, world",0658010128063,Not useful,supplement gummies
+cand_8ca552ebb7db,STËLZ - Hard Seltzer - Multipack - 4 x 250ML,Stelz,Nederland,8720865027791,Useful addition,multipack variant
+cand_8e2775d68f49,"Signature farms, apple cider","Safeway  Inc., Signature Kitchens",United States,0021130418909,Uncertain,non-alcoholic apple cider (juice); scope boundary
+cand_0002b67bc495,Kilchoman Machir Bay,Kilchoman,"Australia, France",5060210700522,Uncertain,bottled whisky; owner decision still open
+cand_4cb73eff85b0,Vizzy hard seltzer,Vizzy,United States,0034100013004,Useful addition,
+cand_08771bb43306,Organic Hard Seltzer Passion Fruit and Kiwi,"Big Country Foods, LLC",world,0850019959109,Useful addition,
+cand_130865ba96b5,Shape mango hard seltzer,Shape,United States,0057496013038,Useful addition,
+cand_f3bcd2e6260a,Sagardoa,Zapiain,"France, Spain",8420504121339,Useful addition,
+cand_e17ed57d59e8,Sea salt & cider vinegar,Tyrell’s,Nederland,5060042641406,Not useful,chips
+cand_d195f2a4aee7,Organic Apple Cider Vinegar Refresher - Concord Grape Hibiscus,"Bragg, Live Food Products Inc.","United States, world",0074305053160,Not useful,"vinegar refresher drink, out of scope categories"
+cand_e284ac1cc0af,Mercury Hard cider,Mercury,Australia,9320000500074,Useful addition,
+cand_1606ad159ce0,BROOKS HARD SELTZER WATERMELON FLAVOURED,BROOKS,United States,6009888697030,Useful addition,
+cand_2cd6a33b134e,Buckler pur malt sans alcool,Buckler,France,3119780263592,Useful addition,"non-alcoholic beer, in scope"
+cand_a20f3a7fe665,Boost,Unilever,India,8901030824227,Not useful,malt health-drink powder
+cand_8f83b1bb2dbe,Hard seltzer,Lunar,Yugoslavia,0860007412462,Useful addition,stale country data in OFF (Yugoslavia)
+cand_219e24b28f6a,Hard Seltzer,VIZZY,United States,0056327018365,Useful addition,variant of #15 (different barcode)
+cand_279ea0ea25cc,Salt & Malt Vinegar Flavour Potato Crisps,McCoy's,United Kingdom,5000237138625,Not useful,potato crisps
+cand_6c9318a66004,Organic Unfiltered Apple Cider Vinegar,Cadia,United States,0815369011662,Not useful,cooking vinegar
+cand_f0906620b8f6,Roast Pork with apple and cider,Marks & Spencer,United Kingdom,00161923,Not useful,ready meal
+cand_5b7b3494e6db,Whisky Cask Scottish Cider,Thistly Cross,Luxembourg,5060191900416,Useful addition,
