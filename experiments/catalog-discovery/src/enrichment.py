@@ -17,7 +17,6 @@ from __future__ import annotations
 import json
 import logging
 import sys
-from pathlib import Path
 
 from rapidfuzz import fuzz, process
 

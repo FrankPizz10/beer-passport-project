@@ -12,6 +12,7 @@ requires a licensing review (see README).
 from __future__ import annotations
 
 import logging
+from typing import Any
 from urllib.parse import urlencode
 
 from ..config import Config
@@ -29,7 +30,7 @@ MAX_PAGES_PER_TERM = 10  # safety bound; --limit usually binds first
 def fetch_products(cfg: Config, client: CachedClient) -> tuple[list[dict], dict]:
     """Search packaged beverages across the configured search terms."""
     records: list[dict] = []
-    stats = {"terms_attempted": 0, "terms_ok": 0, "errors": [],
+    stats: dict[str, Any] = {"terms_attempted": 0, "terms_ok": 0, "errors": [],
              "raw_hits": 0, "rejected": 0}
     terms = cfg.search_terms
 

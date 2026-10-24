@@ -197,6 +197,22 @@ producer context, fuzzy thresholds, review classification, no auto-merge of
 same-name/different-producer products, idempotent repeat runs, second-source
 association updates, graceful single-source failure, and CSV lookup joins.
 
+## Continuous integration
+
+GitHub Actions (`.github/workflows/catalog-discovery-ci.yml`) runs on pull
+requests into `main` and on pushes to `main` that touch this experiment:
+lint (ruff), typecheck (mypy), a byte-compile build check, and the unit
+tests. Tool settings live in `pyproject.toml`; the tools themselves are
+pinned in `requirements-dev.txt`. Run the same checks locally with:
+
+```bash
+pip install -r requirements.txt -r requirements-dev.txt
+ruff check src tests
+mypy src
+python -m compileall -q src tests
+python -m unittest discover -s tests -v
+```
+
 ## Interpreting metrics
 
 - `new_candidate` means *unmatched against the baseline*, not *verified new
@@ -238,6 +254,13 @@ How to resume and expand this work responsibly:
   what moving reviewed records into BeerPassport would require.
 - [Image readiness checklist](docs/06-image-readiness-checklist.md) -
   metadata an eventual image pilot must capture.
+- [Image licensing assessment](docs/07-image-licensing-assessment.md) -
+  rights analysis for Open Food Facts imagery.
+- [Image sourcing plan](docs/08-image-sourcing-plan.md) - barcode-first
+  automated image pipeline design (implemented in `src/images/`).
+- [Old-catalog cleanup strategy](docs/09-old-catalog-cleanup-strategy.md) -
+  v1 cleanup rules for the legacy catalog, report-first flow, and the
+  spreadsheet write-back decision (implemented in `src/cleanup/`).
 
 Prior evidence: [pilot report](pilot/PILOT_REPORT_2026-10-13.md),
 [alias fix notes](pilot/BRAND_ALIAS_FIX_2026-10-13.md),
