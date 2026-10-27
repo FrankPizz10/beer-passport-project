@@ -82,7 +82,8 @@ class BuildTablesTests(unittest.TestCase):
         tables, _ = build_tables(FIXTURE_DIR)
         with tempfile.TemporaryDirectory() as out:
             write_outputs(tables, out)
-            script = open(os.path.join(out, "load.psql")).read()
+            with open(os.path.join(out, "load.psql")) as fh:
+                script = fh.read()
         self.assertIn("initial load only", script)
         self.assertIn("setval('beers_id_seq'", script)
         self.assertIn("\\copy beers", script)
