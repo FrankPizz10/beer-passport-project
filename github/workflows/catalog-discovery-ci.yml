@@ -1,0 +1,61 @@
+name: Catalog Discovery CI
+
+# Matches how this repo works: changes land on a branch and reach main
+# through a reviewed pull request. CI runs on every pull request into
+# main and again on main after a merge, but only when the experiment
+# (the repository's only code) or this workflow changes, so doc-only
+# pull requests do not burn a run. Manual runs are available from the
+# Actions tab via workflow_dispatch.
+#
+# One caution: if this check is ever made a required status check in
+# branch protection, the path filter means doc-only pull requests
+# would wait forever for a check that never runs. Leave it optional,
+# or drop the paths filter before making it required.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "experiments/catalog-discovery/**"
+      - ".github/workflows/catalog-discovery-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "experiments/catalog-discovery/**"
+      - ".github/workflows/catalog-discovery-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/catalog-discovery
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            experiments/catalog-discovery/requirements.txt
+            experiments/catalog-discovery/requirements-dev.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+      - name: Lint (ruff)
+        run: ruff check src tests
+      - name: Typecheck (mypy)
+        run: mypy src
+      - name: Build (byte-compile)
+        run: python -m compileall -q src tests
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
