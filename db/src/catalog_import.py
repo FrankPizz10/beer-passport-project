@@ -267,8 +267,8 @@ def write_outputs(tables: dict[str, TableResult], out_dir: str) -> None:
         "  END IF;",
         "END $$;",
         "BEGIN;",
-        "TRUNCATE collection_beers, user_beers, user_badges, beverage_images, "
-        "beers, breweries, styles, categories RESTART IDENTITY;",
+        ("TRUNCATE collection_beers, user_beers, user_badges, beverage_images, "
+         "beers, breweries, styles, categories RESTART IDENTITY;"),
     ]
     for name in LOAD_ORDER:
         lines.append(

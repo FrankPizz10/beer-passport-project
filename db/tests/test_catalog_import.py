@@ -5,7 +5,7 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from catalog_import import (  # noqa: E402
+from catalog_import import (
     ImportDataError,
     build_tables,
     t_add_user,
