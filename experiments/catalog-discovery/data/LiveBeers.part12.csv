@@ -1,294 +1,346 @@
-5774,1352,Unfiltered Double Simcoe IPA,3,32,9,0,0,0,"In 750ml corked â€™nâ€™ caged bottles this will be and unfiltered, fully bottle conditioned version of the super popular Double Simcoe. Expect Cask taste in a bottle, with more pronounced hoppy flavor and aroma due to being unfiltered. Also, carbonation will be a bit higher as is usual in our cork n cage series in keeping with tradition. It all comes together to form a uniquely great experience for hopheads.",2010-07-22T20:00:00.000Z
-5775,1086,Supplication,11,142,7,0,0,0,"Brown ale aged in Pinot Noir wine barrels for one year with sour cherries, Brettanomyces yeast, and Lactobacillus & Pedicoccus bacteria.",2010-07-22T20:00:00.000Z
-5776,1260,Arctic Panzer Wolf,3,32,9,0,0,0,"A dry and stupendously hopped medium bodied Imperial IPA brewed with Canadian two-row malt, dextrose sugar and lots of American hops. Arctic Panzer Wolf has superior aromas of marmalade, white wine, pine and apricot all mixed with an intense American hop bitterness.",2010-07-22T20:00:00.000Z
-5777,858,Free Loader Double Red IPA,3,32,0,0,0,0,"Free Loader Double Red IPA was \double-brewed\"". [How's that for a catchy term that those BiG brewers can't TouCH. I love it",2024-01-09T02:18:43.000Z
-5778,673,D.O.R.I.S. the Destroyer Double Imperial Stout,3,43,10.5,0,0,0,"This extreme Double Oatmeal Russian Imperial Stout will overwhelm, satisfy, and destroy your taste buds like no other!! D.O.R.I.S. is even darker, hoppier, and stronger than our gold medal winning B.O.R.I.S. The Crusher Stout. Dry hopped and first wort hopped and first wort hopped with the finest American hops for a great Imperial hops for a great Imperial Stout experience! Enjoy the darkness!",2010-07-22T20:00:00.000Z
-5779,673,Hop Dam Triple IPA,3,32,10,0,0,0,"Some say â€œbigger is better!â€. At Hoppinâ€™ Frog, we built a massive hop dam to handle the enormous amount of hops added to this colossal American Triple I.P.A. An intense experience of citrus and piney hop character is complimented by layers of rich malt flavor. Behold our new standard for hoppy beers.",2010-07-22T20:00:00.000Z
-5780,673,Frosted Frog Christmas Ale,11,141,8.6,0,0,0,"The essence of Christmas is captured in this very bottle you are holding. Perfectly blended spices compliment Frosted Frogâ€™s rich malt flavors, creating the ultimate Christmas experience. Celebrate the holidays as you savor this very special seasonal offering.",2010-07-22T20:00:00.000Z
+5746,341,Captain Lawrence Xtra Gold,5,61,10,0,0,0,"This beer is the result of the marriage between two very distinct beer styles; the Belgian Tripel & American IPA. We have taken the best qualities from both styles and allowed them to shine through. The fruity and spicy notes from the imported Belgian yeast strain & the pungent flavors and aromas of the American grown Amarillo hops flow seamlessly together to create this flavorful ale.  Straight from the Captainâ€™s cellar to yours, we hope you enjoy.",2010-07-22T20:00:00.000Z,0
+5747,341,Captin Lawrence Liquid Gold,5,64,6,0,0,0,"Don't let the golden color fool you - this isn't your father's lite beer!
+
+Brewed with imported German malts and US-grown hops, this beer is a full-flavored introduction to craft-brewed beer. We add the hops late in the boil, allowing you to enjoy the flavor and aroma of the hops without an aggressive bitterness.",2010-07-22T20:00:00.000Z,0
+5748,341,Captin Lawrence Smoked Porter,2,25,6.4,0,0,0,"A complex beer, with layers of flavors unfolding as this beer slides down your throat. Before the introduction of indirect-fired malt kilns, all beers had a smoky flavor. Today only a handful of brewers produce beer reminiscent of those of the past. We use imported German smoked malt to add depth and complexity to our Smoked Porter.",2010-07-22T20:00:00.000Z,0
+5749,341,Captain's Reserve Imperial IPA,3,32,9,0,0,0,"This beer is a salute to the ingenuity and creativity of the American craft brewers. A uniquely American style of beer, the Double or Imperial IPA, has become the calling card of many craft brewers who aren't afraid to push the limits of what hops can add to a beer. This beer is big and hoppy - not for the faint of heart! Be prepared to experience sensory overload as you savor this Imperial IPA.",2010-07-22T20:00:00.000Z,0
+5750,341,Sun Block - Belgian Style Witte,5,67,0,0,0,0,"This beer was created as a summer thirst quencher, because we all know how hot and humid it can get in New York during the summer. We brewed this beer using both coriander and orange peel in the boil to increase both the aroma and flavor of this beer. Make sure you donâ€™t get burned this summer, drink your Sun Block.",2010-07-22T20:00:00.000Z,0
+5751,341,Brown Bird Brown Ale,3,38,4.8,0,0,0,"Named after the little birds that fly by the brewery looking for grain after the weather turns cold, this was originally to be a Fall/Winter seasonal. Clearly we underestimated the market for this smooth and malty brown ale, and we have decided to keep it for year round enjoyment.",2010-07-22T20:00:00.000Z,0
+5752,341,Nor' Easter,5,66,12,0,0,0,"This is a truly unique brew, combining some unusual elements to create a powerful, yet flavorful brew. I brewed a similar beer to this one back in 1998, while I was home brewing out in California. Only this time around I decided to age it in bourbon barrels to add a new element to the already rich sensory profile. The combination of dark malt, elderberries and bourbon barrels makes for an interesting tasting experience. This is a sippinâ€™ beer, so sit back by the fire and enjoy. 12% alcohol by volume.",2010-07-22T20:00:00.000Z,0
+5753,341,Golden Delicious,5,61,0,0,0,0,"Thereâ€™s nothing quite likes Momâ€™s apple pieâ€¦But I am willing to bet this beer is pretty darn close.  An American Tripel, dry-hoped with Amarillo hops and aged in Apple Brandy barrels from one of this countryâ€™s oldest distilleries.  The tropical aroma of the hops and the delicate apple aroma from the barrels are a perfect match.  Straight from the Captainâ€™s cellar to yours, we hope you enjoy.",2010-07-22T20:00:00.000Z,0
+5754,705,LeBleu,11,142,5,0,0,0,"Brewed with New York State Blueberries and Brettanomyces, Le Bleu is a blend of barrels filled in 2007, 2008, and 2009. It's finished in the bottle with Champagne yeast.  
+
+Enjoy the dusty rose appearance, mouthwatering aroma of ripe berries, piquant flavor and quick finish.",2010-07-22T20:00:00.000Z,0
+5755,549,Canadian Breakfast Stout,3,43,9.4,0,0,0,,2010-07-22T20:00:00.000Z,0
+5756,540,Raging Bitch Belgian IPA,5,72,8.3,0,0,0,"â€œTwo inflammatory words... one wild drink. Nectar imprisoned in a bottle. Let it out. It is cruel to keep a wild animal locked up. Uncap it. Release it....stand back!! Wallow in its golden glow in a glass beneath a white foaming head. Remember, enjoying a RAGING BITCH, unleashed, untamed, unbridled- and in heat- is pure GONZO!! It has taken 20 years to get from there to here. Enjoy!â€",2010-07-22T20:00:00.000Z,0
+5757,1103,Lilja's Hop Nest Monster,3,31,0,0,0,0,,2010-07-22T20:00:00.000Z,0
+5758,858,Mayhem Belgian-style Double IPA,5,72,8.2,0,0,0,"Chaotic yet hypnotic, Mayhem is a deliberate Double IPA, brewed and conditioned with a special Belgian yeast that contributes complexity and spice. Abundant American hops offer grapefruit, pine, must and mint, which play off the fullness and sweetness of pale malts then provide a biting yet enticing finish.
+
+Mayhem Double IPA accents the complex spice combinations found in Thai, Indian, Cajun, Morrocan, Mexican and Southwest American cuisines as well as BBQ marinades, dry rubs and sauces.
+
+Mayhem creates MAYHEM.",2010-07-22T20:00:00.000Z,0
+5759,858,RUMBAH Double Rum Bock,7,92,10,0,0,0,"Beer Description:
+This double bock provides smooth sailin' in rough seas. The fact that this luscious lager was aged in rum barrels creates the illusion that the open sea is a safe place. And while riding out these waves of grain, you may fall victim to the dangers of pirates, rum, bock. OK...maybe the beach is a bit over-rated.",2010-07-22T20:00:00.000Z,0
+5760,858,Bathtub Gin Gruit Ale,11,126,8,0,0,0,"This gruit ale was inspired by the Phish song of the same name. A traditional gruit in style, Bathtub Gin was brewed without hops. Instead Ben spiced his beer with botanicals typically used to flavor gin: juniper berries, orris root, angelica root, grains of paradise, lemon peel, orange peel and coriander. The result is intensely fragrant, flavorful and fabulous.",2010-07-22T20:00:00.000Z,0
+5761,1173,Farmer's Tan Imperial Pale Lager,8,95,9,0,0,0,"Neolithic humans evolved from nomadic hunters into a more settled agricultural society, changing life forever. The â€˜founderâ€™ crops they raised included wheat and barley. It is little surprise that the first examples of brewing appeared during this age.
+
+Brewers owe much to the epoch. Similarly, we thank our farmer friends of today for cultivating the ingredients the are responsible for the beers we now enjoy. Their laborious days spent ourdoors under the hot sun earn them respect, as well as a mark of distinction: the farmer's tan. Yes, the inevitable red and white hallmark of hard work.",2010-07-22T20:00:00.000Z,0
+5762,1352,Weyerbacher India,3,31,7.2,0,0,0,"The latest in our Brewersâ€™ Select One-offs, India is a West Coast style IPA at [7.2%] ABV, with incredibly delicious hoppiness! Golden in color, this beer is tilted way over toward the hops by way of less specialty malts used in the mash. Draft will be going out to select wholesalers in PA, NJ, FL, and MD.â€ 70+ IBUâ€™s.",2010-07-22T20:00:00.000Z,0
+5763,812,Scumptious Spring Lager (Vinyl),11,142,0,0,0,0,Magic Hat's seasonal Lager is also called Vinyl,2010-07-22T20:00:00.000Z,0
+5764,459,Squall IPA,3,32,9,0,0,0,"An unfiltered and 100% bottle-conditioned version of 90 Minute IPA that's dry-hopped with Palisade, Amarillo, Simcoe, Cascade, CTZ, and Willamette hops. Brewed to honor the Rogue Gallery in Portland, Maine, who will also be releasing a DFH designed clothing line in the summer of '09.",2010-07-22T20:00:00.000Z,0
+5765,634,Glacier Harvest '09 Wet Hop (100 Barrel Series #28),3,26,6.7,0,0,0,"For the 28th session of the Harpoon 100 Barrel Series, weâ€™re celebrating this yearâ€™s hop harvest with Glacier Harvest Wet Hop beer, a pale ale made with fresh Glacier hops.
+ 
+Wet hop beers are brewed using fresh, â€œwetâ€ hops instead of traditional dried hopsâ€”hops contain about 60% moisture when they are first picked.
+
+Typically, when hops are picked they are quickly dried and refrigerated to increase shelf life and make them more consistent for brewing. Freshly picked wet hops, however, need to be used within hours of harvest or they will begin to degrade rapidly. Wet hops retain more of their natural aroma and volatile flavors that dissipate when dried. This gives wet hop beers a fresher hop flavor and aroma than that of beers hopped with processed hops.
+This yields an immersed, intense hop flavor in the beer.
+
+Harpoon brewer Ray Dobens, creator of the beer, added a heroic dose of fresh hops the day of the harvest.The hop flavor and aroma from this copper-colored ale comes from a generous late addition of freshly harvested â€œwetâ€ hops.",2010-07-22T20:00:00.000Z,0
+5766,44,Michelob Irish Red,2,22,0,0,0,0,"Born of Irish tradition, this all-malt ale uses kilned and toasted malts to produce its all-natural, signature red shade. A beer with exceptional balance, Irish Red displays an initial sweetness that fades to a clean, dry finish.",2010-07-22T20:00:00.000Z,0
+5767,765,Lucky 13 Mondo Large Red Ale,3,33,8.3,0,0,0,"Our 13th Anniversary Beer in was a Staff Favorite, So We Make it Each Year. BIG on the Amarillo Hops and Rich Dark Malts for a Round and Huge, Smoky Flavor.",2010-07-22T20:00:00.000Z,0
+5768,1172,Buried Hatchet Stout,3,42,8.25,0,0,0,"Jet-black in color, this monster smells of coffee and chocolate.  The taste is much of the same, with hints of creamy toffee and roasted malt.  Smooth and delicious, this medium bodied ale is all about the malts, but has enough hop bitterness to be balanced.",2010-07-22T20:00:00.000Z,0
+5769,202,Vigneronne,5,70,5,0,0,0,"The name Vigneronne Cantillon was given in 1987. This name reminds us that, while it belongs to the beer patrimony, the spontaneous fermentation, the ageing in the barrels for several years and the addition of grapes make it a distant cousin of certain white wines.
+
+In spite of its success, the Vigneronne represents less than 5% of the total production of the Cantillon brewery. In order to obtain grapes which are as mature as possible, we buy them at the end of the season. Every year, 1000 kilos of white italian grapes are delivered at the Cantillon brewery in the beginning of October.",2010-07-22T20:00:00.000Z,0
+5770,541,Exit 16 - Wild Rice Double IPA,3,32,8.2,0,0,0,"The fourth stop on our multi-year trip to explore New Jersey takes us to one of the most maligned places in the state- the Hackensack Meadowlands. Itâ€™s the place usually identified with landfills, pipelines, mob burials (alleged) and sports teams that say theyâ€™re from New York.
+
+Although no longer home to forests of giant cedars and salt hay marshes teeming with aquatic life, the Meadowlands is still an amazingly diverse ecosystem providing vital animal and plant habitat. In a nod to a once common food plant here, weâ€™ve brewed this beer with wild rice. We also used brown and white rice, as well as two malts.
+
+Rice helps the beer ferment dry to better showcase the five different hops weâ€™ve added. Lots and lots of them. We then dry-hopped this Double IPA with even more-generous additions of Chinook and Citra hops to create a nose that hints at tangerine, mango, papaya and pine.",2010-07-22T20:00:00.000Z,0
+5771,765,Maximus,3,31,7.5,0,0,0,,2010-07-22T20:00:00.000Z,0
+5772,426,Plead the 5th Imperial Stout,3,43,12,0,0,0,It's big and full bodied with lots of roasted malts and balanced with heavy hops to put this imperial in a league of its own.,2010-07-22T20:00:00.000Z,0
+5773,776,Southern Pecan,11,142,4.25,0,0,0,"Southern Pecan Nut Brown Ale is the first beer in the world, to our knowledge, made with whole roasted pecans. The pecans are used just like grain and provide a nutty characteristic and a delightful depth to the flavor profile. This beer is very lightly hopped to allow the malty, caramel, and nutty flavors shine through. The color is dark mahogany. Southern Pecan won a Bronze Medal in the 2006 World Beer Cup in the Specialty Beer category.",2010-07-22T20:00:00.000Z,0
+5774,1352,Unfiltered Double Simcoe IPA,3,32,9,0,0,0,"In 750ml corked â€™nâ€™ caged bottles this will be and unfiltered, fully bottle conditioned version of the super popular Double Simcoe. Expect Cask taste in a bottle, with more pronounced hoppy flavor and aroma due to being unfiltered. Also, carbonation will be a bit higher as is usual in our cork n cage series in keeping with tradition. It all comes together to form a uniquely great experience for hopheads.",2010-07-22T20:00:00.000Z,0
+5775,1086,Supplication,11,142,7,0,0,0,"Brown ale aged in Pinot Noir wine barrels for one year with sour cherries, Brettanomyces yeast, and Lactobacillus & Pedicoccus bacteria.",2010-07-22T20:00:00.000Z,0
+5776,1260,Arctic Panzer Wolf,3,32,9,0,0,0,"A dry and stupendously hopped medium bodied Imperial IPA brewed with Canadian two-row malt, dextrose sugar and lots of American hops. Arctic Panzer Wolf has superior aromas of marmalade, white wine, pine and apricot all mixed with an intense American hop bitterness.",2010-07-22T20:00:00.000Z,0
+5777,858,Free Loader Double Red IPA,3,32,0,0,0,0,"Free Loader Double Red IPA was \double-brewed\"". [How's that for a catchy term that those BiG brewers can't TouCH. I love it",2024-01-09T02:18:43.000Z,0
+5778,673,D.O.R.I.S. the Destroyer Double Imperial Stout,3,43,10.5,0,0,0,"This extreme Double Oatmeal Russian Imperial Stout will overwhelm, satisfy, and destroy your taste buds like no other!! D.O.R.I.S. is even darker, hoppier, and stronger than our gold medal winning B.O.R.I.S. The Crusher Stout. Dry hopped and first wort hopped and first wort hopped with the finest American hops for a great Imperial hops for a great Imperial Stout experience! Enjoy the darkness!",2010-07-22T20:00:00.000Z,0
+5779,673,Hop Dam Triple IPA,3,32,10,0,0,0,"Some say â€œbigger is better!â€. At Hoppinâ€™ Frog, we built a massive hop dam to handle the enormous amount of hops added to this colossal American Triple I.P.A. An intense experience of citrus and piney hop character is complimented by layers of rich malt flavor. Behold our new standard for hoppy beers.",2010-07-22T20:00:00.000Z,0
+5780,673,Frosted Frog Christmas Ale,11,141,8.6,0,0,0,"The essence of Christmas is captured in this very bottle you are holding. Perfectly blended spices compliment Frosted Frogâ€™s rich malt flavors, creating the ultimate Christmas experience. Celebrate the holidays as you savor this very special seasonal offering.",2010-07-22T20:00:00.000Z,0
 5781,673,Fresh Frog Raw Hop Imperial Pale Ale,3,26,7.8,0,0,0,"Special hoppy flavors and aromas are captured by adding freshly picked, undired hops during the harvest.
 
-These wet hops impart a character unlike other brews, that is quite unique and satisfying for those who love hops â€“ the spice of beer. Smell the hop fields, smell the freshness.",2010-07-22T20:00:00.000Z
-5782,673,Frog's Hollow Double Pumpkin Ale,11,123,8.4,0,0,0,"There's a Place just south they call Frog's Hollow, with cauldrons afire in Fall, and they only speak in whispers of the name. There's a brewery they say who has the secret, of spices picked just right. With a crying shout, they'll knock it out, and hand you this Frog's delight.",2010-07-22T20:00:00.000Z
-5783,673,Outta Kilter Wee-Heavy Scotch Red Ale,1,15,8.2,0,0,0,"Rich, malty flavors of caramelized and toasted grains dominate this strong Scotch ale. A hint of rye adds a crisp, Scotch-like, old-world beer character, reminiscent of a simpler life from centuries ago. â€œIt is a wee bit heavyâ€",2010-07-22T20:00:00.000Z
-5784,673,Barrel-Aged B.O.R.I.S. Imperial Stout,3,43,9.4,0,0,0,"Made from our B.O.R.I.S. Imperial Stout, that was rated one of the Worldâ€™s 50 Best Beers, and won the Gold Medal at the GABF in 2008. BARREL-AGED B.O.R.I.S. has picked up rich characters of vanilla, dark fruit, oak, and spice. Itâ€™s unbelievably complex and savory",2010-07-22T20:00:00.000Z
-5785,673,Hop Master's Abbey Belgian-style Double IPA,5,72,8.5,0,0,0,"American hops and Belgian abbey beer flavors intermingle to create a spicy and assertive beer style all their own. Citrusy character from select hops dominate this assertive Double I.P.A., complimented by a unique Belgian flavor to add complexity and ultimate beer satisfaction. The result is a flavor combination thatâ€™s a whirlwind of taste sensations.",2010-07-22T20:00:00.000Z
-5786,673,Mean Manalishi Double I.P.A.,3,32,8.2,0,0,0,"Explore the extremes of hops, and experience all of their bitterness, flavor and aroma with this Double I.P.A. An extreme, super-assertive and satisfying amount of American hop character is balanced with a toasty, caramelized, intense malt presence.",2010-07-22T20:00:00.000Z
-5787,673,Hoppin' To Heaven IPA,3,31,6.8,0,0,0,"Raise your glass to the heavens in a toast to HOPS â€“ the spice of beer! This classic American I.P.A. features the finest American hops to add a spicy, assertive, and citrusy character to its full-bodied, rich malt taste",2010-07-22T20:00:00.000Z
-5788,673,Silk Porter,2,25,6.2,0,0,0,"Dark, robust and silky-smooth, with many flavors of roasted, toasted and caramel malts. Porter is an old-world beer style, so popular that it helped start the industrial revolution. Taste the history.",2010-07-22T20:00:00.000Z
-5789,673,Bodacious Black and Tan,11,142,7.8,0,0,0,"I.P.A. and Stout converge for a really great flavor combination! The assertive, hoppy character of our Hoppinâ€™ To Heaven I.P.A. is perfectly complimented by the intense, deep roasted taste of our B.O.R.I.S. Oatmeal-Imperial Stout.",2010-07-22T20:00:00.000Z
-5790,673,Gulden Fraug Belgian Ale,5,65,10.5,0,0,0,Smooth malt flavors of this golden Belgian-style abbey ale are complimented by traditional imported ingredients. A slightly spicy and complex flavor makes this European celebration-style beer unique and refreshing,2010-07-22T20:00:00.000Z
-5791,673,Wild Frog Wheat,4,50,6,0,0,0,"Traditional German-style, unfiltered wheat beer, with a lively balanced flavor. Although no fruit or spices were used in the brewing, these flavors are created by fermentation with special yeast from the oldest brewery in the world. Try Wild Frog Wheat with a slice of orange for a crisp, refreshing experience",2010-07-22T20:00:00.000Z
-5792,673,Smashing Berry Ale,11,121,4.3,0,0,0,"An abundance of fresh, natural fruit flavor makes this beer something special. You would think we picked the fruit moments before brewing.",2010-07-22T20:00:00.000Z
-5793,673,Smashing Berry Dark,11,121,0,0,0,0,"Fresh, natural fruit flavor and a hint of chocolate malt makes this dark beer something really special. The just picked, fresh fruit flavor is very evident in this beer.",2010-07-22T20:00:00.000Z
-5794,605,Blackout Stout,3,43,9,0,0,0,A Russian Imperial Stout with a hearty malt body and bold hop flavor.,2010-07-22T20:00:00.000Z
-5795,94,Apex,3,32,7.5,0,0,0,"Crafted with a blend of American and English malts and aggressively hopped with Pacific Northwest hops, this beer reflects what our brewers believe to be the Apex of IPA.",2010-07-22T20:00:00.000Z
-5796,645,Old Salty,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z
-5797,444,Paradise Porter,2,25,4.99,0,0,0,"This medium bodied porter has notes of roasted and chocolate malts, making it a perfect balance of sweet and bitter.  Generous hops give this brew a dry finish.",2010-07-22T20:00:00.000Z
-5798,1038,Iron Thistle,1,15,8,0,0,0,"Break out the bagpipes with your lederhosen! Weâ€™re proud to present our Iron Thistle Scotch Ale â€“ Rahrâ€™s first National Grand Champion winner. This dark, Scottish ale has a bold taste dominated by a smooth, sweet maltiness balanced with a low, hoppy bitterness. So don your kilts and enjoy. Hereâ€™s to your health â€“ SlÃ inte! Prosit!",2010-07-22T20:00:00.000Z
-5799,426,Tres Blueberry Stout,3,42,4.5,0,0,0,"A full bodied stout made with all malted barley and blueberry. Flavors of chocolate, roast malt and light blueberry make up the palate with lots of fruity blueberry aroma.",2010-07-22T20:00:00.000Z
-5800,426,Fore Smoked Stout,3,42,0,0,0,0,"Brewed with all malted barley and peat malt (smoked malt). This beer is full bodied with chocolate, roasted barley flavors, and a smokey almost BBQ finish.",2010-07-22T20:00:00.000Z
-5801,426,One Oatmeal Stout,1,21,0,0,0,0,"Number one in a series of five stouts produced to help ease you through the cold and grey midwestern winters. This beer is full bodied with hints of chocolate, roasted barley, coffee flavors and a nice creamy head.",2010-07-22T20:00:00.000Z
-5802,426,Too Cream Stout,1,20,0,0,0,0,This beer is made with milk sugar (lactose) which gives this beer a nice creamy mouth feel which mingles with hints of chocolate and roasty flavors.,2010-07-22T20:00:00.000Z
-5803,426,Three Guy Off The Scale Barley Wine,3,35,15,0,0,0,"A barley wine style ale brewed to 15% alc with hints of raisin, chocolate, carmel, sherry, cherry, and alcohol, just to name a few and this beer will only get better with age.",2010-07-22T20:00:00.000Z
-5804,29,Duet,3,31,7,0,0,0,A West Coast IPA. Our original single IPA made with Simcoe and Amarillo hops â€œin harmony.â€ 1.065 OG 45 IBU 7%ABV,2010-07-22T20:00:00.000Z
+These wet hops impart a character unlike other brews, that is quite unique and satisfying for those who love hops â€“ the spice of beer. Smell the hop fields, smell the freshness.",2010-07-22T20:00:00.000Z,0
+5782,673,Frog's Hollow Double Pumpkin Ale,11,123,8.4,0,0,0,"There's a Place just south they call Frog's Hollow, with cauldrons afire in Fall, and they only speak in whispers of the name. There's a brewery they say who has the secret, of spices picked just right. With a crying shout, they'll knock it out, and hand you this Frog's delight.",2010-07-22T20:00:00.000Z,0
+5783,673,Outta Kilter Wee-Heavy Scotch Red Ale,1,15,8.2,0,0,0,"Rich, malty flavors of caramelized and toasted grains dominate this strong Scotch ale. A hint of rye adds a crisp, Scotch-like, old-world beer character, reminiscent of a simpler life from centuries ago. â€œIt is a wee bit heavyâ€",2010-07-22T20:00:00.000Z,0
+5784,673,Barrel-Aged B.O.R.I.S. Imperial Stout,3,43,9.4,0,0,0,"Made from our B.O.R.I.S. Imperial Stout, that was rated one of the Worldâ€™s 50 Best Beers, and won the Gold Medal at the GABF in 2008. BARREL-AGED B.O.R.I.S. has picked up rich characters of vanilla, dark fruit, oak, and spice. Itâ€™s unbelievably complex and savory",2010-07-22T20:00:00.000Z,0
+5785,673,Hop Master's Abbey Belgian-style Double IPA,5,72,8.5,0,0,0,"American hops and Belgian abbey beer flavors intermingle to create a spicy and assertive beer style all their own. Citrusy character from select hops dominate this assertive Double I.P.A., complimented by a unique Belgian flavor to add complexity and ultimate beer satisfaction. The result is a flavor combination thatâ€™s a whirlwind of taste sensations.",2010-07-22T20:00:00.000Z,0
+5786,673,Mean Manalishi Double I.P.A.,3,32,8.2,0,0,0,"Explore the extremes of hops, and experience all of their bitterness, flavor and aroma with this Double I.P.A. An extreme, super-assertive and satisfying amount of American hop character is balanced with a toasty, caramelized, intense malt presence.",2010-07-22T20:00:00.000Z,0
+5787,673,Hoppin' To Heaven IPA,3,31,6.8,0,0,0,"Raise your glass to the heavens in a toast to HOPS â€“ the spice of beer! This classic American I.P.A. features the finest American hops to add a spicy, assertive, and citrusy character to its full-bodied, rich malt taste",2010-07-22T20:00:00.000Z,0
+5788,673,Silk Porter,2,25,6.2,0,0,0,"Dark, robust and silky-smooth, with many flavors of roasted, toasted and caramel malts. Porter is an old-world beer style, so popular that it helped start the industrial revolution. Taste the history.",2010-07-22T20:00:00.000Z,0
+5789,673,Bodacious Black and Tan,11,142,7.8,0,0,0,"I.P.A. and Stout converge for a really great flavor combination! The assertive, hoppy character of our Hoppinâ€™ To Heaven I.P.A. is perfectly complimented by the intense, deep roasted taste of our B.O.R.I.S. Oatmeal-Imperial Stout.",2010-07-22T20:00:00.000Z,0
+5790,673,Gulden Fraug Belgian Ale,5,65,10.5,0,0,0,Smooth malt flavors of this golden Belgian-style abbey ale are complimented by traditional imported ingredients. A slightly spicy and complex flavor makes this European celebration-style beer unique and refreshing,2010-07-22T20:00:00.000Z,0
+5791,673,Wild Frog Wheat,4,50,6,0,0,0,"Traditional German-style, unfiltered wheat beer, with a lively balanced flavor. Although no fruit or spices were used in the brewing, these flavors are created by fermentation with special yeast from the oldest brewery in the world. Try Wild Frog Wheat with a slice of orange for a crisp, refreshing experience",2010-07-22T20:00:00.000Z,0
+5792,673,Smashing Berry Ale,11,121,4.3,0,0,0,"An abundance of fresh, natural fruit flavor makes this beer something special. You would think we picked the fruit moments before brewing.",2010-07-22T20:00:00.000Z,0
+5793,673,Smashing Berry Dark,11,121,0,0,0,0,"Fresh, natural fruit flavor and a hint of chocolate malt makes this dark beer something really special. The just picked, fresh fruit flavor is very evident in this beer.",2010-07-22T20:00:00.000Z,0
+5794,605,Blackout Stout,3,43,9,0,0,0,A Russian Imperial Stout with a hearty malt body and bold hop flavor.,2010-07-22T20:00:00.000Z,0
+5795,94,Apex,3,32,7.5,0,0,0,"Crafted with a blend of American and English malts and aggressively hopped with Pacific Northwest hops, this beer reflects what our brewers believe to be the Apex of IPA.",2010-07-22T20:00:00.000Z,0
+5796,645,Old Salty,11,142,0,0,0,0,,2010-07-22T20:00:00.000Z,0
+5797,444,Paradise Porter,2,25,4.99,0,0,0,"This medium bodied porter has notes of roasted and chocolate malts, making it a perfect balance of sweet and bitter.  Generous hops give this brew a dry finish.",2010-07-22T20:00:00.000Z,0
+5798,1038,Iron Thistle,1,15,8,0,0,0,"Break out the bagpipes with your lederhosen! Weâ€™re proud to present our Iron Thistle Scotch Ale â€“ Rahrâ€™s first National Grand Champion winner. This dark, Scottish ale has a bold taste dominated by a smooth, sweet maltiness balanced with a low, hoppy bitterness. So don your kilts and enjoy. Hereâ€™s to your health â€“ SlÃ inte! Prosit!",2010-07-22T20:00:00.000Z,0
+5799,426,Tres Blueberry Stout,3,42,4.5,0,0,0,"A full bodied stout made with all malted barley and blueberry. Flavors of chocolate, roast malt and light blueberry make up the palate with lots of fruity blueberry aroma.",2010-07-22T20:00:00.000Z,0
+5800,426,Fore Smoked Stout,3,42,0,0,0,0,"Brewed with all malted barley and peat malt (smoked malt). This beer is full bodied with chocolate, roasted barley flavors, and a smokey almost BBQ finish.",2010-07-22T20:00:00.000Z,0
+5801,426,One Oatmeal Stout,1,21,0,0,0,0,"Number one in a series of five stouts produced to help ease you through the cold and grey midwestern winters. This beer is full bodied with hints of chocolate, roasted barley, coffee flavors and a nice creamy head.",2010-07-22T20:00:00.000Z,0
+5802,426,Too Cream Stout,1,20,0,0,0,0,This beer is made with milk sugar (lactose) which gives this beer a nice creamy mouth feel which mingles with hints of chocolate and roasty flavors.,2010-07-22T20:00:00.000Z,0
+5803,426,Three Guy Off The Scale Barley Wine,3,35,15,0,0,0,"A barley wine style ale brewed to 15% alc with hints of raisin, chocolate, carmel, sherry, cherry, and alcohol, just to name a few and this beer will only get better with age.",2010-07-22T20:00:00.000Z,0
+5804,29,Duet,3,31,7,0,0,0,A West Coast IPA. Our original single IPA made with Simcoe and Amarillo hops â€œin harmony.â€ 1.065 OG 45 IBU 7%ABV,2010-07-22T20:00:00.000Z,0
 5805,29,Nelson,3,31,7,0,0,0,"A Golden Rye IPA.
-An outstanding hop from New Zealand, Nelson Sauvin, is generously used throughout the brewing and dry-hopping of this unique beer. European rye is added for a smooth, malty addition to flavor. 1.065 OG 7%ABV",2010-07-22T20:00:00.000Z
-5806,678,Secession Black India Pale Ale (CDA),11,142,6.5,0,0,0,"Secession is a Black IPA, or Cacadian Dark Ale.  This emerging beer style is characterized by an alliance of North-west hop flavors as formidable as the Cascade Mountain Range and roasted malts as dark as a moonless night.  Join the party and uncap a revolution!",2010-07-22T20:00:00.000Z
-5807,379,Humidor Series Jai Alai Cedar Aged India Pale Ale,3,31,7.5,0,0,0,"he Humidor Series is a rotating offering of Cigar City Brewing beer aged on cedar. Cedar has a more subtle effect on beer than more traditional woods like oak. But, we think that once you taste it youâ€™ll agree that cedar deserves a place alongside oak in the brewerâ€™s wood-aging toolbox.",2010-07-22T20:00:00.000Z
-5808,825,Marble India Pale Ale,3,31,6.2,0,0,0,"Congratulations! By drinking Marble Brewery India Pale Ale, you show exceptionally good taste. Our obsession with quality and attention to detail ensures that every bottle will meet your high expectations. The Columbus, Amarillo and Centennial hops lend a fragrant citrus aroma and snappy hop character. We think you will agree that this is one rock solid beer.",2010-07-22T20:00:00.000Z
-5809,1009,Mongo Double IPA,3,32,8.5,0,0,0,"A Double IPA brewed in memory of the brew cat.  In honor of Mongo, Mike Rodriguez made his first Double IPA, as he loved the cat and wanted to honor him with this beer. This 8.5% abv beer was made with Columbus hops (Mongoâ€™s Birthname), Cascade for the Mama cat, and Simocoe because that is Mikeâ€™s favorite hop.",2010-07-22T20:00:00.000Z
-5810,328,Hopportunity Knocks Ale,3,31,6.8,0,0,0,"IPA brewed with 100% Centennial hops. Big round mouthfeel, very perfumey. Different from our canned IPA. Gotta love the Pacific NW!",2010-07-22T20:00:00.000Z
-5811,1213,Legbiter Ale,1,1,4.7,0,0,0,"Brilliant golden ale with an inviting citrus fragrance of late added Cascade and Glacier hops. The fine hop and light malt aromas carry through to the palate to give an ale that is full but refreshing, with a clean caramel malt bitter finish.",2010-07-22T20:00:00.000Z
-5812,1213,St. Patrick's Best,1,3,4.2,0,0,0,"Light and refreshing on the palate, our session best bitter has a classic Irish malt & traditional hop aroma.  Light amber in colour, this smooth beer has hints of caramel with a woody bitterness.",2010-07-22T20:00:00.000Z
-5813,1213,Barelegs Brew,1,1,4.5,0,0,0,"Golden with a hint of red (towards sunset). Barelegs tastes of fresh fruit, especially red current and malt fragrance. Full drinking with a subtle hoppy finish. Refreshing for a beer of this strength.",2010-07-22T20:00:00.000Z
-5814,1213,St. Patrick's Gold,11,116,4.8,0,0,0,"Our smooth yet powerful wheat beer is unusually refreshing on the pallet.  Golden in colour, St. Patrick's Gold is brewed with barley and wheat malt. Citrus peel and coriander are added to the Goldings and Saaz hops for a symphony of authentic flavour.",2010-07-22T20:00:00.000Z
-5815,1213,St Patrick's Ale,1,1,6,0,0,0,"A deep copper coloured traditional Irish Ale with highly developed and complex flavours. St Patrickâ€™s Ale/Dark is brewed with four malts and two hops, carefully married together to complement eachother producing a satisfying full flavour, ending with a Styrian late hop for a truly brilliant finish.",2010-07-22T20:00:00.000Z
-5816,718,Manheim Red,3,33,5.25,0,0,0,"Our flagship beer, is amber to red in color with a medium body, slight caramel sweetness, and a balance more towards malt than hops. This beer is a true crowd-pleaser and keeps you coming back for more.",2010-07-22T20:00:00.000Z
-5817,585,Bourbon County Brand Coffee Stout,3,43,13,0,0,0,Everyday Goose Island smells the wonderful coffee roasting next to our brewery at Chicago's Intelligentsia Coffee and Tea. They put the same passion and skill into their coffee as Goose Island does with its beer. This excellent stout is made with Black Cat Espresso beans from our friends next door. You'll like the combination.,2010-07-22T20:00:00.000Z
-5818,1251,The Angel's Share - Bourbon Barrel Aged,3,30,12.5,0,0,0,"own in Kentucky and across the pond in Scotland, distillers who age their whiskeys for many years refer to the evaporation of the spirits from their barrels as \The Angel's Share.\"" We couldnâ€™t agree more. Each time a barrel is filled",2000-01-01T00:00:00.000Z
-5819,1352,Weyerbacher Juliet,4,57,8.5,0,0,0,,2010-07-22T20:00:00.000Z
-5820,87,2x4 India Pale Ale,3,32,7,0,0,0,"2x4 India Pale Ale (7% ABV, 65 IBUs) sports Columbus, Nugget and Amarillo hops for a spicy, citrusy blend in both flavor and aroma.  Backed by golden pale malts and a kick from flaked rye, the hops are pleasantly robust with just the right touch of bitterness at the end.",2010-07-22T20:00:00.000Z
-5821,358,Brewhouse Coffee Stout,11,142,0,0,0,0,"A coffee lover's delight! A wonderful stout infused with coffee that is specially roasted for us by Emy J's (www.emyjs.com) in Stevens Point, WI.",2010-07-22T20:00:00.000Z
-5822,656,Dundee KÃ¶lsch-Style Ale,11,142,5.68,0,0,0,,2010-07-22T20:00:00.000Z
-5823,656,Dundee Stout,3,42,5.8,0,0,0,,2010-07-22T20:00:00.000Z
-5824,859,Simcoe Single Hop IPA,3,31,6.9,0,0,0,"The first in a new series of single hop IPA's from Mikkeller. Brewed with Simcoe, known for many great US micro-brews. An extremely fresh-hopped IPA.",2010-07-22T20:00:00.000Z
-5825,700,Kryptonite Imperial IPA,3,32,9,0,0,0,"American style double IPA, full bodied malt flavor supports a ridiculous amount of hops, giving it pronounced bitterness and overwhelming hop flavor and aroma. Made with 5 pounds of hops per barrel.",2010-07-22T20:00:00.000Z
-5826,1172,Pine Belt Pale Ale,3,26,6.3,0,0,0,A deep copper colored ale with a substantial malt backbone accented with British crystal malts with aggressive hop bitterness and substantial American hop flavor and aroma. The yeast profile is neutral.,2010-07-22T20:00:00.000Z
-5827,45,Batch 666,11,141,7.7,0,0,0,,2010-07-22T20:00:00.000Z
-5828,236,471 IPA,3,32,9.2,0,0,0,"Hoppy? Brother, 471 IPA redefines hoppy. 471 is a small batch, limited edition ale that was created by our Brewmaster to separate the weak from the strong. 471 is a double IPA, that combines Pale, Munich, Caramel-30, Carapils and Torrified Wheat malts, with Chinook, Centennial, Simcoe and Fuggles hops. It has a big sweet mouthfeel, followed by more hoppiness than you've ever had at one time. Enjoy.",2010-07-22T20:00:00.000Z
-5829,45,IPA Series (Simcoe),3,31,0,0,0,0,"A series of single hop, small batch IPAs brewed in Camp Hill. These IPAs showcase the bitterness, flavor, and aroma of each particular hop variety.",2010-07-22T20:00:00.000Z
-5830,45,IPA Series (Zeus),3,31,0,0,0,0,"A series of single hop, small batch IPAs brewed in Camp Hill. These IPAs showcase the bitterness, flavor, and aroma of each particular hop variety.",2010-07-22T20:00:00.000Z
-5831,45,IPA Series (Horizon),3,31,0,0,0,0,"A series of single hop, small batch IPAs brewed in Camp Hill. These IPAs showcase the bitterness, flavor, and aroma of each particular hop variety.",2010-07-22T20:00:00.000Z
-5832,133,Nit Wit,5,67,4.7,0,0,0,,2010-07-22T20:00:00.000Z
+An outstanding hop from New Zealand, Nelson Sauvin, is generously used throughout the brewing and dry-hopping of this unique beer. European rye is added for a smooth, malty addition to flavor. 1.065 OG 7%ABV",2010-07-22T20:00:00.000Z,0
+5806,678,Secession Black India Pale Ale (CDA),11,142,6.5,0,0,0,"Secession is a Black IPA, or Cacadian Dark Ale.  This emerging beer style is characterized by an alliance of North-west hop flavors as formidable as the Cascade Mountain Range and roasted malts as dark as a moonless night.  Join the party and uncap a revolution!",2010-07-22T20:00:00.000Z,0
+5807,379,Humidor Series Jai Alai Cedar Aged India Pale Ale,3,31,7.5,0,0,0,"he Humidor Series is a rotating offering of Cigar City Brewing beer aged on cedar. Cedar has a more subtle effect on beer than more traditional woods like oak. But, we think that once you taste it youâ€™ll agree that cedar deserves a place alongside oak in the brewerâ€™s wood-aging toolbox.",2010-07-22T20:00:00.000Z,0
+5808,825,Marble India Pale Ale,3,31,6.2,0,0,0,"Congratulations! By drinking Marble Brewery India Pale Ale, you show exceptionally good taste. Our obsession with quality and attention to detail ensures that every bottle will meet your high expectations. The Columbus, Amarillo and Centennial hops lend a fragrant citrus aroma and snappy hop character. We think you will agree that this is one rock solid beer.",2010-07-22T20:00:00.000Z,0
+5809,1009,Mongo Double IPA,3,32,8.5,0,0,0,"A Double IPA brewed in memory of the brew cat.  In honor of Mongo, Mike Rodriguez made his first Double IPA, as he loved the cat and wanted to honor him with this beer. This 8.5% abv beer was made with Columbus hops (Mongoâ€™s Birthname), Cascade for the Mama cat, and Simocoe because that is Mikeâ€™s favorite hop.",2010-07-22T20:00:00.000Z,0
+5810,328,Hopportunity Knocks Ale,3,31,6.8,0,0,0,"IPA brewed with 100% Centennial hops. Big round mouthfeel, very perfumey. Different from our canned IPA. Gotta love the Pacific NW!",2010-07-22T20:00:00.000Z,0
+5811,1213,Legbiter Ale,1,1,4.7,0,0,0,"Brilliant golden ale with an inviting citrus fragrance of late added Cascade and Glacier hops. The fine hop and light malt aromas carry through to the palate to give an ale that is full but refreshing, with a clean caramel malt bitter finish.",2010-07-22T20:00:00.000Z,0
+5812,1213,St. Patrick's Best,1,3,4.2,0,0,0,"Light and refreshing on the palate, our session best bitter has a classic Irish malt & traditional hop aroma.  Light amber in colour, this smooth beer has hints of caramel with a woody bitterness.",2010-07-22T20:00:00.000Z,0
+5813,1213,Barelegs Brew,1,1,4.5,0,0,0,"Golden with a hint of red (towards sunset). Barelegs tastes of fresh fruit, especially red current and malt fragrance. Full drinking with a subtle hoppy finish. Refreshing for a beer of this strength.",2010-07-22T20:00:00.000Z,0
+5814,1213,St. Patrick's Gold,11,116,4.8,0,0,0,"Our smooth yet powerful wheat beer is unusually refreshing on the pallet.  Golden in colour, St. Patrick's Gold is brewed with barley and wheat malt. Citrus peel and coriander are added to the Goldings and Saaz hops for a symphony of authentic flavour.",2010-07-22T20:00:00.000Z,0
+5815,1213,St Patrick's Ale,1,1,6,0,0,0,"A deep copper coloured traditional Irish Ale with highly developed and complex flavours. St Patrickâ€™s Ale/Dark is brewed with four malts and two hops, carefully married together to complement eachother producing a satisfying full flavour, ending with a Styrian late hop for a truly brilliant finish.",2010-07-22T20:00:00.000Z,0
+5816,718,Manheim Red,3,33,5.25,0,0,0,"Our flagship beer, is amber to red in color with a medium body, slight caramel sweetness, and a balance more towards malt than hops. This beer is a true crowd-pleaser and keeps you coming back for more.",2010-07-22T20:00:00.000Z,0
+5817,585,Bourbon County Brand Coffee Stout,3,43,13,0,0,0,Everyday Goose Island smells the wonderful coffee roasting next to our brewery at Chicago's Intelligentsia Coffee and Tea. They put the same passion and skill into their coffee as Goose Island does with its beer. This excellent stout is made with Black Cat Espresso beans from our friends next door. You'll like the combination.,2010-07-22T20:00:00.000Z,0
+5818,1251,The Angel's Share - Bourbon Barrel Aged,3,30,12.5,0,0,0,"own in Kentucky and across the pond in Scotland, distillers who age their whiskeys for many years refer to the evaporation of the spirits from their barrels as \The Angel's Share.\"" We couldnâ€™t agree more. Each time a barrel is filled",2000-01-01T00:00:00.000Z,0
+5819,1352,Weyerbacher Juliet,4,57,8.5,0,0,0,,2010-07-22T20:00:00.000Z,0
+5820,87,2x4 India Pale Ale,3,32,7,0,0,0,"2x4 India Pale Ale (7% ABV, 65 IBUs) sports Columbus, Nugget and Amarillo hops for a spicy, citrusy blend in both flavor and aroma.  Backed by golden pale malts and a kick from flaked rye, the hops are pleasantly robust with just the right touch of bitterness at the end.",2010-07-22T20:00:00.000Z,0
+5821,358,Brewhouse Coffee Stout,11,142,0,0,0,0,"A coffee lover's delight! A wonderful stout infused with coffee that is specially roasted for us by Emy J's (www.emyjs.com) in Stevens Point, WI.",2010-07-22T20:00:00.000Z,0
+5822,656,Dundee KÃ¶lsch-Style Ale,11,142,5.68,0,0,0,,2010-07-22T20:00:00.000Z,0
+5823,656,Dundee Stout,3,42,5.8,0,0,0,,2010-07-22T20:00:00.000Z,0
+5824,859,Simcoe Single Hop IPA,3,31,6.9,0,0,0,"The first in a new series of single hop IPA's from Mikkeller. Brewed with Simcoe, known for many great US micro-brews. An extremely fresh-hopped IPA.",2010-07-22T20:00:00.000Z,0
+5825,700,Kryptonite Imperial IPA,3,32,9,0,0,0,"American style double IPA, full bodied malt flavor supports a ridiculous amount of hops, giving it pronounced bitterness and overwhelming hop flavor and aroma. Made with 5 pounds of hops per barrel.",2010-07-22T20:00:00.000Z,0
+5826,1172,Pine Belt Pale Ale,3,26,6.3,0,0,0,A deep copper colored ale with a substantial malt backbone accented with British crystal malts with aggressive hop bitterness and substantial American hop flavor and aroma. The yeast profile is neutral.,2010-07-22T20:00:00.000Z,0
+5827,45,Batch 666,11,141,7.7,0,0,0,,2010-07-22T20:00:00.000Z,0
+5828,236,471 IPA,3,32,9.2,0,0,0,"Hoppy? Brother, 471 IPA redefines hoppy. 471 is a small batch, limited edition ale that was created by our Brewmaster to separate the weak from the strong. 471 is a double IPA, that combines Pale, Munich, Caramel-30, Carapils and Torrified Wheat malts, with Chinook, Centennial, Simcoe and Fuggles hops. It has a big sweet mouthfeel, followed by more hoppiness than you've ever had at one time. Enjoy.",2010-07-22T20:00:00.000Z,0
+5829,45,IPA Series (Simcoe),3,31,0,0,0,0,"A series of single hop, small batch IPAs brewed in Camp Hill. These IPAs showcase the bitterness, flavor, and aroma of each particular hop variety.",2010-07-22T20:00:00.000Z,0
+5830,45,IPA Series (Zeus),3,31,0,0,0,0,"A series of single hop, small batch IPAs brewed in Camp Hill. These IPAs showcase the bitterness, flavor, and aroma of each particular hop variety.",2010-07-22T20:00:00.000Z,0
+5831,45,IPA Series (Horizon),3,31,0,0,0,0,"A series of single hop, small batch IPAs brewed in Camp Hill. These IPAs showcase the bitterness, flavor, and aroma of each particular hop variety.",2010-07-22T20:00:00.000Z,0
+5832,133,Nit Wit,5,67,4.7,0,0,0,,2010-07-22T20:00:00.000Z,0
 5833,1286,Scratch Beer 31 - 2010 Citra Of Brotherly Love IPA,3,31,7.4,0,0,0,"Scratch 31, the brothers and the brewers decided to revisit one of our favorite sweet spots â€“ IPA â€“ and have some fun with hop flavors. Dubbed â€˜Citra of Brotherly Loveâ€™ in honor of Philly Beer week, Scratch #31 has generous amounts of Apollo, Cascade and Citra hops. This is our first use of Citra hops, which is known for an intense grapefruit aroma and flavor.
 
-While showcasing the intense Citra flavor we added additional bitterness with Apollo and Chinook hops as well. Scratch #31 went through a bed of Chinook hops in the hopback and was dry-hopped with Cascade and Citra hops.",2010-07-22T20:00:00.000Z
+While showcasing the intense Citra flavor we added additional bitterness with Apollo and Chinook hops as well. Scratch #31 went through a bed of Chinook hops in the hopback and was dry-hopped with Cascade and Citra hops.",2010-07-22T20:00:00.000Z,0
 5834,634,Harpoon Leviathan,3,32,10,0,0,0,"Harpoon Leviathan Imperial IPA will challenge your senses and your palate. As the vibrant aroma rushes out of your glass you will notice the blend of piney and tropical fruit notes.  At first sip, this big beer starts with apowerful hop bitterness up front and an aggressive hop flavor and character throughout. 
 
-Leviathan Imperial IPA is brewed with tons of pale malt and just enough caramel malt to provide a sweet malt body to balance the hop intensity. We used copious amounts of a variety of hops including Chinook, Centennial, Simcoe, and Amarillo at various points during the boil to create a complex hop flavor and clean lingering bitter finish. We then fermented the beer with Harpoonâ€™s own versatile proprietary yeast.   Finally, we dry hopped at a rate of over 1 lb a barrel to produce this beerâ€™s massive aroma.",2010-07-22T20:00:00.000Z
-5835,1044,Full Moon Pale Rye Ale,11,119,5.7,0,0,0,"Tawny red and full of malt and hops, Full Moon's unique flavor truly satisfies. The smooth sweetness of malted rye and barley is complemented by generous helpings of Willamette and Cascade hops, resulting in an assertive American amber ale.",2010-07-22T20:00:00.000Z
-5836,1044,Rio Blanco Pale Ale,3,26,5.3,0,0,0,"Deep golden and malty, with a spicy hop flavor and well balanced hop bitterness, Rio Blanco is a uniquely Texan interpretation of an English-style pale ale. Czech Saaz hops provide a crisp finish and delicate aroma.",2010-07-22T20:00:00.000Z
-5837,742,Hitachino Nest XH,3,30,8,0,0,0,Dark ale with a tan head. Subtle sake flavor from cask aging.,2010-07-22T20:00:00.000Z
-5838,914,Ise Kadoya Stout,3,42,5,0,0,0,A very yeasty beer with an earthy aroma. Rich flavors deepen the stout character.,2010-07-22T20:00:00.000Z
-5839,1348,Wells Banana Bread Beer,11,121,5.2,0,0,0,"A silky, crisp, and rich amber-colored ale with a fluffy head and strong banana note on the nose.",2010-07-22T20:00:00.000Z
-5840,23,Allagash Fluxus 09,5,74,8.3,0,0,0,,2010-07-22T20:00:00.000Z
-5841,1394,HotRod Red,2,22,6.1,0,0,0,A somewhat classic Irish Red Ale.  This ale is feisty and a bit hoppy.  There is a malty sweetness and a somewhat dry finish.  Traditional East Kent Goldings but with a nice touch of Cascade and dash of roasted barley give this ale a great taste. ALWAYS AVAILABLE...or at least we try.,2010-07-22T20:00:00.000Z
-5842,1394,Old BullDog Extra Special,3,30,5.8,0,0,0,A hearty extra special beer or basically a pale ale on steroids.  A dark amber beer with a rich blend of  malts.  The base malt is full kilned pale 2-row barley and is combined with full tasting crystal malt.  This beer has a great heavy late hop addition of East Kent Goldings (that cost us our lunch money for weeks...). ALWAYS AVAILABLE or at least we try.,2010-07-22T20:00:00.000Z
-5843,1,One,5,65,8,0,0,0,"Our first anniversary release is a Belgian-style strong ale that is amber in color, with a light to medium body. Subtle malt sweetness is balanced with noticeable hop flavor, light raisin and mildly spicy, cake-like flavors, and is finished with local wildflower honey aromas. Made with 80% Organic Malted Barley, Belgian Specialty grains, Forbidden Fruit yeast, domestic hops and Round Rock local wildflower honey, this beer is deceptively high in alcohol. ",2010-07-29T14:11:00.000Z
-5847,1396,Conundrum Red Ale,3,33,7,65,13,0,"Have you ever heard of an ESB? In most cases, it stands for Extra Special Bitter, and man is this red extra special. Conundrum walks the line between a malt-centric sweet ale and a hop-centric bitter ale so well, it",2010-11-08T08:45:00.000Z
-5848,1397,Oasis,3,31,7.2,93,0,0,Oasis is a Double ESB/IPAish beer that came about from playing around with one of Jeff,2010-11-11T19:32:00.000Z
-5849,1399,Hudson Pale Ale,3,26,0,0,0,0,,2010-11-17T14:13:00.000Z
-5850,1326,Yakima Glory,3,41,8.7,0,0,0,"The tenacious grip of big, juicy hop aroma and character slides smoothly into rich, dark malts. This heavyweight battle between fresh, Yakima Valley hops and dark, roasted malts is resolved harmoniously as the flavors merge to deliver complex satisfaction with a warming edge. Bask in the ",2010-11-27T12:29:00.000Z
-5851,1400,Irish Amber,2,22,4.6,0,0,2147483647,"Finnegans Irish Amber is brewed with potatoes and three varieties of imported two-row malts. The beer is pale amber in color but light in body. A gentle hop bitterness compliments its complex malt character. 
+Leviathan Imperial IPA is brewed with tons of pale malt and just enough caramel malt to provide a sweet malt body to balance the hop intensity. We used copious amounts of a variety of hops including Chinook, Centennial, Simcoe, and Amarillo at various points during the boil to create a complex hop flavor and clean lingering bitter finish. We then fermented the beer with Harpoonâ€™s own versatile proprietary yeast.   Finally, we dry hopped at a rate of over 1 lb a barrel to produce this beerâ€™s massive aroma.",2010-07-22T20:00:00.000Z,0
+5835,1044,Full Moon Pale Rye Ale,11,119,5.7,0,0,0,"Tawny red and full of malt and hops, Full Moon's unique flavor truly satisfies. The smooth sweetness of malted rye and barley is complemented by generous helpings of Willamette and Cascade hops, resulting in an assertive American amber ale.",2010-07-22T20:00:00.000Z,0
+5836,1044,Rio Blanco Pale Ale,3,26,5.3,0,0,0,"Deep golden and malty, with a spicy hop flavor and well balanced hop bitterness, Rio Blanco is a uniquely Texan interpretation of an English-style pale ale. Czech Saaz hops provide a crisp finish and delicate aroma.",2010-07-22T20:00:00.000Z,0
+5837,742,Hitachino Nest XH,3,30,8,0,0,0,Dark ale with a tan head. Subtle sake flavor from cask aging.,2010-07-22T20:00:00.000Z,0
+5838,914,Ise Kadoya Stout,3,42,5,0,0,0,A very yeasty beer with an earthy aroma. Rich flavors deepen the stout character.,2010-07-22T20:00:00.000Z,0
+5839,1348,Wells Banana Bread Beer,11,121,5.2,0,0,0,"A silky, crisp, and rich amber-colored ale with a fluffy head and strong banana note on the nose.",2010-07-22T20:00:00.000Z,0
+5840,23,Allagash Fluxus 09,5,74,8.3,0,0,0,,2010-07-22T20:00:00.000Z,0
+5841,1394,HotRod Red,2,22,6.1,0,0,0,A somewhat classic Irish Red Ale.  This ale is feisty and a bit hoppy.  There is a malty sweetness and a somewhat dry finish.  Traditional East Kent Goldings but with a nice touch of Cascade and dash of roasted barley give this ale a great taste. ALWAYS AVAILABLE...or at least we try.,2010-07-22T20:00:00.000Z,0
+5842,1394,Old BullDog Extra Special,3,30,5.8,0,0,0,A hearty extra special beer or basically a pale ale on steroids.  A dark amber beer with a rich blend of  malts.  The base malt is full kilned pale 2-row barley and is combined with full tasting crystal malt.  This beer has a great heavy late hop addition of East Kent Goldings (that cost us our lunch money for weeks...). ALWAYS AVAILABLE or at least we try.,2010-07-22T20:00:00.000Z,0
+5843,1,One,5,65,8,0,0,0,"Our first anniversary release is a Belgian-style strong ale that is amber in color, with a light to medium body. Subtle malt sweetness is balanced with noticeable hop flavor, light raisin and mildly spicy, cake-like flavors, and is finished with local wildflower honey aromas. Made with 80% Organic Malted Barley, Belgian Specialty grains, Forbidden Fruit yeast, domestic hops and Round Rock local wildflower honey, this beer is deceptively high in alcohol. ",2010-07-29T14:11:00.000Z,0
+5847,1396,Conundrum Red Ale,3,33,7,65,13,0,"Have you ever heard of an ESB? In most cases, it stands for Extra Special Bitter, and man is this red extra special. Conundrum walks the line between a malt-centric sweet ale and a hop-centric bitter ale so well, it",2010-11-08T08:45:00.000Z,0
+5848,1397,Oasis,3,31,7.2,93,0,0,Oasis is a Double ESB/IPAish beer that came about from playing around with one of Jeff,2010-11-11T19:32:00.000Z,0
+5849,1399,Hudson Pale Ale,3,26,0,0,0,0,,2010-11-17T14:13:00.000Z,0
+5850,1326,Yakima Glory,3,41,8.7,0,0,0,"The tenacious grip of big, juicy hop aroma and character slides smoothly into rich, dark malts. This heavyweight battle between fresh, Yakima Valley hops and dark, roasted malts is resolved harmoniously as the flavors merge to deliver complex satisfaction with a warming edge. Bask in the ",2010-11-27T12:29:00.000Z,0
+5851,1400,Irish Amber,2,22,4.6,0,0,0,"Finnegans Irish Amber is brewed with potatoes and three varieties of imported two-row malts. The beer is pale amber in color but light in body. A gentle hop bitterness compliments its complex malt character. 
 
-Finnegans is currently available on tap and in liquor stores throughout the state of Minnesota. Finnegans is unique in that 100% of the profits are donated to The Finnegans Community Fund which disburses grants to help the working poor and at-risk youth throughout Minnesota. ",2010-12-03T17:58:00.000Z
-5852,415,Colonel Blide's Cask Ale,1,3,5.5,31,0,0,"A tasty, moderately hoppy, easy to drink beer with an orange marmalade hue with a frothy, off-white head. An herbal hop aroma with a hint of lemon and pine. This beer is not overly bitter, with orangy citrus and pine hop with slight earthy notes! There is a malty biscuit flavor that balances the hops. Makes me wish I had some Fish & Chips!!",2010-12-06T13:08:00.000Z
-5853,415,Cricket's Nocturne,8,105,4.5,19,0,0,"Cricket's Nocturne: a dark lager that combines a mild crispness with subtle toasty, chocolate notes to make it the perfect thirst quencher on days when there's a chill in the air. It;s a great accompaniment to hearty winter meals, or dessert by the fireside.",2010-12-06T13:10:00.000Z
-5854,415,Fall Festivus Ale,3,33,4.8,0,0,0,Our Fall release is a harvest Ale with a lighter amber color and a beige head with good retention. There is a good balance of earthy malt and a blend of floral and pine hops in the nose. Biscuit notes mixing with caramel sweetness.do their job to complement the rest of the flavors.This is an enjoyable seasonal for sure!,2010-12-06T13:12:00.000Z
-5855,1401,Little Scrapper IPA,3,31,6,0,0,0,"To admit that the brewer at Half Pints is a bit of a hophead is an understatement. This India Pale Ale is unabashedly hoppy, not only from the Amarillo hops we add to the brew kettle, but also from the northwest U.S. variety called Cascade that we add directly to the final tank. A firm toasted malt presence forms the background for all of these hops, and we're confident our Little Scrapper IPA could take other so-called IPA's to the mat if called upon to do so. Try it with a curry or a basket of beer battered fish & chips. Serve in a glass at 8 degrees celcius. Unpasturized.",2010-12-13T19:33:00.000Z
-5856,10,Christmas Ale,3,38,5.5,38,35,0,"Abita Christmas Ale is an American style Brown Ale. It is hopped with Willamette, Cascade, and Columbus hops and has a good hop flavor and aroma.",2010-12-19T09:11:00.000Z
-5857,62,Samael's Oak-aged Ale,1,14,14.5,41,12.5,7,"A super-caramelly, oak-aged English-style strong ale. The oak is very apparent in this rich and high gravity ale. Additional depth and complexity result in a woody and cask-like nose, with a pronounced vanilla flavor on the palate. As of 2007, the use of additional roasted malt has resulted in subtle bitternes to balance the natural sweetness.",2010-12-19T09:47:00.000Z
-5858,62,Old Jubilation Ale,1,14,8,30,0,7,"A winter strong ale with mahogany hue, a hint of hazelnuts and a finish reminiscent of mocha and toffee. No spices, just a perfect blend of five specialty malts.",2010-12-19T09:56:00.000Z
-5859,144,Fresh Hops Pale Ale,3,26,5,36,0,0,"Blue Point Brewing's Pale Ale has a light golden color but explodes with a rich full-flavor. This refreshing ale is top-fermented and hopped at four different stages of the brewing process. English pale malt lends complexity to this brew. Small amounts of Wheat and Carapils round out the malt bill. Brewed to satisfy the hop lover, this pale ale has an immediate floral-citrus flavor that pervades the overall character of this hoppy, quenching microbrew.",2010-12-20T15:32:00.000Z
-5860,144,Oktoberfest,7,84,5.01,28,0,0,"Blue Point Octoberfest is another palate-pleasing seasonal brew. Originally brewed in 1810 to celebrate the betrothal of the Crown Prince of Bavaria, Blue Point continues the celebration by traditionally brewing this special malty amber lager every October. Octoberfest lager is stored cold for 2 months to ensure its distinct smooth flavor. Tap a pint and celebrate the season!",2010-12-20T15:35:00.000Z
-5861,144,Sour Cherry Imperial Stout,3,43,0,0,0,0,"An extremely complex version of the classic Russian beer style. Roasted, black, and chocolate malts deliver multi-layered coffee and sherry notes in a surprisingly smooth package. The beer is then matured with just a kiss of real sour red cherries.",2010-12-20T15:37:00.000Z
-5862,49,Foreign Extra Stout,2,24,7.5,0,0,0,"Foreign Extra Stout is brewed with generous hops and roasted barley for a bittersweet balance & full-flavored, natural bite. Developed over 200 years ago for global export from Ireland, the addition of extra hops ensured this Stout would arrive to its destination in perfect condition. Today, Guinness Foreign Extra Stout is enjoyed by millions of people around the world.",2010-12-20T15:44:00.000Z
-5863,1149,Sweet Action,11,113,5.2,0,0,0,"Our most basic interpretation of what makes beer great -- sweetness from the barley malt and active spice from the hops. It is hazy golden in color, with a sweet honey aroma, and a dry, crisp flavor",2010-12-20T15:50:00.000Z
-5864,1204,Vertical Epic 10.10.10,5,64,9.5,0,0,0,"Fermented with the legendary Ardennes strain of Belgian yeast, 10.10.10 is a Belgian Strong Pale Ale brewed with pale malt and triticale (a cross of wheat and rye), hopped with German Perle hops, and steeped with chamomile during the whirlpool stage. In secondary fermentation, we added a juice blend of Muscat, Gewurztraminer, and Sauvignon Blanc grape varieties.",2010-12-20T15:55:00.000Z
-5865,1271,Imperial Nut Brown,3,38,9.8,0,0,0,"Commemorating the 10th anniversary of Tommyknocker Brewery, this special brew is meticulously crafted with pure maple syrup, the highest quality chocolate and crystal malts and is accented with the finest blend of European and American hops. Imperial Nut Brown Ale, at 9.8% alcohol by volume, is a bigger, bolder version of their Maple Nut Brown.",2010-12-20T15:59:00.000Z
-5866,959,Alta Gracia Coffee Porter,3,25,0,0,0,0,"Brewed with organic roasted barley and chocolate malts for a rich, dark and robust flavor with an infusion of organic vanilla beans and coffee from the Dominican Republic farm community Alta Gracia. ",2024-03-19T22:56:21.000Z
-5867,206,Beck's Light,7,79,0,0,0,0,,2010-12-20T16:12:00.000Z
-5868,164,Triple,5,61,8.4,0,0,0,,2010-12-20T16:14:00.000Z
-5869,618,Corona Light,8,96,4.1,0,0,0,"Corona Light is a lighter version of the classic Mexican beer, Corona Extra. Renowned for its smooth and mild taste, Corona Light maintains the essence of its full-strength counterpart while offering a lower calorie and lower alcohol alternative. With a pale, golden hue and a touch of citrus, it's a refreshing choice for those seeking a lighter beer option without compromising on flavor.",2010-12-20T16:15:00.000Z
-5870,1402,Doc's Hard Apple Cider,11,121,4.5,0,0,0,,2010-12-20T16:23:00.000Z
-5871,1246,Loakal Red,3,33,6.9,0,0,0,"75% American Red Ale, 25% Ale Aged in American Oak Barrels.  A brash American Red ale, dripping with citrusy Centennial hops, mellowed by a touch of oak.  Aromas of toffee, citrus, crushed herbs, vanilla and fresh sawn oak.  Complex!",2011-01-06T22:26:00.000Z
-5872,1312,Kingfisher Premium,8,96,4.8,0,0,2147483647,,2011-01-09T14:50:00.000Z
-5873,1092,Dry-Hopped APA,3,26,5.9,50,10.6,0,,2011-02-07T14:26:00.000Z
-5874,1092,Coffee Stout,3,42,5.7,30,47,0,,2011-02-07T14:29:00.000Z
+Finnegans is currently available on tap and in liquor stores throughout the state of Minnesota. Finnegans is unique in that 100% of the profits are donated to The Finnegans Community Fund which disburses grants to help the working poor and at-risk youth throughout Minnesota. ",2010-12-03T17:58:00.000Z,0
+5852,415,Colonel Blide's Cask Ale,1,3,5.5,31,0,0,"A tasty, moderately hoppy, easy to drink beer with an orange marmalade hue with a frothy, off-white head. An herbal hop aroma with a hint of lemon and pine. This beer is not overly bitter, with orangy citrus and pine hop with slight earthy notes! There is a malty biscuit flavor that balances the hops. Makes me wish I had some Fish & Chips!!",2010-12-06T13:08:00.000Z,0
+5853,415,Cricket's Nocturne,8,105,4.5,19,0,0,"Cricket's Nocturne: a dark lager that combines a mild crispness with subtle toasty, chocolate notes to make it the perfect thirst quencher on days when there's a chill in the air. It;s a great accompaniment to hearty winter meals, or dessert by the fireside.",2010-12-06T13:10:00.000Z,0
+5854,415,Fall Festivus Ale,3,33,4.8,0,0,0,Our Fall release is a harvest Ale with a lighter amber color and a beige head with good retention. There is a good balance of earthy malt and a blend of floral and pine hops in the nose. Biscuit notes mixing with caramel sweetness.do their job to complement the rest of the flavors.This is an enjoyable seasonal for sure!,2010-12-06T13:12:00.000Z,0
+5855,1401,Little Scrapper IPA,3,31,6,0,0,0,"To admit that the brewer at Half Pints is a bit of a hophead is an understatement. This India Pale Ale is unabashedly hoppy, not only from the Amarillo hops we add to the brew kettle, but also from the northwest U.S. variety called Cascade that we add directly to the final tank. A firm toasted malt presence forms the background for all of these hops, and we're confident our Little Scrapper IPA could take other so-called IPA's to the mat if called upon to do so. Try it with a curry or a basket of beer battered fish & chips. Serve in a glass at 8 degrees celcius. Unpasturized.",2010-12-13T19:33:00.000Z,0
+5856,10,Christmas Ale,3,38,5.5,38,35,0,"Abita Christmas Ale is an American style Brown Ale. It is hopped with Willamette, Cascade, and Columbus hops and has a good hop flavor and aroma.",2010-12-19T09:11:00.000Z,0
+5857,62,Samael's Oak-aged Ale,1,14,14.5,41,12.5,0,"A super-caramelly, oak-aged English-style strong ale. The oak is very apparent in this rich and high gravity ale. Additional depth and complexity result in a woody and cask-like nose, with a pronounced vanilla flavor on the palate. As of 2007, the use of additional roasted malt has resulted in subtle bitternes to balance the natural sweetness.",2010-12-19T09:47:00.000Z,0
+5858,62,Old Jubilation Ale,1,14,8,30,0,0,"A winter strong ale with mahogany hue, a hint of hazelnuts and a finish reminiscent of mocha and toffee. No spices, just a perfect blend of five specialty malts.",2010-12-19T09:56:00.000Z,0
+5859,144,Fresh Hops Pale Ale,3,26,5,36,0,0,"Blue Point Brewing's Pale Ale has a light golden color but explodes with a rich full-flavor. This refreshing ale is top-fermented and hopped at four different stages of the brewing process. English pale malt lends complexity to this brew. Small amounts of Wheat and Carapils round out the malt bill. Brewed to satisfy the hop lover, this pale ale has an immediate floral-citrus flavor that pervades the overall character of this hoppy, quenching microbrew.",2010-12-20T15:32:00.000Z,0
+5860,144,Oktoberfest,7,84,5.01,28,0,0,"Blue Point Octoberfest is another palate-pleasing seasonal brew. Originally brewed in 1810 to celebrate the betrothal of the Crown Prince of Bavaria, Blue Point continues the celebration by traditionally brewing this special malty amber lager every October. Octoberfest lager is stored cold for 2 months to ensure its distinct smooth flavor. Tap a pint and celebrate the season!",2010-12-20T15:35:00.000Z,0
+5861,144,Sour Cherry Imperial Stout,3,43,0,0,0,0,"An extremely complex version of the classic Russian beer style. Roasted, black, and chocolate malts deliver multi-layered coffee and sherry notes in a surprisingly smooth package. The beer is then matured with just a kiss of real sour red cherries.",2010-12-20T15:37:00.000Z,0
+5862,49,Foreign Extra Stout,2,24,7.5,0,0,0,"Foreign Extra Stout is brewed with generous hops and roasted barley for a bittersweet balance & full-flavored, natural bite. Developed over 200 years ago for global export from Ireland, the addition of extra hops ensured this Stout would arrive to its destination in perfect condition. Today, Guinness Foreign Extra Stout is enjoyed by millions of people around the world.",2010-12-20T15:44:00.000Z,0
+5863,1149,Sweet Action,11,113,5.2,0,0,0,"Our most basic interpretation of what makes beer great -- sweetness from the barley malt and active spice from the hops. It is hazy golden in color, with a sweet honey aroma, and a dry, crisp flavor",2010-12-20T15:50:00.000Z,0
+5864,1204,Vertical Epic 10.10.10,5,64,9.5,0,0,0,"Fermented with the legendary Ardennes strain of Belgian yeast, 10.10.10 is a Belgian Strong Pale Ale brewed with pale malt and triticale (a cross of wheat and rye), hopped with German Perle hops, and steeped with chamomile during the whirlpool stage. In secondary fermentation, we added a juice blend of Muscat, Gewurztraminer, and Sauvignon Blanc grape varieties.",2010-12-20T15:55:00.000Z,0
+5865,1271,Imperial Nut Brown,3,38,9.8,0,0,0,"Commemorating the 10th anniversary of Tommyknocker Brewery, this special brew is meticulously crafted with pure maple syrup, the highest quality chocolate and crystal malts and is accented with the finest blend of European and American hops. Imperial Nut Brown Ale, at 9.8% alcohol by volume, is a bigger, bolder version of their Maple Nut Brown.",2010-12-20T15:59:00.000Z,0
+5866,959,Alta Gracia Coffee Porter,3,25,0,0,0,0,"Brewed with organic roasted barley and chocolate malts for a rich, dark and robust flavor with an infusion of organic vanilla beans and coffee from the Dominican Republic farm community Alta Gracia. ",2024-03-19T22:56:21.000Z,0
+5867,206,Beck's Light,7,79,0,0,0,0,,2010-12-20T16:12:00.000Z,0
+5868,164,Triple,5,61,8.4,0,0,0,,2010-12-20T16:14:00.000Z,0
+5869,618,Corona Light,8,96,4.1,0,0,0,"Corona Light is a lighter version of the classic Mexican beer, Corona Extra. Renowned for its smooth and mild taste, Corona Light maintains the essence of its full-strength counterpart while offering a lower calorie and lower alcohol alternative. With a pale, golden hue and a touch of citrus, it's a refreshing choice for those seeking a lighter beer option without compromising on flavor.",2010-12-20T16:15:00.000Z,0
+5870,1402,Doc's Hard Apple Cider,11,121,4.5,0,0,0,,2010-12-20T16:23:00.000Z,0
+5871,1246,Loakal Red,3,33,6.9,0,0,0,"75% American Red Ale, 25% Ale Aged in American Oak Barrels.  A brash American Red ale, dripping with citrusy Centennial hops, mellowed by a touch of oak.  Aromas of toffee, citrus, crushed herbs, vanilla and fresh sawn oak.  Complex!",2011-01-06T22:26:00.000Z,0
+5872,1312,Kingfisher Premium,8,96,4.8,0,0,0,,2011-01-09T14:50:00.000Z,0
+5873,1092,Dry-Hopped APA,3,26,5.9,50,10.6,0,,2011-02-07T14:26:00.000Z,0
+5874,1092,Coffee Stout,3,42,5.7,30,47,0,,2011-02-07T14:29:00.000Z,0
 5875,1404,Pale Ale,3,26,4.4,25,13.5,0,"APPEARANCE: Amber red, bright
 PROCESS: Classic English
 HOPS: East Kent Goldings (UK), Northdown (UK), Pilgrim (UK)
 MALTS: 2-Row and Caramel Malted Barley
 YEAST: London Ale
 OG: 11.2
-SRM: 13.5",2011-02-10T07:51:00.000Z
-5876,1405,Baltika 6,9,106,7,20,30,2147483647,"appearance:  deep, dark brown to black, deep tan head
+SRM: 13.5",2011-02-10T07:51:00.000Z,0
+5876,1405,Baltika 6,9,106,7,20,30,0,"appearance:  deep, dark brown to black, deep tan head
 smell/taste: sweet, malty, roasted coffee, molasses
 full-bodied, smooth, minimal carbonation 
-",2011-02-15T20:00:00.000Z
-5877,1407,Firewater Indian Pale Ale,3,31,0,0,0,0,This golden straw colored IPA is made with 5 varieties of malts and 6 massive hop additions.  It is outstanding in flavor and aromatics.,2011-02-16T12:38:00.000Z
-5879,1409,Summer Teeth,4,58,5.3,0,0,0,"This traditional Bavarian-style kellerbier originated from the small artisanal breweries of Franconia, where it is still a favorite in the local beer gardens.  Ours is served unfiltered with a crisp, smooth finish that taste like sunshine. ",2011-03-08T12:22:00.000Z
-5880,1410,Dank,3,34,9.2,0,0,0,"Anniversary offering, Imperial Red. Heavily hopped and oak aged, very balanced. 12 oz. bottles; 4 pack. ABV: 9.2%",2011-03-16T09:06:00.000Z
-5881,1391,Dos Perros,3,38,3.5,21,13,0,"Many Mexican beer styles today are descendants of old Austrian styles, from when Austria ruled Mexico in the late 19th century. Our Dos Perros is made with German Munich malt, English Pale malt, and Chocolate malt, and hopped with Perle and Saaz hops. To lighten the body, as many Mexican brewers do, we add a small portion of flaked maize. The result is a wonderfully bready malt aroma, balanced with some maize sweetness and a noble hop finish.",2011-04-17T12:22:00.000Z
-5882,1391,Pale Ale,3,30,5.8,55,6,0,"A new version of an American classic. Our Yazoo Pale Ale bursts with spicy, citrusy hop aroma and flavor, coming from the newly discovered Amarillo hop. The wonderful hop aroma is balanced nicely with a toasty malt body, ending with a cleansing hop finish. Made with English Pale, Munich, Vienna, and Crystal malts, and generously hopped with Amarillo, Perle, and Cascade hops. Fermented with our English ale yeast.",2011-04-17T12:25:00.000Z
-5883,1391,Hefeweizen,4,50,5,13,3,0,An authentic example of a Bavarian Hefeweizen. ,2011-04-17T12:30:00.000Z
-5884,1391,Sly Rye Porter,3,25,5.7,28,29,0,"A rich, chocolaty English Porter with a clean finish. We use the finest floor-malted Maris Otter malts from England, the same malts used for the best single-malt scotch. A portion of malted rye gives a spicy, slightly dry finish.",2024-03-19T22:56:51.000Z
-5885,1391,Onward Stout,3,42,3.8,35,45,0,"The tan lace clings to the glass as you raise the pint to your lips. Close your eyes and smile as the rich espresso notes fade to a dry, roasted finish. Exceptionally smooth and satisfying. Made with English Pale malt, roasted barley, black patent malt, and flaked barley. Hopped with East Kent Goldings and Target hops, and fermented with our English ale yeast.",2011-04-17T12:33:00.000Z
-5886,1411,Dark Element,11,127,8.75,65.5,22,2147483647,"American Black Ale. Aromas of an American IPA, dark toffee and chocolate flavors without roasted bitterness.",2011-04-18T05:25:00.000Z
-5887,1412,Finest Bitter,1,3,4,0,0,0,"A regular winner of awards for quality and flavour, and winner of the silver medal at the International Brewing Industry Awards 2002, this refreshing yet full-bodied bitter is a favourite with beer drinkers everywhere. The rich flavours of premium malt and goldings hops are unmistakable in this well balanced, traditionally brewed bitter.",2011-05-17T03:09:00.000Z
-5888,1412,FA,1,4,4.8,0,0,0,"FA is no small beer: despite its deceptively pale golden colour, it boasts a big, smooth flavour and strong punch. Brewed with the finest English malts, and conditioned in cask with dry hops to produce fresh hop aromas and a fuller flavour, delighting the mouth and stimulating the tongue.",2011-05-17T03:15:00.000Z
-5889,1412,IPA,1,2,3.5,0,0,0,IPA is one of Cains,2011-05-17T03:17:00.000Z
-5890,1412,Dark Mild,1,11,3.2,0,0,0,"This is a smooth, full flavoured, truly dark mild with a rich creamy head. It has a full body and distinctive roasted malt taste, balanced by its fresh hop character. Complex flavours and aromas are achieved by blending deeply roasted malt and adding a selected blend of English hops, including dry hops, to the cask conditioned beer.",2011-05-17T03:19:00.000Z
+",2011-02-15T20:00:00.000Z,0
+5877,1407,Firewater Indian Pale Ale,3,31,0,0,0,0,This golden straw colored IPA is made with 5 varieties of malts and 6 massive hop additions.  It is outstanding in flavor and aromatics.,2011-02-16T12:38:00.000Z,0
+5879,1409,Summer Teeth,4,58,5.3,0,0,0,"This traditional Bavarian-style kellerbier originated from the small artisanal breweries of Franconia, where it is still a favorite in the local beer gardens.  Ours is served unfiltered with a crisp, smooth finish that taste like sunshine. ",2011-03-08T12:22:00.000Z,0
+5880,1410,Dank,3,34,9.2,0,0,0,"Anniversary offering, Imperial Red. Heavily hopped and oak aged, very balanced. 12 oz. bottles; 4 pack. ABV: 9.2%",2011-03-16T09:06:00.000Z,0
+5881,1391,Dos Perros,3,38,3.5,21,13,0,"Many Mexican beer styles today are descendants of old Austrian styles, from when Austria ruled Mexico in the late 19th century. Our Dos Perros is made with German Munich malt, English Pale malt, and Chocolate malt, and hopped with Perle and Saaz hops. To lighten the body, as many Mexican brewers do, we add a small portion of flaked maize. The result is a wonderfully bready malt aroma, balanced with some maize sweetness and a noble hop finish.",2011-04-17T12:22:00.000Z,0
+5882,1391,Pale Ale,3,30,5.8,55,6,0,"A new version of an American classic. Our Yazoo Pale Ale bursts with spicy, citrusy hop aroma and flavor, coming from the newly discovered Amarillo hop. The wonderful hop aroma is balanced nicely with a toasty malt body, ending with a cleansing hop finish. Made with English Pale, Munich, Vienna, and Crystal malts, and generously hopped with Amarillo, Perle, and Cascade hops. Fermented with our English ale yeast.",2011-04-17T12:25:00.000Z,0
+5883,1391,Hefeweizen,4,50,5,13,3,0,An authentic example of a Bavarian Hefeweizen. ,2011-04-17T12:30:00.000Z,0
+5884,1391,Sly Rye Porter,3,25,5.7,28,29,0,"A rich, chocolaty English Porter with a clean finish. We use the finest floor-malted Maris Otter malts from England, the same malts used for the best single-malt scotch. A portion of malted rye gives a spicy, slightly dry finish.",2024-03-19T22:56:51.000Z,0
+5885,1391,Onward Stout,3,42,3.8,35,45,0,"The tan lace clings to the glass as you raise the pint to your lips. Close your eyes and smile as the rich espresso notes fade to a dry, roasted finish. Exceptionally smooth and satisfying. Made with English Pale malt, roasted barley, black patent malt, and flaked barley. Hopped with East Kent Goldings and Target hops, and fermented with our English ale yeast.",2011-04-17T12:33:00.000Z,0
+5886,1411,Dark Element,11,127,8.75,65.5,22,0,"American Black Ale. Aromas of an American IPA, dark toffee and chocolate flavors without roasted bitterness.",2011-04-18T05:25:00.000Z,0
+5887,1412,Finest Bitter,1,3,4,0,0,0,"A regular winner of awards for quality and flavour, and winner of the silver medal at the International Brewing Industry Awards 2002, this refreshing yet full-bodied bitter is a favourite with beer drinkers everywhere. The rich flavours of premium malt and goldings hops are unmistakable in this well balanced, traditionally brewed bitter.",2011-05-17T03:09:00.000Z,0
+5888,1412,FA,1,4,4.8,0,0,0,"FA is no small beer: despite its deceptively pale golden colour, it boasts a big, smooth flavour and strong punch. Brewed with the finest English malts, and conditioned in cask with dry hops to produce fresh hop aromas and a fuller flavour, delighting the mouth and stimulating the tongue.",2011-05-17T03:15:00.000Z,0
+5889,1412,IPA,1,2,3.5,0,0,0,IPA is one of Cains,2011-05-17T03:17:00.000Z,0
+5890,1412,Dark Mild,1,11,3.2,0,0,0,"This is a smooth, full flavoured, truly dark mild with a rich creamy head. It has a full body and distinctive roasted malt taste, balanced by its fresh hop character. Complex flavours and aromas are achieved by blending deeply roasted malt and adding a selected blend of English hops, including dry hops, to the cask conditioned beer.",2011-05-17T03:19:00.000Z,0
 5891,1412,2008 Culture Beer,1,3,5,0,0,0,"A full, clean and refreshing pale coloured bitter with an abundance of citrus hop character created by the blend of dry and late hopping techniques.
 
-It also has subtle hints of malt and fruit on aroma and palate which gives the beer a well rounded balance.",2011-05-17T03:27:00.000Z
+It also has subtle hints of malt and fruit on aroma and palate which gives the beer a well rounded balance.",2011-05-17T03:27:00.000Z,0
 5892,1413,Iron Rail IPA,1,2,7.2,0,0,0,"English Style India Pale Ale, Maris Otter 2-row, Canadian Honey Malt and Belgian Crystal.
 Centennial, Kent Golding, and Cascade are added Five times during the process, including Dry Hopping.
 
 Aroma: Earthy, Citrusy, and Resinous
 Tasting/Flavor: Orangy and Sugary Apricots
-Finish: Malt Sweetness Balanced by Dry Hops",2011-05-23T10:39:00.000Z
+Finish: Malt Sweetness Balanced by Dry Hops",2011-05-23T10:39:00.000Z,0
 5893,1414,Black Creek Porter,11,130,0,0,0,0,"Porter is a dark-coloured beer developed in the 1750s. Porter has a heavier flavour and aroma and a slightly sweet taste. Its name probably originates in the belief that this strong, nourishing drink was ideal for hard-working porters and labourers. Black Creek Porter is wonderful on its own, or with salty snacks.
 
-",2011-06-08T07:10:00.000Z
-5894,1416,Vivant Tripel,5,61,9.25,0,0,0,"A classic golden ale, with subtle esters of banana and bubblegum. This beer pours with a creamy head and ends with a sweetness of light Belgian candi sugars. Our brewmaster aged this ale for an extended period to round out the flavors. A great traditional Belgian brew. ",2011-06-22T12:22:00.000Z
-5896,1417,Watershed IPA,3,30,7.1,0,0,0,,2011-07-07T07:44:00.000Z
-5897,1087,Estrella Levante Clasica,9,106,4.8,0,0,0,,2011-07-14T08:52:00.000Z
-5898,1087,Estrella Levante Especial,9,106,5.4,0,0,0,,2011-07-14T08:53:00.000Z
-5899,1087,Estrella Levante Sin 0.0% Alcohol,9,106,1,0,0,0,,2011-07-14T08:54:00.000Z
-5900,1419,Koshihikari Echigo Beer,11,132,5,0,0,0,Japanese Rice Lager,2011-07-23T20:37:00.000Z
-5901,1420,Full Boar,11,132,0,0,0,0,,2011-07-28T19:06:00.000Z
-5902,1421,The Public,3,26,6,0,0,0,The Public,2011-08-08T19:07:00.000Z
-5903,10,Abita Amber,7,82,0,0,0,0,"Abita Amber is a Munich style lager. It has a smooth, malty, slightly caramel flavor and a rich amber color.",2011-08-15T11:46:00.000Z
-5904,10,S.O.S,7,77,0,0,0,0,Save Our Shores (S.O.S) is an unfiltered weizen pils and has a brilliant golden color. A Charitable Pilsner,2011-08-15T11:48:00.000Z
-5905,10,Abita Golden,8,95,0,0,0,0,"Abita Golden is a crisp, clean continental lager. Just four ingredients are all it takes.",2011-08-15T11:49:00.000Z
-5906,10,Abita Light Beer,8,96,0,0,0,0,"Uniquely hand-crafted using 100% all natural ingredients: The result is the smoothest, most flavorful light beer.",2011-08-15T11:50:00.000Z
-5907,10,Abbey Ale,1,1,0,0,0,0,Abbey Ale is a strong malty ale brewed in the style of the Trappist Monks. 22oz bottles only,2011-08-15T11:51:00.000Z
-5908,10,Wheat,7,82,0,0,0,0,"Abita Wheat is a lager, not ale, and contains a generous amount of wheat which produces a clean, simple flavor.",2011-08-15T11:52:00.000Z
-5909,10,Triple Citra Hopped Satsuma Wit,11,121,0,0,0,0,Similar to the Harvest Wit but with a lot more punch. A very pronounce citrus aroma with a triple hop flavor makes for one great beer.,2011-08-15T11:53:00.000Z
-5910,10,Honey Rye Ale,11,128,0,0,0,0,"This beer is not very bitter which allows the flavors of the rye and honey to come through. The result is a full bodied, sweet, and malty beer.",2011-08-15T11:54:00.000Z
-5911,10,Strawberry,11,121,0,0,0,0,Strawberry Harvest Lager is a wheat beer made with real Louisiana strawberries.,2011-08-15T11:55:00.000Z
-5912,10,Satsuma Wit,11,121,0,0,0,0,This Wit beer has a sweet and subtle citrus flavor with a touch of spice that is cool and refreshing.,2011-08-15T11:56:00.000Z
-5913,1422,Abhi beer,7,89,0,0,0,0,,2011-09-27T00:36:00.000Z
-5914,1423,Ambr,11,132,0,0,0,0,,2011-10-04T00:25:00.000Z
-5915,1424,Modelo Especial,10,139,4.4,0,0,0,"Modelo Especial is a Mexican lager that has gained widespread popularity for its distinctive and enjoyable characteristics. With a pale golden hue, this beer offers a crisp and refreshing taste, making it a go-to choice for many beer enthusiasts. Modelo Especial is known for its well-balanced flavor profile, featuring a mild malt sweetness and a touch of hop bitterness. The beer has a clean and smooth finish, making it easy to drink and a versatile option for various occasions. Often served with a wedge of lime, Modelo Especial exemplifies the refreshing qualities associated with Mexican lagers, making it a popular and iconic choice in the beer landscape.",2024-01-09T02:18:43.000Z
-5919,44,Michelob Ultra,3,95,4.2,,,,"Michelob Ultra is specifically crafted for those seeking a lighter beer option with reduced calories and carbohydrates. The beer is often associated with an active and health-conscious lifestyle, appealing to individuals who enjoy a cold beer without compromising on their fitness goals. Michelob Ultra is characterized by its smooth, clean flavor profile and a slightly lower alcohol by volume (ABV) compared to regular beers. With its distinctively light and easy-drinking qualities, Michelob Ultra has gained popularity among consumers looking for a balance between a satisfying beer experience and a commitment to a healthier, active lifestyle.",2024-01-26T21:59:41.000Z
-5921,1425,Banner City,8,116,3.8,,,,Boston's Light Lager which is crafted in Massachusetts,2024-02-24T06:00:00.000Z
-5922,1426,Brown Ale,3,12,4.2,,,,This medium body London style ale packs a malty sweetness with hints of chocolate and toffee,2024-03-01T15:52:14.000Z
-5923,1426,East Kölsch,4,47,4.5,,,,"This take on a German Kölsch is made with all German hops is light, crisp, and bursting with flavor",2024-03-01T15:56:28.000Z
-5924,1426,Cream Ale,11,113,4.2,,,,Newburgh’s take on a New York Cream Ale. This beer is light-bodied and a pale straw color,2024-03-01T16:03:11.000Z
-5925,1426,NanoBoss Session NEIPA,3,32,4.5,,,,"This flavorful	New England IPA contains hops including: Citrus Cascade, Lemon Drop, Sorachi Ace, and Centennial",2024-03-01T16:08:14.000Z
-5926,1426,GigaBoss DIPA,3,32,9,,,,This unfiltered Double IPA is our most hoppy beer. It offers a bitter but smooth finish,2024-03-01T16:11:28.000Z
-5927,1426,MegaBoss IPA,3,32,7,,,,The MegaBoss is our flagship IPA. This beer displays a pineapple and tropical fruit aroma that concludes with a lemon and herbal hop finish.,2024-03-01T16:13:26.000Z
-5928,1427,Carlsberg,9,139,5,,,,"Carlsberg is a balanced Danish Pilsner that is wonderfully crisp and refreshing, with a full flavor and a distinctive hoppy aroma",2024-03-06T01:45:32.000Z
-5929,1428,Murphy’s Irish Stout,2,23,4,,,,Murphy’s Irish Stout is an Irish dry stout. It is dark in color and medium bodied. It contains toffee and coffee undertones with a creamy finish.,2024-03-06T02:12:04.000Z
-5930,343,O’Hara’s Irish Red,2,22,4.3,,,,O’Hara’s Irish Red is a unique Irish red with a smooth malt body. It has also has some caramel tones,2024-03-06T02:26:43.000Z
-5933,1429,White Claw - Black Cherry,11,143,5,,,, ,2024-03-06T21:55:18.000Z
-5934,1429,White Claw - Mango,11,143,5,,,, ,2024-03-06T21:55:48.000Z
-5935,1429,White Claw - Watermelon,11,143,5,,,, ,2024-03-06T21:55:55.000Z
-5936,1429,White Claw - Natural Lime,11,143,5,,,, ,2024-03-06T21:56:04.000Z
-5937,1429,White Claw - Raspberry,11,143,5,,,, ,2024-03-06T21:56:16.000Z
-5938,1429,White Claw - Ruby Grapefruit,11,143,5,,,, ,2024-03-06T21:56:25.000Z
-5939,1429,White Claw - Passion Fruit,11,143,5,,,, ,2024-03-06T22:01:56.000Z
-5940,1429,White Claw - Tangerine,11,143,5,,,, ,2024-03-06T22:02:01.000Z
-5941,1429,White Claw - Lemon,11,143,5,,,, ,2024-03-06T22:02:07.000Z
-5942,1429,White Claw - Blackberry,11,143,5,,,, ,2024-03-06T22:02:12.000Z
-5943,1429,White Claw - Strawberry,11,143,5,,,, ,2024-03-06T22:02:19.000Z
-5944,1429,White Claw - Pineapple,11,143,5,,,, ,2024-03-06T22:02:24.000Z
-5945,1429,White Claw - Peach,11,143,5,,,, ,2024-03-06T22:02:32.000Z
-5946,1429,White Claw Surf - Tropical Pomelo Smash,11,143,5,,,, ,2024-03-06T22:06:22.000Z
-5947,1429,White Claw Surf - Citrus Yuzu Smash,11,143,5,,,, ,2024-03-06T22:06:31.000Z
-5948,1429,White Claw Surf - Watermelon Lime Smash,11,143,5,,,, ,2024-03-06T22:06:40.000Z
-5949,1429,White Claw Surf - Wildberry Açai Smash,11,143,5,,,, ,2024-03-06T22:06:53.000Z
-5950,1429,White Claw Surge - Blood Orange,11,143,8,,,, ,2024-03-06T22:09:51.000Z
-5951,1429,White Claw Surge - Cranberry,11,143,8,,,, ,2024-03-06T22:10:03.000Z
-5952,1429,White Claw Surge - Blackberry,11,143,8,,,, ,2024-03-06T22:10:11.000Z
-5953,1429,White Claw Surge - Lime,11,143,8,,,, ,2024-03-06T22:10:23.000Z
-5954,157,Truly - Wild Berry,12,143,5,,,, ,2024-03-06T22:29:59.000Z
-5955,157,Truly - Cherry,12,143,5,,,, ,2024-03-06T22:31:49.000Z
-5956,157,Truly - Blueberry,12,143,5,,,, ,2024-03-06T22:31:56.000Z
-5957,157,Truly - Strawberry,12,143,5,,,, ,2024-03-06T22:32:02.000Z
-5958,157,Truly - Lime,12,143,5,,,, ,2024-03-06T22:32:10.000Z
-5959,157,Truly - Grapefruit,12,143,5,,,, ,2024-03-06T22:32:17.000Z
-5960,157,Truly - Lemon,12,143,5,,,, ,2024-03-06T22:32:22.000Z
-5961,157,Truly - Raspberry,12,143,5,,,, ,2024-03-06T22:32:30.000Z
-5962,157,Truly - Pineapple,12,143,5,,,, ,2024-03-06T22:32:36.000Z
-5963,157,Truly - Mango,12,143,5,,,, ,2024-03-06T22:32:41.000Z
-5964,157,Truly - Passion Fruit,12,143,5,,,, ,2024-03-06T22:32:49.000Z
-5965,157,Truly - Watermelon,12,143,5,,,, ,2024-03-06T22:33:55.000Z
-5966,157,Truly Unruly - Strawberry Smash,12,143,8,,,, ,2024-03-06T22:34:47.000Z
-5967,157,Truly Unruly - Tropical Twist,12,143,5,,,, ,2024-03-06T22:35:28.000Z
-5968,157,Truly Unruly - Berry Blast,12,143,5,,,, ,2024-03-06T22:35:40.000Z
-5969,157,Truly Unruly - Citrus Crush,12,143,5,,,, ,2024-03-06T22:35:48.000Z
-5970,157,Truly - Lemonade,12,143,5,,,, ,2024-03-06T22:35:55.000Z
-5971,157,Truly - Strawberry Lemonade,12,143,5,,,, ,2024-03-06T22:36:03.000Z
-5972,157,Truly - Citrus Squeeze,12,143,5,,,, ,2024-03-06T22:41:22.000Z
-5973,157,Truly - Watermelon Lemonade,12,143,5,,,, ,2024-03-06T22:41:34.000Z
-5974,157,Truly - Pineapple Lemonade,12,143,5,,,, ,2024-03-19T22:35:46.000Z
-5975,157,Truly - Berry Punch,12,143,5,,,, ,2024-03-06T22:41:47.000Z
-5977,157,Truly - Citrus Punch,12,143,5,,,, ,2024-03-06T22:41:57.000Z
-5978,157,Truly - Fruit Punch,12,143,5,,,, ,2024-03-06T22:42:03.000Z
-5979,157,Truly - Tropical Punch,12,143,5,,,, ,2024-03-06T22:42:11.000Z
-5980,1430,Redd's Hard Apple,11,142,5,,,,,2024-03-06T22:46:30.000Z
-5981,1430,Redd's Hard Apple Peach,11,142,5,,,,,2024-03-06T22:46:38.000Z
-5982,1430,Redd's Hard Apple Strawberry,11,142,5,,,,,2024-03-06T22:46:44.000Z
-5983,1430,Redd's Hard Apple Black Cherry,11,142,5,,,,,2024-03-06T22:46:56.000Z
-5984,905,Fat Tire,3,37,5.2,,,,"Fat Tire opened America to the idea of craft beers. Today is is a lighter beer than in the past, but maintains a subtle malt presence with a slightly fruity hop profile.",2024-03-26T01:12:45.000Z
-5985,905,Voodoo Ranger IPA,3,31,7,,,,Voodoo Ranger is the flagship IPA of New Belgium's Ranger collection. This beer is filled with a tropical aroma and juicy fruit flavors from Mosaic and Amarillo hops.,2024-03-26T01:16:22.000Z
-5986,905,Voodoo Ranger Imperial IPA,3,32,9,,,,Voodoo Ranger Imperial IPA offers a rare blend of choice hops and complex rich flavors with a higher alcohol percentage compared to the classic Voodoo Ranger.,2024-03-26T01:21:23.000Z
-5987,905,Voodoo Ranger Juicy Haze IPA,3,145,7.5,,,,This beer is packed with bright tropical aromas with a citrusy flavor.,2024-03-26T01:24:53.000Z
-5988,905,Voodoo Ranger Juice Force IPA,3,146,9.5,,,,"This hazy IPA is fruit forward, highly drinkable, and will have you buzzing the tower in no time.",2024-03-26T01:30:53.000Z
-5989,905,Voodoo Ranger Fruit Force IPA,3,147,9.5,,,,This beer is an American-style Hazy Imperial IPA with an interesting fruit punch twist.,2024-03-26T01:31:15.000Z
-5993,1431,Bloomin' Blonde Ale,3,37,4.8,,,,This beer is exactly what you need after a hot day in the outback. This refreshing beer has a medium carbonation and a thin body.,2024-03-26T01:52:56.000Z
-5994,1432,Coney Island Mermaid Pilsner,8,100,5.2,,,,"This beer is light-bodied, crisp-drinking, and nicely hopped. It contains a fruity, floral hop aroma.",2024-03-26T02:05:40.000Z
-5995,1432,Coney Island Merman NY IPA,3,31,5.8,,,,"This beer is a great new take on an IPA. It combines the best parts of West Coast IPAs, hazy IPAs, and New England IPAs.",2024-03-26T02:08:53.000Z
-5996,157,Wicked Hazy,3,145,6.8,,,,"Super-juiced with pineapple, mango, and peach flavors.",2024-04-10T20:42:59.000Z
-5997,157,Wicked Easy,3,148,4.7,,,,This beer tastes like a day off. It is easy drinking and has citrus flavor.,2024-04-10T20:45:49.000Z
-5998,157,Twisted Tea,14,149,5,,,,The King of Hard Teas,2024-04-10T20:52:53.000Z
-5999,157,Twisted Tea - Black Cherry,14,149,5,,,,Hard iced tea with a hint of black cherry,2024-04-10T20:53:50.000Z
-6000,157,Twisted Tea - Half & Half,14,149,5,,,,Hard iced tea with lemonade flavor,2024-04-10T20:54:33.000Z
-6001,157,Twisted Tea - Peach,14,149,5,,,,Hard iced tea with peach flavor. Reach for the Peach!,2024-04-10T20:55:11.000Z
-6002,157,Twisted Tea - Raspberry,14,149,5,,,,Hard iced tea with raspberry flavor,2024-04-10T20:56:06.000Z
-6003,157,Twisted Tea - Light,14,149,4,,,,Hard iced tea light,2024-04-10T20:56:52.000Z
-6004,157,Twisted Tea - Pineapple,14,149,5,,,,Hard iced tea with pineapple flavor.,2024-04-10T20:57:27.000Z
-6005,157,Twisted Tea - Mango,14,149,5,,,,Hard iced tea with mango flavor,2024-04-10T20:57:51.000Z
-6006,157,Twisted Tea - Blueberry,14,149,5,,,,Hard iced tea with blueberry flavor,2024-04-10T20:58:02.000Z
-6007,157,Twisted Tea - Mangonada,14,149,5,,,,Hard iced tea with mango and chamoy flavor,2024-04-10T20:58:43.000Z
-6008,1433,Downeast - Original,13,144,5.1,,,,This unfiltered craft cider is made with juicy sweet apples and tastes like farm fresh cider,2024-04-12T23:57:31.000Z
-6009,1433,Downeast - Overboard,13,144,8,,,,Same taste as the original but 8%,2024-04-12T23:58:40.000Z
-6010,1434,Whirlpool,3,145,4.5,,,,This IPA has a fruity flavor with minimal bitterness,2024-04-13T00:17:32.000Z
-6011,1435,High Noon Vodka - Watermelon,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:08.000Z
-6012,1435,High Noon Vodka - Black Cherry,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:27.000Z
-6013,1435,High Noon Vodka - Grapefruit,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:46.000Z
-6014,1435,High Noon Vodka - Pineapple,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:59.000Z
-6015,1435,High Noon Vodka - Peach,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:14.000Z
-6016,1435,High Noon Vodka - Lemon,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:20.000Z
-6017,1435,High Noon Vodka - Raspberry,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:34.000Z
-6018,1435,High Noon Vodka - Plum,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:38.000Z
-6019,1435,High Noon Vodka - Mango,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:52.000Z
-6020,1435,High Noon Vodka - Passionfruit,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:58.000Z
-6021,1435,High Noon Tequila - Grapefruit,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:39:09.000Z
-6022,1435,High Noon Tequila - Lime,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:39:21.000Z
-6023,1435,High Noon Tequila - Blood Orange,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:39:49.000Z
-6024,1435,High Noon Tequila - Prickly Pear,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:40:05.000Z
-6025,1435,High Noon Tequila - Strawberry,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:40:32.000Z
-6026,1435,High Noon Tequila - Passionfruit,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:40:45.000Z
-6027,1435,High Noon Vodka - Guava,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T23:41:25.000Z
-6028,1435,High Noon Vodka - Kiwi,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T23:41:38.000Z
-6029,1436,Laško Zlatorog,10,139,4.9,,,,"Zlatorog is a pale lager with a unique flavor profile, featuring a rich head and a distinctive bitterness, achieved through the use of renowned Slovenian hop varieties.",2024-05-26T17:14:06.000Z
-6030,157,Samuel Adams Wicked Fenway,3,145,5.5,,,,Fenway exclusive Sam Adams IPA,2024-06-15T23:15:45.000Z
-6031,1437,Surfside Vodka - Iced Tea,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the robust flavor of iced tea.,2024-07-03T01:20:49.000Z
-6032,1437,Surfside Vodka - Lemonade,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the tangy sweetness of lemonade.,2024-07-03T01:24:18.000Z
-6033,1437,Surfside Vodka - Peach Tea,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the juicy sweetness of peach iced tea.,2024-07-03T01:26:38.000Z
-6034,1437,Surfside Vodka - Half and Half,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the robust flavors of iced tea and lemonade,2024-07-03T01:27:31.000Z
-6035,1438,Happy Dad - Pineapple,12,143,5,,,,"A tropical-flavored hard seltzer that combines a hint of pineapple sweetness with a crisp, refreshing finish. No skinny can bullsh*t here",2024-07-03T02:17:55.000Z
-6036,1438,Happy Dad - Lemon Lime,12,143,5,,,,"A zesty hard seltzer that blends the tangy flavors of lemon and lime with a crisp, refreshing finish. No skinny can bullsh*t here",2024-07-03T02:18:12.000Z
-6037,1438,Happy Dad - Wild Cherry,12,143,5,,,,"A flavorful hard seltzer that combines the bold, sweet taste of wild cherries with a crisp, refreshing finish. No skinny can bullsh*t here",2024-07-03T02:18:21.000Z
-6038,1438,Happy Dad - Watermelon,12,143,5,,,,"A refreshing hard seltzer that blends the juicy sweetness of watermelon with a crisp, light finish. No skinny can bullsh*t here",2024-07-03T02:18:31.000Z
-6039,1439,Cutwater - Lime Margarita,12,143,12.5,,,,A ready-to-drink cocktail that combines the zesty flavor of lime with premium tequila and triple sec. Let the adventure continue,2024-07-03T02:21:28.000Z
-6040,1439,Cutwater - Mango Margarita,12,143,12.5,,,,A ready-to-drink cocktail that features the tropical sweetness of mango combined with premium tequila and triple sec. Let the adventure continue,2024-07-03T02:21:39.000Z
-6041,1439,Cutwater - Strawberry Margarita,12,143,10,,,,A ready-to-drink cocktail that blends the sweet and tangy flavors of ripe strawberries with premium tequila and triple sec. Let the adventure continue,2024-07-03T02:21:49.000Z
-6042,1439,Cutwater - Tiki Rum Mai Tai,12,143,12.5,,,,A ready-to-drink cocktail that combines the rich flavors of aged rum with notes of almond and citrus. Let the adventure continue,2024-07-03T02:21:58.000Z
-6043,1439,Cutwater - Vodka Mule,12,143,7,,,,A ready-to-drink cocktail that features smooth vodka mixed with spicy ginger beer and a hint of lime. Let the adventure continue,2024-07-03T02:22:14.000Z
-6044,1442,"Smirnoff Seltzer - Red, White & Berry",12,143,4.5,,,,"Meet the summer essential, Smirnoff Seltzer Zero Sugar Red, White & Berry. Made with vodka and infused with cherry, citrus, and blue raspberry flavors, this limited edition drink changes color when cold—perfect for beating the heat and impressing at parties. Great for the 4th of July!",2024-07-03T02:14:25.000Z
-6045,1440,Friday Beers,8,96,4.2,,,,"It's the ""Friday of Beers,"" 3...2...1 Commence Suckdown",2024-07-03T02:08:51.000Z
-6046,1441,Fishers Island Lemonade,11,142,9,,,,"A ready-to-drink cocktail that blends vodka, whiskey, and natural lemonade flavors",2024-07-03T02:16:21.000Z
-6047,1441,Fishers Island Lemonade - Blueberry Wave,11,142,7,,,,"A twist on the traditional lemonade with a incorporation of blueberry flavors, adding a fruity twist to the blend of vodka, whiskey, and lemonade",2024-07-03T02:19:05.000Z
-6048,1441,Fishers Island Lemonade - Nude Peach,11,142,7,,,,"A ready-to-drink cocktail that blends vodka, whiskey, and natural lemonade flavors with an additional sweetness of a subtle peach flavor",2024-07-03T02:21:49.000Z
-6049,1441,Fishers Island Lemonade - Half and Half,11,142,7,,,,"Fisher Island's Half and Half Lemonade combines their signature blend of vodka and whiskey with iced tea flavors, offering a balanced and refreshing beverage with a hint of tea alongside the citrusy lemonade",2024-07-03T02:23:01.000Z
-6050,1441,Fishers Island Lemonade - Pink Flamgino,11,142,7,,,,Fisher Island Lemonade's signature blend of vodka and whiskey with the incorporation of additional fruity notes of cranberry,2024-07-03T02:25:45.000Z
-6051,1438,Happy Dad - Fruit Punch,12,143,5,,,,A flavored hard seltzer that combines a mix of fruity flavors. No skinny can bullsh*t here,2024-07-03T02:42:58.000Z
-6052,44,Busch,8,95,4.3,,,,"Busch is an American-style lager known for its crisp, clean taste, mild hop aroma, and a smooth finish. ",2024-07-18T15:46:02.000Z
-6053,44,Busch Light,8,96,4.1,,,,"Busch Light is a lighter version of Busch, offering a crisp, clean taste with fewer calories and a lower alcohol content",2024-07-18T15:42:28.000Z
-6054,44,Busch Light Peach,8,109,4.1,,,,"A flavored variant of Busch Light, combining the classic crisp, clean taste of Busch Light with a refreshing peach flavor",2024-07-18T15:44:36.000Z
-6055,157,Samuel Adams Jack-O Pumpkin,8,95,4.4,,,,A seasonal brew that combines the flavors of fresh pumpkin and classic fall spices like cinnamon and nutmeg.,2024-09-16T21:23:37.000Z
+",2011-06-08T07:10:00.000Z,0
+5894,1416,Vivant Tripel,5,61,9.25,0,0,0,"A classic golden ale, with subtle esters of banana and bubblegum. This beer pours with a creamy head and ends with a sweetness of light Belgian candi sugars. Our brewmaster aged this ale for an extended period to round out the flavors. A great traditional Belgian brew. ",2011-06-22T12:22:00.000Z,0
+5896,1417,Watershed IPA,3,30,7.1,0,0,0,,2011-07-07T07:44:00.000Z,0
+5897,1087,Estrella Levante Clasica,9,106,4.8,0,0,0,,2011-07-14T08:52:00.000Z,0
+5898,1087,Estrella Levante Especial,9,106,5.4,0,0,0,,2011-07-14T08:53:00.000Z,0
+5899,1087,Estrella Levante Sin 0.0% Alcohol,9,106,1,0,0,0,,2011-07-14T08:54:00.000Z,0
+5900,1419,Koshihikari Echigo Beer,11,132,5,0,0,0,Japanese Rice Lager,2011-07-23T20:37:00.000Z,0
+5901,1420,Full Boar,11,132,0,0,0,0,,2011-07-28T19:06:00.000Z,0
+5902,1421,The Public,3,26,6,0,0,0,The Public,2011-08-08T19:07:00.000Z,0
+5903,10,Abita Amber,7,82,0,0,0,0,"Abita Amber is a Munich style lager. It has a smooth, malty, slightly caramel flavor and a rich amber color.",2011-08-15T11:46:00.000Z,0
+5904,10,S.O.S,7,77,0,0,0,0,Save Our Shores (S.O.S) is an unfiltered weizen pils and has a brilliant golden color. A Charitable Pilsner,2011-08-15T11:48:00.000Z,0
+5905,10,Abita Golden,8,95,0,0,0,0,"Abita Golden is a crisp, clean continental lager. Just four ingredients are all it takes.",2011-08-15T11:49:00.000Z,0
+5906,10,Abita Light Beer,8,96,0,0,0,0,"Uniquely hand-crafted using 100% all natural ingredients: The result is the smoothest, most flavorful light beer.",2011-08-15T11:50:00.000Z,0
+5907,10,Abbey Ale,1,1,0,0,0,0,Abbey Ale is a strong malty ale brewed in the style of the Trappist Monks. 22oz bottles only,2011-08-15T11:51:00.000Z,0
+5908,10,Wheat,7,82,0,0,0,0,"Abita Wheat is a lager, not ale, and contains a generous amount of wheat which produces a clean, simple flavor.",2011-08-15T11:52:00.000Z,0
+5909,10,Triple Citra Hopped Satsuma Wit,11,121,0,0,0,0,Similar to the Harvest Wit but with a lot more punch. A very pronounce citrus aroma with a triple hop flavor makes for one great beer.,2011-08-15T11:53:00.000Z,0
+5910,10,Honey Rye Ale,11,128,0,0,0,0,"This beer is not very bitter which allows the flavors of the rye and honey to come through. The result is a full bodied, sweet, and malty beer.",2011-08-15T11:54:00.000Z,0
+5911,10,Strawberry,11,121,0,0,0,0,Strawberry Harvest Lager is a wheat beer made with real Louisiana strawberries.,2011-08-15T11:55:00.000Z,0
+5912,10,Satsuma Wit,11,121,0,0,0,0,This Wit beer has a sweet and subtle citrus flavor with a touch of spice that is cool and refreshing.,2011-08-15T11:56:00.000Z,0
+5913,1422,Abhi beer,7,89,0,0,0,0,,2011-09-27T00:36:00.000Z,0
+5914,1423,Ambr,11,132,0,0,0,0,,2011-10-04T00:25:00.000Z,0
+5915,1424,Modelo Especial,10,139,4.4,0,0,0,"Modelo Especial is a Mexican lager that has gained widespread popularity for its distinctive and enjoyable characteristics. With a pale golden hue, this beer offers a crisp and refreshing taste, making it a go-to choice for many beer enthusiasts. Modelo Especial is known for its well-balanced flavor profile, featuring a mild malt sweetness and a touch of hop bitterness. The beer has a clean and smooth finish, making it easy to drink and a versatile option for various occasions. Often served with a wedge of lime, Modelo Especial exemplifies the refreshing qualities associated with Mexican lagers, making it a popular and iconic choice in the beer landscape.",2024-01-09T02:18:43.000Z,0
+5919,44,Michelob Ultra,3,95,4.2,,,,"Michelob Ultra is specifically crafted for those seeking a lighter beer option with reduced calories and carbohydrates. The beer is often associated with an active and health-conscious lifestyle, appealing to individuals who enjoy a cold beer without compromising on their fitness goals. Michelob Ultra is characterized by its smooth, clean flavor profile and a slightly lower alcohol by volume (ABV) compared to regular beers. With its distinctively light and easy-drinking qualities, Michelob Ultra has gained popularity among consumers looking for a balance between a satisfying beer experience and a commitment to a healthier, active lifestyle.",2024-01-26T21:59:41.000Z,0
+5921,1425,Banner City,8,116,3.8,,,,Boston's Light Lager which is crafted in Massachusetts,2024-02-24T06:00:00.000Z,0
+5922,1426,Brown Ale,3,12,4.2,,,,This medium body London style ale packs a malty sweetness with hints of chocolate and toffee,2024-03-01T15:52:14.000Z,0
+5923,1426,East Kölsch,4,47,4.5,,,,"This take on a German Kölsch is made with all German hops is light, crisp, and bursting with flavor",2024-03-01T15:56:28.000Z,0
+5924,1426,Cream Ale,11,113,4.2,,,,Newburgh’s take on a New York Cream Ale. This beer is light-bodied and a pale straw color,2024-03-01T16:03:11.000Z,0
+5925,1426,NanoBoss Session NEIPA,3,32,4.5,,,,"This flavorful	New England IPA contains hops including: Citrus Cascade, Lemon Drop, Sorachi Ace, and Centennial",2024-03-01T16:08:14.000Z,0
+5926,1426,GigaBoss DIPA,3,32,9,,,,This unfiltered Double IPA is our most hoppy beer. It offers a bitter but smooth finish,2024-03-01T16:11:28.000Z,0
+5927,1426,MegaBoss IPA,3,32,7,,,,The MegaBoss is our flagship IPA. This beer displays a pineapple and tropical fruit aroma that concludes with a lemon and herbal hop finish.,2024-03-01T16:13:26.000Z,0
+5928,1427,Carlsberg,9,139,5,,,,"Carlsberg is a balanced Danish Pilsner that is wonderfully crisp and refreshing, with a full flavor and a distinctive hoppy aroma",2024-03-06T01:45:32.000Z,0
+5929,1428,Murphy’s Irish Stout,2,23,4,,,,Murphy’s Irish Stout is an Irish dry stout. It is dark in color and medium bodied. It contains toffee and coffee undertones with a creamy finish.,2024-03-06T02:12:04.000Z,0
+5930,343,O’Hara’s Irish Red,2,22,4.3,,,,O’Hara’s Irish Red is a unique Irish red with a smooth malt body. It has also has some caramel tones,2024-03-06T02:26:43.000Z,0
+5933,1429,White Claw - Black Cherry,11,143,5,,,, ,2024-03-06T21:55:18.000Z,0
+5934,1429,White Claw - Mango,11,143,5,,,, ,2024-03-06T21:55:48.000Z,0
+5935,1429,White Claw - Watermelon,11,143,5,,,, ,2024-03-06T21:55:55.000Z,0
+5936,1429,White Claw - Natural Lime,11,143,5,,,, ,2024-03-06T21:56:04.000Z,0
+5937,1429,White Claw - Raspberry,11,143,5,,,, ,2024-03-06T21:56:16.000Z,0
+5938,1429,White Claw - Ruby Grapefruit,11,143,5,,,, ,2024-03-06T21:56:25.000Z,0
+5939,1429,White Claw - Passion Fruit,11,143,5,,,, ,2024-03-06T22:01:56.000Z,0
+5940,1429,White Claw - Tangerine,11,143,5,,,, ,2024-03-06T22:02:01.000Z,0
+5941,1429,White Claw - Lemon,11,143,5,,,, ,2024-03-06T22:02:07.000Z,0
+5942,1429,White Claw - Blackberry,11,143,5,,,, ,2024-03-06T22:02:12.000Z,0
+5943,1429,White Claw - Strawberry,11,143,5,,,, ,2024-03-06T22:02:19.000Z,0
+5944,1429,White Claw - Pineapple,11,143,5,,,, ,2024-03-06T22:02:24.000Z,0
+5945,1429,White Claw - Peach,11,143,5,,,, ,2024-03-06T22:02:32.000Z,0
+5946,1429,White Claw Surf - Tropical Pomelo Smash,11,143,5,,,, ,2024-03-06T22:06:22.000Z,0
+5947,1429,White Claw Surf - Citrus Yuzu Smash,11,143,5,,,, ,2024-03-06T22:06:31.000Z,0
+5948,1429,White Claw Surf - Watermelon Lime Smash,11,143,5,,,, ,2024-03-06T22:06:40.000Z,0
+5949,1429,White Claw Surf - Wildberry Açai Smash,11,143,5,,,, ,2024-03-06T22:06:53.000Z,0
+5950,1429,White Claw Surge - Blood Orange,11,143,8,,,, ,2024-03-06T22:09:51.000Z,0
+5951,1429,White Claw Surge - Cranberry,11,143,8,,,, ,2024-03-06T22:10:03.000Z,0
+5952,1429,White Claw Surge - Blackberry,11,143,8,,,, ,2024-03-06T22:10:11.000Z,0
+5953,1429,White Claw Surge - Lime,11,143,8,,,, ,2024-03-06T22:10:23.000Z,0
+5954,157,Truly - Wild Berry,12,143,5,,,, ,2024-03-06T22:29:59.000Z,0
+5955,157,Truly - Cherry,12,143,5,,,, ,2024-03-06T22:31:49.000Z,0
+5956,157,Truly - Blueberry,12,143,5,,,, ,2024-03-06T22:31:56.000Z,0
+5957,157,Truly - Strawberry,12,143,5,,,, ,2024-03-06T22:32:02.000Z,0
+5958,157,Truly - Lime,12,143,5,,,, ,2024-03-06T22:32:10.000Z,0
+5959,157,Truly - Grapefruit,12,143,5,,,, ,2024-03-06T22:32:17.000Z,0
+5960,157,Truly - Lemon,12,143,5,,,, ,2024-03-06T22:32:22.000Z,0
+5961,157,Truly - Raspberry,12,143,5,,,, ,2024-03-06T22:32:30.000Z,0
+5962,157,Truly - Pineapple,12,143,5,,,, ,2024-03-06T22:32:36.000Z,0
+5963,157,Truly - Mango,12,143,5,,,, ,2024-03-06T22:32:41.000Z,0
+5964,157,Truly - Passion Fruit,12,143,5,,,, ,2024-03-06T22:32:49.000Z,0
+5965,157,Truly - Watermelon,12,143,5,,,, ,2024-03-06T22:33:55.000Z,0
+5966,157,Truly Unruly - Strawberry Smash,12,143,8,,,, ,2024-03-06T22:34:47.000Z,0
+5967,157,Truly Unruly - Tropical Twist,12,143,5,,,, ,2024-03-06T22:35:28.000Z,0
+5968,157,Truly Unruly - Berry Blast,12,143,5,,,, ,2024-03-06T22:35:40.000Z,0
+5969,157,Truly Unruly - Citrus Crush,12,143,5,,,, ,2024-03-06T22:35:48.000Z,0
+5970,157,Truly - Lemonade,12,143,5,,,, ,2024-03-06T22:35:55.000Z,0
+5971,157,Truly - Strawberry Lemonade,12,143,5,,,, ,2024-03-06T22:36:03.000Z,0
+5972,157,Truly - Citrus Squeeze,12,143,5,,,, ,2024-03-06T22:41:22.000Z,0
+5973,157,Truly - Watermelon Lemonade,12,143,5,,,, ,2024-03-06T22:41:34.000Z,0
+5974,157,Truly - Pineapple Lemonade,12,143,5,,,, ,2024-03-19T22:35:46.000Z,0
+5975,157,Truly - Berry Punch,12,143,5,,,, ,2024-03-06T22:41:47.000Z,0
+5977,157,Truly - Citrus Punch,12,143,5,,,, ,2024-03-06T22:41:57.000Z,0
+5978,157,Truly - Fruit Punch,12,143,5,,,, ,2024-03-06T22:42:03.000Z,0
+5979,157,Truly - Tropical Punch,12,143,5,,,, ,2024-03-06T22:42:11.000Z,0
+5980,1430,Redd's Hard Apple,11,142,5,,,,,2024-03-06T22:46:30.000Z,0
+5981,1430,Redd's Hard Apple Peach,11,142,5,,,,,2024-03-06T22:46:38.000Z,0
+5982,1430,Redd's Hard Apple Strawberry,11,142,5,,,,,2024-03-06T22:46:44.000Z,0
+5983,1430,Redd's Hard Apple Black Cherry,11,142,5,,,,,2024-03-06T22:46:56.000Z,0
+5984,905,Fat Tire,3,37,5.2,,,,"Fat Tire opened America to the idea of craft beers. Today is is a lighter beer than in the past, but maintains a subtle malt presence with a slightly fruity hop profile.",2024-03-26T01:12:45.000Z,0
+5985,905,Voodoo Ranger IPA,3,31,7,,,,Voodoo Ranger is the flagship IPA of New Belgium's Ranger collection. This beer is filled with a tropical aroma and juicy fruit flavors from Mosaic and Amarillo hops.,2024-03-26T01:16:22.000Z,0
+5986,905,Voodoo Ranger Imperial IPA,3,32,9,,,,Voodoo Ranger Imperial IPA offers a rare blend of choice hops and complex rich flavors with a higher alcohol percentage compared to the classic Voodoo Ranger.,2024-03-26T01:21:23.000Z,0
+5987,905,Voodoo Ranger Juicy Haze IPA,3,145,7.5,,,,This beer is packed with bright tropical aromas with a citrusy flavor.,2024-03-26T01:24:53.000Z,0
+5988,905,Voodoo Ranger Juice Force IPA,3,146,9.5,,,,"This hazy IPA is fruit forward, highly drinkable, and will have you buzzing the tower in no time.",2024-03-26T01:30:53.000Z,0
+5989,905,Voodoo Ranger Fruit Force IPA,3,147,9.5,,,,This beer is an American-style Hazy Imperial IPA with an interesting fruit punch twist.,2024-03-26T01:31:15.000Z,0
+5993,1431,Bloomin' Blonde Ale,3,37,4.8,,,,This beer is exactly what you need after a hot day in the outback. This refreshing beer has a medium carbonation and a thin body.,2024-03-26T01:52:56.000Z,0
+5994,1432,Coney Island Mermaid Pilsner,8,100,5.2,,,,"This beer is light-bodied, crisp-drinking, and nicely hopped. It contains a fruity, floral hop aroma.",2024-03-26T02:05:40.000Z,0
+5995,1432,Coney Island Merman NY IPA,3,31,5.8,,,,"This beer is a great new take on an IPA. It combines the best parts of West Coast IPAs, hazy IPAs, and New England IPAs.",2024-03-26T02:08:53.000Z,0
+5996,157,Wicked Hazy,3,145,6.8,,,,"Super-juiced with pineapple, mango, and peach flavors.",2024-04-10T20:42:59.000Z,0
+5997,157,Wicked Easy,3,148,4.7,,,,This beer tastes like a day off. It is easy drinking and has citrus flavor.,2024-04-10T20:45:49.000Z,0
+5998,157,Twisted Tea,14,149,5,,,,The King of Hard Teas,2024-04-10T20:52:53.000Z,0
+5999,157,Twisted Tea - Black Cherry,14,149,5,,,,Hard iced tea with a hint of black cherry,2024-04-10T20:53:50.000Z,0
+6000,157,Twisted Tea - Half & Half,14,149,5,,,,Hard iced tea with lemonade flavor,2024-04-10T20:54:33.000Z,0
+6001,157,Twisted Tea - Peach,14,149,5,,,,Hard iced tea with peach flavor. Reach for the Peach!,2024-04-10T20:55:11.000Z,0
+6002,157,Twisted Tea - Raspberry,14,149,5,,,,Hard iced tea with raspberry flavor,2024-04-10T20:56:06.000Z,0
+6003,157,Twisted Tea - Light,14,149,4,,,,Hard iced tea light,2024-04-10T20:56:52.000Z,0
+6004,157,Twisted Tea - Pineapple,14,149,5,,,,Hard iced tea with pineapple flavor.,2024-04-10T20:57:27.000Z,0
+6005,157,Twisted Tea - Mango,14,149,5,,,,Hard iced tea with mango flavor,2024-04-10T20:57:51.000Z,0
+6006,157,Twisted Tea - Blueberry,14,149,5,,,,Hard iced tea with blueberry flavor,2024-04-10T20:58:02.000Z,0
+6007,157,Twisted Tea - Mangonada,14,149,5,,,,Hard iced tea with mango and chamoy flavor,2024-04-10T20:58:43.000Z,0
+6008,1433,Downeast - Original,13,144,5.1,,,,This unfiltered craft cider is made with juicy sweet apples and tastes like farm fresh cider,2024-04-12T23:57:31.000Z,0
+6009,1433,Downeast - Overboard,13,144,8,,,,Same taste as the original but 8%,2024-04-12T23:58:40.000Z,0
+6010,1434,Whirlpool,3,145,4.5,,,,This IPA has a fruity flavor with minimal bitterness,2024-04-13T00:17:32.000Z,0
+6011,1435,High Noon Vodka - Watermelon,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:08.000Z,0
+6012,1435,High Noon Vodka - Black Cherry,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:27.000Z,0
+6013,1435,High Noon Vodka - Grapefruit,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:46.000Z,0
+6014,1435,High Noon Vodka - Pineapple,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:14:59.000Z,0
+6015,1435,High Noon Vodka - Peach,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:14.000Z,0
+6016,1435,High Noon Vodka - Lemon,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:20.000Z,0
+6017,1435,High Noon Vodka - Raspberry,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:34.000Z,0
+6018,1435,High Noon Vodka - Plum,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:38.000Z,0
+6019,1435,High Noon Vodka - Mango,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:52.000Z,0
+6020,1435,High Noon Vodka - Passionfruit,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T21:15:58.000Z,0
+6021,1435,High Noon Tequila - Grapefruit,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:39:09.000Z,0
+6022,1435,High Noon Tequila - Lime,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:39:21.000Z,0
+6023,1435,High Noon Tequila - Blood Orange,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:39:49.000Z,0
+6024,1435,High Noon Tequila - Prickly Pear,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:40:05.000Z,0
+6025,1435,High Noon Tequila - Strawberry,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:40:32.000Z,0
+6026,1435,High Noon Tequila - Passionfruit,12,143,4.5,,,,A refreshing seltzer made with tequila and real fruit juice,2024-05-22T23:40:45.000Z,0
+6027,1435,High Noon Vodka - Guava,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T23:41:25.000Z,0
+6028,1435,High Noon Vodka - Kiwi,12,143,4.5,,,,A refreshing seltzer made with vodka and real fruit juice,2024-05-22T23:41:38.000Z,0
+6029,1436,Laško Zlatorog,10,139,4.9,,,,"Zlatorog is a pale lager with a unique flavor profile, featuring a rich head and a distinctive bitterness, achieved through the use of renowned Slovenian hop varieties.",2024-05-26T17:14:06.000Z,0
+6030,157,Samuel Adams Wicked Fenway,3,145,5.5,,,,Fenway exclusive Sam Adams IPA,2024-06-15T23:15:45.000Z,0
+6031,1437,Surfside Vodka - Iced Tea,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the robust flavor of iced tea.,2024-07-03T01:20:49.000Z,0
+6032,1437,Surfside Vodka - Lemonade,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the tangy sweetness of lemonade.,2024-07-03T01:24:18.000Z,0
+6033,1437,Surfside Vodka - Peach Tea,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the juicy sweetness of peach iced tea.,2024-07-03T01:26:38.000Z,0
+6034,1437,Surfside Vodka - Half and Half,14,149,4.5,,,,A beverage that combines the smoothness of vodka with the robust flavors of iced tea and lemonade,2024-07-03T01:27:31.000Z,0
+6035,1438,Happy Dad - Pineapple,12,143,5,,,,"A tropical-flavored hard seltzer that combines a hint of pineapple sweetness with a crisp, refreshing finish. No skinny can bullsh*t here",2024-07-03T02:17:55.000Z,0
+6036,1438,Happy Dad - Lemon Lime,12,143,5,,,,"A zesty hard seltzer that blends the tangy flavors of lemon and lime with a crisp, refreshing finish. No skinny can bullsh*t here",2024-07-03T02:18:12.000Z,0
+6037,1438,Happy Dad - Wild Cherry,12,143,5,,,,"A flavorful hard seltzer that combines the bold, sweet taste of wild cherries with a crisp, refreshing finish. No skinny can bullsh*t here",2024-07-03T02:18:21.000Z,0
+6038,1438,Happy Dad - Watermelon,12,143,5,,,,"A refreshing hard seltzer that blends the juicy sweetness of watermelon with a crisp, light finish. No skinny can bullsh*t here",2024-07-03T02:18:31.000Z,0
+6039,1439,Cutwater - Lime Margarita,12,143,12.5,,,,A ready-to-drink cocktail that combines the zesty flavor of lime with premium tequila and triple sec. Let the adventure continue,2024-07-03T02:21:28.000Z,0
+6040,1439,Cutwater - Mango Margarita,12,143,12.5,,,,A ready-to-drink cocktail that features the tropical sweetness of mango combined with premium tequila and triple sec. Let the adventure continue,2024-07-03T02:21:39.000Z,0
+6041,1439,Cutwater - Strawberry Margarita,12,143,10,,,,A ready-to-drink cocktail that blends the sweet and tangy flavors of ripe strawberries with premium tequila and triple sec. Let the adventure continue,2024-07-03T02:21:49.000Z,0
+6042,1439,Cutwater - Tiki Rum Mai Tai,12,143,12.5,,,,A ready-to-drink cocktail that combines the rich flavors of aged rum with notes of almond and citrus. Let the adventure continue,2024-07-03T02:21:58.000Z,0
+6043,1439,Cutwater - Vodka Mule,12,143,7,,,,A ready-to-drink cocktail that features smooth vodka mixed with spicy ginger beer and a hint of lime. Let the adventure continue,2024-07-03T02:22:14.000Z,0
+6044,1442,"Smirnoff Seltzer - Red, White & Berry",12,143,4.5,,,,"Meet the summer essential, Smirnoff Seltzer Zero Sugar Red, White & Berry. Made with vodka and infused with cherry, citrus, and blue raspberry flavors, this limited edition drink changes color when cold—perfect for beating the heat and impressing at parties. Great for the 4th of July!",2024-07-03T02:14:25.000Z,0
+6045,1440,Friday Beers,8,96,4.2,,,,"It's the ""Friday of Beers,"" 3...2...1 Commence Suckdown",2024-07-03T02:08:51.000Z,0
+6046,1441,Fishers Island Lemonade,11,142,9,,,,"A ready-to-drink cocktail that blends vodka, whiskey, and natural lemonade flavors",2024-07-03T02:16:21.000Z,0
+6047,1441,Fishers Island Lemonade - Blueberry Wave,11,142,7,,,,"A twist on the traditional lemonade with a incorporation of blueberry flavors, adding a fruity twist to the blend of vodka, whiskey, and lemonade",2024-07-03T02:19:05.000Z,0
+6048,1441,Fishers Island Lemonade - Nude Peach,11,142,7,,,,"A ready-to-drink cocktail that blends vodka, whiskey, and natural lemonade flavors with an additional sweetness of a subtle peach flavor",2024-07-03T02:21:49.000Z,0
+6049,1441,Fishers Island Lemonade - Half and Half,11,142,7,,,,"Fisher Island's Half and Half Lemonade combines their signature blend of vodka and whiskey with iced tea flavors, offering a balanced and refreshing beverage with a hint of tea alongside the citrusy lemonade",2024-07-03T02:23:01.000Z,0
+6050,1441,Fishers Island Lemonade - Pink Flamgino,11,142,7,,,,Fisher Island Lemonade's signature blend of vodka and whiskey with the incorporation of additional fruity notes of cranberry,2024-07-03T02:25:45.000Z,0
+6051,1438,Happy Dad - Fruit Punch,12,143,5,,,,A flavored hard seltzer that combines a mix of fruity flavors. No skinny can bullsh*t here,2024-07-03T02:42:58.000Z,0
+6052,44,Busch,8,95,4.3,,,,"Busch is an American-style lager known for its crisp, clean taste, mild hop aroma, and a smooth finish. ",2024-07-18T15:46:02.000Z,0
+6053,44,Busch Light,8,96,4.1,,,,"Busch Light is a lighter version of Busch, offering a crisp, clean taste with fewer calories and a lower alcohol content",2024-07-18T15:42:28.000Z,0
+6054,44,Busch Light Peach,8,109,4.1,,,,"A flavored variant of Busch Light, combining the classic crisp, clean taste of Busch Light with a refreshing peach flavor",2024-07-18T15:44:36.000Z,0
+6055,157,Samuel Adams Jack-O Pumpkin,8,95,4.4,,,,A seasonal brew that combines the flavors of fresh pumpkin and classic fall spices like cinnamon and nutmeg.,2024-09-16T21:23:37.000Z,0
