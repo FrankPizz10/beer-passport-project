@@ -27,7 +27,7 @@ from . import match as match_mod
 from . import off_images
 from . import review as review_mod
 from . import rights as rights_mod
-from .models import ApprovalStatus, ImageCandidate
+from .models import ImageCandidate
 
 log = logging.getLogger(__name__)
 
@@ -90,7 +90,7 @@ def run(cfg: Config, input_path: Path, output_dir: Path,
                           max_retries=cfg.max_retries)
 
     candidates: list[ImageCandidate] = []
-    totals = Counter()
+    totals: Counter[str] = Counter()
     for bev in beverages:
         cands, stats = process_beverage(bev, client, refresh=refresh)
         candidates.extend(cands)

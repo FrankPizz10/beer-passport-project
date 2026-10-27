@@ -9,6 +9,7 @@ reported separately.
 from __future__ import annotations
 
 import logging
+from typing import Any
 from urllib.parse import urlencode
 
 from ..config import Config
@@ -23,7 +24,7 @@ PER_PAGE = 200  # documented maximum
 def fetch_breweries(cfg: Config, client: CachedClient) -> tuple[list[dict], dict]:
     """Fetch a bounded number of brewery pages. Returns (records, stats)."""
     records: list[dict] = []
-    stats = {"pages_attempted": 0, "pages_ok": 0, "errors": []}
+    stats: dict[str, Any] = {"pages_attempted": 0, "pages_ok": 0, "errors": []}
     pages = cfg.brewery_pages
     if cfg.limit is not None:
         # --limit caps total brewery records for test runs

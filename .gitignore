@@ -2,3 +2,9 @@
 # Local editor and macOS files
 /.vscode/
 /.DS_Store
+
+# Secrets and environment files: never committed, anywhere in the repo.
+# (.env matches at every depth; .env.example templates may be committed.)
+.env
+.env.*
+!.env.example

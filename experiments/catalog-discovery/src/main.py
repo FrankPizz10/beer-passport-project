@@ -13,7 +13,6 @@ from __future__ import annotations
 import json
 import logging
 import sys
-from pathlib import Path
 
 from rapidfuzz import fuzz
 
@@ -23,7 +22,7 @@ from . import match as match_mod
 from . import state as state_mod
 from .config import Config, parse_args
 from .match import Candidate, make_candidate_id, missing_fields_for
-from .normalize import normalize_barcode, normalize_name, parse_abv
+from .normalize import normalize_name
 from .sources import openbrewerydb as obdb
 from .sources import openfoodfacts as off
 from .sources import brewery_dataset

@@ -1,0 +1,31 @@
+# Tool configuration for the catalog-discovery experiment.
+# The GitHub Actions workflow (.github/workflows/catalog-discovery-ci.yml)
+# and local runs share these settings. Dev tools are pinned in
+# requirements-dev.txt.
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+# E9: syntax errors. F: pyflakes (unused imports, undefined names).
+# E501: line length at the 110 limit above (the longest pre-existing
+# line is 107). Deliberately not the full pycodestyle rule set: this
+# codebase predates linting, and catching real defects is the goal,
+# not enforcing a style.
+select = ["E9", "F", "E501"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+
+# Pre-existing type debt, recorded 2026-10-21 when CI was adopted.
+# src.main has 3 errors under default settings (a Path | None passed
+# where Path is expected in the dataset branch, and a seen_source_ids
+# inference conflict with src.state). The annotation-only errors in
+# the other modules were fixed instead of overridden. New modules get
+# no override: they must typecheck clean. Remove this override when
+# src.main is fixed.
+[[tool.mypy.overrides]]
+module = "src.main"
+ignore_errors = true

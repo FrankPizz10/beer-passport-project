@@ -5,3 +5,12 @@ cache/
 data/dataset/*.csv
 .vscode/
 .DS_Store
+
+# Generated run outputs stay local (rule set 2026-10-26): test and
+# script outputs, cleaned CSVs, and run artifacts are reproducible
+# from committed code and inputs, so they do not belong in git. Only
+# code and material that must be shared get committed. Files already
+# tracked are unaffected; force-add (git add -f) is the deliberate
+# exception when an output really must be shared.
+cleanup/
+output/
