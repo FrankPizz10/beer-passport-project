@@ -1,6 +1,6 @@
 # Old-Catalog Cleanup Report
 
-Generated: 2026-10-27 03:10 UTC (mode: report)
+Generated: 2026-10-27 04:36 UTC (mode: apply)
 
 Input: 5894 beers, 1431 breweries
 Output: 5894 beers, 1339 breweries
