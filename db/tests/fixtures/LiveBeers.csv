@@ -1,0 +1,3 @@
+id,brewery_id,name,cat_id,style_id,abv,ibu,srm,upc,descript,last_mod,discontinued
+1,812,Hocus Pocus,1,11,4.5,0,0,0085415002331,A summer ale.,2010-07-22T20:00:00.000Z,1
+2,812,Old Ale,1,11,6.1,,0,0,,2010-07-22T20:00:00.000Z,0

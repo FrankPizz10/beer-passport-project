@@ -20,6 +20,7 @@ Instructions for any AI coding agent working on BeerPassport. These apply whethe
 - **Never modify production data, deploy services, or perform destructive operations** without explicit authorization from Frank.
 - **Prefer focused branches and reviewable changes.** One task, one branch, one pull request; conclude every change to an existing repository with a PR for Frank's review. Do not push directly to `main`.
 - **Run the relevant tests** and report exactly which tests passed, failed, or were not run. Do not claim broader coverage than you ran.
+- **Testing placement (Frank, 2026-10-27).** For each suite, decide where it runs: tests that will run repeatedly or guard against regressions belong in the CI workflow; one-off verifications and reports may run locally. Every PR description includes a brief test report: what ran, where it ran (CI or local), and the result.
 - **Never claim a change was implemented, tested, or deployed without evidence.** Link the branch, commit, or test output.
 - **Follow the relaunch constraints:** approximately $0-15/month infrastructure target, no manual SQL for routine catalog work, backward-compatible API changes, lawful image/data provenance.
 - **Respect privacy rules:** user data access is governed by server-side authorization and the privacy/visibility rules in `PROJECT_CONTEXT.md`. Do not widen data exposure.

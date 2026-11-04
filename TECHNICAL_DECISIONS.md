@@ -19,7 +19,7 @@ Status values: **accepted** (made and standing), **proposed** (working default a
 - **Status:** accepted
 - **Decision:** Keep React Native + Expo (mobile), Node.js + Express + TypeScript (API), Firebase Authentication, and Prisma (data access) where practical.
 - **Context:** These components worked in the original app; the audit explicitly recommends keeping Prisma.
-- **Consequences:** Affects all five repositories. Hosting and database provider choices are still open (D1, D2).
+- **Consequences:** Affects all five repositories. Hosting decided in TD-9, database provider in TD-10.
 - **Source:** Plan section 6; audit executive summary.
 
 ### TD-3: Server-side authorization is the security boundary
@@ -36,6 +36,30 @@ Status values: **accepted** (made and standing), **proposed** (working default a
 - **Decision:** `beer-passport-project` consolidates the plan, audit, and verified repository state for all agents and developers; the Google Drive documents are preserved as archival sources and are not edited.
 - **Context:** Planning material lived in Drive; code lives in five repos; agents need one consistent starting point.
 - **Source:** Project hub creation, October 2026.
+
+### TD-9: Hosting is a single Lightsail instance (closes D1)
+
+- **Status:** accepted
+- **Decision:** Production runs on one AWS Lightsail instance (Docker: Postgres + Express API), static IP, automatic snapshots, Route 53 for DNS, S3 + CloudFront for images. About $8/month. Full record: [decisions/001-hosting-lightsail.md](decisions/001-hosting-lightsail.md).
+- **Context:** The old deployment died when AWS credits ran out under ECS/ELB/RDS-class costs. Serverless alternatives cost more at this scale and deploy slower; plain EC2 is the same shape with worse billing predictability.
+- **Consequences:** Single box is a single point of failure, accepted at this scale. Upgrade path is the $10 Lightsail tier, then RDS only if ever needed. Jarvis administers the box over SSH as a dedicated user with key-only auth; state-changing commands need Frank's approval.
+- **Source:** Frank's decision, 2026-10-26/27; "BeerPassport Relaunch: Deployment Proposal" (Drive, Jarvis/BeerPassport).
+
+### TD-10: Database provider is PostgreSQL (closes D2)
+
+- **Status:** accepted
+- **Decision:** The relaunch database is PostgreSQL. The Prisma schema is ported from MySQL (`db/schema.prisma`) with audit fixes F-1, F-2, F-4, F-5, F-7, F-9, F-11, F-13 applied at port time. Full record: [decisions/002-database-postgresql.md](decisions/002-database-postgresql.md).
+- **Context:** The server is Prisma-only (no raw SQL), and the catalog import is greenfield from CSVs, so the switch costs an evening now and would cost a live-data migration later. Postgres offers stronger search (tsvector/pg_trgm), JSON (jsonb), and geo (PostGIS) for the planned catalog work.
+- **Consequences:** All data lands in Postgres from day one; no MySQL is ever deployed in the new stack. The MySQL data on EFS is recovered read-only and transformed, never run again as a server.
+- **Source:** Frank's decision, 2026-10-27.
+
+### TD-11: User data continuity, not a restart
+
+- **Status:** accepted
+- **Decision:** Existing users keep their accounts and data. Firebase Auth accounts and the EFS MySQL user tables (users, user_beers, user_badges, friends, collections) migrate to Postgres with all IDs preserved. The EFS volume and Firebase project are frozen (no deletion or modification) until the migrated data is verified on the box. Full record: [decisions/003-user-data-continuity.md](decisions/003-user-data-continuity.md).
+- **Context:** Firebase verification (2026-10-27) found 309 real Auth accounts created 2023-09 to 2026-02, all email/password; the app gates on server reachability, so accounts map to server profiles. The only unrecoverable-if-lost assets are users' personal beer logs, badge progress, and the collection definitions, which exist only in the EFS database.
+- **Consequences:** Catalog IDs are load-bearing and are preserved as primary keys in the import. Fallback trigger agreed in advance: if the EFS data proves unrecoverable after a clean InnoDB recovery attempt, or Firebase had held only test accounts, the plan switches to a catalog-only restart on evidence presented to Frank.
+- **Source:** Frank's decision, 2026-10-27.
 
 ## Proposed (working defaults, validation needed)
 
