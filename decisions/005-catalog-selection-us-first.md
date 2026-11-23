@@ -41,8 +41,13 @@ Adopt the selection strategy in
 `experiments/catalog-expansion/SELECTION_STRATEGY.md`. In summary:
 
 - Tier 1 is US-produced beverages (6,607 records in the current
-  baseline), ranked on country-of-origin, brewery location, or
-  manufacturer and origins evidence.
+  baseline), ranked on country-of-origin evidence (Wikidata P495
+  class) or manufacturer and origins evidence. P17 alone does not
+  establish US production, and neither does an ambiguous place
+  name; conflicting origin evidence is held, per the strategy's
+  evidence standards (the audit found all 6,585 Tier 1 Wikidata
+  records resting on P495 = United States, with zero P17-only and
+  zero conflicts).
 - Tier 2 is imports with evidence of US market presence (210
   records), ranked on sales-country data today, with TTB COLA label
   approval and US retailer or distributor listings as named future
@@ -79,7 +84,9 @@ record's provenance and `origin_evidence`.
   entirely on P495 country-of-origin assertions (verified by QID
   join against the harvest's raw pull; the P17 fallback contributes
   0 records), and conflicting origin evidence discovered later moves
-  a record to held, per the strategy's standing rules.
+  a record to held, per the strategy's standing rules. Verification
+  was performed by Jarvis against the local staged files; Codex has
+  not independently accessed the source files.
 - Batch 2 (702 records, 687 importable) is unaffected and keeps its
   separate, already-approved path; it is sequenced first and never
   double-counted against the pool.

@@ -82,20 +82,42 @@ Every selected record keeps its provenance (source, source record
 id, source URL, retrieved date, tier) and its full `origin_evidence`
 list, with each signal named and its raw value recorded.
 
-**US production evidence (any one suffices):**
+**US production evidence:**
 
-- Country-of-origin data naming the United States. In the current
-  pool this is the Wikidata `country` field, harvested as P495
-  (country of origin) with a P17 fallback, recorded on each record
-  as the signal `wikidata_country_p495_else_p17`.
-- The producing brewery located in the United States.
+- Country-of-origin data naming the United States establishes US
+  production. In the current pool this is the Wikidata P495
+  (country of origin) assertion, recorded on each record inside the
+  fused signal `wikidata_country_p495_else_p17`; the audit in this
+  document separates the two properties (see "Wikidata origin
+  evidence: P495 vs P17").
+- **P17 alone does NOT establish US production.** P17 names the
+  country associated with the item, often the brewery's or brand's
+  country rather than the production site. It may corroborate an
+  independent production signal, but a record whose only US signal
+  is P17 is held (reason `origin_p17_only`) until corroborated by
+  P495 from any source, manufacturer or origins data, or a TTB COLA
+  record. The audit found zero Tier 1 records resting on P17.
+- The producing brewery located in the United States, when the
+  location is a structured country-level datum (the brewery's own
+  country property or a verified address country). A place-name
+  string alone is not sufficient (see the does-not-count list).
 - Open Food Facts `origins_tags` or `origins` naming the United
   States, or `manufacturing_places` naming the United States, a US
-  state, or a USA suffix, recorded verbatim.
+  state, or a USA suffix, recorded verbatim; a bare state or place
+  name that is internationally ambiguous does not suffice alone.
 - For a record merged across sources, the alternate source's country
   counts as production evidence unless the primary source's origins
-  explicitly contradict it; a contradiction sends the record to the
-  review bucket with the conflict recorded.
+  explicitly contradict it; a contradiction holds the record with
+  the conflict recorded (reason `origin_conflict`).
+
+**Conflicting or ambiguous evidence is held, never resolved by
+assumption:** P495 and P17 disagreeing, multiple P495 countries, a
+later signal contradicting an earlier one, or an ambiguous place
+name each move the record to the review classes with the reason
+recorded (`origin_conflict`, `origin_ambiguous`, `origin_p17_only`).
+In the current pool these classes are empty inside Tier 1 (verified
+by the audit); the one P17-only-US record that reached the pool is
+already in the review file.
 
 **US market evidence (no US production evidence required):**
 
@@ -117,6 +139,10 @@ list, with each signal named and its raw value recorded.
   be read from them.
 - The language of a product name, or a brewery name that sounds
   American.
+- P17 by itself (see the production evidence rules above).
+- An ambiguous place name: a location string that fits more than
+  one country (Georgia, Cork, Cambridge, Richmond, and similar)
+  without a structured country datum behind it.
 - Assumed popularity, fame, or audience fit without availability
   evidence.
 
@@ -303,3 +329,34 @@ means decision-ready (verified images first), not merely present.
 - Provenance is recorded for every record regardless of tier, and
   the hard lines from decision 004 are unchanged: no bypassing
   authentication, paywalls, or technical access controls.
+
+## Verification note
+
+The record-level reconciliation and the P495/P17 audit in this
+document were performed by Jarvis against the local staged files on
+2026-11-23 (file names and SHA-256 values are stated where the
+counts are introduced; the audit method is the QID join against the
+harvest's raw SPARQL pull, sample seed 20261123). **Codex has not
+independently accessed the source files**; its review covers these
+documents, not the underlying data. Any reviewer with access to the
+`catalog-expansion-2` workstream can reproduce both checks from the
+stated methods.
+
+## Acceptance checks
+
+- [ ] Re-running the QID join (Tier 1 Wikidata records against the
+      raw pull) reproduces the audit split exactly: P495 = US sole
+      value 6,585; P17-only 0; multi-country P495 0; conflicts 0.
+- [ ] The five staging classes sum to 22,132 and the per-source
+      closures hold (Wikidata 15,740 + 85 merged = 15,825; Open Food
+      Facts 6,392 + 2 merged = 6,394).
+- [ ] Classifier cases, applied to fixture records: P495 = US ->
+      Tier 1. P17 = US with no P495 and no other production signal
+      -> held (`origin_p17_only`). P495 = Canada with P17 = US ->
+      held (`origin_conflict`). P495 = {US, Canada} -> held
+      (`origin_conflict`). A place-name string with no structured
+      country datum -> held (`origin_ambiguous`). Open Food Facts
+      `manufacturing_places` = "Georgia" alone -> held pending
+      corroboration.
+- [ ] No record in Tier 1 or Tier 2 lacks an `origin_evidence` list
+      naming the signal that placed it there.
