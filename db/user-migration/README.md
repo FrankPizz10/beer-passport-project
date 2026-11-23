@@ -21,6 +21,16 @@ under the commands in `../REHEARSAL_RUNBOOK.md`.
   in a single transaction, resets sequences, runs the nine post-load
   validation checks, and writes a manifest whose accounting closes:
   source = loaded + rejected + deduped + excluded_unmatched.
+  Production modes: `--dry-run` reports aggregate counts and rejects
+  without writing to PostgreSQL; `--require-empty` refuses a
+  non-empty target (and forbids `--truncate-user-tables`);
+  `--expect-users N` asserts the exact profile count after transform
+  and again inside the load transaction, whose integrity gate must
+  pass before commit.
+- Legacy push tokens: `transform.py` drops `notification_token`
+  values before validation (stale tokens; devices re-register on
+  sign-in), so a token collision can never exclude a matched profile.
+  Dropped tokens are counted in the manifest's transform stats.
 - `make_fixture.py`, `make_fixture_matched.py`: synthetic fixture
   generators (the 890-row edge-case fixture and the production-shape
   299-user / 294-matched fixture). All identifiers in both are
