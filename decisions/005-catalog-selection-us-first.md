@@ -9,7 +9,12 @@
 The discovery expansion harvested 22,219 unique new beverage records
 against the 5,894-beer baseline. Cross-deduping the Wikidata and
 Open Food Facts batches against each other and against batch 2
-leaves a candidate pool of 21,438. The pool's composition is an
+(87 merges) leaves 22,132 candidate records in five mutually
+exclusive classes: 6,607 US-produced, 210 clearly US-market, 14,621
+uncertain, 693 ambiguous-pair-flagged, and 1 held match. (An earlier
+headline figure of 21,438 silently excluded the 694 cross-match-
+flagged records; pairs are relationships between records, not
+records, and are counted separately.) The pool's composition is an
 artifact of its sources: the Wikidata harvest is dominated by a 2025
 Dutch and European craft import, and Open Food Facts origin data is
 sparse. Importing the pool in harvest order would tilt the catalog
@@ -46,8 +51,9 @@ Adopt the selection strategy in
   reaffirmed: it applies inside the tiers and never substitutes for
   tier evidence.
 - Everything without sufficient evidence (14,621 uncertain-origin
-  records, 693 ambiguous cross-source pairs, 1 held match; 15,315
-  staged for review) is held for human review and origin research,
+  records, 693 ambiguous-pair-flagged records, 1 held match; 15,315
+  records staged for review, with the 693 pairs counted separately
+  as relationships) is held for human review and origin research,
   not imported and not deleted.
 - Audience fit is judged by market availability and product
   relevance evidence only. No product is excluded, demoted, or
@@ -68,7 +74,12 @@ record's provenance and `origin_evidence`.
 ## Consequences and affected repositories
 
 - The proposal baseline is set: Tier 1, 6,607; Tier 2, 210; review,
-  15,315. These counts change only through a new dry-run manifest.
+  15,315 records of 22,132 staged. These counts change only through
+  a new dry-run manifest. Tier 1's Wikidata majority (6,585) rests
+  entirely on P495 country-of-origin assertions (verified by QID
+  join against the harvest's raw pull; the P17 fallback contributes
+  0 records), and conflicting origin evidence discovered later moves
+  a record to held, per the strategy's standing rules.
 - Batch 2 (702 records, 687 importable) is unaffected and keeps its
   separate, already-approved path; it is sequenced first and never
   double-counted against the pool.

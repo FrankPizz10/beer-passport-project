@@ -42,7 +42,15 @@ Category and style relevance follow the approved scope in decision
 - **Discovery expansion (this strategy's subject):** 22,219 unique
   new records (Wikidata 15,825 + Open Food Facts full pull 6,394),
   cross-deduped against each other and against batch 2 with the POC
-  dedupe ladder into a candidate pool of 21,438. Source report and
+  dedupe ladder. Record-level accounting (verified 2026-11-23 against
+  the staged files; this corrects an earlier headline figure of
+  21,438, which silently excluded every cross-match-flagged record):
+  22,219 minus 87 cross-source merges (76 Wikidata into Open Food
+  Facts primaries, 9 Wikidata into batch 2, 2 Open Food Facts into
+  CraftCans) leaves **22,132 candidate records**, staged in five
+  mutually exclusive classes (tier table below). Ambiguous pairs are
+  relationships between records, not records, and are counted
+  separately (693 pairs, plus 1 held match link). Source report and
   staged files are local, not in GitHub:
   `~/workspace/workstreams/catalog-expansion-2/reassessment/REASSESSMENT_MANIFEST.md`,
   `candidates-us.json` (SHA-256
@@ -114,19 +122,33 @@ list, with each signal named and its raw value recorded.
 
 ## Tier table (proposal baseline, from the reassessment)
 
-| Tier | Definition | Records | Wikidata | Open Food Facts |
+Candidate RECORDS, in five mutually exclusive classes:
+
+| Class | Definition | Records | Wikidata | Open Food Facts |
 |---|---|---|---|---|
-| 1 | US-produced | 6,607 | 6,585 | 22 |
-| 2 | Clearly US-market | 210 | 0 | 210 |
-| Review | Uncertain origin, ambiguous pairs, held match | 15,315 | see below | see below |
+| Tier 1 | US-produced | 6,607 | 6,585 | 22 |
+| Tier 2 | Clearly US-market | 210 | 0 | 210 |
+| Review: uncertain | Origin or market evidence insufficient | 14,621 | 8,500 | 6,121 |
+| Review: pair-flagged | Member of an ambiguous cross-source pair, held unmerged | 693 | 654 | 39 |
+| Review: held match | Matched a held Open Food Facts record | 1 | 1 | 0 |
+| **Total staged records** | | **22,132** | **15,740** | **6,392** |
 
-US-selected total (tiers 1 + 2): **6,817**.
+US-selected total (tiers 1 + 2): **6,817**. Review classes total
+15,315 records (14,621 + 693 + 1), staged in `candidates-review.json`,
+each record with a `review_reason`. Per-source closure: Wikidata
+6,585 + 8,500 + 654 + 1 = 15,740 staged records, plus 85 merged away
+(76 into Open Food Facts primaries, 9 into batch 2) reconciles
+exactly to the 15,825 harvested; Open Food Facts 22 + 210 + 6,121 +
+39 = 6,392 staged records, plus 2 merged into CraftCans reconciles
+exactly to 6,394. Batch 2's 702 records are staged separately; the
+grand total of staged candidate records across all batches is
+22,834.
 
-The review bucket is 14,621 uncertain-origin records (Wikidata
-8,500, Open Food Facts 6,121), plus 693 ambiguous cross-source pairs
-held unmerged, plus 1 record that matched a held Open Food Facts
-record. It is staged in `candidates-review.json`, each record with a
-`review_reason`.
+RELATIONSHIPS, counted separately from records: 693 ambiguous pairs
+(39 Open Food Facts vs CraftCans, 126 Wikidata vs batch 2, 528
+Wikidata vs Open Food Facts; fuzzy scores 48.8 to 95.9), 1 held match
+link (Wikidata vs Open Food Facts), and 87 merge links whose merged
+records survive only as alternate-source provenance on the primary.
 
 Image readiness inside the selected tiers (statuses inherited from
 the source batches and preserved verbatim; unverified images were
@@ -147,13 +169,87 @@ these outputs.
 Known limits on the baseline counts, from the reassessment: Open
 Food Facts origin fields are sparse (`origins_tags` populated for
 775 of 6,394 records, `manufacturing_places` for 355), so the Tier 1
-Open Food Facts count of 22 is a floor, not a census. The Wikidata
-country field merges P495 and P17 without separating them. The 693
+Open Food Facts count of 22 is a floor, not a census. The 693
 ambiguous pairs are inflated by dense same-brewery name families and
 are likely mostly distinct products, but they stay unmerged pending
 review. US state-name matching in `manufacturing_places` is a text
 signal recorded verbatim (a value such as "Georgia" is ambiguous
 between the US state and the country).
+
+## Wikidata origin evidence: P495 vs P17 (verified 2026-11-23)
+
+The reassessment's evidence string fuses the two Wikidata country
+properties (`wikidata_country_p495_else_p17`), so the split was
+recovered by joining all 6,585 Tier 1 Wikidata records, by QID,
+against the harvest's raw SPARQL pull, which stored P495 (country of
+origin) and P17 (country) separately per item.
+
+| Evidence behind the US-produced classification | Records |
+|---|---|
+| P495 = "United States", sole P495 value | 6,585 |
+| P495 absent, P17 = "United States" (fallback) | 0 |
+| P495 multiple values including the US | 0 |
+| P495 non-US (conflict with the classification) | 0 |
+| No country in the raw pull | 0 |
+
+The P17 fallback contributes nothing to Tier 1: in the entire raw
+pull only 4 QIDs carry P17 = US with no P495, and none is in Tier 1
+(1 sits in the review file; 3 never reached the pool). The Open Food
+Facts Tier 1 records (22) rest on their own signals, chiefly
+`off_manufacturing_places` (13 records) and `off_origins_tags` /
+`off_origins` (8 each; signals overlap per record).
+
+Why a Dutch/European-dominated harvest yields 6,585 US-produced
+records: the harvest's European weight is real but it sits in the
+uncertain class (8,500 Wikidata records, dominated by the 2025
+Dutch/European craft import whose items carry language-neutral
+labels and no US origin evidence). Tier 1 membership required an
+explicit P495 = United States assertion, and Wikidata's beer-item
+coverage itself skews toward recent US craft releases. Origin was
+never inferred from product names, label language, or brewery place
+names.
+
+Auditable sample (fixed-seed random draw, seed 20261123, from the
+6,585; every row is checkable at wikidata.org by QID):
+
+| Beer | Brewery | QID | P495 |
+|---|---|---|---|
+| Oil of Aphrodite | Jackie O's Pub & Brewery | Q141727503 | United States |
+| Handsome Maniac | Sand City Brewing Co. | Q140250822 | United States |
+| Orloj | Xul Beer Company | Q140313835 | United States |
+| Snap, Crackle, Pop | Mikerphone Brewing | Q140224763 | United States |
+| Double Dope | 3 Sons Brewing Co. | Q140167549 | United States |
+| Hydra \| Chonk | Mortalis Brewing Company | Q140172166 | United States |
+| Formless Shadows | Pure Project Brewing | Q140250507 | United States |
+| Cosmic Background | Spyglass Brewing Company | Q140130267 | United States |
+| Cookie Jar Superstar | Kane Brewing Company | Q140250020 | United States |
+| Caliban | Modern Times Beer | Q140204803 | United States |
+| Fruitlands (Strawberry Limeade) | Modern Times Beer | Q140204966 | United States |
+| Liquid Truth Serum | Dogfish Head Craft Brewery | Q141460283 | United States |
+| Forestry | Outer Range Brewing Co. | Q140172436 | United States |
+| Cooper Project No. 3 | Goose Island Brewery | Q139913423 | United States |
+| A.D.I.D.A.S. | Xul Beer Company | Q140313829 | United States |
+
+Confidence limits, stated plainly: the split above is exact for the
+harvest's own raw data, but P495 is a community-edited Wikidata
+assertion, not a registry record; the pull is a 2026-11-23 snapshot
+and Wikidata changes; and a P495 can reflect brand origin for
+contract-brewed or licensed products rather than the liquid's
+production site. Standing rules that follow:
+
+- Any record whose evidence later conflicts (a second P495 country
+  appears, a P17 contradicts the P495, or a TTB COLA record shows
+  foreign production) is held with reason origin_conflict until a
+  human resolves it.
+- Future harvests must store P495 and P17 as separate signals. A
+  classification resting on P17 alone reaches Tier 1 only with a
+  corroborating signal; otherwise it is held.
+- Ambiguous place names are never evidence: brewery location and
+  name language were excluded from classification for this reason.
+  The sample shows why in both directions: "Orloj" is a Czech-named
+  beer from Xul Beer Company of Knoxville, Tennessee, and is Tier 1
+  on its P495 alone; a US-sounding name with no country evidence
+  stays uncertain.
 
 ## Sequencing proposal
 
@@ -185,6 +281,14 @@ Each stage is its own dry-run manifest and its own approval. A stage
 may be split further (for example Tier 1 by image readiness) without
 changing this strategy, as long as the manifest accounts for every
 record it draws from the pool.
+
+Image decisions precede manifests: under the discovery hub flow
+(issues/001-catalog-discovery-hub.md), a candidate's image is
+previewed and approved in the hub, bound to the exact image by
+content hash, before the candidate may enter an import manifest;
+the approved decision then carries through the import into the
+published catalog. Image readiness in the ordering above therefore
+means decision-ready (verified images first), not merely present.
 
 ## Governance
 
