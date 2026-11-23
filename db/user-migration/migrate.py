@@ -12,12 +12,24 @@ Usage:
         --database beerpassport_migtest --out runs/2026-11-21-fixture \
         [--truncate-user-tables]
 
+    Production initial load (see ../PRODUCTION_PREFLIGHT.md):
+    python3 migrate.py --dump beerpassport-user-tables.sql \
+        --sha256 beerpassport-user-tables.sql.sha256 \
+        --database <production database> --out runs/production-step5 \
+        --matched-uids <allowlist file> --require-empty --expect-users 294
+    and first the same command with --dry-run appended, which reports
+    aggregate counts and rejects and writes nothing to PostgreSQL.
+
 Connection comes from PGHOST / PGPORT / PGUSER / PSQL_BIN environment
 variables (defaults target the db-recovery workstream's local instance).
 The load refuses to touch a target whose user tables are non-empty
-unless --truncate-user-tables is passed. Rejected and deduplicated rows
-are written to rejects.json / rejects.csv in the output directory and
-summarized in manifest.json; nothing is silently dropped.
+unless --truncate-user-tables is passed; --require-empty makes that
+refusal absolute (and forbids --truncate-user-tables). The load runs
+in a single transaction whose integrity gate (the nine orphan and
+order checks, plus the --expect-users count when given) must pass
+before COMMIT. Rejected and deduplicated rows are written to
+rejects.json / rejects.csv in the output directory and summarized in
+manifest.json; nothing is silently dropped.
 """
 
 import argparse
@@ -126,9 +138,46 @@ def write_copy_files(clean, out_dir):
     return paths
 
 
-def load(database, clean, out_dir, truncate):
+ORPHAN_QUERIES = {
+    "user_beers_orphan_users": "SELECT count(*) FROM user_beers ub LEFT JOIN users u ON ub.user_id = u.id WHERE u.id IS NULL",
+    "user_beers_orphan_beers": "SELECT count(*) FROM user_beers ub LEFT JOIN beers b ON ub.beer_id = b.id WHERE b.id IS NULL",
+    "friends_orphan_users": "SELECT count(*) FROM friends f WHERE NOT EXISTS (SELECT 1 FROM users u WHERE u.id = f.user_1) OR NOT EXISTS (SELECT 1 FROM users u WHERE u.id = f.user_2)",
+    "friends_order_violations": "SELECT count(*) FROM friends WHERE user_1 >= user_2",
+    "collection_beers_orphan_collections": "SELECT count(*) FROM collection_beers cb LEFT JOIN collections c ON cb.collection_id = c.id WHERE c.id IS NULL",
+    "collection_beers_orphan_beers": "SELECT count(*) FROM collection_beers cb LEFT JOIN beers b ON cb.beer_id = b.id WHERE b.id IS NULL",
+    "user_badges_orphan_users": "SELECT count(*) FROM user_badges ub LEFT JOIN users u ON ub.user_id = u.id WHERE u.id IS NULL",
+    "user_badges_orphan_collections": "SELECT count(*) FROM user_badges ub LEFT JOIN collections c ON ub.collection_id = c.id WHERE c.id IS NULL",
+    "notifications_orphan_users": "SELECT count(*) FROM notifications n LEFT JOIN users u ON n.user_id = u.id WHERE u.id IS NULL",
+}
+
+
+def integrity_gate_sql(expect_users=None):
+    """A DO block that raises unless every integrity check passes.
+
+    Runs inside the load transaction, so a failure aborts the load and
+    nothing commits. The checks are the same queries validate() runs
+    after the load for the manifest.
+    """
+    lines = ["DO $$", "DECLARE bad bigint;", "BEGIN"]
+    if expect_users is not None:
+        lines.append("  SELECT count(*) INTO bad FROM users;")
+        lines.append(
+            f"  IF bad <> {int(expect_users)} THEN RAISE EXCEPTION "
+            f"'expected exactly {int(expect_users)} users, found %', bad; END IF;"
+        )
+    for name, sql in ORPHAN_QUERIES.items():
+        into = sql.replace("SELECT count(*)", "SELECT count(*) INTO bad", 1)
+        lines.append(f"  {into};")
+        lines.append(f"  IF bad <> 0 THEN RAISE EXCEPTION 'integrity check failed: {name} = %', bad; END IF;")
+    lines.append("END $$;")
+    return "\n".join(lines)
+
+
+def load(database, clean, out_dir, truncate, require_empty=False, expect_users=None):
     counts = {t: int(query_scalar(database, f"SELECT count(*) FROM {t}")) for t in USER_TABLES}
     nonempty = {t: c for t, c in counts.items() if c > 0}
+    if nonempty and require_empty:
+        raise RuntimeError(f"production load requires empty target user tables; non-empty: {nonempty}")
     if nonempty and not truncate:
         raise RuntimeError(f"target user tables are not empty: {nonempty}; pass --truncate-user-tables to reload")
     paths = write_copy_files(clean, out_dir)
@@ -144,6 +193,7 @@ def load(database, clean, out_dir, truncate):
         script.append(
             f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE((SELECT max(id) FROM {table}), 1), true);"
         )
+    script.append(integrity_gate_sql(expect_users))
     script.append("COMMIT;")
     psql(database, ["-q"], input_text="\n".join(script))
 
@@ -152,18 +202,7 @@ def validate(database):
     checks = {}
     for table in USER_TABLES:
         checks[f"count_{table}"] = int(query_scalar(database, f"SELECT count(*) FROM {table}"))
-    orphan_queries = {
-        "user_beers_orphan_users": "SELECT count(*) FROM user_beers ub LEFT JOIN users u ON ub.user_id = u.id WHERE u.id IS NULL",
-        "user_beers_orphan_beers": "SELECT count(*) FROM user_beers ub LEFT JOIN beers b ON ub.beer_id = b.id WHERE b.id IS NULL",
-        "friends_orphan_users": "SELECT count(*) FROM friends f WHERE NOT EXISTS (SELECT 1 FROM users u WHERE u.id = f.user_1) OR NOT EXISTS (SELECT 1 FROM users u WHERE u.id = f.user_2)",
-        "friends_order_violations": "SELECT count(*) FROM friends WHERE user_1 >= user_2",
-        "collection_beers_orphan_collections": "SELECT count(*) FROM collection_beers cb LEFT JOIN collections c ON cb.collection_id = c.id WHERE c.id IS NULL",
-        "collection_beers_orphan_beers": "SELECT count(*) FROM collection_beers cb LEFT JOIN beers b ON cb.beer_id = b.id WHERE b.id IS NULL",
-        "user_badges_orphan_users": "SELECT count(*) FROM user_badges ub LEFT JOIN users u ON ub.user_id = u.id WHERE u.id IS NULL",
-        "user_badges_orphan_collections": "SELECT count(*) FROM user_badges ub LEFT JOIN collections c ON ub.collection_id = c.id WHERE c.id IS NULL",
-        "notifications_orphan_users": "SELECT count(*) FROM notifications n LEFT JOIN users u ON n.user_id = u.id WHERE u.id IS NULL",
-    }
-    for name, sql in orphan_queries.items():
+    for name, sql in ORPHAN_QUERIES.items():
         checks[name] = int(query_scalar(database, sql))
     checks["all_orphan_checks_zero"] = all(v == 0 for k, v in checks.items() if "orphan" in k or "violations" in k)
     return checks
@@ -176,9 +215,14 @@ def main(argv=None):
     ap.add_argument("--database", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--truncate-user-tables", action="store_true")
+    ap.add_argument("--require-empty", action="store_true", help="production initial load: refuse unless every target user table is empty; cannot be combined with --truncate-user-tables")
+    ap.add_argument("--expect-users", type=int, default=None, help="assert exactly this many users survive transform and land inside the load transaction (production: 294)")
+    ap.add_argument("--dry-run", action="store_true", help="parse, scope, and transform only; write manifest and rejects to --out and report counts without writing to PostgreSQL")
     ap.add_argument("--matched-uids", default=None, help="path to a matched-UID allowlist file; when given, the import is scoped to matched profiles (step 5 rehearsal)")
     ap.add_argument("--run-ts", default=None, help="fill timestamp for NOT NULL columns, default: now (UTC)")
     args = ap.parse_args(argv)
+    if args.require_empty and args.truncate_user_tables:
+        ap.error("--require-empty cannot be combined with --truncate-user-tables")
 
     os.makedirs(args.out, exist_ok=True)
     run_ts = args.run_ts or datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
@@ -202,8 +246,22 @@ def main(argv=None):
         parsed, scope_accounting = apply_matched_scope(parsed, matched_uids)
 
     clean, rejects, stats = transform_all(parsed, valid_beer_ids=beer_ids, run_ts=run_ts)
-    load(args.database, clean, args.out, args.truncate_user_tables)
-    checks = validate(args.database)
+    if args.expect_users is not None and len(clean["users"]) != args.expect_users:
+        raise RuntimeError(
+            f"expected exactly {args.expect_users} users after transform, got {len(clean['users'])}; nothing written"
+        )
+    if args.dry_run:
+        checks = None
+    else:
+        load(
+            args.database,
+            clean,
+            args.out,
+            args.truncate_user_tables,
+            require_empty=args.require_empty,
+            expect_users=args.expect_users,
+        )
+        checks = validate(args.database)
 
     reject_dicts = [r.as_dict() for r in rejects]
     with open(os.path.join(args.out, "rejects.json"), "w", encoding="utf-8") as f:
@@ -221,7 +279,7 @@ def main(argv=None):
             "loaded": len(clean[table]),
             "rejected": sum(1 for r in table_rejects if r.category == "reject"),
             "deduped": sum(1 for r in table_rejects if r.category == "dedupe"),
-            "db_count_after_load": checks[f"count_{table}"],
+            "db_count_after_load": (checks[f"count_{table}"] if checks else None),
             "transform_stats": stats[table],
             "excluded_unmatched": (scope_accounting[table]["excluded_unmatched"] if scope_accounting else 0),
         }
@@ -231,6 +289,9 @@ def main(argv=None):
         "dump_sha256": digest,
         "checksum_verified": bool(args.sha256),
         "target_database": args.database,
+        "dry_run": bool(args.dry_run),
+        "require_empty": bool(args.require_empty),
+        "expect_users": args.expect_users,
         "per_table": per_table,
         "scope": ({"allowlist_size": scope_accounting["allowlist_size"]} if scope_accounting else None),
         "validation": checks,
@@ -242,6 +303,8 @@ def main(argv=None):
     with open(os.path.join(args.out, "manifest.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2, ensure_ascii=False)
     print(json.dumps({k: manifest[k] for k in ("total_source_rows", "total_loaded", "total_rejected", "total_deduped")}, indent=2))
+    if args.dry_run:
+        print("DRY RUN: no database writes were performed.")
     print(f"manifest: {os.path.join(args.out, 'manifest.json')}")
     return 0
 

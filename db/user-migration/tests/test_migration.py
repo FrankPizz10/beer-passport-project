@@ -110,6 +110,16 @@ class TestTransforms(unittest.TestCase):
         self.assertFalse(clean["users"][0]["private"])
         self.assertTrue(clean["users"][1]["private"])
 
+    def test_users_shared_push_token_never_excludes(self):
+        parsed = base_parsed()
+        parsed["users"][0]["notification_token"] = "shared-token"
+        parsed["users"][1]["notification_token"] = "shared-token"
+        clean, rejects, stats = self.run_transform(parsed)
+        self.assertEqual(len(clean["users"]), 2)
+        self.assertEqual(reasons(rejects, "users"), [])
+        self.assertEqual([u["notification_token"] for u in clean["users"]], [None, None])
+        self.assertEqual(stats["users"]["notification_tokens_dropped"], 2)
+
     def test_users_reject_missing_age_and_duplicate_email(self):
         parsed = base_parsed()
         parsed["users"].append({"id": 3, "uid": "uid3", "notification_token": None, "age": None, "email": "c@x.invalid", "user_name": "cid", "private": 0})
@@ -245,6 +255,49 @@ class TestEndToEndFixture(unittest.TestCase):
 
     def test_validation_all_zero(self):
         self.assertTrue(self.manifest["validation"]["all_orphan_checks_zero"])
+
+    def _run_migrate(self, extra_args, out_name):
+        env = dict(os.environ, PSQL_BIN=PSQL, PGHOST="127.0.0.1", PGPORT="54329", PGUSER="postgres",
+                   LD_LIBRARY_PATH=os.path.join(WS, "pginstall/lib"))
+        result = subprocess.run(
+            [
+                sys.executable, os.path.join(MIGRATION_DIR, "migrate.py"),
+                "--dump", os.path.join(MIGRATION_DIR, "fixture/fixture_user_tables.sql"),
+                "--sha256", os.path.join(MIGRATION_DIR, "fixture/fixture_user_tables.sql.sha256"),
+                "--database", "beerpassport_migtest",
+                "--out", os.path.join(MIGRATION_DIR, "runs", out_name),
+                "--run-ts", RUN_TS,
+            ] + extra_args,
+            capture_output=True, text=True, env=env,
+        )
+        return result, env
+
+    def test_dry_run_reports_without_writing(self):
+        result, env = self._run_migrate(["--dry-run"], "test-dry-run")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("DRY RUN", result.stdout)
+        with open(os.path.join(MIGRATION_DIR, "runs", "test-dry-run", "manifest.json")) as f:
+            m = json.load(f)
+        self.assertTrue(m["dry_run"])
+        self.assertIsNone(m["validation"])
+        self.assertEqual(m["total_loaded"], 857)
+        self.assertEqual(m["total_rejected"], 18)
+        out = subprocess.run(
+            [PSQL, "-h", "127.0.0.1", "-p", "54329", "-U", "postgres", "-d", "beerpassport_migtest", "-tAc",
+             "SELECT count(*) FROM users"],
+            capture_output=True, text=True, env=env,
+        )
+        self.assertEqual(out.stdout.strip(), "121")
+
+    def test_expect_users_mismatch_aborts_before_writing(self):
+        result, _ = self._run_migrate(["--expect-users", "999"], "test-expect-users")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("expected exactly 999 users after transform", result.stderr + result.stdout)
+
+    def test_require_empty_refuses_nonempty_target(self):
+        result, _ = self._run_migrate(["--require-empty"], "test-require-empty")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("requires empty target user tables", result.stderr + result.stdout)
 
     def test_checksum_mismatch_aborts(self):
         env = dict(os.environ, PSQL_BIN=PSQL, PGHOST="127.0.0.1", PGPORT="54329", PGUSER="postgres",

@@ -118,7 +118,11 @@ def transform_all(parsed, *, valid_beer_ids, run_ts):
         rejects.append(Reject(table, row.get("id"), category, reason, detail))
 
     # ---- users -------------------------------------------------------
-    seen_uid, seen_email, seen_name, seen_token = {}, {}, {}, {}
+    # Legacy push tokens are dropped before validation (set to None on
+    # every output row, and counted in stats): the recovered tokens are
+    # stale, devices re-register on sign-in, and a shared or recycled
+    # token must never collide and exclude a matched profile.
+    seen_uid, seen_email, seen_name = {}, {}, {}
     for row in sorted(parsed.get("users", []), key=lambda r: r["id"]):
         r = dict(row)
         _repair_fields(r, ["user_name"], stats["users"], "users")
@@ -142,8 +146,6 @@ def transform_all(parsed, *, valid_beer_ids, run_ts):
             dup = ("duplicate_email", seen_email[email])
         elif name in seen_name:
             dup = ("duplicate_user_name", seen_name[name])
-        elif r.get("notification_token") and r["notification_token"] in seen_token:
-            dup = ("duplicate_notification_token", seen_token[r["notification_token"]])
         if dup:
             reject("users", r, "reject", dup[0], f"conflicts with kept user id {dup[1]}")
             continue
@@ -156,12 +158,14 @@ def transform_all(parsed, *, valid_beer_ids, run_ts):
         seen_email[email] = r["id"]
         seen_name[name] = r["id"]
         if r.get("notification_token"):
-            seen_token[r["notification_token"]] = r["id"]
+            stats["users"]["notification_tokens_dropped"] = (
+                stats["users"].get("notification_tokens_dropped", 0) + 1
+            )
         clean["users"].append(
             {
                 "id": r["id"],
                 "uid": uid,
-                "notification_token": r.get("notification_token"),
+                "notification_token": None,
                 "age": int(r["age"]),
                 "email": email,
                 "user_name": name,
