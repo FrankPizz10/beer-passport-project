@@ -35,6 +35,7 @@ manifest.json; nothing is silently dropped.
 import argparse
 import csv
 import hashlib
+import io
 import json
 import os
 import subprocess
@@ -127,15 +128,19 @@ def _copy_escape(value):
     )
 
 
-def write_copy_files(clean, out_dir):
-    paths = {}
-    for table in LOAD_ORDER:
-        path = os.path.join(out_dir, f"{table}.copy")
-        with open(path, "w", encoding="utf-8") as f:
-            for row in clean[table]:
-                f.write("\t".join(_copy_escape(row[col]) for col in COLUMNS[table]) + "\n")
-        paths[table] = path
-    return paths
+def copy_data_lines(clean, table):
+    """COPY text-format lines for one table, escaped by _copy_escape.
+
+    The lines travel inside the psql input stream (\\copy ... FROM STDIN),
+    so the load never depends on the psql process being able to open
+    host-side files; that is what makes the pipeline work when psql runs
+    in a container. _copy_escape doubles backslashes first, so no data
+    value can produce the \\. terminator line or a raw newline.
+    """
+    return [
+        "\t".join(_copy_escape(row[col]) for col in COLUMNS[table])
+        for row in clean[table]
+    ]
 
 
 ORPHAN_QUERIES = {
@@ -173,29 +178,64 @@ def integrity_gate_sql(expect_users=None):
     return "\n".join(lines)
 
 
-def load(database, clean, out_dir, truncate, require_empty=False, expect_users=None):
-    counts = {t: int(query_scalar(database, f"SELECT count(*) FROM {t}")) for t in USER_TABLES}
-    nonempty = {t: c for t, c in counts.items() if c > 0}
-    if nonempty and require_empty:
-        raise RuntimeError(f"production load requires empty target user tables; non-empty: {nonempty}")
-    if nonempty and not truncate:
-        raise RuntimeError(f"target user tables are not empty: {nonempty}; pass --truncate-user-tables to reload")
-    paths = write_copy_files(clean, out_dir)
-    script = ["BEGIN;"]
-    if nonempty:
-        script.append(
-            "TRUNCATE users, collections, user_beers, friends, collection_beers, user_badges, notifications RESTART IDENTITY CASCADE;"
+def empty_gate_sql(require_empty):
+    """A DO block that raises if any user table is non-empty.
+
+    Runs inside the load transaction, after the tables are locked, so
+    the check and the load are atomic: no other writer can change the
+    tables between the check and the COMMIT.
+    """
+    lines = ["DO $$", "DECLARE bad text := '';", "BEGIN"]
+    for table in LOAD_ORDER:
+        lines.append(
+            f"  IF (SELECT count(*) FROM {table}) > 0 THEN bad := bad || ' {table}'; END IF;"
         )
+    if require_empty:
+        lines.append(
+            "  IF bad <> '' THEN RAISE EXCEPTION "
+            "'production load requires empty target user tables; non-empty:%', bad; END IF;"
+        )
+    else:
+        lines.append(
+            "  IF bad <> '' THEN RAISE EXCEPTION "
+            "'target user tables are not empty:%; pass --truncate-user-tables to reload', bad; END IF;"
+        )
+    lines.append("END $$;")
+    return "\n".join(lines)
+
+
+def build_load_script(clean, truncate, require_empty=False, expect_users=None):
+    """The full load as one psql input stream: one transaction, the
+    seven tables locked ACCESS EXCLUSIVE before any check, the
+    empty-table gate inside the transaction, row data inline via
+    \\copy ... FROM STDIN, sequence resets, the integrity gate, COMMIT.
+    A failure anywhere aborts the transaction and nothing commits.
+    """
+    tables = ", ".join(LOAD_ORDER)
+    script = ["BEGIN;", f"LOCK TABLE {tables} IN ACCESS EXCLUSIVE MODE;"]
+    if truncate:
+        script.append(f"TRUNCATE {tables} RESTART IDENTITY CASCADE;")
+    else:
+        script.append(empty_gate_sql(require_empty))
     for table in LOAD_ORDER:
         cols = ", ".join(COLUMNS[table])
-        script.append(f"\\copy {table} ({cols}) FROM '{paths[table]}'")
+        script.append(f"\\copy {table} ({cols}) FROM STDIN")
+        script.extend(copy_data_lines(clean, table))
+        script.append("\\.")
     for table in LOAD_ORDER:
         script.append(
             f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE((SELECT max(id) FROM {table}), 1), true);"
         )
     script.append(integrity_gate_sql(expect_users))
     script.append("COMMIT;")
-    psql(database, ["-q"], input_text="\n".join(script))
+    return "\n".join(script)
+
+
+def load(database, clean, truncate, require_empty=False, expect_users=None):
+    script = build_load_script(
+        clean, truncate, require_empty=require_empty, expect_users=expect_users
+    )
+    psql(database, ["-q"], input_text=script)
 
 
 def validate(database):
@@ -206,6 +246,24 @@ def validate(database):
         checks[name] = int(query_scalar(database, sql))
     checks["all_orphan_checks_zero"] = all(v == 0 for k, v in checks.items() if "orphan" in k or "violations" in k)
     return checks
+
+
+def ensure_private_dir(path):
+    """Create the run output directory (or tighten an existing one) to
+    mode 0700. Run outputs (manifest, rejects) carry user identifiers,
+    so the directory is owner-only regardless of umask."""
+    os.makedirs(path, exist_ok=True)
+    os.chmod(path, 0o700)
+    return path
+
+
+def write_private_file(path, text):
+    """Write a run output file with mode 0600, tightening the mode even
+    when the file already exists from an earlier run."""
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    with os.fdopen(fd, "w", encoding="utf-8") as f:
+        f.write(text)
+    os.chmod(path, 0o600)
 
 
 def main(argv=None):
@@ -224,7 +282,7 @@ def main(argv=None):
     if args.require_empty and args.truncate_user_tables:
         ap.error("--require-empty cannot be combined with --truncate-user-tables")
 
-    os.makedirs(args.out, exist_ok=True)
+    ensure_private_dir(args.out)
     run_ts = args.run_ts or datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 
     digest = verify_checksum(args.dump, args.sha256)
@@ -256,7 +314,6 @@ def main(argv=None):
         load(
             args.database,
             clean,
-            args.out,
             args.truncate_user_tables,
             require_empty=args.require_empty,
             expect_users=args.expect_users,
@@ -264,12 +321,15 @@ def main(argv=None):
         checks = validate(args.database)
 
     reject_dicts = [r.as_dict() for r in rejects]
-    with open(os.path.join(args.out, "rejects.json"), "w", encoding="utf-8") as f:
-        json.dump(reject_dicts, f, indent=2, ensure_ascii=False)
-    with open(os.path.join(args.out, "rejects.csv"), "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["table", "source_id", "category", "reason", "detail"])
-        writer.writeheader()
-        writer.writerows(reject_dicts)
+    write_private_file(
+        os.path.join(args.out, "rejects.json"),
+        json.dumps(reject_dicts, indent=2, ensure_ascii=False),
+    )
+    csv_buf = io.StringIO()
+    writer = csv.DictWriter(csv_buf, fieldnames=["table", "source_id", "category", "reason", "detail"])
+    writer.writeheader()
+    writer.writerows(reject_dicts)
+    write_private_file(os.path.join(args.out, "rejects.csv"), csv_buf.getvalue())
 
     per_table = {}
     for table in USER_TABLES:
@@ -300,8 +360,10 @@ def main(argv=None):
         "total_rejected": sum(1 for r in rejects if r.category == "reject"),
         "total_deduped": sum(1 for r in rejects if r.category == "dedupe"),
     }
-    with open(os.path.join(args.out, "manifest.json"), "w", encoding="utf-8") as f:
-        json.dump(manifest, f, indent=2, ensure_ascii=False)
+    write_private_file(
+        os.path.join(args.out, "manifest.json"),
+        json.dumps(manifest, indent=2, ensure_ascii=False),
+    )
     print(json.dumps({k: manifest[k] for k in ("total_source_rows", "total_loaded", "total_rejected", "total_deduped")}, indent=2))
     if args.dry_run:
         print("DRY RUN: no database writes were performed.")

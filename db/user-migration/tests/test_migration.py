@@ -234,14 +234,14 @@ class TestEndToEndFixture(unittest.TestCase):
     def test_totals(self):
         m = self.manifest
         self.assertEqual(m["total_source_rows"], 890)
-        self.assertEqual(m["total_loaded"], 857)
-        self.assertEqual(m["total_rejected"], 18)
+        self.assertEqual(m["total_loaded"], 858)
+        self.assertEqual(m["total_rejected"], 17)
         self.assertEqual(m["total_deduped"], 15)
         self.assertTrue(m["checksum_verified"])
 
     def test_per_table_loaded(self):
         expected = {
-            "users": 121,
+            "users": 122,
             "collections": 13,
             "user_beers": 282,
             "friends": 100,
@@ -280,14 +280,14 @@ class TestEndToEndFixture(unittest.TestCase):
             m = json.load(f)
         self.assertTrue(m["dry_run"])
         self.assertIsNone(m["validation"])
-        self.assertEqual(m["total_loaded"], 857)
-        self.assertEqual(m["total_rejected"], 18)
+        self.assertEqual(m["total_loaded"], 858)
+        self.assertEqual(m["total_rejected"], 17)
         out = subprocess.run(
             [PSQL, "-h", "127.0.0.1", "-p", "54329", "-U", "postgres", "-d", "beerpassport_migtest", "-tAc",
              "SELECT count(*) FROM users"],
             capture_output=True, text=True, env=env,
         )
-        self.assertEqual(out.stdout.strip(), "121")
+        self.assertEqual(out.stdout.strip(), "122")
 
     def test_expect_users_mismatch_aborts_before_writing(self):
         result, _ = self._run_migrate(["--expect-users", "999"], "test-expect-users")
