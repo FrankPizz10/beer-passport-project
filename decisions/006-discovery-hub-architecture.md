@@ -1,0 +1,89 @@
+# Decision 006: Catalog discovery hub architecture
+
+Date: 2026-11-23
+Status: PROPOSED (Frank accepts by merging; implementation brief in
+issues/001-catalog-discovery-hub.md)
+Ledger reference: D-017 (proposed)
+
+## Context
+
+Discovery harvests (batch 2, Wikidata, Open Food Facts) and their
+cross-deduped reassessment exist only as files in a local workstream:
+22,132 staged candidate records from the discovery harvests (6,607
+US-produced, 210 US-market, 14,621 uncertain, 693 ambiguous-pair-
+flagged, 1 held-match) plus batch 2's 702, with 693 ambiguous pairs
+counted as relationships, not records. They are not reviewable in the
+admin, carry no decision trail, and cannot become imports without ad
+hoc handling.
+The admin is read-only today; the image approval workflow introduces
+the first scoped write path. The production host is a 1 GB Lightsail
+instance that must never run discovery jobs.
+
+## Decision (proposed)
+
+Build the catalog discovery hub in the admin, per
+issues/001-catalog-discovery-hub.md:
+
+1. Staging lives in new discovery_* tables in the existing Postgres
+   database, fully separate from the production catalog tables.
+   Candidates stay staged until Frank approves an import.
+2. The flow is discovery batch -> candidate review -> image review ->
+   import-ready manifest, with three separate approval gates in that
+   order: candidate selection, candidate image approval, and Frank's
+   production-import approval of a specific manifest (exact id +
+   SHA-256). No gate implies another.
+3. Manifests are immutable: canonically serialized JSON (sorted keys,
+   no insignificant whitespace, one trailing LF), identified by id and
+   SHA-256. Frank approves the exact (id, SHA-256) pair through the
+   manifest approval endpoint (allowlisted to his account; the
+   reviewer role's grant covers exactly the four approval columns it
+   writes: status, approved_by, approved_at, approved_sha256). The
+   import runs as one transaction under an advisory lock and
+   re-verifies, inside the transaction, the manifest hash, every
+   payload hash, every decision's currency, every approved image's
+   content hash, and a catalog baseline fingerprint that hashes
+   content-bearing columns, so count-preserving catalog changes are
+   detected; any divergence aborts with zero writes.
+4. Discovery jobs run off-server. Their results travel as immutable,
+   SHA-256-checksummed batch bundles (manifest.json + candidates.jsonl)
+   through a private S3 bucket and are loaded by an operator-run ingest
+   script. The admin API never ingests and the Lightsail instance never
+   runs discovery work.
+5. Review decisions use a dedicated beerpassport_discovery_reviewer
+   role scoped to the decision columns of the staging tables plus
+   INSERT on the discovery_decisions audit table, mirroring the image
+   workflow's approver pattern. The viewer role stays read-only and
+   gains only SELECT on the discovery tables. Every decision records
+   who, when, from-state, to-state, and reason in the same transaction.
+6. Selection policy is decision 005 (US-first tiers, evidence
+   standards, no gender-assumption exclusions); scope is decision 004
+   (all canned beverages). Uncertain market relevance is a hold state
+   with a recorded reason, never a silent exclusion.
+7. Image review happens in the hub BEFORE manifest approval: the API
+   fetches the candidate image server-side under strict fetch
+   constraints (SSRF defenses: address filtering re-validated per
+   redirect hop, redirect and size caps, content-type plus magic-byte
+   verification), stores the fetched bytes content-addressed, and the
+   reviewer previews THOSE bytes, so the image approved is
+   byte-identical to the image hashed. The decision binds to the
+   exact image by content SHA-256 recorded at decision time. At
+   import, the image bytes are re-hashed; on a match the decision
+   carries through and the image is published as an approved
+   beverage_images row naming the candidate decision in its
+   provenance, with no second decision. On a mismatch the import
+   aborts. Images for beverages already in the catalog keep using the
+   beverage_images approval queue from the image workflow, unchanged,
+   with the full quality gate.
+
+## Consequences
+
+- The staged batches become reviewable with progress counts, search,
+  side-by-side duplicate review, and an audit trail, at $0 incremental
+  monthly cost (S3 bundle storage under $0.01, staging rows are tens of
+  MB on the existing instance).
+- Import remains a separate operator-run, separately approved step;
+  the hub can prepare manifests but can never write the catalog.
+- The canonical Prisma schema in beer-passport-server must mirror the
+  staging tables before any migration is applied to production.
+- Phasing: Phase 1 read-only hub + ingest; Phase 2 review write path;
+  Phase 3 manifest builder. Each phase is its own PR and deployment.
