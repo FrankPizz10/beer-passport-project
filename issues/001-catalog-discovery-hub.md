@@ -183,13 +183,21 @@ pool is on the order of 15 MB of JSON; storage cost is effectively $0
   it lives in another batch, e.g. a batch 2 record), comparison, score,
   status (pending / same / distinct), decided_by, decided_at. Seeded
   from the 693 ambiguous relationships plus the 1 held match link.
-- discovery_image_decisions: id, candidate_id, image_ref (the direct
+- discovery_image_decisions: id, candidate_id, fetch_id (FK to
+  discovery_image_fetches: the exact fetch whose bytes were
+  previewed), image_ref (the direct
   image URL or private storage reference exactly as staged),
   image_sha256 (SHA-256 of the image bytes at decision time),
   image_content_type, image_width, image_height, decision (approved /
   rejected), decided_by, decided_by_uid, decided_at, note. One row per
   decision; the latest row for a candidate is its current image
   decision. This is what binds an approval to the exact image.
+- discovery_image_fetches: id, candidate_id, image_ref, sha256
+  (SHA-256 of the fetched bytes), content_type, byte_size, width,
+  height, fetched_by, fetched_at, outcome (ok / not_image /
+  unreachable / refused, with the refusal reason). The content-
+  addressed staging object lives under this hash; decisions name a
+  fetch row, so the exact bytes reviewed are always recoverable.
 - discovery_decisions: id, candidate_id, action (select / hold /
   reject / unhold / mark_duplicate / mark_distinct), from_status,
   to_status, admin_user_id, admin_uid, reason, note, created_at. The
@@ -213,7 +221,9 @@ required).
 ### 3. Permissions (narrowly scoped, mirroring the image workflow)
 
 - beerpassport_admin_viewer (existing, unchanged): gains SELECT on the
-  five discovery tables only. It still cannot write anything.
+  discovery tables only (batches, candidates, pairs, decisions, image
+  fetches, image decisions, import manifests). It still cannot write
+  anything.
 - beerpassport_admin_approver (from the image workflow): unchanged;
   image decisions stay on beverage_images.
 - beerpassport_discovery_reviewer (new role, same restricted
@@ -222,12 +232,13 @@ required).
   hold_reason, duplicate_of_candidate_id, updated_at) on
   discovery_candidates; UPDATE (status, decided_by, decided_at) on
   discovery_candidate_pairs; INSERT and SELECT on discovery_decisions;
-  INSERT and SELECT on discovery_image_decisions; INSERT and SELECT on
-  import_manifests; UPDATE (status) on
-  import_manifests limited to the draft-to-approved transition being
-  performed only by Frank's account is enforced in the API layer by
-  checking the caller's users row against an allowlist env var, because
-  Postgres cannot see Firebase identity. No INSERT or DELETE on
+  INSERT and SELECT on discovery_image_fetches; INSERT and SELECT on
+  discovery_image_decisions; INSERT and SELECT on import_manifests;
+  UPDATE (status, approved_by, approved_at, approved_sha256) on
+  import_manifests, exactly the columns the approval endpoint writes
+  (the endpoint additionally restricts that transition to Frank's
+  allowlisted account in the API layer, because Postgres cannot see
+  Firebase identity). No INSERT or DELETE on
   candidates or batches, no access to catalog tables beyond the
   viewer's.
 - Ingest identity: the operator/migration identity only (the same
@@ -264,18 +275,22 @@ Review (admin UI + API):
     POST /admin-api/v1/discovery/candidates/:id/decision
          {action, reason?, note?}                   (reviewer role)
     GET  /admin-api/v1/discovery/candidates/:id/image-preview
-         fetch + hash the candidate image; returns the preview URL
-         (or a presigned URL for private references), the content
-         check, and the image_sha256 a decision will bind to
+         fetches the candidate image under the fetch constraints,
+         stores the bytes content-addressed, records the fetch row;
+         returns a short-lived URL serving THOSE bytes, the fetch id,
+         the content check, and the image_sha256 a decision binds to
     POST /admin-api/v1/discovery/candidates/:id/image-decision
-         {decision, image_sha256}                   (reviewer role;
-         the API refuses when image_sha256 does not match the bytes it
-         just hashed, so a decision can never bind to an image the
-         reviewer did not see)
+         {decision, fetch_id, image_sha256}         (reviewer role;
+         the API refuses when image_sha256 does not match the named
+         fetch's stored bytes, so a decision can never bind to an
+         image the reviewer did not see)
     POST /admin-api/v1/discovery/pairs/:id/decision {same | distinct}
     POST /admin-api/v1/discovery/batches/:id/manifest
          builds a draft import manifest from selected candidates
     GET  /admin-api/v1/discovery/manifests/:id      manifest + sha256
+    POST /admin-api/v1/discovery/manifests/:id/approve
+         {sha256}                                   (Frank allowlist
+         only; writes the approval audit fields atomically)
 
 Progress shown per batch: candidates by review_status, pairs pending,
 images by image_status, and percent reviewed. The Catalog Overview page
@@ -284,20 +299,42 @@ bug is fixed in the staged viewer-enhancements PR).
 
 Image flow (review BEFORE the manifest, bound to the exact image):
 
-- The candidate detail view previews the candidate's image next to the
-  beverage data and its provenance: hosted images render from their
-  direct URL; private references render through the presigned pattern
-  (900s cap, the reference itself never reaches the client as a usable
-  key). The same load-gated mechanic as the image workflow applies:
-  Approve stays disabled until the image has actually loaded in the
-  reviewer's browser, and the recorded content-type check must say
-  image/*. This is Frank's quality gate, applied pre-import: the
-  correct product visible at usable quality.
-- When the reviewer opens the preview, the API fetches the image once
-  and records its SHA-256, content type, and dimensions. The approve or
-  reject decision writes a discovery_image_decisions row binding the
-  decision to that exact image (reference + content hash + provenance
-  snapshot: source, source URL, license, attribution).
+- The reviewer never views the origin URL directly for the binding
+  preview, because an origin can serve different bytes to different
+  clients. Instead, the API fetches the candidate image server-side
+  (under the fetch constraints below), stores the fetched bytes
+  content-addressed in the private staging bucket under their
+  SHA-256, and records a discovery_image_fetches row (candidate,
+  reference, SHA-256, content type, byte size, dimensions, outcome).
+  The preview is served from those stored bytes through a short-lived
+  preview URL, so the image on the reviewer's screen is byte-identical
+  to the image whose hash a decision will bind. Private references
+  are fetched from storage directly; their keys never reach the
+  client. The same load-gated mechanic as the image workflow applies:
+  Approve stays disabled until the preview has actually loaded in the
+  reviewer's browser. This is Frank's quality gate, applied
+  pre-import: the correct product visible at usable quality, in the
+  exact bytes that will be published.
+- Server-side fetch constraints (the fetcher is an SSRF surface and
+  is constrained accordingly): http/https only, URLs with embedded
+  credentials refused; DNS resolution must reject private, loopback,
+  link-local, and reserved addresses (including 169.254.169.254 and
+  IPv6 equivalents), re-validated at every redirect hop; at most 3
+  redirects; an https-to-http downgrade redirect is refused; connect
+  timeout 5s, total timeout 10s; response body capped at 10 MB with
+  streaming abort; the final Content-Type must be image/* AND the
+  magic bytes must match a known image format (jpeg, png, webp, gif,
+  avif). Preview responses are served with the verified content type,
+  X-Content-Type-Options: nosniff, and Content-Security-Policy:
+  default-src 'none'; sandbox, so fetched content can never execute
+  in the admin origin. Every fetch is audit-logged in
+  discovery_image_fetches and rate-limited per reviewer.
+- The approve or reject decision names the fetch it is based on; the
+  API refuses a decision whose image_sha256 does not match that
+  fetch's stored bytes. The decision writes a
+  discovery_image_decisions row binding the decision to that exact
+  image (fetch id, reference, content hash, provenance snapshot:
+  source, source URL, license, attribution).
 - A candidate can enter a manifest only with a current approved image
   decision (image attached) or as an explicitly no-image selection.
   The manifest embeds, per record, the image reference and the approved
@@ -326,18 +363,27 @@ Import manifests (immutable, hash-approved, verified at import):
   mf-<batch-slug>-<yyyymmdd>-<seq>; once built, a manifest never
   changes. Any change produces a new manifest with a new id.
 - Content: header (manifest id, batch slug and bundle sha256,
-  created_by, created_at, generator name and version, record counts);
+  created_by, created_at, generator name and version, record counts,
+  and the catalog baseline fingerprint defined below);
   records[] in candidate_key order, each with candidate_key, the
   SHA-256 of the candidate's canonical payload, its selection decision
   id, and its image disposition (none, or approved with image_ref,
   image_sha256, and image decision id).
-- Approval: Frank approves the exact (manifest_id, sha256) pair. The
-  approval is recorded on the import_manifests row (approved_by,
-  approved_at, approved_sha256). Approval of anything else (a batch, a
+- Approval: Frank approves the exact (manifest_id, sha256) pair via
+  POST /admin-api/v1/discovery/manifests/:id/approve with the sha256
+  in the body. The endpoint requires the caller to be on the
+  approver allowlist (an env var matched against the caller's users
+  row, because Postgres cannot see Firebase identity), refuses when
+  the supplied sha256 differs from the stored manifest hash (422) or
+  the manifest is not in draft status (409), and in one transaction
+  writes status, approved_by, approved_at, and approved_sha256. The
+  reviewer role's grant on import_manifests is exactly UPDATE
+  (status, approved_by, approved_at, approved_sha256), matching these
+  audit fields and no others. Approval of anything else (a batch, a
   count, an earlier manifest) authorizes nothing.
-- Import-time checks (the operator-run import performs all five BEFORE
-  writing anything; any failure aborts the whole import with a printed
-  diff and imports nothing):
+- Import-time checks (the operator-run import performs all five;
+  any failure aborts the whole import with a printed diff and imports
+  nothing):
   1. The manifest file's recomputed SHA-256 equals approved_sha256.
   2. Every record's staged payload hash still equals the manifest's
      payload hash (no staged data changed since the build).
@@ -346,9 +392,29 @@ Import manifests (immutable, hash-approved, verified at import):
      superseded after approval).
   4. Every attached image's current decision is still approved, and
      the re-fetched image bytes hash to the manifest's image_sha256.
-  5. The target catalog still matches the baseline counts recorded in
-     the manifest header (an intervening import makes the approval
-     stale).
+  5. The target catalog still matches the baseline FINGERPRINT
+     recorded in the manifest header: for each of beers, breweries,
+     and beverage_images, the row count plus an MD5 over the
+     content-bearing columns in id order (beers: id, name,
+     brewery_id, updated_at; breweries: id, name, updated_at;
+     beverage_images: id, beverage_id, status, updated_at). A
+     count-preserving change (a rename, a re-assigned brewery, a
+     status flip) changes the fingerprint even though counts are
+     unchanged, and makes the approval stale.
+- Validity through the write: the checks are not a preflight that
+  races the write. The import runs as ONE transaction at REPEATABLE
+  READ: it first takes a transaction-scoped advisory lock on a fixed
+  catalog-import key (a concurrent import waits, then re-checks
+  against the new baseline and aborts as stale), runs all five checks
+  inside the transaction against its snapshot, takes SELECT ... FOR
+  UPDATE row locks on the manifest's candidate rows (a concurrent
+  review decision on one of those candidates blocks until the import
+  commits, then lands on the post-import state with the audit order
+  preserved), performs the writes, and commits atomically. A catalog
+  change from any writer that does not take the lock is still caught:
+  it either lands before the snapshot (the fingerprint check sees
+  it) or touches rows the transaction's fingerprint re-verification
+  covers before commit.
 
 ### 5. Migration of existing staged results
 
@@ -449,6 +515,27 @@ Rollback per phase as in section 6.
 - [ ] An imported pre-approved image appears in the published catalog
       as an approved beverage_images row whose provenance names the
       candidate decision id, with no second decision taken.
+- [ ] Preview byte identity: a test origin that serves different
+      bytes to the fetcher than to a direct browser request results
+      in the preview rendering the FETCHED bytes, and the recorded
+      decision hash equals the fetched bytes' SHA-256.
+- [ ] Fetch constraint cases, one test each: redirect to a link-local
+      address refused; a fourth redirect refused; https-to-http
+      downgrade refused; a body over 10 MB aborted; a text/html
+      response refused; image Content-Type with non-image magic bytes
+      refused. Refusals are recorded in discovery_image_fetches.
+- [ ] Manifest approval: a wrong sha256 is refused (422); a caller
+      not on the allowlist is refused (403); a second approval is
+      refused (409); the verify script proves the reviewer role can
+      update exactly (status, approved_by, approved_at,
+      approved_sha256) on import_manifests and no other column.
+- [ ] Import validity: a count-preserving catalog edit (rename a
+      beer) between manifest approval and import is detected by the
+      baseline fingerprint and aborts the import; two concurrent
+      imports serialize on the advisory lock and the second aborts
+      as stale; a review decision attempted on a candidate mid-import
+      blocks on the row lock and is recorded after the import
+      commits.
 - [ ] No endpoint returns a bare storage key; private image references
       stay references until the post-import presigned flow.
 - [ ] The Lightsail instance runs no discovery job at any point
@@ -464,7 +551,13 @@ Rollback per phase as in section 6.
   Manifest canonicalization test vectors (key ordering, escaping, the
   trailing LF) with a known-answer SHA-256; image-decision hash binding
   (mismatched hash refused); import-time check fixtures, one per abort
-  condition.
+  condition. Fetcher tests against a local stand-in origin covering
+  the SSRF cases in the acceptance criteria (per-client byte
+  divergence, redirect abuse, downgrade, oversize, content-type and
+  magic-byte mismatch). Manifest approval endpoint tests (allowlist,
+  hash match, atomic audit fields). Import concurrency tests on a
+  disposable database (advisory-lock serialization, fingerprint
+  detection of a count-preserving edit, decision row-lock ordering).
 - Role verification scripts run against a disposable database copy, in
   the pattern of verify-readonly-role.sql (13 checks) and the approval
   role's script.

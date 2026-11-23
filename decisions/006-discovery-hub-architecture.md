@@ -34,10 +34,16 @@ issues/001-catalog-discovery-hub.md:
    SHA-256). No gate implies another.
 3. Manifests are immutable: canonically serialized JSON (sorted keys,
    no insignificant whitespace, one trailing LF), identified by id and
-   SHA-256. Frank approves the exact (id, SHA-256) pair; the import
-   step re-verifies the manifest hash, every payload hash, every
-   decision's currency, every approved image's content hash, and the
-   catalog baseline before writing, and aborts on any divergence.
+   SHA-256. Frank approves the exact (id, SHA-256) pair through the
+   manifest approval endpoint (allowlisted to his account; the
+   reviewer role's grant covers exactly the four approval columns it
+   writes: status, approved_by, approved_at, approved_sha256). The
+   import runs as one transaction under an advisory lock and
+   re-verifies, inside the transaction, the manifest hash, every
+   payload hash, every decision's currency, every approved image's
+   content hash, and a catalog baseline fingerprint that hashes
+   content-bearing columns, so count-preserving catalog changes are
+   detected; any divergence aborts with zero writes.
 4. Discovery jobs run off-server. Their results travel as immutable,
    SHA-256-checksummed batch bundles (manifest.json + candidates.jsonl)
    through a private S3 bucket and are loaded by an operator-run ingest
@@ -53,12 +59,17 @@ issues/001-catalog-discovery-hub.md:
    standards, no gender-assumption exclusions); scope is decision 004
    (all canned beverages). Uncertain market relevance is a hold state
    with a recorded reason, never a silent exclusion.
-7. Image review happens in the hub BEFORE manifest approval: the
-   reviewer previews the candidate's image with its provenance, and
-   the decision binds to the exact image by content SHA-256 recorded
-   at decision time. At import, the image bytes are re-hashed; on a
-   match the decision carries through and the image is published as an
-   approved beverage_images row naming the candidate decision in its
+7. Image review happens in the hub BEFORE manifest approval: the API
+   fetches the candidate image server-side under strict fetch
+   constraints (SSRF defenses: address filtering re-validated per
+   redirect hop, redirect and size caps, content-type plus magic-byte
+   verification), stores the fetched bytes content-addressed, and the
+   reviewer previews THOSE bytes, so the image approved is
+   byte-identical to the image hashed. The decision binds to the
+   exact image by content SHA-256 recorded at decision time. At
+   import, the image bytes are re-hashed; on a match the decision
+   carries through and the image is published as an approved
+   beverage_images row naming the candidate decision in its
    provenance, with no second decision. On a mismatch the import
    aborts. Images for beverages already in the catalog keep using the
    beverage_images approval queue from the image workflow, unchanged,
