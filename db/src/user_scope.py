@@ -5,6 +5,14 @@ account in the UID reconciliation (294 of 299 recovered users). The five
 MySQL-only profiles stay in the verified backup; Firebase accounts are
 never modified by the migration.
 
+The production allowlist is exactly the 294 matched UIDs: the
+intersection of the Firebase Auth UID set and the recovered users' UID
+set. Every allowlisted UID must have a recovered profile; an allowlisted
+UID with no recovered profile is a hard error, not a metric. The 15
+Firebase-only accounts (in Firebase, with no recovered profile) are a
+separate reconciliation metric recorded with the reconciliation results;
+they are not part of the allowlist and never enter this stage.
+
 This module is the scope stage that sits between the migration pipeline's
 dump parser and its transform stage (the pipeline itself is unchanged):
 
@@ -26,9 +34,7 @@ Rules
 - Any other table in the parsed dump passes through untouched.
 
 Accounting: per table, source == kept + excluded_unmatched, asserted.
-The top-level "matched_uids_without_profile" count reports matched UIDs
-with no recovered user row (the Firebase-only accounts; 15 in the real
-reconciliation). Nothing is written anywhere by this module.
+Nothing is written anywhere by this module.
 """
 
 USER_ID_TABLES = ("user_beers", "user_badges", "notifications")
@@ -62,13 +68,25 @@ def apply_matched_scope(parsed, matched_uids):
 
     Returns (scoped, accounting): scoped has the same shape as parsed;
     accounting maps each table to {"source", "kept", "excluded_unmatched"}
-    and carries the top-level "matched_uids_without_profile" count.
+    and carries the top-level "allowlist_size".
+
+    Raises ValueError if any allowlisted UID has no recovered profile:
+    the production allowlist is exactly the matched set, so that count
+    is required to be zero. The error reports the count only, never the
+    UIDs themselves.
     """
     users = parsed.get("users", [])
+    present_uids = {r.get("uid") for r in users}
+    without_profile = set(matched_uids) - present_uids
+    if without_profile:
+        raise ValueError(
+            f"allowlist contains {len(without_profile)} UID(s) with no "
+            "recovered profile; the production allowlist is exactly the "
+            "matched set (Firebase-only accounts are a separate "
+            "reconciliation metric and must not be allowlisted)")
     kept_user_ids = {r["id"] for r in users if r.get("uid") in matched_uids}
     excluded_user_ids = {r["id"] for r in users
                          if r.get("uid") not in matched_uids}
-    present_uids = {r.get("uid") for r in users}
 
     scoped = {}
     accounting = {}
@@ -92,6 +110,5 @@ def apply_matched_scope(parsed, matched_uids):
             "kept": len(kept),
             "excluded_unmatched": excluded,
         }
-    accounting["matched_uids_without_profile"] = len(
-        set(matched_uids) - present_uids)
+    accounting["allowlist_size"] = len(matched_uids)
     return scoped, accounting

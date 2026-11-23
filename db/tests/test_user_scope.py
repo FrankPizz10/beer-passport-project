@@ -1,8 +1,11 @@
 """Synthetic-fixture tests for src.user_scope (no database required).
 
 All UIDs and rows below are invented. The production-shape test mirrors
-the real reconciliation counts (299 recovered users, 294 matched,
-5 MySQL-only, 15 Firebase-only) with synthetic identifiers only.
+the real reconciliation counts (299 recovered users, exactly 294
+allowlisted matched UIDs, 5 MySQL-only) with synthetic identifiers only.
+The 15 Firebase-only accounts are a separate reconciliation metric and
+never enter the allowlist; a test below proves an allowlist containing
+one is a hard error.
 """
 
 import os
@@ -47,7 +50,7 @@ def small_fixture():
         "collections": [{"id": 7, "name": "Synthetic Collection"}],
         "collection_beers": [{"id": 51, "collection_id": 7, "beer_id": 100}],
     }
-    matched = {"uid-a", "uid-b", "uid-c", "uid-d", "uid-ghost"}
+    matched = {"uid-a", "uid-b", "uid-c", "uid-d"}
     return parsed, matched
 
 
@@ -99,12 +102,16 @@ class MatchedScopeTests(unittest.TestCase):
                     counts["kept"] + counts["excluded_unmatched"],
                     table)
 
-    def test_matched_without_profile_count(self):
-        # "uid-ghost" is matched (a Firebase account) with no user row:
-        # the Firebase-only analog.
+    def test_allowlist_uid_without_profile_is_a_hard_error(self):
+        # A Firebase-only account UID in the allowlist means the
+        # allowlist is not exactly the matched set: hard error, and the
+        # error reports the count, never the UID itself.
         parsed, matched = small_fixture()
-        _, acc = apply_matched_scope(parsed, matched)
-        self.assertEqual(acc["matched_uids_without_profile"], 1)
+        matched = matched | {"uid-ghost"}
+        with self.assertRaises(ValueError) as ctx:
+            apply_matched_scope(parsed, matched)
+        self.assertIn("1 UID(s)", str(ctx.exception))
+        self.assertNotIn("uid-ghost", str(ctx.exception))
 
     def test_empty_allowlist_excludes_all_known_users(self):
         parsed, _ = small_fixture()
@@ -112,21 +119,28 @@ class MatchedScopeTests(unittest.TestCase):
         self.assertEqual(scoped["users"], [])
         self.assertEqual([r["id"] for r in scoped["user_beers"]], [13])
         self.assertEqual(scoped["friends"], [])
-        self.assertEqual(acc["matched_uids_without_profile"], 0)
+        self.assertEqual(acc["allowlist_size"], 0)
 
     def test_production_shape_counts(self):
         users = [{"id": i, "uid": f"synthetic-uid-{i}"}
                  for i in range(1, 300)]            # 299 recovered users
-        matched = {f"synthetic-uid-{i}" for i in range(1, 295)}  # 294
-        matched |= {f"firebase-only-{i}" for i in range(15)}     # 15
+        matched = {f"synthetic-uid-{i}" for i in range(1, 295)}  # exactly 294
         parsed = {"users": users,
                   "friends": [{"id": 1, "user_1": 1, "user_2": 299},
                               {"id": 2, "user_1": 1, "user_2": 2}]}
         scoped, acc = apply_matched_scope(parsed, matched)
         self.assertEqual(acc["users"]["kept"], 294)
         self.assertEqual(acc["users"]["excluded_unmatched"], 5)
-        self.assertEqual(acc["matched_uids_without_profile"], 15)
+        self.assertEqual(acc["allowlist_size"], 294)
         self.assertEqual([r["id"] for r in scoped["friends"]], [2])
+
+    def test_production_allowlist_rejects_a_firebase_only_uid(self):
+        users = [{"id": i, "uid": f"synthetic-uid-{i}"}
+                 for i in range(1, 300)]
+        matched = {f"synthetic-uid-{i}" for i in range(1, 295)}
+        matched.add("firebase-only-0")
+        with self.assertRaises(ValueError):
+            apply_matched_scope({"users": users}, matched)
 
 
 class LoadMatchedUidsTests(unittest.TestCase):

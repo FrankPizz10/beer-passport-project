@@ -69,9 +69,14 @@ The accounting invariant extends by one category, asserted per table:
 
     source = loaded + rejected + deduped + excluded_unmatched
 
-The scope stage also reports `matched_uids_without_profile`, which must
-equal the Firebase-only count (15) in the production run; a mismatch
-stops the load for review before anything is written.
+The production allowlist is exactly the 294 matched UIDs: the
+intersection of the Firebase Auth UID set and the recovered users' UID
+set. The scope stage enforces this by construction: it raises a hard
+error if any allowlisted UID has no recovered profile, so that count is
+required to be zero before anything is written. The 15 Firebase-only
+accounts are a separate reconciliation metric, recorded with the
+reconciliation results in CURRENT_STATE.md and the step 3 handoff; they
+are not part of the allowlist and never enter this stage.
 
 The matched-UID allowlist is a plain local file (one UID per line)
 produced by the reconciliation tooling on Frank's Mac. It is never
@@ -98,9 +103,9 @@ Pre-load gates (any failure stops the run):
 - Catalog counts in the target database equal the frozen baseline
   (14 / 147 / 1,339 / 5,894) and the beer ID set is loaded before any
   user table is touched.
-- Allowlist count equals the expected matched count (294 for
-  production; the fixture's own count in rehearsal), and
-  matched_uids_without_profile equals the expected Firebase-only count.
+- Allowlist count equals exactly the matched count (294 for production;
+  the fixture's own count in rehearsal), and the scope stage's hard
+  check passes: zero allowlisted UIDs without a recovered profile.
 
 Post-load checks (existing pipeline, unchanged):
 
