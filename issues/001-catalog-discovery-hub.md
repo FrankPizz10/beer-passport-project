@@ -11,8 +11,9 @@ catalog discovery. Discovery work (harvests, dedupe, origin classification)
 already happens off-server and has produced large staged result sets that
 today live only as files in a local workstream: batch 2 (702 records), the
 Wikidata harvest (15,825 unique new), the Open Food Facts full pull (6,394
-unique new), and their cross-deduped, US-classified reassessment (pool
-21,438). None of it is reviewable in the admin, none of it has a decision
+unique new), and their cross-deduped, US-classified reassessment (22,132
+candidate records, plus 693 ambiguous pairs counted as relationships).
+None of it is reviewable in the admin, none of it has a decision
 trail, and none of it can become an import without ad hoc file handling.
 
 The hub provides one flow with three separate approval gates:
@@ -157,7 +158,7 @@ one immutable bundle per batch:
 
 Bundles are stored in a private, versioned S3 bucket under
 discovery-bundles/<batch-slug>/ and never on the Lightsail disk except
-transiently during ingest. Estimated size: the full 21,438-candidate
+transiently during ingest. Estimated size: the full 22,132-candidate
 pool is on the order of 15 MB of JSON; storage cost is effectively $0
 (under $0.01 per month at S3 standard rates). No new compute.
 
