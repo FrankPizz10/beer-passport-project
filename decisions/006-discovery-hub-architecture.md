@@ -8,9 +8,13 @@ Ledger reference: D-017 (proposed)
 ## Context
 
 Discovery harvests (batch 2, Wikidata, Open Food Facts) and their
-cross-deduped, US-classified reassessment (pool 21,438) exist only as
-files in a local workstream. They are not reviewable in the admin, carry
-no decision trail, and cannot become imports without ad hoc handling.
+cross-deduped reassessment exist only as files in a local workstream:
+22,132 staged candidate records from the discovery harvests (6,607
+US-produced, 210 US-market, 14,621 uncertain, 693 ambiguous-pair-
+flagged, 1 held-match) plus batch 2's 702, with 693 ambiguous pairs
+counted as relationships, not records. They are not reviewable in the
+admin, carry no decision trail, and cannot become imports without ad
+hoc handling.
 The admin is read-only today; the image approval workflow introduces
 the first scoped write path. The production host is a 1 GB Lightsail
 instance that must never run discovery jobs.
@@ -24,29 +28,41 @@ issues/001-catalog-discovery-hub.md:
    database, fully separate from the production catalog tables.
    Candidates stay staged until Frank approves an import.
 2. The flow is discovery batch -> candidate review -> image review ->
-   import-ready manifest, with three separate approval gates:
-   candidate selection, image approval, and Frank's production-import
-   approval of a specific manifest (id + SHA-256). No gate implies
-   another.
-3. Discovery jobs run off-server. Their results travel as immutable,
+   import-ready manifest, with three separate approval gates in that
+   order: candidate selection, candidate image approval, and Frank's
+   production-import approval of a specific manifest (exact id +
+   SHA-256). No gate implies another.
+3. Manifests are immutable: canonically serialized JSON (sorted keys,
+   no insignificant whitespace, one trailing LF), identified by id and
+   SHA-256. Frank approves the exact (id, SHA-256) pair; the import
+   step re-verifies the manifest hash, every payload hash, every
+   decision's currency, every approved image's content hash, and the
+   catalog baseline before writing, and aborts on any divergence.
+4. Discovery jobs run off-server. Their results travel as immutable,
    SHA-256-checksummed batch bundles (manifest.json + candidates.jsonl)
    through a private S3 bucket and are loaded by an operator-run ingest
    script. The admin API never ingests and the Lightsail instance never
    runs discovery work.
-4. Review decisions use a dedicated beerpassport_discovery_reviewer
+5. Review decisions use a dedicated beerpassport_discovery_reviewer
    role scoped to the decision columns of the staging tables plus
    INSERT on the discovery_decisions audit table, mirroring the image
    workflow's approver pattern. The viewer role stays read-only and
    gains only SELECT on the discovery tables. Every decision records
    who, when, from-state, to-state, and reason in the same transaction.
-5. Selection policy is decision 005 (US-first tiers, evidence
+6. Selection policy is decision 005 (US-first tiers, evidence
    standards, no gender-assumption exclusions); scope is decision 004
    (all canned beverages). Uncertain market relevance is a hold state
    with a recorded reason, never a silent exclusion.
-6. Image review is two-stage: candidate image status (from the harvest
-   quality gate) travels with the candidate; the binding approval
-   happens after import in the existing beverage_images workflow,
-   unchanged, with the full quality gate.
+7. Image review happens in the hub BEFORE manifest approval: the
+   reviewer previews the candidate's image with its provenance, and
+   the decision binds to the exact image by content SHA-256 recorded
+   at decision time. At import, the image bytes are re-hashed; on a
+   match the decision carries through and the image is published as an
+   approved beverage_images row naming the candidate decision in its
+   provenance, with no second decision. On a mismatch the import
+   aborts. Images for beverages already in the catalog keep using the
+   beverage_images approval queue from the image workflow, unchanged,
+   with the full quality gate.
 
 ## Consequences
 
