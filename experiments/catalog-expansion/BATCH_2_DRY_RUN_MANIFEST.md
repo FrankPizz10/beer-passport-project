@@ -9,10 +9,11 @@ dispositions.
 
 ## Batch definition
 
-The measured Catalog Expansion POC batch under decision D-015
-(2026-11-23, licensing tiers relaxed): every unique-new record from
-the POC, both sources. Open Food Facts 190 (Tier A) and the CraftCans
-GitHub dataset 512 (Tier C, valid under D-015). Dedupe verdicts were
+The measured Catalog Expansion POC batch under the CTO-approved
+decision [004: Catalog licensing tiers relaxed](../../decisions/004-catalog-licensing-relaxed.md)
+(ledger D-015, 2026-11-23): every unique-new record from the POC,
+both sources. Open Food Facts 190 (Tier A) and the CraftCans GitHub
+dataset 512 (Tier C, valid under decision 004). Dedupe verdicts were
 reproduced locally for this dry run with the POC pipeline and match
 the measured metrics exactly: 702 unique new against the 5,894-beer
 baseline, with 71 baseline matches, 50 duplicates, and 260 ambiguous
@@ -64,6 +65,15 @@ product-match review of every hosted image:
   beers require a brewery, so these 15 are held out of the import
   until each is resolved to a brewery (matched to an existing
   brewery or a new one created). Import-ready records: 687 of 702.
+- **Reconciliation of images against the held records (exact):**
+  all 15 held records carry verified images, so the importable
+  counts are lower than the batch totals. Importable records: 687
+  (175 Open Food Facts + 512 CraftCans). Importable verified images:
+  170 (185 verified batch-wide, minus the 15 held with their
+  records). Held pending brewery resolution: 15 records and their
+  15 verified images. Batch totals for reference: 702 records, 185
+  verified images, 4 excluded images, 517 records without an image
+  before the hold (512 CraftCans + 4 excluded + 1 missing).
 - New IDs are assigned at import time starting above the current
   maximum beer ID (6,055), in manifest order; baseline IDs are never
   reused or shifted.
@@ -78,8 +88,8 @@ product-match review of every hosted image:
   Database License (ODbL) v1.0; product contents under the Database
   Contents License (DbCL); images under CC BY-SA."
 - CraftCans records carry their source URL for traceability; per
-  D-015 no attribution text is mandated, and provenance is recorded
-  the same way.
+  decision 004 no attribution text is mandated, and provenance is
+  recorded the same way.
 
 ## Evidence
 
