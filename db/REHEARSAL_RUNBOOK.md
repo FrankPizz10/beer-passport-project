@@ -45,9 +45,15 @@ setpriv --reuid 1000 --regid 1000 --clear-groups \
   -l "$REHEARSAL_DIR/server.log" \
   -o "-k $REHEARSAL_DIR -c listen_addresses=''" start
 export PSQL_BIN="$REHEARSAL_DIR/pginstall/bin/psql" \
-  PGHOST="$REHEARSAL_DIR" PGUSER=postgres \
+  PGHOST="$REHEARSAL_DIR" PGPORT=5432 PGUSER=postgres \
   LD_LIBRARY_PATH="$REHEARSAL_DIR/pginstall/lib"
 ```
+
+PGPORT must be set explicitly: it names the socket file suffix, the
+pipeline reads it from the environment, and its built-in default is
+the workstream instance's 54329, not the rehearsal server's 5432.
+(Found during the 2026-11-23 run: the first R2 attempt failed on this
+default before writing anything; see the rehearsal report.)
 
 The copy carries the `beerpassport_migtest` database with the schema
 applied and the catalog loaded (step 2 load proof), which is the
