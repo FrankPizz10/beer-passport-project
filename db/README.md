@@ -8,6 +8,8 @@ This directory holds the scripted catalog import that turns the cleaned catalog 
 - `src/catalog_import.py`: reads the catalog baseline from `experiments/catalog-discovery/data/` and writes PostgreSQL COPY files, an idempotent `load.psql`, and `import_manifest.json` into `output/` (gitignored). Validation fails the run before anything is written: frozen row counts (beers 5,894; breweries 1,339; categories 14; styles 147), unique ids, referential integrity, and value formats, including rejecting sentinel or implausibly short UPCs.
 - `src/user_scope.py`: the matched-profile scope stage for the step 5 user-data import (keeps the 294 reconciled profiles and their dependent data; see `MIGRATION_REHEARSAL_PLAN.md`). Pure functions over the migration pipeline's parsed rows; no database access.
 - `MIGRATION_REHEARSAL_PLAN.md`: the Milestone 1 migration rehearsal plan (scope, per-table rules, validation gates, rehearsal steps R1 to R4).
+- `user-migration/`: the rehearsed MySQL to PostgreSQL user-data pipeline as a self-contained package (parser, transforms, scope stage vendored from `src/user_scope.py` with a drift-guard test, CLI, synthetic fixture generators, tests). Passed the R2/R3 rehearsal on 2026-11-23; see its README.
+- `PRODUCTION_PREFLIGHT.md`: the gated preflight for the step 5 production load of exactly the 294 matched profiles (read-only checks, allowlist and dump integrity, safeguards, post-load verification, sign-off).
 - `tests/`: unit tests for the transforms and validation, with small fixtures.
 
 ## Loading a database (what Milestone 1 step 5 runs on the box)
