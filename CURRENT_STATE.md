@@ -14,6 +14,7 @@ Implementation has begun. Milestone 1 (database available on the Lightsail box) 
 - Catalog discovery experiment and old-catalog cleanup (PRs #2-#6). Cleanup apply mode ran 2026-10-27; the cleaned catalog (5,894 beers, 1,339 breweries) was reviewed and promoted to the git baseline in `experiments/catalog-discovery/data/` (PR #8), with all source IDs verified preserved.
 - Firebase verification, 2026-10-27: project beerpassport-b31d8 (Blaze) holds 309 real Auth accounts (2023-09 to 2026-02, all email/password); Firestore has only a 4-document users collection.
 - Milestone 1 step 2 (split across two PRs at Frank's direction): the PostgreSQL schema port landed in `beer-passport-server` (PR targeting `release/2.0`, the server repo's new integration branch), and the scripted catalog import lives in this hub's `db/`. Full local load proof against PostgreSQL 16.2 (exact counts, constraints exercised).
+- Milestone 1 step 3 (EFS MySQL recovery), 2026-11-22: the dormant MySQL data directory was recovered in isolation and an isolated test restore passed full verification: 14 tables restored, exact row counts matched the recovered source (10,016 rows total), every table passed CHECK TABLE, and all 13 foreign-key checks found zero orphaned rows. The recovered data itself stays out of git. Firebase Auth UID reconciliation is complete (2026-11-22, by SHA-256 fingerprint comparison; no raw UIDs recorded): 309 Firebase Auth accounts, 299 recovered users, 294 matched profiles, 15 Firebase-only accounts (left as they are), and 5 MySQL-only profiles (preserved in the verified backup and excluded from the step 5 load scope). The production load remains a separate, separately approved step.
 
 ## Confirmed findings
 
@@ -44,12 +45,12 @@ See [TECHNICAL_DECISIONS.md](TECHNICAL_DECISIONS.md) and [ROADMAP.md](ROADMAP.md
 
 ## Blockers and risks
 
-- The EFS MySQL data directory's integrity is unverified until the Milestone 1 step 3 recovery spike (temporary EC2 mounts EFS, matching MySQL, full dump). The agreed fallback trigger lives in decisions/003.
+- The EFS MySQL data directory's integrity is now verified (Milestone 1 step 3 isolated test restore, 2026-11-22; see Work completed), so the decisions/003 fallback trigger was not met. Open follow-on items: step 4 (Lightsail box setup) has not been provisioned yet, and no production load has been approved or performed. The step 5 load scope is the 294 matched profiles; the 5 MySQL-only profiles stay in the verified backup.
 - Risk: the legacy catalog (circa 2008 dataset) has unresolved provenance and reuse rights; bulk reuse before the license audit could create legal exposure.
 - GitHub Actions for this repo still await the workflow file landing under Frank's own GitHub identity (the Muse app lacks the Workflows permission); test suites run locally in the meantime.
 
 ## Next recommended action
 
-Frank reviews and merges the Milestone 1 step 2 PR. Next step: the EFS recovery spike (step 3), run by Frank from a step-by-step guide with Jarvis directing, in parallel with the Firebase Auth UID export for the ghost-user diff.
+Milestone 1 step 4, box setup (together): Frank creates the Lightsail instance from the setup guide; Jarvis guides keys, firewall, Docker, snapshots, and the database volume with its written restore procedure. Provisioning has not been authorized yet. Step 5 then loads the catalog and the 294 matched profiles with source IDs preserved, verifies row counts, and runs the restore test; the load itself is separately gated.
 
 Relevant links: [ROADMAP.md](ROADMAP.md) for the phased plan, [AUDIT.md](AUDIT.md) for all findings, [REPOSITORIES.md](REPOSITORIES.md) for the repo inventory.
